@@ -19,9 +19,7 @@
    home.file.".config/fish/conf.d/mocha.fish".source = ../user/fish/conf.d/mocha.fish;
    home.file.".config/fish/functions".source = ../user/fish/functions;
 ####waybar
-   home.file.".config/waybar/Cava.sh".source = ../user/waybar/Cava.sh;
    home.file.".config/waybar/launch_waybar.sh".source = ../user/waybar/launch_waybar.sh;
-   home.file.".config/waybar/wallpaper_random.sh".source = ../user/waybar/wallpaper_random.sh;
 ####watermark
    home.file.".config/sway/watermark.png".source = ../user/watermark.png;
 }
