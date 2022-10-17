@@ -5,16 +5,14 @@
     enable = true;
     package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
       forceWayland = true;
-      extraPolicies = {
-        ExtensionSettings = [
-          (fetchFirefoxAddon {
-            name = "catppuccin-frappe-pink";
-          url =
-            "https://github.com/catppuccin/firefox/releases/download/old/catppuccin_frappe_pink.xpi";
-            sha256 = "UMkjWqNUzk72ZlP1roh1e4xlUpfDYrkKidRTIfAem9M=";
-          })
-        ];
-      };
+      ExtensionSettings = [
+        (fetchFirefoxAddon {
+          name = "catppuccin-frappe-pink";
+        url =
+          "https://github.com/catppuccin/firefox/releases/download/old/catppuccin_frappe_pink.xpi";
+          sha256 = "UMkjWqNUzk72ZlP1roh1e4xlUpfDYrkKidRTIfAem9M=";
+        })
+      ];
       extraPolicies = {
         DisplayBookmarksToolbar = false;    
         Preferences = {
