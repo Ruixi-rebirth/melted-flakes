@@ -79,7 +79,6 @@ in
      TERMINAL = "kitty";
      QT_QPA_PLATFORMTHEME="gtk2";
      MOZ_ENABLE_WAYLAND=1;
-     GTK_IM_MODULE="fcitx5";
      QT_IM_MODULE="fcitx5";
      XMODIFIERS="@im=fcitx5";
      SDL_VIDEODRIVER="wayland";
