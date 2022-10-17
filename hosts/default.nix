@@ -31,9 +31,6 @@ in
           (final: prev: {
               catppuccin-cursors = prev.callPackage ../overlays/catppuccin-cursors.nix { };
           })
-          (self: super: {
-              catppuccin-gtk = super.callPackage ../overlays/catppuccin-gtk.nix { };
-          })
         ];
         };
       }
