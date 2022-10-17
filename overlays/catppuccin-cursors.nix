@@ -4,7 +4,7 @@
     version = "9999";
     src = fetchzip {
         url =
-          "https://github.com/Ruixi-rebirth/Catppuccin-cursor/archive/refs/tags/1.0.zip";
+          "https://github.com/Ruixi-rebirth1/Catppuccin-cursor/archive/refs/tags/1.0.zip";
         stripRoot = false;
       };
     installPhase = ''
