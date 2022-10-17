@@ -17,7 +17,7 @@ let
     convert $HOME/Pictures/output.png -bordercolor none -border 20 \( +clone -background black -shadow 80x8+15+15 \) \
       +swap -background transparent -layers merge +repage $HOME/Pictures/$FILE
 #
-    composite -gravity Southeast ~/Pictures/watermark.png $HOME/Pictures/$FILE $HOME/Pictures/$FILE 
+    composite -gravity Southeast ~/.config/sway/watermark.png $HOME/Pictures/$FILE $HOME/Pictures/$FILE 
 #
 # # Send the Picture to clipboard
     wl-copy < $HOME/Pictures/$FILE
