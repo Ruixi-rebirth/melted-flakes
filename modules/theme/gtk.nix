@@ -6,6 +6,12 @@
       catppuccin-gtk
     ];
   };
+  home.pointerCursor = {
+      package = pkgs.catppuccin-cursors;
+      name = "Catppuccin-Frappe-Dark";
+      size = 16;
+    };
+    home.pointerCursor.gtk.enable = true;
   gtk= {
     enable = true;
     theme = {
