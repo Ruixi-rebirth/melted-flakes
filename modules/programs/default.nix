@@ -7,7 +7,6 @@
   ./notification.nix
   ./music.nix
   ./search.nix
-  ./firefox.nix
   ./gpg.nix
   ./yt-dlp.nix
   ./mpv.nix
@@ -16,5 +15,5 @@
   ./dbeaver.nix
   ./lazygit.nix
   ./neofetch/neofetch.nix
-  # ./firefox/firefox.nix
+  ./firefox/firefox.nix
 ]
