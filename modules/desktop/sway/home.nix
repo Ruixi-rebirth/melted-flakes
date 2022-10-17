@@ -312,7 +312,7 @@ in
         bindsym $mod+q exec --no-startup-id              icalingua --enable-features=UseOzonePlatform --ozone-platform=wayland
         bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
         bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 
-        bindsym $mod+a exec --no-startup-id              grimshot_watermark
+        bindsym $mod+a exec --no-startup-id              /etc/profiles/per-user/ruixi/bin/grimshot_watermark
 
 
         # Kill focused window
