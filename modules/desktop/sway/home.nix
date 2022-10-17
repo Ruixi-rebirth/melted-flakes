@@ -126,7 +126,7 @@
         set $gnome-schema org.gnome.desktop.interface
         exec_always {
             gsettings set $gnome-schema gtk-theme 'Catppuccin-Frappe-Pink'
-            gsettings set $gnome-schema icon-theme 'Papirus'
+            gsettings set $gnome-schema icon-theme 'Papirus-Dark'
             gsettings set $gnome-schema cursor-theme 'Catppuccin-Frappe-Dark'
             gsettings set $gnome-schema font-name 'JetBrainsMono Nerd Font 12'
         }
