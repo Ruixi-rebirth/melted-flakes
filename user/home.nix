@@ -18,8 +18,4 @@
    home.file.".config/fish/fish_variables".source = ../user/fish/fish_variables;
    home.file.".config/fish/conf.d/mocha.fish".source = ../user/fish/conf.d/mocha.fish;
    home.file.".config/fish/functions".source = ../user/fish/functions;
-####waybar
-   home.file.".config/waybar/launch_waybar.sh".source = ../user/waybar/launch_waybar.sh;
-####watermark
-   # home.file.".config/sway/watermark.png".source = ../user/watermark.png;
 }

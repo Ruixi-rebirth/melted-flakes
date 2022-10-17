@@ -179,7 +179,7 @@ in
         exec_always  --no-startup-id  mako &
         exec_always  --no-startup-id  fcitx5 &
         exec_always  --no-startup-id  nm-applet --indicator &
-        exec_always  --no-startup-id  ~/.config/waybar/launch_waybar.sh &
+        exec_always  --no-startup-id  waybar
 
     #-------------------------------#
     # Make capslock work as escape #
