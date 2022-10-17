@@ -1,6 +1,70 @@
 { config, lib, pkgs, ... }:
 
+let 
+  grimshot_watermark = pkgs.writeShellScriptBin "grimshot_watermark" ''
+    #!/bin/bash
+    FILE=$(date "+%Y-%m-%d"T"%H:%M:%S").png
+# Get the picture from maim
+    grimshot --notify  save area ~/Pictures/src.png >> /dev/null 2>&1
+# add shadow, round corner, border and watermark
+    convert $HOME/Pictures/src.png \
+      \( +clone -alpha extract \
+      -draw 'fill black polygon 0,0 0,8 8,0 fill white circle 8,8 8,0' \
+      \( +clone -flip \) -compose Multiply -composite \
+      \( +clone -flop \) -compose Multiply -composite \
+      \) -alpha off -compose CopyOpacity -composite $HOME/Pictures/output.png
+#
+    convert $HOME/Pictures/output.png -bordercolor none -border 20 \( +clone -background black -shadow 80x8+15+15 \) \
+      +swap -background transparent -layers merge +repage $HOME/Pictures/$FILE
+#
+    composite -gravity Southeast ./watermark.png $HOME/Pictures/$FILE $HOME/Pictures/$FILE 
+#
+# # Send the Picture to clipboard
+    wl-copy < $HOME/Pictures/$FILE
+#
+# # remove the other pictures
+    rm $HOME/Pictures/src.png $HOME/Pictures/output.png
+  '';
+  myswaylock = pkgs.writeShellScriptBin "myswaylock" ''
+    #!/bin/bash
+    swaylock  \
+           --screenshots \
+           --clock \
+           --indicator \
+           --indicator-radius 100 \
+           --indicator-thickness 7 \
+           --effect-blur 7x5 \
+           --effect-vignette 0.5:0.5 \
+           --ring-color 3b4252 \
+           --key-hl-color 880033 \
+           --line-color 00000000 \
+           --inside-color 00000088 \
+           --separator-color 00000000 \
+           --grace 2 \
+           --fade-in 0.3
+  '';
+  dynamic_wallpaper = pkgs.writeShellScriptBin "dynamic_wallpaper" ''
+    #!/bin/bash
+    killall swaybg
+# Automatically change wallpaper every 10 minutes
+    swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
+    OLD_PID=$!
+    while true; do
+        sleep 120
+        swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
+        NEXT_PID=$!
+        sleep 5
+        kill $OLD_PID
+        OLD_PID=$NEXT_PID
+    done
+  '';
+in 
 {
+  home.packages = with pkgs; [
+    grimshot_watermark
+    myswaylock
+    dynamic_wallpaper
+  ];
   home.file = {
     ".config/sway/config".text = ''
 
@@ -178,7 +242,7 @@
         # exec_always --no-startup-id swaybg -i ~/.config/sway/wallpaper/02.png 
         #output "*" bg ~/Pictures/wallpaper/11.png fill
         # Automatically change wallpapers at intervals
-        exec_always --no-startup-id ~/.config/sway/dynamic_wallpaper.sh $
+        exec_always --no-startup-id dynamic_wallpaper 
 
     #-------------------------------------------------#
     # Control volume,monitor brightness,media players #
@@ -242,7 +306,7 @@
         bindsym $mod+q exec --no-startup-id              icalingua --enable-features=UseOzonePlatform --ozone-platform=wayland
         bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
         bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 
-        bindsym $mod+a exec --no-startup-id             ~/.config/sway/grimshot_watermark.sh
+        bindsym $mod+a exec --no-startup-id              grimshot_watermark
 
 
         # Kill focused window

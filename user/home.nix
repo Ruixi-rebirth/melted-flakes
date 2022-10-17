@@ -22,11 +22,4 @@
    home.file.".config/waybar/Cava.sh".source = ../user/waybar/Cava.sh;
    home.file.".config/waybar/launch_waybar.sh".source = ../user/waybar/launch_waybar.sh;
    home.file.".config/waybar/wallpaper_random.sh".source = ../user/waybar/wallpaper_random.sh;
-####grimshot
-   home.file.".config/sway/grimshot.sh".source = ../user/sway/grimshot.sh;
-   home.file.".config/sway/grimshot_watermark.sh".source = ../user/sway/grimshot_watermark.sh;
-   home.file.".config/sway/watermark.png".source = ../user/sway/watermark.png;
-   home.file.".config/sway/dynamic_wallpaper.sh".source = ../user/sway/dynamic_wallpaper.sh;
-####swayidle
-   home.file.".config/sway/swaylock.sh".source = ../user/sway/swaylock.sh;
 }
