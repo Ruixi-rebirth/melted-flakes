@@ -4,7 +4,7 @@
 
 ![2022-10-17T22:05:06](https://user-images.githubusercontent.com/75824585/196198382-8df63882-f56e-4fb9-9add-7dc02fd4e317.png)
 
-## How to build 
+## 如何构建
 ```bash
 git clone  https://github.com/Ruixi-rebirth/nixos-config.git && cd nixos-config
 
