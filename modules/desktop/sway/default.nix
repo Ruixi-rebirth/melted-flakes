@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ../../programs/waybar.nix ];
+  imports = [ ../../programs/waybar/waybar.nix ];
 
   programs = {
     sway = {
