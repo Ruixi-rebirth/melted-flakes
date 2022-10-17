@@ -5,7 +5,7 @@ stdenv.mkDerivation rec {
   pName = "cattpuccin-gtk";
   vErsion = "0.2.7";
 
-  src = fetchzip {
+  sRc = fetchzip {
     url =
       "https://github.com/catppuccin/gtk/releases/download/v-0.2.7/Catppuccin-Frappe-Pink.zip";
     sha256 = "w7yv9e9MuZgmCdr/RdDxg2hAeIhb1f82idUj4diI8v8=";
