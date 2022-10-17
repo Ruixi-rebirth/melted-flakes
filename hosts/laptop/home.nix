@@ -3,7 +3,7 @@
 {
   imports =
     [(import ../../modules/desktop/sway/home.nix)] ++
-    [(import ../../modules/programs/waybar/home.nix)] ++
+    [(import ../../modules/scripts/home.nix)] ++
     (import ../../modules/shell) ++
     (import ../../modules/editors) ++
     (import ../../modules/programs) ++
