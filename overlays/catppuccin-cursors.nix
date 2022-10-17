@@ -4,8 +4,7 @@
     version = "9999";
     src = fetchzip {
         url =
-          "https://github.com/Ruixi-rebirth1/Catppuccin-cursor/archive/refs/tags/1.0.zip";
-        stripRoot = false;
+          "https://github.com/Ruixi-rebirth/Catppuccin-cursor/archive/refs/tags/1.0.zip";
       };
     installPhase = ''
       mkdir -p $out/share/icons/Catppuccin-Frappe-Dark
@@ -18,6 +17,5 @@
       platforms = lib.platforms.unix;
       maintainers = [ lib.maintainers.Ruixi-rebirth ];
     };
-    s
   }
 
