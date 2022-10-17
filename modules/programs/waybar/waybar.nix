@@ -267,7 +267,7 @@ in
           "tooltip"= false;
         };
         "temperature"= {
-          "hwmon-path"= "${./get_temp_path.sh}";
+          "hwmon-path"= "${env:HWMON_PATH}";
           #"critical-threshold"= 80;
           "tooltip"= false;
           "format"= " {temperatureC}°C";
