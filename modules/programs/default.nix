@@ -1,6 +1,6 @@
 [
   ./kitty.nix
-  ./btop.nix
+  ./btop/btop.nix
   ./rofi.nix
   ./cava.nix
   ./obs_studio.nix
