@@ -16,7 +16,7 @@
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
     };
-    profiles = {
+    profiles.home = {
        userChrome = builtins.readFile ./userChrome.css;
        userContent = builtins.readFile ./userContent.css;
     };
