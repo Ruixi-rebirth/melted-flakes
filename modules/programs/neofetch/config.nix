@@ -33,7 +33,7 @@
   gtk_shorthand="on"
   gtk2="on"
   gtk3="on"
-  public_ip_host="http://ident.me"
+  public_ip_host=""
   public_ip_timeout=2
   de_version="on"
   disk_show=('/')
