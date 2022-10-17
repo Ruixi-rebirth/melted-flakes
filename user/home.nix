@@ -27,4 +27,6 @@
    home.file.".config/sway/grimshot_watermark.sh".source = ../user/sway/grimshot_watermark.sh;
    home.file.".config/sway/watermark.png".source = ../user/sway/watermark.png;
    home.file.".config/sway/dynamic_wallpaper.sh".source = ../user/sway/dynamic_wallpaper.sh;
+####swayidle
+   home.file.".config/sway/swaylock.sh".source = ../user/sway/swaylock.sh;
 }
