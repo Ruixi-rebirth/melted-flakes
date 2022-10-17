@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/bin/sh
 swaylock  \
        --screenshots \
        --clock \
