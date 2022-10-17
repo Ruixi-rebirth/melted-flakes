@@ -16,5 +16,5 @@
   ./dbeaver.nix
   ./lazygit.nix
   ./neofetch/neofetch.nix
-  ./firefox/firefox.nix
+  # ./firefox/firefox.nix
 ]
