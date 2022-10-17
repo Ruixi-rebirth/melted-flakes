@@ -33,6 +33,6 @@
   environment = {
     systemPackages = with pkgs; [
       glxinfo
-      ];
+    ];
   };
 }
