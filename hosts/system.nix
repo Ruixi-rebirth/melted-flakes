@@ -79,8 +79,6 @@ in
      TERMINAL = "kitty";
      QT_QPA_PLATFORMTHEME="gtk2";
      MOZ_ENABLE_WAYLAND="1";
-     QT_IM_MODULE="fcitx5";
-     XMODIFIERS="@im=fcitx5";
      SDL_VIDEODRIVER="wayland";
      _JAVA_AWT_WM_NONREPARENTING="1";
      QT_QPA_PLATFORM="wayland";
