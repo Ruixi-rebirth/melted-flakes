@@ -1,7 +1,7 @@
 { lib, stdenv, fetchzip, ... }:
 
 stdenv.mkDerivation rec {
-  pname = "cattpuccin-cursors";
+  pName = "cattpuccin-cursors";
   version = "9999";
 
   src = fetchzip {
