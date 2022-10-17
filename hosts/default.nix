@@ -26,16 +26,18 @@ in
         home-manager.users.${user} = {
           imports =  [(import ./laptop/home.nix)] ++ [(import ../user/home.nix)];
         };
-        nixpkgs.overlays = [
+        nixpkgs= { 
+          overlays = [
           (final: prev: {
               catppuccin-cursors = prev.callPackage ../overlays/catppuccin-cursors.nix { };
           })
         ];
-        nixpkgs.overlays = [
+          overlays = [
           (final: prev: {
               catppuccin-gtk = prev.callPackage ../overlays/catppuccin-gtk.nix { };
           })
         ];
+        };
       }
     ];
   };
