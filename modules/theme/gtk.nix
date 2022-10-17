@@ -18,45 +18,29 @@
       name = "Catppuccin-Frappe-Pink";
       # package = pkgs.catppuccin-gtk.override { size = "compact"; };
     };
+    cursorTheme = {
+      name = "Catppuccin-Frappe-Dark";
+    };
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-    gtk3.extraConfig={
-      gtk-theme-name="Catppuccin";
-      gtk-icon-theme-name="Papirus-Dark";
-      # gtk-font-name="JetBrainsMono Nerd Font 12";
-      gtk-cursor-theme-name="Catppuccin-cursor";
-      gtk-cursor-theme-size=0;
-      gtk-toolbar-style="GTK_TOOLBAR_BOTH_HORIZ";
-      gtk-toolbar-icon-size="GTK_ICON_SIZE_LARGE_TOOLBAR";
-      gtk-button-images=0;
-      gtk-menu-images=0;
-      gtk-enable-event-sounds=1;
-      gtk-enable-input-feedback-sounds=1;
-      gtk-xft-antialias=1;
-      gtk-xft-hinting=1;
-      gtk-xft-hintstyle="hintmedium";
-      gtk-modules="gail:atk-bridge";
-      gtk-xft-rgba="none";
+
+    font = {
+      name = "JetBrainsMono Nerd Font";
+      size = 12; 
     };
-  gtk2.extraConfig = ''
-    gtk-theme-name="Catppuccin";
-    gtk-icon-theme-name="Papirus-Dark";
-    gtk-font-name="JetBrainsMono Nerd Font 12";
-    gtk-cursor-theme-name="Catppuccin-cursor";
-    gtk-cursor-theme-size=0;
-    gtk-toolbar-style="GTK_TOOLBAR_BOTH_HORIZ";
-    gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
-    gtk-button-images=0
-    gtk-menu-images=0
-    gtk-enable-event-sounds=1
-    gtk-enable-input-feedback-sounds=1
-    gtk-xft-antialias=1
-    gtk-xft-hinting=1
-    gtk-xft-hintstyle="hintmedium"
-    gtk-xft-rgba="none"
-    gtk-modules="gail:atk-bridge"
-  '';
+    gtk3.extraConfig = {
+      gtk-xft-antialias = 1;
+      gtk-xft-hinting = 1;
+      gtk-xft-hintstyle = "hintslight";
+      gtk-xft-rgba = "rgb";
+    };
+    gtk2.extraConfig = ''
+      gtk-xft-antialias=1
+      gtk-xft-hinting=1
+      gtk-xft-hintstyle="hintslight"
+      gtk-xft-rgba="rgb"
+    '';
   };
 }
