@@ -16,7 +16,7 @@
         };
       };
     };
-    profiles.default = {
+    profiles = {
        userChrome = builtins.readFile ./userChrome.css;
        userContent = builtins.readFile ./userContent.css;
     };
