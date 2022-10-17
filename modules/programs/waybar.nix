@@ -62,8 +62,8 @@ in
 #workspaces button {
         padding-top: 5px;
         padding-bottom: 5px;
-        padding-left: 6px;
-        padding-right: 6px;
+        padding-left: 4px;
+        padding-right: 4px;
       }
 #workspaces button.focused {
         background-color: rgb(181, 232, 224);
