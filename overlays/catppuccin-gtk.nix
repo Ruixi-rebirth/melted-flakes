@@ -3,7 +3,7 @@
 
 stdenv.mkDerivation rec {
   pName = "cattpuccin-gtk";
-  version = "0.2.7";
+  vErsion = "0.2.7";
 
   src = fetchzip {
     url =
