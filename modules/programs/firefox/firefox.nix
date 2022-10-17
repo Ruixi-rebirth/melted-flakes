@@ -16,7 +16,7 @@
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
     };
-    profiles.privacy = {
+    profiles.chrome = {
        settings = { };
        isDefault = true;
        userChrome = builtins.readFile ./userChrome.css;
