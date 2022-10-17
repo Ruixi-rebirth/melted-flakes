@@ -21,5 +21,5 @@
 ####waybar
    home.file.".config/waybar/launch_waybar.sh".source = ../user/waybar/launch_waybar.sh;
 ####watermark
-   home.file.".config/sway/watermark.png".source = ../user/watermark.png;
+   # home.file.".config/sway/watermark.png".source = ../user/watermark.png;
 }
