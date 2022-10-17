@@ -18,9 +18,6 @@
       name = "Catppuccin-Frappe-Pink";
       # package = pkgs.catppuccin-gtk.override { size = "compact"; };
     };
-    cursorTheme = {
-      name = "Catppuccin-Frappe-Dark-Cursors";
-    };
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;

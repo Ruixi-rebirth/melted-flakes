@@ -127,7 +127,7 @@
         exec_always {
             gsettings set $gnome-schema gtk-theme 'Catppuccin-Frappe-Pink'
             gsettings set $gnome-schema icon-theme 'Papirus-Dark'
-            gsettings set $gnome-schema cursor-theme 'Catppuccin-Frappe-Dark-Cursors'
+            gsettings set $gnome-schema cursor-theme 'Catppuccin-Frappe-Dark'
             gsettings set $gnome-schema font-name 'jetbrains mono nerd font 12'
         }
 
