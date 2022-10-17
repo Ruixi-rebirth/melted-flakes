@@ -10,11 +10,11 @@
       };
       extraPolicies = {
         DisplayBookmarksToolbar = false;    
+        Preferences = {
+          "browser.toolbars.bookmarks.visibility" = "never";
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        };
       };
-    };
-    Preferences = {
-      "browser.toolbars.bookmarks.visibility" = "never";
-      "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
     };
     profiles.default = {
        userChrome = builtins.readFile ./userChrome.css;
