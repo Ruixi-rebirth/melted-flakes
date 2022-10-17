@@ -17,11 +17,8 @@ in
    home.packages = with pkgs; [
      Cava
      wallpaper_random
+     waybar
     ];
-
-  environment.systemPackages = with pkgs; [
-    waybar
-  ];
 
   nixpkgs.overlays = [                                      # Waybar needs to be compiled with the experimental flag for wlr/workspaces to work
     (self: super: {
