@@ -8,5 +8,5 @@
       };
     };
   };
-   home.file.".config/btop/theme/catppuccin_mocha.theme".source = ./theme.nix;
+   home.file.".config/btop/themes/catppuccin_mocha.theme".source = ./theme.nix;
 }
