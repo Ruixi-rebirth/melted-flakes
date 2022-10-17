@@ -179,7 +179,7 @@ in
           "tooltip"= false;
         };
         "custom/cava-internal"= {
-          "exec"= "~/.config/waybar/Cava.sh";
+          "exec"= "Cava";
           "tooltip"= false;
         };
         "sway/workspaces"= {
@@ -226,7 +226,7 @@ in
           "tooltip"= false;
         };
         "clock"= {
-          "on-click-right"= "~/.config/waybar/wallpaper_random.sh &";
+          "on-click-right"= "wallpaper_random";
           "interval"= 1;
           "format"= "{:%I:%M %p  %A %b %d}";
           "tooltip"= true;
