@@ -3,10 +3,10 @@
 {
   imports = [ ../../programs/waybar.nix ];
 
-
   programs = {
     sway = {
       enable = true;
+      wrapperFeatures.gtk = true;
       extraPackages = with pkgs;[
       swaybg
       swayidle
