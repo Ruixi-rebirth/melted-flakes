@@ -15,12 +15,12 @@
         "browser.toolbars.bookmarks.visibility" = "never";
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
+    };
     profiles = {
-        settings = { };
-        isDefault = true;
-        userChrome = builtins.readFile ./userChrome.css;
-        userContent = builtins.readFile ./userContent.css;
-      };
+       settings = { };
+       isDefault = true;
+       userChrome = builtins.readFile ./userChrome.css;
+       userContent = builtins.readFile ./userContent.css;
+    };
   };
-};
 }
