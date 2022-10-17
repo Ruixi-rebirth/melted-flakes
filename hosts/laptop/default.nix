@@ -28,6 +28,8 @@
       "splash"
       "nvidia-drm.modeset=1"
     ];
+    consoleLogLevel = 0;
+    initrd.verbose = false;
   };
 
   programs = {
