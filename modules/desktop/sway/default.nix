@@ -2,11 +2,6 @@
 {
   imports = [ ../../programs/waybar.nix ];
 
-   home.packages = with pkgs; [
-     Cava
-     wallpaper_random
-     waybar
-    ];
   programs = {
     sway = {
       enable = true;
