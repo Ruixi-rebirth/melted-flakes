@@ -17,8 +17,6 @@
       };
     };
     profiles = {
-       settings = { };
-       isDefault = true;
        userChrome = builtins.readFile ./userChrome.css;
        userContent = builtins.readFile ./userContent.css;
     };
