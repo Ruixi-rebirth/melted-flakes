@@ -28,8 +28,8 @@ in
         };
         nixpkgs.overlays = [
           (final: prev: {
-              # catppuccin-cursors = prev.callPackage ../overlays/catppuccin-cursors.nix { };
               catppuccin-gtk = prev.callPackage ../overlays/catppuccin-gtk.nix { };
+              catppuccin-cursors = prev.callPackage ../overlays/catppuccin-cursors.nix { };
           })
         ];
       }
