@@ -1,0 +1,13 @@
+/*hide all scroll bars*/
+/* *{ scrollbar-width: none !important } */
+
+
+* {
+font-family: jetbrains mono nerd font; 
+}
+
+@-moz-document url-prefix("about:") {
+    :root {
+        --in-content-page-background: #1E1E2E !important;
+    }
+}

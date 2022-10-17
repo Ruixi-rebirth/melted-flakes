@@ -1,0 +1,4 @@
+[
+#./fish.nix
+./git.nix
+]
