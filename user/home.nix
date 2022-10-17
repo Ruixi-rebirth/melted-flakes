@@ -23,5 +23,5 @@
    home.file.".config/waybar/launch_waybar.sh".source = ../user/waybar/launch_waybar.sh;
    home.file.".config/waybar/wallpaper_random.sh".source = ../user/waybar/wallpaper_random.sh;
 ####watermark
-   home.file."Pictures/watermark.png".source = ../user/watermark.png;
+   home.file."/home/ruixi/Pictures/watermark.png".source = ../user/watermark.png;
 }
