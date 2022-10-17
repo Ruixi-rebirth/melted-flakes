@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
     gtk-engine-murrine
   ];
 
-  installPhase = ''
+  inStallPhase = ''
     mkdir -p $out/share/themes/
     cp -r Catppuccin-Frappe-Pink $out/share/themes
   '';
