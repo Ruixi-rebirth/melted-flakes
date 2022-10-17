@@ -1,6 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [ ../../programs/waybar/waybar.nix ];
+
   programs = {
     sway = {
       enable = true;

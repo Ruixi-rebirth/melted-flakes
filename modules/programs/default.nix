@@ -1,5 +1,4 @@
 [
-  ./waybar/waybar.nix
   ./kitty.nix
   ./btop/btop.nix
   ./rofi.nix
