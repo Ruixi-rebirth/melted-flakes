@@ -15,7 +15,7 @@
         "browser.toolbars.bookmarks.visibility" = "never";
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
-    profiles.privacy = {
+    profiles = {
         settings = { };
         isDefault = true;
         userChrome = builtins.readFile ./userChrome.css;
