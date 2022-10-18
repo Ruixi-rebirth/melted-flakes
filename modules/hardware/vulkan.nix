@@ -36,7 +36,7 @@
       libva 
       vaapiVdpau 
       mesa
-      libva-utils
+      # libva-utils
     ];
   };
 }
