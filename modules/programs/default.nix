@@ -9,11 +9,13 @@
   ./search.nix
   ./gpg.nix
   ./yt-dlp.nix
-  ./mpv.nix
+  ./mpv/mpv.nix
   ./imgview.nix
   ./hugo.nix
   ./dbeaver.nix
   ./lazygit.nix
   ./neofetch/neofetch.nix
   ./firefox/firefox.nix
+  ./zathura/zathura.nix
+  ./ranger/ranger.nix
 ]

@@ -25,7 +25,7 @@ in
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = { inherit user; };
         home-manager.users.${user} = {
-          imports =  [(import ./laptop/home.nix)] ++ [(import ../user/home.nix)];
+          imports =  [(import ./laptop/home.nix)];
         };
         nixpkgs= { 
           overlays = [
