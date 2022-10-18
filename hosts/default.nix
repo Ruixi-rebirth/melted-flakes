@@ -18,7 +18,7 @@ in
     modules = [
       ./laptop
       ./system.nix
-
+      nur.nixosModules.nur
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
