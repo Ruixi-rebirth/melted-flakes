@@ -1,6 +1,6 @@
 [
 ./nvidia.nix
 ./vulkan.nix
-./hotspot.nix
+# ./hotspot.nix
 ./bluetooth.nix
 ]
