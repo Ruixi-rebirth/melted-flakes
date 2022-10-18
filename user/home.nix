@@ -10,7 +10,8 @@
 ####mpv
    home.file.".config/mpv/mpv.conf".source = ../user/mpv/mpv.conf;
    home.file.".config/mpv/input.conf".source = ../user/mpv/input.conf;
-   # home.file.".config/mpv/scripts/file-browser.lua".source = ../user/mpv/scripts/file-browser.lua;
+   home.file.".config/mpv/scripts/file-browser.lua".source = ../user/mpv/scripts/file-browser.lua;
+   home.file.".config/mpv/shaders/".source = ../user/mpv/shaders;
 ####zathura
    home.file.".config/zathura/zathurarc".source = ../user/zathura/zathurarc;
 ####fish 
