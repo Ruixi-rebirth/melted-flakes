@@ -34,7 +34,7 @@
     systemPackages = with pkgs; [
       glxinfo
       libva 
-      vaapiVdpau 
+      # vaapiVdpau 
       mesa
       libva-utils
     ];
