@@ -1,11 +1,12 @@
 { config, lib, pkgs, ... }: 
-
 {
-  services.hostapd = {
-  enable        = true;
-  interface     = "wlp0s20f3";
-  hwMode        = "g";
-  ssid          = "nix";
-  wpaPassphrase = "mysekret";
+  services.create_ap = {
+  enable = true;
+  settings = {
+    INTERNET_IFACE = "wlp0s20f3";
+    WIFI_IFACE = "wlp0s20f3";
+    SSID = "NixOS";
+    PASSPHRASE = "12345678";
+  };
 };
 }
