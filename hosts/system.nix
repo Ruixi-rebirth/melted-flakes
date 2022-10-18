@@ -69,6 +69,7 @@ in
     packages = with pkgs; [
       tdesktop
       pkgs.sway-contrib.grimshot
+      imagemagick
     ];
   };
 
