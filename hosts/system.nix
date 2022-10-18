@@ -113,7 +113,6 @@ in
       glfw-wayland
       xwayland
       pkgs.qt6.qtwayland
-      pkgs.libsForQt5.qtstyleplugins
       lsd
       gcc 
       clang
