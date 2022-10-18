@@ -1,5 +1,8 @@
 { config, lib, pkgs, ... }: 
 {
+   environment.systemPackages = [
+    pkgs.linux-wifi-hotspot
+  ];
   services.create_ap = {
   enable = true;
   settings = {
