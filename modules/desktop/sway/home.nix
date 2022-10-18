@@ -204,7 +204,7 @@
 
         exec swayidle -w \
                timeout 900 'systemctl suspend' \
-                before-sleep '~/.config/sway/swaylock.sh'
+                before-sleep 'myswaylock'
 
 
     # This will lock your screen after 300 seconds of inactivity, then turn off
