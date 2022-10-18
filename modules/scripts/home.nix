@@ -79,7 +79,7 @@ let
         OLD_PID=$NEXT_PID
     done
   '';
-  launch_waybar = writeShellScriptBin "launch_waybar" ''
+  launch_waybar = pkg.writeShellScriptBin "launch_waybar" ''
     #!/bin/bash
     is_waybar_ServerExist=`ps -ef|grep -m 1 waybar|grep -v "grep"|wc -l`
     if [ "$is_waybar_ServerExist" = "0" ]; then
