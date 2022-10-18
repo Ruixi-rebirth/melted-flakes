@@ -68,10 +68,11 @@ in
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];  
     packages = with pkgs; [
       tdesktop
-      cargo
       pkgs.sway-contrib.grimshot
     ];
   };
+
+  environment.binsh = "${pkgs.dash}/bin/dash";
   environment = {
     variables = {
      EDITOR = "nvim";
@@ -114,6 +115,7 @@ in
       lsd
       gcc 
       clang
+      cargo
       zig
       p7zip
       atool
