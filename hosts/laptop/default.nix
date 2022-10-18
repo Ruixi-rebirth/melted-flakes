@@ -3,6 +3,7 @@
 {
   imports =
     [(import ./hardware-configuration.nix)] ++
+    [(import ../../modules/environment/variables.nix)] ++
     [(import ../../modules/desktop/sway/default.nix)] ++
     [(import ../../modules/programs/fcitx5.nix)] ++
     [(import ../../modules/fonts/fonts.nix)] ++
