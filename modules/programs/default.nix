@@ -16,4 +16,5 @@
   ./lazygit.nix
   ./neofetch/neofetch.nix
   ./firefox/firefox.nix
+  ./net-im.nix
 ]
