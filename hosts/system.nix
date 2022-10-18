@@ -63,7 +63,7 @@ in
     };
   };
   users.users.${user} = {
-    shell = pkgs.fish;
+    shell = fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];  
     packages = with pkgs; [
