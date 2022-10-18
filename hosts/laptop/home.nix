@@ -7,6 +7,7 @@
     (import ../../modules/shell) ++
     (import ../../modules/editors) ++
     (import ../../modules/programs) ++
+    [(import ../../modules/environment/variables.nix)] ++
     (import ../../modules/theme) ++
     (import ../../modules/dev_lang);
 
