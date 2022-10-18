@@ -15,7 +15,7 @@
 ####zathura
    home.file.".config/zathura/zathurarc".source = ../user/zathura/zathurarc;
 ####fish 
-   home.file.".config/fish/config.fish".source = ../user/fish/config.fish;
+   # home.file.".config/fish/config.fish".source = ../user/fish/config.fish;
    home.file.".config/fish/fish_variables".source = ../user/fish/fish_variables;
    home.file.".config/fish/conf.d/mocha.fish".source = ../user/fish/conf.d/mocha.fish;
    home.file.".config/fish/functions".source = ../user/fish/functions;
