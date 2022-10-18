@@ -126,7 +126,6 @@ in
       ffmpegthumbnailer
       glib
       xdg-utils
-      pkgs.gnome.nautilus
       networkmanagerapplet
       wev
       wf-recorder
