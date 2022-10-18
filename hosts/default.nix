@@ -19,6 +19,9 @@ in
       ./laptop
       ./system.nix
       nur.nixosModules.nur
+      ({ config, ... }: {
+           environment.systemPackages = [ config.nur.repos.linyinfeng.icalingua-plus-plus ];
+         })
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
