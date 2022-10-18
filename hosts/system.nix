@@ -74,6 +74,7 @@ in
   };
 
   environment.binsh = "${pkgs.dash}/bin/dash";
+  environment.shells = with pkgs; [ fish ];
   environment = {
     variables = {
      EDITOR = "nvim";
