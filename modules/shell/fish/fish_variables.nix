@@ -1,3 +1,4 @@
+''
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:3400
@@ -31,4 +32,4 @@ SETUVAR fish_pager_color_description:B3A06D
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
-SETUVAR fish_user_paths:/usr/libexec/docker/cli\x2dplugins\x1e/home/ruixi/Scripts\x1e/home/ruixi/\x2ecargo/bin\x1e/home/ruixi/\x2enpm\x2dglobal/bin\x1e/home/ruixi/\x2elocal/bin
+''

@@ -27,4 +27,5 @@
    # home.file.".config/fish/fish_variables".source = ./fish_variables;
    home.file.".config/fish/conf.d/mocha.fish".source = ./conf.d/mocha.fish;
    home.file.".config/fish/functions/fish_prompt".source = ./functions/fish_prompt.fish;
+   home.file.".config/fish/fish_variables".text = import ./fish_variables.nix;
 }
