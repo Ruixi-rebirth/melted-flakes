@@ -1,5 +1,5 @@
 [
-./fish/fish.nix
+./fish.nix
 ./git.nix
 ./bash.nix
 ]
