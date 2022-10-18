@@ -73,9 +73,6 @@ in
     ];
   };
 
-  programs.bash = {
-    enable = true;
-  };
   environment.binsh = "${pkgs.dash}/bin/dash";
   environment.shells = with pkgs; [ fish ];
   environment = {
