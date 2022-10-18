@@ -115,6 +115,7 @@ in
       pkgs.qt6.qtwayland
       pkgs.libsForQt5.qtstyleplugins
       lsd
+      linux-wifi-hotspot
       gcc 
       clang
       cargo
