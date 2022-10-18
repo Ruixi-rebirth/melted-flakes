@@ -1,3 +1,4 @@
+''
 # Catppuccin color palette
 
 # --> special
@@ -43,3 +44,4 @@ set -g fish_pager_color_progress $gray
 set -g fish_pager_color_prefix $pink
 set -g fish_pager_color_completion $foreground
 set -g fish_pager_color_description $gray
+''

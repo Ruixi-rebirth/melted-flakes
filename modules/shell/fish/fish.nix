@@ -1,9 +1,7 @@
 { lib, pkgs, user,  ... }:
 
 {
-   home.file.".config/fish/conf.d/mocha.fish".source = ./conf.d/mocha.fish;
+   home.file.".config/fish/conf.d/mocha.fish".source = ./conf.d/mocha_theme.nix;
+   home.file.".config/fish/config.fish".source = ./config.nix;
    home.file.".config/fish/functions".source = ./functions;
-   # home.file.".config/fish/functions/owf.fish".source = ./functions/owf.fish;
-   # home.file.".config/fish/functions/f.fish".source = ./functions/f.fish;
-   # home.file.".config/fish/fish_variables".text = import ./fish_variables.nix;
 }
