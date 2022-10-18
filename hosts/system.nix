@@ -70,6 +70,7 @@ in
       tdesktop
       pkgs.sway-contrib.grimshot
       imagemagick
+      linux-wifi-hotspot
     ];
   };
 
