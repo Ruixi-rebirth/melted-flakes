@@ -73,6 +73,9 @@ in
     ];
   };
 
+  programs.bash = {
+    enable = true;
+  };
   environment.binsh = "${pkgs.dash}/bin/dash";
   environment.shells = with pkgs; [ fish ];
   environment = {
@@ -98,7 +101,6 @@ in
      #__NV_PRIME_RENDER_OFFLOAD="1";
     };
     systemPackages = with pkgs; [
-      fish
       neovim
       wget
       neofetch
