@@ -14,9 +14,9 @@
     extraPackages = with pkgs; [
       intel-media-driver
       vaapiIntel
-      # vaapiVdpau
-      # libvdpau-va-gl
-      # nvidia-vaapi-driver
+      vaapiVdpau
+      libvdpau-va-gl
+      nvidia-vaapi-driver
     ];
     };
     pulseaudio.support32Bit = true;
