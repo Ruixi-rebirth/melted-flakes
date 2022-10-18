@@ -13,10 +13,10 @@
       driSupport32Bit = true;
     extraPackages = with pkgs; [
       intel-media-driver
-      vaapiVdpau
       vaapiIntel
-      libvdpau-va-gl
-      nvidia-vaapi-driver
+      # vaapiVdpau
+      # libvdpau-va-gl
+      # nvidia-vaapi-driver
     ];
     };
     pulseaudio.support32Bit = true;
