@@ -98,6 +98,7 @@ in
      #__NV_PRIME_RENDER_OFFLOAD="1";
     };
     systemPackages = with pkgs; [
+      fish
       neovim
       wget
       neofetch
