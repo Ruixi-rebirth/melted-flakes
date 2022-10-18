@@ -70,7 +70,6 @@ in
       tdesktop
       pkgs.sway-contrib.grimshot
       imagemagick
-      linux-wifi-hotspot
     ];
   };
 
@@ -116,6 +115,7 @@ in
       pkgs.qt6.qtwayland
       pkgs.libsForQt5.qtstyleplugins
       lsd
+      linux-wifi-hotspot
       gcc 
       clang
       cargo
