@@ -33,6 +33,10 @@
   environment = {
     systemPackages = with pkgs; [
       glxinfo
+      libva 
+      vaapiVdpau 
+      mesa
+      libva-utils
     ];
   };
 }

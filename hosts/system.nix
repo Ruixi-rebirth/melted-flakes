@@ -80,8 +80,7 @@ in
      EDITOR = "nvim";
      BROWSER = "firefox";
      TERMINAL = "kitty";
-     # QT_QPA_PLATFORMTHEME="gtk2";
-     QT_QPA_PLATFORMTHEME="qt5ct";
+     QT_QPA_PLATFORMTHEME="gtk2";
      MOZ_ENABLE_WAYLAND="1";
      SDL_VIDEODRIVER="wayland";
      _JAVA_AWT_WM_NONREPARENTING="1";
@@ -134,15 +133,11 @@ in
       alsa-utils
       flac
       pulsemixer
-      libva-utils
+      linux-firmware
       sshpass
       pciutils
       gdb
       ntfs3g
-      linux-firmware
-      libva 
-      vaapiVdpau 
-      mesa
       killall
     ];
   };
