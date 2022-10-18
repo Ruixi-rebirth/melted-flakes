@@ -122,6 +122,7 @@ in
       atool
       unzip
       ranger
+      pcmanfm
       ffmpegthumbnailer
       glib
       xdg-utils
@@ -145,6 +146,7 @@ in
       killall
     ];
   };
+  services.gvfs.enable = true;
   services.dbus.enable = true;
   nix = {
     settings.experimental-features = [ "nix-command" "flakes" ];
