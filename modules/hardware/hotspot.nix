@@ -3,7 +3,7 @@
 {
   services.hostapd = {
   enable        = true;
-  interface     = "wlan-ap0";
+  interface     = "wlp0s20f3";
   hwMode        = "g";
   ssid          = "nix";
   wpaPassphrase = "mysekret";
