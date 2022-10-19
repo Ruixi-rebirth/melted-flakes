@@ -93,6 +93,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "User-Agent Switcher and Manager";
             url = "https://addons.mozilla.org/firefox/downloads/file/3952467/user_agent_string_switcher-0.4.8.xpi";
+            sha256 = "sha256-cjoYRvFlVEuCqX5pAA8l/76d4xLwqTLB9sNeVCQKA+4=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "Vim Vixen";
