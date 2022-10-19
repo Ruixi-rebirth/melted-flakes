@@ -46,6 +46,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "Saladict";
             url = "https://addons.mozilla.org/firefox/downloads/file/3854859/ext_saladict-7.20.0.xpi";
+            sha256 = "sha256-k2CdheMm3oqhMggQjHTHVeXbm0Xc2770cvKMtIcEebY=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "Stylus";
