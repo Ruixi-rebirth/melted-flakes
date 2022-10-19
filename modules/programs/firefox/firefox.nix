@@ -5,15 +5,7 @@
     enable = true;
     package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
       forceWayland = true;
-      extraPolicies = {
-        DisplayBookmarksToolbar = false;    
-        Preferences = {
-          "browser.toolbars.bookmarks.visibility" = "never";
-          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-          "media.ffmpeg.vaapi.enabled" = true;
-          "browser.startup.homepage" = "file://${./homepage/index.html}";
-        };
-        nixExtensions = [
+      nixExtensions = [
           (fetchFirefoxAddon{
             name = "Adblock Plus";
             url = "https://addons.mozilla.org/firefox/downloads/file/3995494/adblock_plus-3.14.2.xpi";
@@ -95,6 +87,14 @@
             url = "https://addons.mozilla.org/firefox/downloads/file/3845233/vim_vixen-1.2.3.xpi";
           })
         ];
+      extraPolicies = {
+        DisplayBookmarksToolbar = false;    
+        Preferences = {
+          "browser.toolbars.bookmarks.visibility" = "never";
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+          "media.ffmpeg.vaapi.enabled" = true;
+          "browser.startup.homepage" = "file://${./homepage/index.html}";
+        };
       };
     };
     profiles.default = {
