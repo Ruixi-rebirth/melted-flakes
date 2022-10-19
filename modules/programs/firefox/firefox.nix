@@ -109,7 +109,7 @@
       #     })
       #   ];
       extraPolicies = {
-        DisplayBookmarksToolbar = false;    
+        DisplayBookmarksToolbar = true;    
         Preferences = {
           "browser.toolbars.bookmarks.visibility" = "never";
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
