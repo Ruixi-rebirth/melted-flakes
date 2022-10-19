@@ -23,6 +23,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "Content Farm Terminator";
             url = "https://addons.mozilla.org/firefox/downloads/file/4017713/content_farm_terminator-5.9.2.xpi";
+            sha256 = "sha256-LQ6h46hR+pOlMzRujghZOPI4ev+X9jPfiuDgboaU4GA=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "Custom New Tab Page";
