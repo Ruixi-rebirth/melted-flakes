@@ -3,7 +3,7 @@
   ./btop/btop.nix
   ./rofi.nix
   ./cava.nix
-  ./obs_studio.nix
+  ./obs-studio/obs_studio.nix
   ./notification.nix
   ./music.nix
   ./search.nix
