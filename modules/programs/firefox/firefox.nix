@@ -127,5 +127,9 @@
     };
   };
 
-  home.file.".mozilla/firefox/homepage".source = ./homepage;
+  home.file.".mozilla/firefox/homepage/app.css".source = ./homepage/app.css;
+  home.file.".mozilla/firefox/homepage/config.js".source = ./homepage/config.js;
+  home.file.".mozilla/firefox/homepage/index.html".source = ./homepage/index.html;
+  home.file.".mozilla/firefox/homepage/lucide.min.js".source = ./homepage/lucide.min.js;
+  home.file.".mozilla/firefox/homepage/assets".source = ./homepage/assets;
 }
