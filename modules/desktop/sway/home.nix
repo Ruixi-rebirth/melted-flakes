@@ -183,8 +183,8 @@
     #-------------------------------------------------#
     # Control volume,monitor brightness,media players #
     #-------------------------------------------------#
-        bindsym XF86AudioRaiseVolume exec pamixer -d 5
-        bindsym XF86AudioLowerVolume exec pamixer -i 5
+        bindsym XF86AudioRaiseVolume exec pamixer -i 5
+        bindsym XF86AudioLowerVolume exec pamixer -d 5
         bindsym XF86AudioMute exec pamixer -t
         bindsym XF86AudioMicMute exec pamixer --default-source -t
         bindsym XF86MonBrightnessUp exec light -A 5
