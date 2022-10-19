@@ -6,7 +6,7 @@
     package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
       forceWayland = true;
       nixExtensions = [
-          (fetchFirefoxAddon{
+          (pkgs.fetchFirefoxAddon{
             name = "Adblock Plus";
             url = "https://addons.mozilla.org/firefox/downloads/file/3995494/adblock_plus-3.14.2.xpi";
           })
