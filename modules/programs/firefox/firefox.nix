@@ -79,6 +79,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "TWP";
             url = "https://addons.mozilla.org/firefox/downloads/file/4011167/traduzir_paginas_web-9.6.1.xpi";
+            sha256 = "sha256-PMDBB/aLPEg8fyzxqda3NPy+4nYpEeBTHD7pr9ZDWcE=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "uBlacklist";
