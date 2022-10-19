@@ -114,18 +114,18 @@
           "browser.toolbars.bookmarks.visibility" = "never";
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "media.ffmpeg.vaapi.enabled" = true;
-          "browser.startup.homepage" = "file://${./homepage/index.html}";
+          # "browser.startup.homepage" = "file://${./homepage/index.html}";
         };
       };
     };
     profiles.default = {
        userChrome = builtins.readFile ./userChrome.css;
        userContent = builtins.readFile ./userContent.css;
-       # settings = {
-       #      "browser.startup.homepage" = "${home.file.".mozilla/firefox/homepage".source/index.html}";
-       #  };
+       settings = {
+            "browser.startup.homepage" = "~/.mozilla/firefox./homepage/index.html";
+        };
     };
   };
 
-  # home.file.".mozilla/firefox/homepage".source = ./homepage;
+  home.file.".mozilla/firefox/homepage".source = ./homepage;
 }
