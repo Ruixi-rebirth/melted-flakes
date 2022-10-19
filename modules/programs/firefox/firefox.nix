@@ -121,11 +121,11 @@
     profiles.default = {
        userChrome = builtins.readFile ./userChrome.css;
        userContent = builtins.readFile ./userContent.css;
-       settings = {
-            "browser.startup.homepage" = "${home.file.".mozilla/firefox/homepage".source/index.html}";
-        };
+       # settings = {
+       #      "browser.startup.homepage" = "${home.file.".mozilla/firefox/homepage".source/index.html}";
+       #  };
     };
   };
 
-  home.file.".mozilla/firefox/homepage".source = ./homepage;
+  # home.file.".mozilla/firefox/homepage".source = ./homepage;
 }
