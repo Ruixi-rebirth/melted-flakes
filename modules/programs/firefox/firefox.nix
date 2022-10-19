@@ -38,6 +38,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "ImageAssistant Batch Image Downloader";
             url = "https://addons.mozilla.org/firefox/downloads/file/3976583/ia_batch_image_downloader-1.66.6.xpi";
+            sha256 = "sha256-Ks401nYN/E8jxYoeZAOL8AK5tVrqVZrMsy4dAwdlgZs=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "Octotree";
