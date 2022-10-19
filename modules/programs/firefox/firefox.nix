@@ -114,7 +114,7 @@
           "browser.toolbars.bookmarks.visibility" = "never";
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "media.ffmpeg.vaapi.enabled" = true;
-          "browser.startup.homepage" = "file://${./homepage/index.html}";
+          "browser.startup.homepage" = "file://${./homepage.html}";
         };
       };
     };
