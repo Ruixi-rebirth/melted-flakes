@@ -19,6 +19,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "AdGuard AdBlocker";
             url = "https://addons.mozilla.org/firefox/downloads/file/4012057/adguard_adblocker-4.1.37.xpi";
+            sha256 = "sha256-T81ntGhm38SlJIaUXdXTniADV2Q8fSlFuyrPa3/737M=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "Content Farm Terminator";
