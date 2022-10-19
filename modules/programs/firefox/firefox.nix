@@ -79,6 +79,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "uBlacklist";
             url = "https://addons.mozilla.org/firefox/downloads/file/4003811/ublacklist-8.0.2.xpi";
+            sha256 = "sha256-FnxO29qYP6F+BIIHcEdCEite6uhIfOsF4eMFJ03qUmo=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "uBlock Origin";
