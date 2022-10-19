@@ -51,6 +51,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "Stylus";
             url = "https://addons.mozilla.org/firefox/downloads/file/3995806/styl_us-1.5.26.xpi";
+            sha256 = "sha256-swsU6cT6DI1JDVfmt9iv5sxx4vRZuXS1xvor+jIhApQ=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "FireShot";
