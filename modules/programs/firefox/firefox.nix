@@ -122,7 +122,7 @@
        userChrome = builtins.readFile ./userChrome.css;
        userContent = builtins.readFile ./userContent.css;
        settings = {
-            "browser.startup.homepage" = "~/.mozilla/firefox/homepage/indent.html";
+            "browser.startup.homepage" = "~/.mozilla/firefox./homepage/index.html";
         };
     };
   };
