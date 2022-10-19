@@ -10,7 +10,7 @@
             name = "Adblock Plus";
             url = "https://addons.mozilla.org/firefox/downloads/file/3995494/adblock_plus-3.14.2.xpi";
           })
-          (fetchFirefoxAddon{
+          (pkgs.fetchFirefoxAddon{
             name = "AdBlock for Firefox";
             url = "https://addons.mozilla.org/firefox/downloads/file/4014431/adblock_for_firefox-5.2.0.xpi";
           })
