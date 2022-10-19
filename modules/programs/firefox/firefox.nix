@@ -75,6 +75,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "TST Mouse Wheel and Double Click";
             url = "https://addons.mozilla.org/firefox/downloads/file/3473925/tree_style_tab_mouse_wheel-1.5.xpi";
+            sha256 = "sha256-ybrVH86xjnMjRl/SXdgd98bLP126+Hjcb4ToljxJK7U=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "TWP";
