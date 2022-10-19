@@ -114,11 +114,12 @@
           "browser.toolbars.bookmarks.visibility" = "never";
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "media.ffmpeg.vaapi.enabled" = true;
-          "browser.startup.homepage" = "file://${./homepage.html}";
         };
       };
     };
     profiles.default = {
+      settings = {
+        "browser.startup.homepage" = "file://${./homepage.html}";             };
        userChrome =  ''
       /*================== SIDEBAR ==================*/
 #sidebar-box,
