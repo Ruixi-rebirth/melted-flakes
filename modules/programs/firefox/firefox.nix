@@ -90,6 +90,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "uBlock Origin";
             url = "https://addons.mozilla.org/firefox/downloads/file/4003969/ublock_origin-1.44.4.xpi";
+            sha256 = "sha256-C+VQyaJ8BA0ErXGVTdnppJZ6J9SP+izf6RFxdS4VJoU=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "User-Agent Switcher and Manager";
