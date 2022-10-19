@@ -31,6 +31,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "Enhancer for YouTube";
             url = "https://addons.mozilla.org/firefox/downloads/file/3964540/enhancer_for_youtube-2.0.115.xpi";
+            sha256 = "sha256-oHKFhK0rNrEK7J6Ff+xHfLzYT5DlKmB3Hrd/j5jjsdc=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "ImageAssistant Batch Image Downloader";
