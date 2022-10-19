@@ -59,6 +59,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "Tampermonkey";
             url = "https://addons.mozilla.org/firefox/downloads/file/4009746/tampermonkey-4.18.0.xpi";
+            sha256 = "sha256-CLFSYZtPcV0hety3fLsej89GEOSGIrgNECO998WoeEg=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "Tree Style Tab";
