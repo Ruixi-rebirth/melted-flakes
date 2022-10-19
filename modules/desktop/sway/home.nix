@@ -183,10 +183,10 @@
     #-------------------------------------------------#
     # Control volume,monitor brightness,media players #
     #-------------------------------------------------#
-        bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-        bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-        bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-        bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+        bindsym XF86AudioRaiseVolume exec pamixer -d 5
+        bindsym XF86AudioLowerVolume exec pamixer -i 5
+        bindsym XF86AudioMute exec pamixer -t
+        bindsym XF86AudioMicMute exec pamixer --default-source -t
         bindsym XF86MonBrightnessUp exec light -A 5
         bindsym XF86MonBrightnessDown exec light -U 5
         bindsym XF86AudioPlay exec playerctl play-pause

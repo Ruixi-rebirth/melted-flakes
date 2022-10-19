@@ -10,6 +10,7 @@
       swaybg
       swayidle
       swaylock-effects
+      pamixer
       ];
     };
   };
