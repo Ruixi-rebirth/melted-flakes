@@ -25,6 +25,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "Custom New Tab Page";
             url = "https://addons.mozilla.org/firefox/downloads/file/3669474/custom_new_tab_page-1.0.0.xpi";
+            sha256 = "sha256-C5GBsK9RYo8cjk8MKL8fNCseDR5d4Fweeqqzu0dPSBQ=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "Enhancer for YouTube";
