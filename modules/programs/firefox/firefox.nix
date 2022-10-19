@@ -68,6 +68,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "TST Indent Line";
             url = "https://addons.mozilla.org/firefox/downloads/file/4003179/tst_indent_line-1.2.1.xpi";
+            sha256 = "sha256-MdDzDw6l1/m6sXeEE8I+/yU2VEAsn8iAfg29W3OJQGI=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "TST Mouse Wheel and Double Click";
