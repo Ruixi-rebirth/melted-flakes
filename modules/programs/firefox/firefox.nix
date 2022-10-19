@@ -63,6 +63,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "Tree Style Tab";
             url = "https://addons.mozilla.org/firefox/downloads/file/4017073/tree_style_tab-3.9.7.xpi";
+            sha256 = "sha256-JzNN4vW9iQFJd1ujso+N3EXpcfHUl0ZuCu3u7F+25qw=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "TST Indent Line";
