@@ -13,7 +13,7 @@
     };
     home.pointerCursor.gtk.enable = true;
   gtk= {
-    enable = true;
+    enable = flase;
     theme = {
       name = "Catppuccin-Frappe-Pink";
       # package = pkgs.catppuccin-gtk.override { size = "compact"; };
