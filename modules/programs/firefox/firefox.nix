@@ -3,7 +3,7 @@
 {
   programs.firefox = {
     enable = true;
-    package = pkgs.wrapFirefox pkgs.firefox-esr-102-unwrapped {
+    package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
       forceWayland = true;
       nixExtensions = [
           (pkgs.fetchFirefoxAddon{
