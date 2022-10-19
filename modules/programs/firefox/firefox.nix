@@ -44,6 +44,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "Octotree";
             url = "https://addons.mozilla.org/firefox/downloads/file/3999843/octotree-7.6.1.xpi";
+            sha256 = "sha256-E1tWPPafiIc5RpklXR6CfooVc2RU2qcoAijxE8OPNo0=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "Saladict";
