@@ -59,6 +59,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "FireShot";
             url = "https://addons.mozilla.org/firefox/downloads/file/4002435/fireshot-1.11.18.xpi";
+            sha256 = "sha256-Ohoy1iotD7ZwVawIZLrMMSlea/p4aofWnk8gmTave6I=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "Tampermonkey";
