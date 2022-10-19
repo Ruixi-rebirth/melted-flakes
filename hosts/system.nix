@@ -123,6 +123,7 @@ in
       unzip
       ranger
       pcmanfm
+      ffmpeg
       ffmpegthumbnailer
       glib
       xdg-utils
