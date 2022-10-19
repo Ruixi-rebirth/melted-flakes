@@ -9,6 +9,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "Adblock Plus";
             url = "https://addons.mozilla.org/firefox/downloads/file/3995494/adblock_plus-3.14.2.xpi";
+            sha256 = "sha256-DaatU30g8yf1Ek3E8UNvMvEilokCLlg0H6wJKlZU7g8=";
           })
           (pkgs.fetchFirefoxAddon{
             name = "AdBlock for Firefox";
