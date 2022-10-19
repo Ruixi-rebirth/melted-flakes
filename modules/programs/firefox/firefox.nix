@@ -101,6 +101,7 @@
           (pkgs.fetchFirefoxAddon{
             name = "Vim Vixen";
             url = "https://addons.mozilla.org/firefox/downloads/file/3845233/vim_vixen-1.2.3.xpi";
+            sha256 = "sha256-j4bHesjmXf0/GjJpC1bOkjGsdobVqGv4Xj1cxaOp6bU=";
           })
         ];
       extraPolicies = {
