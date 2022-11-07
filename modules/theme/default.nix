@@ -1,0 +1,4 @@
+[
+./gtk.nix
+./qt.nix
+]
