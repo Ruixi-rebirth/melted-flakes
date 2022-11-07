@@ -1,0 +1,13 @@
+diff --git a/libnemo-private/nemo-icon-container.c b/libnemo-private/nemo-icon-container.c
+index 5ea40e6..bf5dd6e 100644
+--- a/libnemo-private/nemo-icon-container.c
++++ b/libnemo-private/nemo-icon-container.c
+@@ -2738,7 +2738,7 @@ destroy (GtkWidget *object)
+ 
+ 	/* destroy interactive search dialog */
+ 	if (container->details->search_window) {
+-		gtk_widget_destroy (container->details->search_window);
++		//gtk_widget_destroy (container->details->search_window);
+ 		container->details->search_window = NULL;
+ 		container->details->search_entry = NULL;
+ 	}
