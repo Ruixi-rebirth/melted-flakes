@@ -1,0 +1,3 @@
+{{ if .Site.Params.comments.enabled }}
+    {{ partial (printf "comments/provider/%s" .Site.Params.comments.provider) . }}
+{{ end }}
