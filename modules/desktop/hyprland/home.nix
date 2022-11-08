@@ -321,6 +321,9 @@
       windowrule=animation slide right,kitty
       windowrule=workspace name:QQ, title:Icalingua++
       windowrule=workspace name:TG, telegramdesktop
+      windowrule=float,ncmpcpp
+      windowrule=move 25%-,ncmpcpp
+      windowrule=size 960 540,ncmpcpp
     '';
   };
 }
