@@ -37,6 +37,7 @@
     sessionPath = [
       "$HOME/.npm-global/bin"
       "$HOME/.local/bin"
+      "$HOME/Codelearning/go/bin"
     ];
   };
 }
