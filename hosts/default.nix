@@ -17,28 +17,12 @@ in
     specialArgs = { inherit inputs user; };
     modules = [
       ./laptop
+      impermanence.nixosModules.impermanence
       ./system.nix
       nur.nixosModules.nur
       ../modules/programs/nurpkgs.nix
       hyprland.nixosModules.default
       home-manager.nixosModules.home-manager
-      impermanence.nixosModules.impermanence
-      {
-        environment.persistence."/nix/" = {
-          directories = [
-            "/etc/NetworkManager/system-connections/"
-            "/etc/nixos"
-            "/home/aria"
-            "/home/jeux"
-            "/home/baptiste"
-            "/nix/var/nix"
-            "/root"
-            "/var/lib"
-            "/var/log"
-            "/tmp"
-          ];
-        };
-      }
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
