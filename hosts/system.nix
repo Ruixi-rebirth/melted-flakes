@@ -50,7 +50,6 @@
         "/etc/NetworkManager"
         "/var/log"
         "/var/lib"
-        "/home/ruixi"
       ];
       files = [
         #      "/etc/machine-id"
