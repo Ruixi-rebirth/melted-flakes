@@ -13,7 +13,6 @@
       };
       impermanence = {
         url = "github:nix-community/impermanence";
-        inputs.nixpkgs.follows = "nixpkgs";
       };
       nur = {
         url = "github:nix-community/NUR"; # NUR Packages
