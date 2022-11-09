@@ -17,7 +17,7 @@ in
     specialArgs = { inherit inputs user; };
     modules = [
       ./laptop
-      impermanence.nixosModules.impermanence
+      # impermanence.nixosModules.impermanence
       ./system.nix
       nur.nixosModules.nur
       ../modules/programs/nurpkgs.nix

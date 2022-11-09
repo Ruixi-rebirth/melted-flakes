@@ -44,19 +44,19 @@
     ];
   };
   environment = {
-    persistence."/nix/persist/" = {
-      directories = [
-        "/etc/nixos" # bind mounted from /nix/persist/etc/nixos to /etc/nixos
-        "/etc/NetworkManager"
-        "/var/log"
-        "/var/lib"
-        "/home/ruixi"
-      ];
-      files = [
-        #      "/etc/machine-id"
-        "/etc/doas.conf"
-      ];
-    };
+    # persistence."/nix/persist/" = {
+    #   directories = [
+    #     "/etc/nixos" # bind mounted from /nix/persist/etc/nixos to /etc/nixos
+    #     "/etc/NetworkManager"
+    #     "/var/log"
+    #     "/var/lib"
+    #     "/home/ruixi"
+    #   ];
+    #   files = [
+    #     #      "/etc/machine-id"
+    #     "/etc/doas.conf"
+    #   ];
+    # };
     variables = {
       EDITOR = "nvim";
       BROWSER = "firefox";
