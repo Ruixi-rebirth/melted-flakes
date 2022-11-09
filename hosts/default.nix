@@ -17,7 +17,7 @@ in
     specialArgs = { inherit inputs user; };
     modules = [
       ./laptop
-      # impermanence.nixosModules.impermanence
+      impermanence.nixosModules.impermanence
       ./system.nix
       nur.nixosModules.nur
       ../modules/programs/nurpkgs.nix
@@ -28,7 +28,7 @@ in
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = { inherit user; };
         home-manager.users.${user} = {
-          imports = [ (import ./laptop/home.nix) ];
+          imports = [ (import ./laptop/home.nix) ] ++ [ (inputs.impermanence + "/home-manager.nix") ];
         };
         nixpkgs = {
           overlays = [
