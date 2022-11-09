@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
@@ -14,12 +15,26 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/f23014c8-4cfe-4640-9462-f6a25aff4195";
+    {
+      device = "none";
+      fsType = "tmpfs";
+      options = [ "size=3G" "mode=755" ]; # mode=755 so only root can write to those files
+    };
+  fileSystems."/home/ruixi" =
+    {
+      device = "none";
+      fsType = "tmpfs"; # Can be stored on normal drive or on tmpfs as well
+      options = [ "size=4G" "mode=777" ];
+    };
+  fileSystems."/nix" =
+    {
+      device = "/dev/disk/by-uuid/f23014c8-4cfe-4640-9462-f6a25aff4195";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/3C0D-7D32";
+    {
+      device = "/dev/disk/by-uuid/3C0D-7D32";
       fsType = "vfat";
     };
 

@@ -1,6 +1,9 @@
 { config, pkgs, lib, inputs, user, ... }:
-
+# let
+#   impermanence = builtins.fetchTarball "https://github.com/nix-community/impermanence/archive/master.tar.gz";
+# in
 {
+  # imports = [ "${impermanence}/nixos.nix" ];
   nixpkgs.system = "x86_64-linux";
 
   networking = {
@@ -41,6 +44,19 @@
     ];
   };
   environment = {
+    persistence."/nix/persist/system" = {
+      directories = [
+        "/etc/nixos" # bind mounted from /nix/persist/system/etc/nixos to /etc/nixos
+        "/etc/NetworkManager"
+        "/var/log"
+        "/var/lib"
+        "/home/ruixi"
+      ];
+      files = [
+        #      "/etc/machine-id"
+        "/etc/doas.conf"
+      ];
+    };
     variables = {
       EDITOR = "nvim";
       BROWSER = "firefox";
