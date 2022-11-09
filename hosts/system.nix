@@ -38,7 +38,6 @@
       tdesktop
       pkgs.sway-contrib.grimshot
       imagemagick
-      netease-cloud-music-gtk
     ];
   };
   environment = {
