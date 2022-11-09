@@ -24,6 +24,22 @@ in
       home-manager.nixosModules.home-manager
       impermanence.nixosModules.impermanence
       {
+        environment.persistence."/nix/" = {
+          directories = [
+            "/etc/NetworkManager/system-connections/"
+            "/etc/nixos"
+            "/home/aria"
+            "/home/jeux"
+            "/home/baptiste"
+            "/nix/var/nix"
+            "/root"
+            "/var/lib"
+            "/var/log"
+            "/tmp"
+          ];
+        };
+      }
+      {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = { inherit user; };
