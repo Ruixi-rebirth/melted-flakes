@@ -44,9 +44,9 @@
     ];
   };
   environment = {
-    persistence."/nix/persist/system" = {
+    persistence."/nix/persist/" = {
       directories = [
-        "/etc/nixos" # bind mounted from /nix/persist/system/etc/nixos to /etc/nixos
+        "/etc/nixos" # bind mounted from /nix/persist/etc/nixos to /etc/nixos
         "/etc/NetworkManager"
         "/var/log"
         "/var/lib"

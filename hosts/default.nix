@@ -22,6 +22,7 @@ in
       ../modules/programs/nurpkgs.nix
       hyprland.nixosModules.default
       home-manager.nixosModules.home-manager
+      impermanence.nixosModules.impermanence
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
