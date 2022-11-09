@@ -7,6 +7,7 @@
       swayidle
       swaylock-effects
       pamixer
+      hyprpicker
     ];
   };
   home.file = {
