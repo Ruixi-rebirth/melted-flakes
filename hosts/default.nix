@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, nur, user, hyprland, ... }:
+{ lib, inputs, nixpkgs, home-manager, nur, user, hyprland, impermanence, ... }:
 
 let
   system = "x86_64-linux"; # System architecture
