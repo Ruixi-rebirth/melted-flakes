@@ -65,6 +65,7 @@
           ".cache"
           "Codelearning"
           ".npm-global"
+          ".config"
           "Flakes"
           { directory = ".gnupg"; mode = "0700"; }
           { directory = ".ssh"; mode = "0700"; }
