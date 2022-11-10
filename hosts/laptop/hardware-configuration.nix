@@ -5,8 +5,7 @@
 
 {
   imports =
-    [
-      (modulesPath + "/installer/scan/not-detected.nix")
+    [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
@@ -15,26 +14,24 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    {
-      device = "none";
+    { device = "none";
       fsType = "tmpfs";
-      options = [ "size=3G" "mode=755" ]; # mode=755 so only root can write to those files
+      options = [ "defaults" "size=8G" "mode=755" ];
     };
-  fileSystems."/home/ruixi" =
-    {
-      device = "none";
-      fsType = "tmpfs"; # Can be stored on normal drive or on tmpfs as well
-      options = [ "size=4G" "mode=777" ];
-    };
+
   fileSystems."/nix" =
-    {
-      device = "/dev/disk/by-uuid/f23014c8-4cfe-4640-9462-f6a25aff4195";
+    { device = "/dev/disk/by-uuid/b0f7587b-1eb4-43ad-b4a1-e6385b8511ae";
       fsType = "ext4";
     };
 
+  fileSystems."/home/ruixi" =
+    { device = "none";
+      fsType = "tmpfs";
+      options = [ "defaults" "size=8G" "mode=777" ];
+    };
+
   fileSystems."/boot" =
-    {
-      device = "/dev/disk/by-uuid/3C0D-7D32";
+    { device = "/dev/disk/by-uuid/3C0D-7D32";
       fsType = "vfat";
     };
 
@@ -45,9 +42,11 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.docker0.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp65s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
 
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

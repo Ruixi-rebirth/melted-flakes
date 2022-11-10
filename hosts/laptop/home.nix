@@ -20,17 +20,6 @@
   programs = {
     home-manager.enable = true;
   };
-  home.persistence."/nix/dotfiles" = {
-    removePrefixDirectory = true; # for GNU Stow styled dotfile folders
-    allowOther = true;
-    directories = [
-      # fuse mounted from /nix/dotfiles/Firefox/.mozilla to /home/$USERNAME/.mozilla
-      "Firefox/.mozilla"
-    ];
-    files = [
-      # "Atom/.atom/config.cson"
-      # "Atom/.atom/github.cson"
-    ];
-  };
+
   home.stateVersion = "22.11";
 }

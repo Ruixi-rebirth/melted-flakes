@@ -1,9 +1,8 @@
 { config, pkgs, lib, inputs, user, ... }:
-# let
-#   impermanence = builtins.fetchTarball "https://github.com/nix-community/impermanence/archive/master.tar.gz";
-# in
+
 {
-  # imports = [ "${impermanence}/nixos.nix" ];
+  users.mutableUsers = false;
+  users.users.root.initialPassword = "ruixi";
   nixpkgs.system = "x86_64-linux";
 
   networking = {
@@ -34,6 +33,7 @@
     };
   };
   users.users.${user} = {
+    initialPassword = "ruixi";
     shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
@@ -48,13 +48,34 @@
       directories = [
         "/etc/nixos" # bind mounted from /nix/persist/etc/nixos to /etc/nixos
         "/etc/NetworkManager"
+        "/etc/v2raya"
         "/var/log"
         "/var/lib"
       ];
       files = [
         #      "/etc/machine-id"
-        "/etc/doas.conf"
+        #"/etc/doas.conf"
       ];
+      users.ruixi = {
+        directories = [
+          "Downloads"
+          "Music"
+          "Pictures"
+          "Documents"
+          "Videos"
+          ".cache"
+          "Codelearning"
+          ".npm-global"
+	  "Flakes"
+          { directory = ".gnupg"; mode = "0700"; }
+          { directory = ".ssh"; mode = "0700"; }
+          ".local"
+          ".mozilla"
+        ];
+        files = [
+          # ".npmrc"
+        ];
+      };
     };
     variables = {
       EDITOR = "nvim";
