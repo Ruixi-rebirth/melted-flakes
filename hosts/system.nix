@@ -53,8 +53,7 @@
         "/var/lib"
       ];
       files = [
-        "/etc/machine-id"
-        #"/etc/doas.conf"
+        # "/etc/machine-id"
       ];
       users.ruixi = {
         directories = [
