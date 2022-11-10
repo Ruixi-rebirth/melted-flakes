@@ -6,6 +6,8 @@ let
     if [ ! -d ~/.npm-global ]; then  
              mkdir ~/.npm-global
              npm set prefix ~/.npm-global
+      else 
+             npm set prefix ~/.npm-global
     fi
     npm i -g npm vscode-langservers-extracted vscode-langservers-extracted typescript typescript-language-server bash-language-server
   '';
