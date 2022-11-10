@@ -52,9 +52,6 @@
         "/var/log"
         "/var/lib"
       ];
-      files = [
-        "/etc/machine-id"
-      ];
       users.ruixi = {
         directories = [
           "Downloads"
@@ -71,9 +68,6 @@
           { directory = ".ssh"; mode = "0700"; }
           ".local"
           ".mozilla"
-        ];
-        files = [
-          ".npmrc"
         ];
       };
     };
