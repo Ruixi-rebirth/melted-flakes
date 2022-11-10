@@ -73,7 +73,7 @@
           ".mozilla"
         ];
         files = [
-          ".npmrc"
+          # ".npmrc"
         ];
       };
     };
