@@ -74,6 +74,7 @@
         ];
         files = [
           ".npmrc"
+          "a.txt"
         ];
       };
     };
