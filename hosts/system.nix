@@ -1,8 +1,6 @@
 { config, pkgs, lib, inputs, user, ... }:
 
 {
-  users.mutableUsers = false;
-  users.users.root.initialPassword = "ruixi";
   nixpkgs.system = "x86_64-linux";
 
   networking = {
@@ -32,8 +30,10 @@
       enable = true;
     };
   };
+  users.mutableUsers = false;
+  users.users.root.initialHashPassword = "$6$4lwj3AGq8M9CQE2.$q8cNPghWHTl/dfE0dMPm2vsh0cMpY2gWxw91/Uadi8jShbvUHJJu3Jg0CvSpqrlEB7a3kvWDf/p2CI3mSqP1c/";
   users.users.${user} = {
-    initialPassword = "ruixi";
+    initialHashPassword = "$6$4lwj3AGq8M9CQE2.$q8cNPghWHTl/dfE0dMPm2vsh0cMpY2gWxw91/Uadi8jShbvUHJJu3Jg0CvSpqrlEB7a3kvWDf/p2CI3mSqP1c/";
     shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
@@ -66,7 +66,7 @@
           ".cache"
           "Codelearning"
           ".npm-global"
-	  "Flakes"
+          "Flakes"
           { directory = ".gnupg"; mode = "0700"; }
           { directory = ".ssh"; mode = "0700"; }
           ".local"
