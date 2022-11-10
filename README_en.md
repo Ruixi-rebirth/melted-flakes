@@ -57,6 +57,6 @@ cd /mnt/etc/nixos/nixos-config && rm -rf .git
 ```
 8. Perform install
 ```bash
-nixos-install --flake .#laptop
+nixos-install --no-root-passwd --flake .#laptop
 ```
 
