@@ -33,15 +33,63 @@
 ```
 
 ## 如何安装?
-0. 分区和格式化分区自己完成
-1. nixos-generate-config --root /mnt 
-2.
+0. 假设我已经分好两个分区`/dev/nvme0n1p1` `/dev/nvme0n1p3`
+1. 格式化分区
 ```bash
-$ git clone  https://github.com/Ruixi-rebirth/nixos-config.git /mnt/etc/nixos/ 
+  mkfs.fat -F 32 /dev/nvme0n1p1 
+  mkfs.ext4 /dev/nvme0n1p3
+```
+2. 挂载
+```bash
+  mount -t tmpfs none /mnt 
+  mkdir -p /mnt/{boot,nix}
+  mount /dev/nvme0n1p3 /mnt/nix
+  mount /dev/nvme0n1p1 /mnt/boot 
+```
+3. 生成一个基本的配置 
+```bash
+  nixos-generate-config --root /mnt
+```
+4. 克隆仓库到本地
+```bash
+git clone  https://github.com/Ruixi-rebirth/nixos-config.git /mnt/etc/nixos/ 
+```
+5. 将 /mnt/etc/nixos 中的 `hardware-configuration.nix` 拷贝到 /mnt/etc/nixos/nixos-config/hosts/laptop/hardware-configuration.nix
+```bash 
+cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/nixos-config/hosts/laptop/hardware-configuration.nix
+```
+6. 修改被覆盖后的 `hardware-configuration.nix`
+```nix
+...
+#这只是一个例子
+fileSystems."/" =
+    { device = "none";
+      fsType = "tmpfs";
+      options = [ "defaults" "size=8G" "mode=755" ];
+    };
 
-$ cd /mnt/etc/nixos/nixos-config && rm -rf .git 
+  fileSystems."/nix" =
+    { device = "/dev/disk/by-uuid/b0f7587b-1eb4-43ad-b4a1-e6385b8511ae";
+      fsType = "ext4";
+    };
 
-$ cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/nixos-config/hosts/laptop/hardware-configuration.nix
+  fileSystems."/home/ruixi" =
+    { device = "none";
+      fsType = "tmpfs";
+      options = [ "defaults" "size=8G" "mode=777" ];
+    };
 
-$ nixos-install --flake .#laptop
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/3C0D-7D32";
+      fsType = "vfat";
+    };
+...
+```
+7. 进入克隆的仓库并移除 '/mnt/etc/nixos/nixos-config/.git'
+```bash 
+cd /mnt/etc/nixos/nixos-config && rm -rf .git
+```
+8. 安装
+```bash
+nixos-install --flake .#laptop
 ```

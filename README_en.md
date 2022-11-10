@@ -1,13 +1,62 @@
 ## How to install ?
-0. Partitioning and formatting partitions is done by yourself !
-1. nixos-generate-config --root /mnt 
-2.
+0. Suppose I have divided two partitions `/dev/nvme0n1p1` `/dev/nvme0n1p3`
+1. format the partition 
 ```bash
-$ git clone  https://github.com/Ruixi-rebirth/nixos-config.git /mnt/etc/nixos/ 
-
-$ cd /mnt/etc/nixos/nixos-config && rm -rf .git 
-
-$ cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/nixos-config/hosts/laptop/hardware-configuration.nix
-
-$ nixos-install --flake .#laptop
+  mkfs.fat -F 32 /dev/nvme0n1p1 
+  mkfs.ext4 /dev/nvme0n1p3
 ```
+2. mount 
+```bash
+  mount -t tmpfs none /mnt 
+  mkdir -p /mnt/{boot,nix}
+  mount /dev/nvme0n1p3 /mnt/nix
+  mount /dev/nvme0n1p1 /mnt/boot 
+```
+3. Generate a basic configuration 
+```bash
+  nixos-generate-config --root /mnt
+```
+4. clone the repository locally 
+```bash
+git clone  https://github.com/Ruixi-rebirth/nixos-config.git /mnt/etc/nixos/ 
+```
+5. Copy `hardware-configuration.nix` from /mnt/etc/nixos to /mnt/etc/nixos/nixos-config/hosts/laptop/hardware-configuration.nix 
+```bash 
+cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/nixos-config/hosts/laptop/hardware-configuration.nix
+```
+6. Modify the overwritten `hardware-configuration.nix` 
+```nix
+...
+#This is just an example
+fileSystems."/" =
+    { device = "none";
+      fsType = "tmpfs";
+      options = [ "defaults" "size=8G" "mode=755" ];
+    };
+
+  fileSystems."/nix" =
+    { device = "/dev/disk/by-uuid/b0f7587b-1eb4-43ad-b4a1-e6385b8511ae";
+      fsType = "ext4";
+    };
+
+  fileSystems."/home/ruixi" =
+    { device = "none";
+      fsType = "tmpfs";
+      options = [ "defaults" "size=8G" "mode=777" ];
+    };
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/3C0D-7D32";
+      fsType = "vfat";
+    };
+...
+```
+7. Go into the cloned repository and remove '/mnt/etc/nixos/nixos-config/.git' 
+```bash 
+cd /mnt/etc/nixos/nixos-config && rm -rf .git
+```
+8. Perform install
+```bash
+nixos-install --flake .#laptop
+```
+
