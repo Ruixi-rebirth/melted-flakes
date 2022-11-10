@@ -53,7 +53,7 @@
         "/var/lib"
       ];
       files = [
-        # "/etc/machine-id"
+        "/etc/machine-id"
       ];
       users.ruixi = {
         directories = [
