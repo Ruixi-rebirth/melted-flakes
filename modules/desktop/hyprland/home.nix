@@ -164,6 +164,8 @@
       bind = $mainMod, 9, workspace, 9
       bind = $mainMod, period, workspace, e+1
       bind = $mainMod, comma, workspace,e-1
+      bind = $mainMod, Q, workspace,QQ
+      bind = $mainMod, T, workspace,TG
 
       #-------------------------------#
       # special workspace(scratchpad) #
