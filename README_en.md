@@ -1,4 +1,4 @@
-## How to install ?
+## How to install ?(root on tmpfs)
 0. Suppose I have divided two partitions `/dev/nvme0n1p1` `/dev/nvme0n1p3`
 1. format the partition 
 ```bash

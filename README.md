@@ -32,7 +32,7 @@
 └── README.md
 ```
 
-## 如何安装?
+## 如何安装?(root on tmpfs)
 0. 假设我已经分好两个分区`/dev/nvme0n1p1` `/dev/nvme0n1p3`
 1. 格式化分区
 ```bash
