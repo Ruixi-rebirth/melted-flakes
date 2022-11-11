@@ -39,12 +39,6 @@ fileSystems."/" =
       fsType = "ext4";
     };
 
-  fileSystems."/home/ruixi" =
-    { device = "none";
-      fsType = "tmpfs";
-      options = [ "defaults" "size=8G" "mode=777" ];
-    };
-
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/3C0D-7D32";
       fsType = "vfat";
