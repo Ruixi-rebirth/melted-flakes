@@ -3,9 +3,15 @@
 <h2 align="center">Ruixi-rebirth's NixOS Config</h2>
 <p align="center"><img src="https://user-images.githubusercontent.com/75824585/196195007-ecebb290-2c6b-4fab-9e1e-2dbb12f7eb44.png" width=300px></p>
 
+### ScreenShot
+<details>
+<summary><b>Click to expend</b></summary>
+
 ![](./screenshot/screenshot.png)
 
-## 目录结构
+</details>
+
+### 目录结构
 ```
 .
 ├── flake.lock
@@ -32,7 +38,7 @@
 └── README.md
 ```
 
-## 如何安装?(root on tmpfs)
+### 如何安装?(root on tmpfs)
 0. 假设我已经分好两个分区`/dev/nvme0n1p1` `/dev/nvme0n1p3`
 1. 格式化分区
 ```bash
