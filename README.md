@@ -83,7 +83,12 @@ fileSystems."/" =
 ```bash 
 cd /mnt/etc/nixos/nixos-config && rm -rf .git
 ```
-8. 安装
+8. 修改root和ruixi 密码,使用 `mkpasswd -m sha-512` 命令生成的hash密码将 `./hosts/system.nix` 中的 `users.users.<name>.hashedPassword` 的值替换掉
+9. 安装
 ```bash
 nixos-install --no-root-passwd --flake .#laptop
+```
+10. 重启
+```bash
+reboot
 ```
