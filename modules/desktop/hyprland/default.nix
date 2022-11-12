@@ -1,8 +1,17 @@
 { config, lib, pkgs, ... }:
 {
   imports = [ ../../programs/waybar/hyprland_waybar.nix ];
+
   programs.hyprland = {
     enable = true;
+  };
+
+  programs.fish = {
+    enable = true;
+    loginShellInit = ''
+      set TTY1 (tty)
+      [ "$TTY1" = "/dev/tty1" ] && exec dbus-run-session Hyprland
+    '';
   };
 
   security.pam.services.swaylock = { };

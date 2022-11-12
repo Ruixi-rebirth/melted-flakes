@@ -3,12 +3,6 @@
 {
   programs.fish = {
     enable = true;
-    loginShellInit = ''
-      # set TTY1 (tty)
-      # [ "$TTY1" = "/dev/tty1" ] && exec dbus-run-session sway --unsupported-gpu
-      set TTY1 (tty)
-      [ "$TTY1" = "/dev/tty1" ] && exec dbus-run-session Hyprland
-    '';
   };
 
   home.file.".config/fish/conf.d/mocha.fish".text = import ./conf.d/mocha_theme.nix;
