@@ -93,7 +93,8 @@
       animations {
         enabled = yes
 
-        bezier = easeOutElastic, 0.05, 0.9, 0.1, 1.05
+        # bezier = myBezier, 0.05, 0.9, 0.1, 1.05
+        bezier=overshot,0.05,0.9,0.1,1.1
 
         animation = windows, 1, 5, myBezier
         animation = windowsOut, 1, 5, default, popin 80%
