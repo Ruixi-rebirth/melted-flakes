@@ -81,11 +81,11 @@
         shadow_range = 4
         shadow_render_power = 3
         shadow_ignore_window = true
-      #col.shadow = 
-      #col.shadow_inactive
-      #shadow_offset
+      # col.shadow = 
+      # col.shadow_inactive
+      # shadow_offset
         dim_inactive = false
-      #dim_strength = #0.0 ~ 1.0
+      # dim_strength = #0.0 ~ 1.0
         blur_ignore_opacity = false
         col.shadow = rgba(1a1a1aee)
       }
@@ -111,8 +111,6 @@
         animation = fade, 1, 8, default
         animation = workspaces, 1, 6, overshot, slidevert
       }
-
-
 
       gestures {
         workspace_swipe = true
