@@ -90,22 +90,33 @@
         col.shadow = rgba(1a1a1aee)
       }
 
+      # animations {
+      #   enabled = yes
+      #
+      #   bezier = easeOutElastic, 0.05, 0.9, 0.1, 1.05
+      #   # bezier=overshot,0.05,0.9,0.1,1.1
+      #
+      #   animation = windows, 1, 5, easeOutElastic
+      #   animation = windowsOut, 1, 5, default, popin 80%
+      #   animation = border, 1, 8, default
+      #   animation = fade, 1, 5, default
+      #   animation = workspaces, 1, 6, default
+      # }
       animations {
-        enabled = yes
-
-        bezier = easeOutElastic, 0.05, 0.9, 0.1, 1.05
+        enabled=1
         # bezier=overshot,0.05,0.9,0.1,1.1
-
-        animation = windows, 1, 5, easeOutElastic
-        animation = windowsOut, 1, 5, default, popin 80%
-        animation = border, 1, 8, default
-        animation = fade, 1, 5, default
-        animation = workspaces, 1, 6, default
+        bezier=overshot,0.13,0.99,0.29,1.1
+        animation=windows,1,4,overshot,slide
+        animation=border,1,10,default
+        animation=fade,1,10,default
+        animation=workspaces,1,6,overshot,slidevert
       }
+
 
 
       gestures {
         workspace_swipe = true
+        workspace_swipe_fingers = 4
         workspace_swipe_distance = 250
         workspace_swipe_invert = true
         workspace_swipe_min_speed_to_force = 15
