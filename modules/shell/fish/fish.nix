@@ -1,6 +1,11 @@
 { lib, pkgs, user, ... }:
 
 {
+  programs.fish = {
+    enable = true;
+    loginShellInit = ''
+    '';
+  };
   home.file.".config/fish/conf.d/mocha.fish".text = import ./conf.d/mocha_theme.nix;
   home.file.".config/fish/fish_variables".text = import ./fish_variables.nix;
   home.file.".config/fish/functions/f.fish".text = import ./functions/f.nix;
