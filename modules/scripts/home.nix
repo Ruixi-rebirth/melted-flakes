@@ -7,7 +7,7 @@ let
   '';
   wallpaper_random = pkgs.writeShellScriptBin "wallpaper_random" ''
     #!/bin/bash
-    ps -ef | grep swaybg | grep -v 'grep' | awk '{print $2}' |  xargs kill
+    ps -ef | grep 'swaybg' | grep -v 'grep' | awk '{print $2}' |  xargs kill
     swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
   '';
   grimshot_watermark = pkgs.writeShellScriptBin "grimshot_watermark" ''
@@ -54,7 +54,7 @@ let
   '';
   dynamic_wallpaper = pkgs.writeShellScriptBin "dynamic_wallpaper" ''
     #!/bin/bash
-    ps -ef | grep dynamic_wallpaper | grep -v 'grep' | awk '{print $2}' |  xargs kill
+    ps -ef | grep 'dynamic_wallpaper' | grep -v 'grep' | awk '{print $2}' |  xargs kill
     swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
     OLD_PID=$!
     while true; do
