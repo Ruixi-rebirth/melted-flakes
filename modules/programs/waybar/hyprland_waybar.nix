@@ -229,7 +229,7 @@ in
         };
         "clock" = {
           "on-click" = "wallpaper_random";
-          "on-click-right" = "pkill dynamic_wallpaper || dynamic_wallpaper &";
+          "on-click-right" = "killall dynamic_wallpaper || dynamic_wallpaper &";
           "interval" = 1;
           "format" = "{:%I:%M %p  %A %b %d}";
           "tooltip" = true;
