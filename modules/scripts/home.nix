@@ -6,9 +6,15 @@ let
     cava -p ~/.config/cava/config1 | sed -u 's/;//g;s/0/▁/g;s/1/▂/g;s/2/▃/g;s/3/▄/g;s/4/▅/g;s/5/▆/g;s/6/▇/g;s/7/█/g;'
   '';
   wallpaper_random = pkgs.writeShellScriptBin "wallpaper_random" ''
-    #!/bin/bash
-    ps -ef | grep 'swaybg' | grep -v 'grep' | awk '{print $2}' |  xargs kill
-    swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
+        #!/bin/bash
+        is_swaybg_ServerExist=`ps -ef|grep -m 1 swaybg|grep -v "grep"|wc -l`
+        if [ "$is_swaybg_ServerExist" = "0" ]; then
+          echo "swaybg_server not found" > /dev/null 2>&1
+    #	exit;
+        elif [ "$is_swaybg_ServerExist" = "1" ]; then
+          ps -ef | grep 'wallpaper' | grep -v 'grep' | awk '{print $2}' | xargs kill
+        fi
+        swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
   '';
   grimshot_watermark = pkgs.writeShellScriptBin "grimshot_watermark" ''
         #!/bin/bash
@@ -53,18 +59,25 @@ let
            --fade-in 0.3
   '';
   dynamic_wallpaper = pkgs.writeShellScriptBin "dynamic_wallpaper" ''
-    #!/bin/bash
-    ps -ef | grep 'wallpaper' | grep -v 'grep' | awk '{print $2}' | xargs kill
-    swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
-    OLD_PID=$!
-    while true; do
-        sleep 120
+        #!/bin/bash
+        is_swaybg_ServerExist=`ps -ef|grep -m 1 swaybg|grep -v "grep"|wc -l`
+        if [ "$is_swaybg_ServerExist" = "0" ]; then
+          echo "swaybg_server not found" > /dev/null 2>&1
+    #	exit;
+        elif [ "$is_swaybg_ServerExist" = "1" ]; then
+          ps -ef | grep 'wallpaper' | grep -v 'grep' | awk '{print $2}' | xargs kill
+        fi
+    # Automatically change wallpaper every 10 minutes
         swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
-        NEXT_PID=$!
-        sleep 5
-        kill $OLD_PID
-        OLD_PID=$NEXT_PID
-    done
+        OLD_PID=$!
+        while true; do
+            sleep 120
+            swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
+            NEXT_PID=$!
+            sleep 5
+            kill $OLD_PID
+            OLD_PID=$NEXT_PID
+        done
   '';
   launch_waybar = pkgs.writeShellScriptBin "launch_waybar" ''
         #!/bin/bash
