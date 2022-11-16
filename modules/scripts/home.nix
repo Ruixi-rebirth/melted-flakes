@@ -49,7 +49,6 @@ let
            --fade-in 0.3
   '';
   dynamic_wallpaper = pkgs.writeShellScriptBin "dynamic_wallpaper" ''
-    killall dynamic_wallpaper
     swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
     OLD_PID=$!
     while true; do
