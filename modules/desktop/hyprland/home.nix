@@ -296,8 +296,8 @@
       #------#
       # wall #
       #------#
-      # exec-once = dynamic_wallpaper
-       exec-once = swaybg -i "${./background/default.png}"
+      exec-once = dynamic_wallpaper
+      # exec-once = swaybg -i "${./background/default.png}"
 
       #------------#
       # auto start #
