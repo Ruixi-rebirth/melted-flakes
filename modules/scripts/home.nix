@@ -6,6 +6,7 @@ let
   '';
   wallpaper_random = pkgs.writeShellScriptBin "wallpaper_random" ''
     killall swaybg
+    killall dynamic_wallpaper
     swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
   '';
   grimshot_watermark = pkgs.writeShellScriptBin "grimshot_watermark" ''
@@ -49,6 +50,9 @@ let
            --fade-in 0.3
   '';
   dynamic_wallpaper = pkgs.writeShellScriptBin "dynamic_wallpaper" ''
+    killall swaybg
+    killall dynamic_wallpaper
+
     swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
     OLD_PID=$!
     while true; do
