@@ -220,8 +220,8 @@ in
           "tooltip" = false;
         };
         "clock" = {
-          "on-click" = "wallpaper_random";
-          "on-click-right" = "dynamic_wallpaper";
+          "on-click" = "ps -ef | grep 'swaybg' | grep -v 'grep' | awk '{print $2}' | xargs kill || wallpaper_random";
+          "on-click-right" = "ps -ef | grep 'wallpaper' | grep -v 'grep' | awk '{print $2}' | xargs kill || dynamic_wallpaper &";
           "interval" = 1;
           "format" = "{:%I:%M %p  %A %b %d}";
           "tooltip" = true;
