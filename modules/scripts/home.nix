@@ -54,7 +54,6 @@ let
   '';
   dynamic_wallpaper = pkgs.writeShellScriptBin "dynamic_wallpaper" ''
     #!/bin/bash
-    ps -ef | grep 'dynamic_wallpaper' | grep -v 'grep' | awk '{print $2}' |  xargs kill
     swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
     OLD_PID=$!
     while true; do
