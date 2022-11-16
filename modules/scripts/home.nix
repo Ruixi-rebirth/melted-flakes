@@ -12,7 +12,7 @@ let
           echo "swaybg_server not found" > /dev/null 2>&1
     #	exit;
         elif [ "$is_swaybg_ServerExist" = "1" ]; then
-          ps -ef | grep 'wallpaper' | grep -v 'grep' | awk '{print $2}' | xargs kill
+          ps -ef | grep 'wallpaper' | grep -v 'grep' | awk '{print $2}' | xargs kill -9
         fi
         swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
   '';
