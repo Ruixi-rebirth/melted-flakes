@@ -142,7 +142,8 @@
       bind = $mainMod SHIFT, P, killactive,
       bind = $mainMod SHIFT, Q, exit,
       bind = $mainMod SHIFT, Space, togglefloating,
-      bind=bind=$mainMod,F,fullscreen
+      bind = $mainMod,F,fullscreen
+      bind = $mainMod,Y,pin
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, J, togglesplit, # dwindle
 
