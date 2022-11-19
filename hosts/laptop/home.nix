@@ -8,8 +8,8 @@
     (import ../../modules/shell) ++
     (import ../../modules/editors) ++
     (import ../../modules/programs) ++
-    # [ (import ../../modules/environment/sway-variables.nix) ] ++
-    [ (import ../../modules/environment/hypr-variables.nix) ] ++
+    [ (import ../../modules/environment/sway-variables.nix) ] ++
+    # [ (import ../../modules/environment/hypr-variables.nix) ] ++
     (import ../../modules/theme) ++
     (import ../../modules/dev_lang);
 
