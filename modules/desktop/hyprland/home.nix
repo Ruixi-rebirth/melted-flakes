@@ -307,6 +307,7 @@
       exec-once = fcitx5 &
       exec-once = mako &
       exec-once = nm-applet --indicator &
+      exec-once = myswayidle &
 
       #---------------#
       # windows rules #
