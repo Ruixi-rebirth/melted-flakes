@@ -7,8 +7,6 @@
     [ (import ../../modules/scripts/home.nix) ] ++
     (import ../../modules/shell) ++
     (import ../../modules/editors) ++
-    [ (import ../../modules/programs/fcitx5.nix) ] ++
-    [ (import ../../modules/programs/gpg.nix) ] ++
     (import ../../modules/programs) ++
     (import ../../modules/theme) ++
     (import ../../modules/dev_lang);
