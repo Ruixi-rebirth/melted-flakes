@@ -177,9 +177,9 @@
         #
         # You can get the names of your outputs by running: swaymsg -t get_outputs
         # exec_always --no-startup-id swaybg -i ~/.config/sway/wallpaper/02.png 
-        #output "*" bg "${./background/default.png}" fill
+          output "*" bg "${./background/default.png}" fill
         # Automatically change wallpapers at intervals
-        exec_always --no-startup-id dynamic_wallpaper 
+        # exec_always --no-startup-id dynamic_wallpaper 
 
     #-------------------------------------------------#
     # Control volume,monitor brightness,media players #
