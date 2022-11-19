@@ -49,11 +49,6 @@ let
            --grace 2 \
            --fade-in 0.3
   '';
-  myswayidle = pkgs.writeShellScriptBin "myswayidle" ''
-    swayidle -w \
-      timeout 900 'systemctl suspend' \
-      before-sleep 'myswaylock'
-  '';
   dynamic_wallpaper = pkgs.writeShellScriptBin "dynamic_wallpaper" ''
     killall swaybg
     swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
@@ -85,7 +80,6 @@ in
     wallpaper_random
     grimshot_watermark
     myswaylock
-    myswayidle
     dynamic_wallpaper
     launch_waybar
   ];

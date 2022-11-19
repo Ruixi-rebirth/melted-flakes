@@ -4,7 +4,6 @@
   home = {
     packages = with pkgs; [
       swaybg
-      swayidle
       swaylock-effects
       pamixer
       # hyprpicker
@@ -307,7 +306,6 @@
       exec-once = fcitx5 &
       exec-once = mako &
       exec-once = nm-applet --indicator &
-      exec-once = myswayidle &
 
       #---------------#
       # windows rules #
