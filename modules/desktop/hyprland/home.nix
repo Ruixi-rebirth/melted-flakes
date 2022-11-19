@@ -1,6 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [ ../../environment/hypr-variables.nix ];
+
   home = {
     packages = with pkgs; [
       swaybg

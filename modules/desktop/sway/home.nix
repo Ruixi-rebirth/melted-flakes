@@ -1,6 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [ ../../environment/sway-variables.nix ];
+
   home.file = {
     ".config/sway/config".text = ''
 

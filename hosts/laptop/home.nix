@@ -2,14 +2,14 @@
 
 {
   imports =
-    [ (import ../../modules/desktop/sway/home.nix) ] ++
-    # [ (import ../../modules/desktop/hyprland/home.nix) ] ++
+    # [ (import ../../modules/desktop/sway/home.nix) ] ++
+    [ (import ../../modules/desktop/hyprland/home.nix) ] ++
     [ (import ../../modules/scripts/home.nix) ] ++
     (import ../../modules/shell) ++
     (import ../../modules/editors) ++
+    [ (import ../../modules/programs/fcitx5.nix) ] ++
+    [ (import ../../modules/programs/gpg.nix) ] ++
     (import ../../modules/programs) ++
-    [ (import ../../modules/environment/sway-variables.nix) ] ++
-    # [ (import ../../modules/environment/hypr-variables.nix) ] ++
     (import ../../modules/theme) ++
     (import ../../modules/dev_lang);
 
