@@ -148,6 +148,7 @@
       ntfs3g
       killall
       nodejs
+      socat
     ];
   };
   services.gvfs.enable = true;
