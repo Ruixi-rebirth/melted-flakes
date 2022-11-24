@@ -7,12 +7,10 @@ in
   environment.systemPackages = with pkgs; [
     waybar
   ];
+
   nixpkgs.overlays = [
-    # Waybar needs to be compiled with the experimental flag for wlr/workspaces to work
-    (self: super: {
-      waybar = super.waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-      });
+    (final: prev: {
+      waybar = prev.callPackage ../../../overlays/waybar.nix { };
     })
   ];
 
