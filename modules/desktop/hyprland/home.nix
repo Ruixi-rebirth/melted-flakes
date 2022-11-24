@@ -241,6 +241,7 @@
       bind=$mainMod,M,exec,netease-cloud-music
       bind=$mainMod SHIFT,D,exec,kitty  --class="danmufloat" --hold sh -c "cd /home/ruixi/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && ./main"
       bind=$mainMod SHIFT,X,exec,myswaylock
+      bind=$mainMod,M,exec, youtube-music
       bind=$mainMod,T,exec,telegram-desktop
       bind=$mainMod,Q,exec,icalingua-plus-plus --enable-features=UseOzonePlatform --ozone-platform=wayland
       bind=$mainMod,bracketleft,exec,grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
@@ -338,6 +339,7 @@
       windowrule=animation slide right,kitty
       windowrule=workspace name:QQ, title:Icalingua++
       windowrule=workspace name:TG, telegramdesktop
+      windowrule=workspace name:Music, title:YouTube Music
       windowrule=float,ncmpcpp
       windowrule=move 25%-,ncmpcpp
       windowrule=size 960 540,ncmpcpp
