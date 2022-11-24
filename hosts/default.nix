@@ -20,7 +20,7 @@ in
       impermanence.nixosModules.impermanence
       ./system.nix
       nur.nixosModules.nur
-      ../modules/programs/nurpkgs.nix
+      #../modules/programs/nurpkgs.nix
       hyprland.nixosModules.default
       home-manager.nixosModules.home-manager
       {
@@ -35,6 +35,7 @@ in
             (final: prev: {
               catppuccin-cursors = prev.callPackage ../overlays/catppuccin-cursors.nix { };
               catppuccin-gtk = prev.callPackage ../overlays/catppuccin-gtk.nix { };
+              waybar = prev.callPackage ../overlays/waybar.nix { };
             })
           ];
         };
