@@ -20,7 +20,7 @@ in
       impermanence.nixosModules.impermanence
       ./system.nix
       nur.nixosModules.nur
-      #../modules/programs/nurpkgs.nix
+      ../modules/programs/nurpkgs.nix
       hyprland.nixosModules.default
       home-manager.nixosModules.home-manager
       {
