@@ -4,7 +4,6 @@
   home = {
     packages = with pkgs; [
       mpc-cli
-      netease-cloud-music-gtk
       youtube-music
     ];
   };
