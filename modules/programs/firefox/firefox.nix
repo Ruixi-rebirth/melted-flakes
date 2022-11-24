@@ -5,7 +5,7 @@
     enable = true;
     package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
       # package = pkgs.wrapFirefox pkgs.firefox-esr-unwrapped {
-      forceWayland = true;
+      # forceWayland = true;
       # nixExtensions = [
       #     (pkgs.fetchFirefoxAddon{
       #       name = "Adblock Plus";
