@@ -173,7 +173,7 @@ in
           "tooltip" = false;
         };
         "custom/cava-internal" = {
-          "exec" = "Cava";
+          "exec" = "cava-internal";
           "tooltip" = false;
         };
         "sway/workspaces" = {
