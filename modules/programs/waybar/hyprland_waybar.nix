@@ -176,7 +176,7 @@ in
           "tooltip" = false;
         };
         "custom/cava-internal" = {
-          "exec" = "cava-internal";
+          "exec" = "sleep 1s && cava-internal";
           "tooltip" = false;
         };
         "wlr/workspaces" = {
