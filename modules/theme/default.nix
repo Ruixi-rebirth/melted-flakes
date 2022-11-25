@@ -1,4 +1,3 @@
 [
   ./gtk.nix
-  #./qt.nix
 ]
