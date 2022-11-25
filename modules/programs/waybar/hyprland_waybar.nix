@@ -10,13 +10,13 @@ in
 
   nixpkgs.overlays = [
     (final: prev: {
-      waybar = prev.callPackage ../../../overlays/waybar.nix { };
+      mywaybar = prev.callPackage ../../../overlays/waybar.nix { };
       waybar =
         let
           hyprctl = "${pkgs.hyprland}/bin/hyprctl";
           waybarPatchFile = import ./workspace-patch.nix { inherit pkgs hyprctl; };
         in
-        prev.waybar.overrideAttrs (oldAttrs: {
+        prev.mywaybar.overrideAttrs (oldAttrs: {
           mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
           patches = (oldAttrs.patches or [ ]) ++ [ waybarPatchFile ];
         });
