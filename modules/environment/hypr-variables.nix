@@ -26,13 +26,12 @@
       #WLR_RENDERER="vulkan";
       #__NV_PRIME_RENDER_OFFLOAD="1";
 
-      XDG_CURRENT_DESKTOP = "sway";
-      XDG_SESSION_DESKTOP = "sway";
+      XDG_CURRENT_DESKTOP = "Hyprland";
+      XDG_SESSION_DESKTOP = "Hyprland";
       XDG_CACHE_HOME = "\${HOME}/.cache";
       XDG_CONFIG_HOME = "\${HOME}/.config";
       XDG_BIN_HOME = "\${HOME}/.local/bin";
       XDG_DATA_HOME = "\${HOME}/.local/share";
-      XDG_RUNTIME_DIR = "/run/user/1000";
     };
     sessionPath = [
       "$HOME/.npm-global/bin"
