@@ -9,7 +9,7 @@
       # GTK_IM_MODULE = "fcitx5";
       # QT_IM_MODULE = "fcitx5";
       # XMODIFIERS = "@im=fcitx5";
-      QT_QPA_PLATFORMTHEME = "gtk2";
+      QT_QPA_PLATFORMTHEME = "gtk3";
       MOZ_ENABLE_WAYLAND = "1";
       SDL_VIDEODRIVER = "wayland";
       _JAVA_AWT_WM_NONREPARENTING = "1";
