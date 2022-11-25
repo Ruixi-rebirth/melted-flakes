@@ -12,7 +12,7 @@ in
     (final: prev: {
       waybar = prev.callPackage ../../../overlays/waybar.nix { };
     })
-    (final:prev: {
+    (final: prev: {
       waybar =
         let
           hyprctl = "${pkgs.hyprland}/bin/hyprctl";
