@@ -148,6 +148,12 @@
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, J, togglesplit, # dwindle
 
+      #-----------------------#
+      # Toggle grouped layout #
+      #-----------------------#
+      bind = $mainMod, K, togglegroup,
+      bind = $mainMod, Tab, changegroupactive, f
+
       #------------#
       # change gap #
       #------------#
