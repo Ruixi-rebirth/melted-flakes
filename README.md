@@ -97,7 +97,7 @@ cd /mnt/etc/nixos/nixos-config && rm -rf .git
 nixos-install --no-root-passwd --flake .#laptop
 
 #或者指定源：
-nixos-rebuild switch --option substituters https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store --no-root-passwd --flake .#laptop
+nixos-install --option substituters https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store --no-root-passwd --flake .#laptop
 ```
 10. 重启
 ```bash
