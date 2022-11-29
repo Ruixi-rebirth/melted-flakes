@@ -125,6 +125,8 @@
       killall
       nodejs
       socat
+      zip
+      rar
     ];
   };
   services.gvfs.enable = true;
