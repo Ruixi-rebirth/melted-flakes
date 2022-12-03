@@ -9,30 +9,18 @@ in
   ];
 
   nixpkgs.overlays = [
-    # Waybar needs to be compiled with the experimental flag for wlr/workspaces to work
-    (self: super: {
-      waybar = super.waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-      });
+    (final: prev: {
+      waybar =
+        let
+          hyprctl = "${pkgs.hyprland}/bin/hyprctl";
+          waybarPatchFile = import ./workspace-patch.nix { inherit pkgs hyprctl; };
+        in
+        prev.waybar.overrideAttrs (oldAttrs: {
+          mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+          patches = (oldAttrs.patches or [ ]) ++ [ waybarPatchFile ];
+        });
     })
   ];
-
-  # nixpkgs.overlays = [
-  #   (final: prev: {
-  #     waybar = prev.callPackage ../../../overlays/waybar.nix { };
-  #   })
-  #   (final: prev: {
-  #     waybar =
-  #       let
-  #         hyprctl = "${pkgs.hyprland}/bin/hyprctl";
-  #         waybarPatchFile = import ./workspace-patch.nix { inherit pkgs hyprctl; };
-  #       in
-  #       prev.waybar.overrideAttrs (oldAttrs: {
-  #         mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-  #         patches = (oldAttrs.patches or [ ]) ++ [ waybarPatchFile ];
-  #       });
-  #   })
-  # ];
 
   home-manager.users.${user} = {
     # Home-manager waybar config
