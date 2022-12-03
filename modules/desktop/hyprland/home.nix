@@ -341,10 +341,10 @@
       windowrule=float,pcmanfm
       windowrule=move 25%-,pcmanfm
       windowrule=size 960 540,pcmanfm
-      windowrule=opacity 0.95,telegramdesktop
+      windowrule=opacity 0.95,title:Telegram
       windowrule=animation slide right,kitty
       windowrule=workspace name:QQ, title:Icalingua++
-      windowrule=workspace name:TG, telegramdesktop
+      windowrule=workspace name:TG, title:Telegram
       windowrule=workspace name:Music, title:YouTube Music
       windowrule=float,ncmpcpp
       windowrule=move 25%-,ncmpcpp
