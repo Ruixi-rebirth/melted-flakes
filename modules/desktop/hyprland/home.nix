@@ -8,7 +8,7 @@
       swaybg
       swaylock-effects
       pamixer
-      # hyprpicker
+      hyprpicker
     ];
   };
   home.file = {
