@@ -4,5 +4,5 @@
   programs.zathura = {
     enable = true;
   };
-  home.file.".config/zathura/zathurarc".source = ./zathurarc;
+  # home.file.".config/zathura/zathurarc".source = ./zathurarc;
 }
