@@ -127,6 +127,7 @@
       socat
       zip
       rar
+      frp
     ];
   };
   services.gvfs.enable = true;
