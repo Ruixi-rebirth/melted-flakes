@@ -180,6 +180,7 @@
       bind = $mainMod, 7, workspace, 7
       bind = $mainMod, 8, workspace, 8
       bind = $mainMod, 9, workspace, 9
+      bind = $mainMod, 0, workspace, 10
       bind = $mainMod, L, workspace, +1
       bind = $mainMod, H, workspace, -1
       bind = $mainMod, period, workspace, e+1
