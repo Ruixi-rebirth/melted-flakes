@@ -241,9 +241,9 @@
       }
       bind=$mainMod,slash,workspace,previous
 
-      #----------------------#
+      #------------------------#
       # quickly launch program #
-      #----------------------# 
+      #------------------------# 
       bind=$mainMod,B,exec,firefox
       bind=$mainMod,M,exec,netease-cloud-music
       bind=$mainMod SHIFT,D,exec,kitty  --class="danmufloat" --hold sh -c "cd /home/ruixi/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && ./main"
