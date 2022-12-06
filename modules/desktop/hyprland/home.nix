@@ -215,8 +215,8 @@
       bind = $mainMod CTRL, 8, movetoworkspace, 8
       bind = $mainMod CTRL, 9, movetoworkspace, 9
       bind = $mainMod CTRL, 0, movetoworkspace, 10
-      bind = $mainMod CTRL, bracketleft, movetoworkspace, -1
-      bind = $mainMod CTRL, bracketright, movetoworkspace, +1
+      bind = $mainMod CTRL, left, movetoworkspace, -1
+      bind = $mainMod CTRL, right, movetoworkspace, +1
       # same as above, but doesnt switch to the workspace
       bind = $mainMod SHIFT, 1, movetoworkspacesilent, 1
       bind = $mainMod SHIFT, 2, movetoworkspacesilent, 2
