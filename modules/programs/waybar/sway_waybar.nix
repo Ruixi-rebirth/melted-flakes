@@ -169,7 +169,7 @@ in
         ];
         "custom/launcher" = {
           "format" = " ";
-          "on-click" = "~/.config/rofi/launcher.sh";
+          "on-click" = "pkill rofi || ~/.config/rofi/launcher.sh";
           "tooltip" = false;
         };
         "custom/cava-internal" = {
@@ -269,7 +269,7 @@ in
         };
         "custom/powermenu" = {
           "format" = "";
-          "on-click" = "~/.config/rofi/powermenu.sh";
+          "on-click" = "pkill rofi || ~/.config/rofi/powermenu.sh";
           "tooltip" = false;
         };
         "tray" = {
