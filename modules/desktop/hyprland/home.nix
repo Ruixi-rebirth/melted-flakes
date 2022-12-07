@@ -313,7 +313,7 @@
       # auto start #
       #------------#
       exec-once = waybar &
-      exec-once = fcitx5 &
+      exec-once = fcitx5 -d &
       exec-once = mako &
       exec-once = nm-applet --indicator &
 

@@ -110,7 +110,7 @@
     # Autostart #
     #-----------#
         exec_always  --no-startup-id  mako &
-        exec_always  --no-startup-id  fcitx5 &
+        exec_always  --no-startup-id  fcitx5 -d &
         exec_always  --no-startup-id  nm-applet --indicator &
         exec_always  --no-startup-id  launch_waybar
 
