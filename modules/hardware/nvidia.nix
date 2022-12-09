@@ -16,7 +16,6 @@
         vaapiIntel
         nvidia-vaapi-driver
         vaapiVdpau
-        mesa
         libvdpau-va-gl
         libva
       ];
@@ -25,6 +24,7 @@
   };
   environment = {
     systemPackages = with pkgs; [
+      mesa
       libva-utils
       glxinfo
     ];
