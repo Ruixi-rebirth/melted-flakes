@@ -14,7 +14,7 @@
       extraPackages = with pkgs; [
         intel-media-driver
         vaapiIntel
-        nvidia-vaapi-driver
+        #nvidia-vaapi-driver
         vaapiVdpau
         libvdpau-va-gl
       ];
