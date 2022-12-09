@@ -18,6 +18,8 @@
         vaapiVdpau
         mesa
         libvdpau-va-gl
+        libva
+        libva-utils
       ];
     };
     pulseaudio.support32Bit = true;
@@ -25,8 +27,6 @@
   environment = {
     systemPackages = with pkgs; [
       glxinfo
-      libva
-      libva-utils
     ];
   };
 }
