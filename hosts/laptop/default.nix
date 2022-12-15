@@ -84,6 +84,7 @@
     systemPackages = with pkgs; [
       libnotify
       wl-clipboard
+      wlr-randr
       wireplumber
       pipewire-media-session
       wayland
