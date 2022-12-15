@@ -37,5 +37,9 @@
     dconf.enable = true;
     light.enable = true;
   };
+  systemPackages = with pkgs; [
+    libnotify
+
+  ];
 
 }
