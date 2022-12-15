@@ -1,3 +1,3 @@
 [
-  ./go.nix
+  ./go/go.nix
 ]
