@@ -9,7 +9,7 @@
     (import ../../modules/editors) ++
     (import ../../modules/programs) ++
     (import ../../modules/theme) ++
-    (import ../../modules/dev_lang);
+    (import ../../modules/devlop);
 
   home = {
     username = "ruixi";
