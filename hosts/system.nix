@@ -7,7 +7,7 @@
     hostName = "RuiXi"; # Define your hostname.
     networkmanager.enable = true;
     firewall = {
-      enable = true;
+      enable = false;
       allowedTCPPorts = [ 22 80 443 ];
       allowedUDPPorts = [ ];
     };
