@@ -11,6 +11,14 @@
     (import ../../modules/hardware) ++
     (import ../../modules/virtualisation);
 
+  networking = {
+    firewall = {
+      enable = false;
+      allowedTCPPorts = [ 22 80 443 ];
+      allowedUDPPorts = [ ];
+    };
+  };
+
   users.mutableUsers = false;
   users.users.root.initialHashedPassword = "$6$4lwj3AGq8M9CQE2.$q8cNPghWHTl/dfE0dMPm2vsh0cMpY2gWxw91/Uadi8jShbvUHJJu3Jg0CvSpqrlEB7a3kvWDf/p2CI3mSqP1c/";
   users.users.${user} = {
