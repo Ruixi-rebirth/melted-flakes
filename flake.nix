@@ -32,11 +32,7 @@
     {
       nixosConfigurations = (
         # NixOS configurations
-        import ./hosts {
-          # Imports ./hosts/default.nix
-          inherit (nixpkgs) lib;
-          inherit inputs nixpkgs home-manager nur user hyprland impermanence; # Also inherit home-manager so it does not need to be defined here.
-        }
+        import ./hosts inputs
       );
     };
 }
