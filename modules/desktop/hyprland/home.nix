@@ -246,7 +246,7 @@
       #------------------------# 
       bind=$mainMod,B,exec,firefox
       bind=$mainMod,M,exec,netease-cloud-music
-      bind=$mainMod SHIFT,D,exec,kitty  --class="danmufloat" --hold sh -c "cd /home/ruixi/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && ./main"
+      bind=$mainMod SHIFT,D,exec,kitty  --class="danmufloat" --hold sh -c "cd /home/ruixi/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && go run main.go -c config.toml"
       bind=$mainMod SHIFT,X,exec,myswaylock
       bind=$mainMod,M,exec, youtube-music
       bind=$mainMod,T,exec,telegram-desktop
