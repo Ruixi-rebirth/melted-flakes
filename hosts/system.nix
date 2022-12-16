@@ -6,11 +6,11 @@
   networking = {
     hostName = "RuiXi"; # Define your hostname.
     networkmanager.enable = true;
-    # firewall = {
-    #   enable = false;
-    #   allowedTCPPorts = [ 22 80 443 ];
-    #   allowedUDPPorts = [ ];
-    # };
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 22 80 443 ];
+      allowedUDPPorts = [ ];
+    };
     hosts = {
       "185.199.109.133" = [ "raw.githubusercontent.com" ];
       "185.199.111.133" = [ "raw.githubusercontent.com" ];
