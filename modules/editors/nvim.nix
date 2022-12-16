@@ -21,7 +21,7 @@ in
   programs = {
     neovim = {
       enable = true;
-      package = pkgs.neovim-nightly;
+      package = neovim-nightly;
       withPython3 = true;
       withNodeJs = true;
       #-- Plugins --#
