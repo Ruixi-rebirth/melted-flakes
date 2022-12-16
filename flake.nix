@@ -32,7 +32,9 @@
     {
       nixosConfigurations = (
         # NixOS configurations
-        import ./hosts inputs
+        import ./hosts {
+          # Imports ./hosts/default.nix
+        }
       );
     };
 }
