@@ -23,7 +23,7 @@
       };
     };
 
-  outputs = { self, ... } @ inputs: # Function that tells my flake which to use and what do what to do with the dependencies.
+  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, ... }: # Function that tells my flake which to use and what do what to do with the dependencies.
     let
       # Variables that can be used in the config files.
       user = "ruixi";
@@ -32,8 +32,10 @@
     {
       nixosConfigurations = (
         # NixOS configurations
-        import ./hosts inputs {
+        import ./hosts {
           # Imports ./hosts/default.nix
+          inherit (nixpkgs) lib;
+          inherit inputs nixpkgs home-manager nur user hyprland impermanence; # Also inherit home-manager so it does not need to be defined here.
         }
       );
     };
