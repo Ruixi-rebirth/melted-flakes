@@ -23,7 +23,7 @@
       };
     };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, ... }: # Function that tells my flake which to use and what do what to do with the dependencies.
+  outputs = { self, ... } @ inputs: # Function that tells my flake which to use and what do what to do with the dependencies.
     let
       # Variables that can be used in the config files.
       user = "ruixi";
