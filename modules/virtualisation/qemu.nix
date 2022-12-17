@@ -9,7 +9,7 @@
   virtualisation = {
     libvirtd = {
       enable = true;
-      onBoot = "ignore";
+      # onBoot = "ignore";
     };
   };
   networking.firewall.trustedInterfaces = [ "virbr0" ];
