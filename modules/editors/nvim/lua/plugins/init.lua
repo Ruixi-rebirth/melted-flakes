@@ -169,7 +169,7 @@ return require("packer").startup(function(use)
 		ft = { "markdown" },
 	})
 	--[ A fast and lua alternative to filetype.vim. It is ~175x faster than filetype.vim ]--
-	use({ "nathom/filetype.nvim" })
+	-- use({ "nathom/filetype.nvim" })
 	--[ A pretty list for showing diagnostics, references, telescope results, quickfix and location lists to help you solve all the trouble your code is causing.]--
 	use({
 		"folke/trouble.nvim",
