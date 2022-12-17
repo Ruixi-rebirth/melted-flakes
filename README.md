@@ -97,7 +97,7 @@ fileSystems."/" =
 ```bash 
 cd /mnt/etc/nixos/Flakes && rm -rf .git
 ```
-8. 修改用户 *root* 和 *ruixi* 的登陆密码,使用 `mkpasswd -m sha-512` 命令生成的hash密码将 `/mnt/etc/nixos/Flakes/hosts/system.nix` 中的 `users.users.<name>.hashedPassword` 的值替换掉
+8. 修改用户 *root* 和 *ruixi* 的登陆密码,使用 `mkpasswd -m sha-512` 命令生成的hash密码将 `/mnt/etc/nixos/Flakes/hosts/laptop/default.nix` 中的 `users.users.<name>.hashedPassword` 的值替换掉
 9. 安装
 ```bash
 nixos-install --no-root-passwd --flake .#laptop
