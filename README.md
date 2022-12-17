@@ -60,16 +60,22 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 ```
 4. 克隆仓库到本地
 ```bash
-git clone  https://github.com/Ruixi-rebirth/nixos-config.git /mnt/etc/nixos/ 
+nix-shell -p git
+git clone  https://github.com/Ruixi-rebirth/nixos-config.git /mnt/etc/nixos/Flakes 
 ```
-5. 将 /mnt/etc/nixos 中的 `hardware-configuration.nix` 拷贝到 /mnt/etc/nixos/nixos-config/hosts/laptop/hardware-configuration.nix
+5. 将 /mnt/etc/nixos 中的 `hardware-configuration.nix` 拷贝到 /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
 ```bash 
-cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/nixos-config/hosts/laptop/hardware-configuration.nix
+cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
 ```
 6. 修改被覆盖后的 `hardware-configuration.nix`
+```bash
+nano /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
+```
 ```nix
 ...
 #这只是一个例子
+#请参考 `https://elis.nu/blog/2020/05/nixos-tmpfs-as-root/#step-4-1-configure-disks`
+
 fileSystems."/" =
     { device = "none";
       fsType = "tmpfs";
@@ -87,11 +93,11 @@ fileSystems."/" =
     };
 ...
 ```
-7. 进入克隆的仓库并移除 '/mnt/etc/nixos/nixos-config/.git'
+7. 进入克隆的仓库并移除 '/mnt/etc/nixos/Flakes/.git'
 ```bash 
-cd /mnt/etc/nixos/nixos-config && rm -rf .git
+cd /mnt/etc/nixos/Flakes && rm -rf .git
 ```
-8. 修改root和ruixi 密码,使用 `mkpasswd -m sha-512` 命令生成的hash密码将 `./hosts/system.nix` 中的 `users.users.<name>.hashedPassword` 的值替换掉
+8. 修改用户 *root* 和 *ruixi* 的登陆密码,使用 `mkpasswd -m sha-512` 命令生成的hash密码将 `/mnt/etc/nixos/Flakes/hosts/system.nix` 中的 `users.users.<name>.hashedPassword` 的值替换掉
 9. 安装
 ```bash
 nixos-install --no-root-passwd --flake .#laptop
@@ -103,3 +109,4 @@ nixos-install --option substituters "https://mirrors.tuna.tsinghua.edu.cn/nix-ch
 ```bash
 reboot
 ```
+11. 享受它吧！
