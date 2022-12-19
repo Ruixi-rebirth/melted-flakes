@@ -3,7 +3,7 @@
   programs = {
     bash = {
       enable = true;
-      loginShellInit = ''
+      initExtra = ''
         # if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
         #    exec dbus-run-session sway --unsupported-gpu
         #  fi
@@ -12,13 +12,5 @@
          fi
       '';
     };
-    # initExtra = ''
-    #   # if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-    #   #    exec dbus-run-session sway --unsupported-gpu
-    #   #  fi
-    #   if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-    #      exec dbus-run-session Hyprland
-    #    fi
-    # '';
   };
 }
