@@ -7,12 +7,10 @@
       fcitx5-chinese-addons
     ];
   };
-  home = {
-    packages = with pkgs; [
-      fcitx5-gtk
-      fcitx5-lua
-      libsForQt5.fcitx5-qt
-      fcitx5-configtool
-    ];
-  };
+  environment.systemPackages = with pkgs; [
+    fcitx5-gtk
+    fcitx5-lua
+    libsForQt5.fcitx5-qt
+    fcitx5-configtool
+  ];
 }
