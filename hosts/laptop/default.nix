@@ -5,7 +5,7 @@
     [ (import ./hardware-configuration.nix) ] ++
     # [ (import ../../modules/desktop/sway/default.nix) ] ++
     [ (import ../../modules/desktop/hyprland/default.nix) ] ++
-    # [ (import ../../modules/programs/fcitx5/fcitx5.nix) ] ++
+    [ (import ../../modules/programs/fcitx5/fcitx5.nix) ] ++
     [ (import ../../modules/programs/gpg.nix) ] ++
     [ (import ../../modules/fonts/fonts.nix) ] ++
     (import ../../modules/hardware) ++
@@ -15,7 +15,7 @@
   users.users.root.initialHashedPassword = "$6$4lwj3AGq8M9CQE2.$q8cNPghWHTl/dfE0dMPm2vsh0cMpY2gWxw91/Uadi8jShbvUHJJu3Jg0CvSpqrlEB7a3kvWDf/p2CI3mSqP1c/";
   users.users.${user} = {
     initialHashedPassword = "$6$4lwj3AGq8M9CQE2.$q8cNPghWHTl/dfE0dMPm2vsh0cMpY2gWxw91/Uadi8jShbvUHJJu3Jg0CvSpqrlEB7a3kvWDf/p2CI3mSqP1c/";
-    shell = pkgs.fish;
+    # shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
     packages = with pkgs; [
