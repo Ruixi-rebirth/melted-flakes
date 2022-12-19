@@ -18,4 +18,5 @@
   ./zathura/zathura.nix
   ./ranger/ranger.nix
   ./fcitx5/fcitx5-theme.nix
+  ./fcitx5.nix
 ]
