@@ -11,6 +11,9 @@
            exec dbus-run-session Hyprland
          fi
       '';
+      bashrcExtra = ''
+        exec fish
+      '';
     };
   };
 }
