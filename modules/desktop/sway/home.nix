@@ -70,9 +70,9 @@
         for_window [app_id="mpv"]                        floating enable 
         for_window [app_id="mpv"]                        resize set height 540
         for_window [app_id="mpv"]                        resize set width 960
-        for_window [app_id="Nautilus"]                   floating enable 
-        for_window [app_id="Nautilus"]                   resize set height 540
-        for_window [app_id="Nautilus"]                   resize set width 960
+        for_window [app_id="nemo"]                   floating enable 
+        for_window [app_id="nemo"]                   resize set height 540
+        for_window [app_id="nemo"]                   resize set width 960
 
     #-------------------------------------------------------#
     # Sticky floating windows(sticky enable|disable|toggle) #
