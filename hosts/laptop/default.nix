@@ -98,6 +98,7 @@
       xwayland
       pkgs.qt6.qtwayland
       pcmanfm
+      nemo
       networkmanagerapplet
       wev
       wf-recorder
