@@ -138,8 +138,8 @@
         sensitivity = -0.5
       }
 
-      bind = $mainMod, Return, exec, kitty
-      bind = $mainMod SHIFT, Return, exec, kitty --class="termfloat"
+      bind = $mainMod, Return, exec, kitty fish
+      bind = $mainMod SHIFT, Return, exec, kitty --class="termfloat" fish
       bind = $mainMod SHIFT, P, killactive,
       bind = $mainMod SHIFT, Q, exit,
       bind = $mainMod SHIFT, Space, togglefloating,
