@@ -112,6 +112,7 @@
   };
 
   services = {
+    getty.autologinUser = "ruixi";
     gvfs.enable = true;
     pipewire = {
       enable = true;
