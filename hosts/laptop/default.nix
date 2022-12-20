@@ -97,8 +97,7 @@
       glfw-wayland
       xwayland
       pkgs.qt6.qtwayland
-      pcmanfm
-      nemo
+      cinnamon.nemo
       networkmanagerapplet
       wev
       wf-recorder
