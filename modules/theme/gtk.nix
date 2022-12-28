@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, user, ... }:
+{ config, pkgs, lib, inputs, user, self, ... }:
 
 {
 
@@ -9,7 +9,8 @@
   };
   home.pointerCursor = {
     # package = pkgs.catppuccin-cursors;
-    package = pkgs.catppuccin-cursors;
+    # package = pkgs.catppuccin-cursors;
+    package = self.packages.${pkgs.system}.catppuccin-cursors;
     name = "Catppuccin-Frappe-Dark";
     size = 16;
   };
@@ -19,11 +20,11 @@
     theme = {
       name = "Catppuccin-Frappe-Pink";
       # package = pkgs.catppuccin-gtk.override { size = "compact"; };
-      package = pkgs.catppuccin-gtk;
+      package = self.packages.${pkgs.system}.catppuccin-gtk;
     };
     cursorTheme = {
       name = "Catppuccin-Frappe-Dark";
-      package = pkgs.catppuccin-cursors;
+      package = self.packages.${pkgs.system}.catppuccin-cursors;
     };
     iconTheme = {
       name = "Papirus-Dark";
