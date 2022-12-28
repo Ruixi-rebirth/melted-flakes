@@ -21,7 +21,7 @@
       };
     };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, ... }:
+  outputs = { self, ... }@inputs:
     let
       user = "ruixi";
     in
