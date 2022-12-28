@@ -38,5 +38,10 @@
           inherit inputs nixpkgs home-manager nur user hyprland impermanence; # Also inherit home-manager so it does not need to be defined here.
         }
       );
+      packages.${system} = {
+        catppuccin-gtk = pkgs.callPackage ../pkgs/catppuccin-gtk.nix { };
+        catppuccin-cursors = pkgs.callPackage ../pkgs/catppuccin-cursors.nix { };
+      };
+
     };
 }

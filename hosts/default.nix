@@ -30,10 +30,6 @@ in
         home-manager.users.${user} = {
           imports = [ (import ./laptop/home.nix) ];
         };
-        ${system} = {
-          catppuccin-gtk = pkgs.callPackage ../pkgs/catppuccin-gtk.nix { };
-          catppuccin-cursors = pkgs.callPackage ../pkgs/catppuccin-cursors.nix { };
-        };
         nixpkgs = {
           overlays = [
             # (final: prev: {
