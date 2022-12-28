@@ -17,7 +17,6 @@ in
     specialArgs = { inherit inputs user; };
     modules = [
       ./laptop
-      ../pkgs
       impermanence.nixosModules.impermanence
       ./system.nix
       nur.nixosModules.nur
@@ -30,6 +29,10 @@ in
         home-manager.extraSpecialArgs = { inherit user; };
         home-manager.users.${user} = {
           imports = [ (import ./laptop/home.nix) ];
+        };
+        packages.${system} = {
+          catppuccin-gtk = pkgs.callPackage ../pkgs/catppuccin-gtk.nix { };
+          catppuccin-cursors = pkgs.callPackage ../pkgs/catppuccin-cursors.nix { };
         };
         nixpkgs = {
           overlays = [
