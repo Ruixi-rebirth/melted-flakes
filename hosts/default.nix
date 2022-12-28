@@ -30,7 +30,7 @@ in
         home-manager.users.${user} = {
           imports = [ (import ./laptop/home.nix) ];
         };
-        packages.${system} = {
+        ${system} = {
           catppuccin-gtk = pkgs.callPackage ../pkgs/catppuccin-gtk.nix { };
           catppuccin-cursors = pkgs.callPackage ../pkgs/catppuccin-cursors.nix { };
         };
