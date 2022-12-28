@@ -27,6 +27,7 @@
     let
       # Variables that can be used in the config files.
       user = "ruixi";
+      system = "x86_64-linux"; # System architecture
     in
     # Use above variables in ...
     {
