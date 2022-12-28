@@ -28,6 +28,7 @@
       # Variables that can be used in the config files.
       user = "ruixi";
       system = "x86_64-linux"; # System architecture
+      pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
     in
     # Use above variables in ...
     {
