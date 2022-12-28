@@ -36,6 +36,7 @@ in
             #   catppuccin-cursors = prev.callPackage ../overlays/catppuccin-cursors.nix { };
             #   catppuccin-gtk = prev.callPackage ../overlays/catppuccin-gtk.nix { };
             # })
+            (import ../overlays)
             inputs.neovim-nightly-overlay.overlay
           ];
         };

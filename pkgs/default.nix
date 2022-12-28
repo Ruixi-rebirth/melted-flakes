@@ -1,6 +1,6 @@
-{ pkgs ? null }:
+{ pkgs }:
 
 {
-  catppuccin-cursors = pkgs.callPackage ./catppuccin-cursors.nix { };
-  catppuccin-gtk = pkgs.callPackage ./catppuccin-gtk.nix { };
+  catppuccin-cursors = pkgs.callPackage ./catppuccin-cursors { };
+  catppuccin-gtk = pkgs.callPackage ./catppuccin-gtk { };
 }

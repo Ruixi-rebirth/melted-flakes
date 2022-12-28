@@ -2,12 +2,10 @@
   description = "My Personal NixOS Configuration";
 
   inputs =
-    # All flake references used to build my NixOS setup. These are dependencies.
     {
-      nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; # Nix Packages
+      nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
       neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
       home-manager = {
-        # User Package Management
         url = "github:nix-community/home-manager";
         inputs.nixpkgs.follows = "nixpkgs";
       };
@@ -15,7 +13,7 @@
         url = "github:nix-community/impermanence";
       };
       nur = {
-        url = "github:nix-community/NUR"; # NUR Packages
+        url = "github:nix-community/NUR";
       };
       hyprland = {
         url = "github:hyprwm/Hyprland";
@@ -23,14 +21,10 @@
       };
     };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, ... }: # Function that tells my flake which to use and what do what to do with the dependencies.
+  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, ... }:
     let
-      # Variables that can be used in the config files.
       user = "ruixi";
-      system = "x86_64-linux"; # System architecture
-      pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
     in
-    # Use above variables in ...
     {
       nixosConfigurations = (
         # NixOS configurations
@@ -40,10 +34,5 @@
           inherit inputs nixpkgs home-manager nur user hyprland impermanence; # Also inherit home-manager so it does not need to be defined here.
         }
       );
-      packages.${system} = {
-        catppuccin-gtk = pkgs.callPackage ../pkgs/catppuccin-gtk.nix { };
-        catppuccin-cursors = pkgs.callPackage ../pkgs/catppuccin-cursors.nix { };
-      };
-
     };
 }
