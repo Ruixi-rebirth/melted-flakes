@@ -9,7 +9,7 @@
   };
   home.pointerCursor = {
     # package = pkgs.catppuccin-cursors;
-    package = pkgs.callPackage ../../pkgs/catppuccin-cursors.nix;
+    package = pkgs.catppuccin-cursors;
     name = "Catppuccin-Frappe-Dark";
     size = 16;
   };
@@ -19,11 +19,11 @@
     theme = {
       name = "Catppuccin-Frappe-Pink";
       # package = pkgs.catppuccin-gtk.override { size = "compact"; };
-      package = pkgs.callPackage ../../pkgs/catppuccin-gtk.nix;
+      package = pkgs.catppuccin-gtk;
     };
     cursorTheme = {
       name = "Catppuccin-Frappe-Dark";
-      package = pkgs.callPackage ../../pkgs/catppuccin-cursors.nix;
+      package = pkgs.catppuccin-cursors;
     };
     iconTheme = {
       name = "Papirus-Dark";
