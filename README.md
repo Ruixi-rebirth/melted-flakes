@@ -24,7 +24,7 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 │   └── system.nix
 ├── modules
 │   ├── desktop
-│   ├── dev_lang
+│   ├── devlop
 │   ├── editors
 │   ├── environment
 │   ├── fonts
@@ -35,9 +35,15 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 │   ├── theme
 │   └── virtualisation
 ├── overlays
-│   ├── catppuccin-cursors.nix
-│   └── catppuccin-gtk.nix
-└── README.md
+│   └── default.nix
+├── pkgs
+│   ├── catppuccin-cursors
+│   ├── catppuccin-gtk
+│   └── default.nix
+├── README_en.md
+├── README.md
+└── screenshot
+    └── screenshot.png
 ```
 
 ### 如何安装?(root on tmpfs)
