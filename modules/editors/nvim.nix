@@ -42,8 +42,7 @@ in
       beautysh
       nodePackages.prettier
       #-- Debug --#
-      vscode-extensions.ms-vscode.cpptools
-      codelldb
+      vscode-lldb
     ];
   };
 
