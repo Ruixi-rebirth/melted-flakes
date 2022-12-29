@@ -84,7 +84,7 @@ return require("packer").startup(function(use)
 	use({ "hrsh7th/cmp-path", after = "cmp-buffer" })
 	use({ "hrsh7th/cmp-cmdline", after = "cmp-path" })
 	use({ "neovim/nvim-lspconfig" })
-	use({ "simrat39/rust-tools.nvim", config = "require('plugins.configs.rust-tools')" })
+	-- use({ "simrat39/rust-tools.nvim", config = "require('plugins.configs.rust-tools')" })
 	-- use({ "williamboman/nvim-lsp-installer" })
 	use({ "glepnir/lspsaga.nvim", config = "require('plugins.configs.lspsaga')", branch = "main" })
 	--[ debug ]--
