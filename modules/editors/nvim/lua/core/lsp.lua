@@ -132,6 +132,10 @@ nvim_lsp.sumneko_lua.setup({
 	},
 })
 
+nvim_lsp.rust.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
 nvim_lsp.html.setup({
 	on_attach = on_attach,
 	cmd = { "/home/ruixi/.npm-global/bin/vscode-html-language-server", "--stdio" },
