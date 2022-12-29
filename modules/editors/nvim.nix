@@ -41,6 +41,8 @@ in
       rustfmt
       beautysh
       nodePackages.prettier
+      #-- Debug --#
+      vscode-extensions.ms-vscode.cpptools
     ];
   };
 

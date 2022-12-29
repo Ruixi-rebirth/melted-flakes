@@ -90,7 +90,7 @@ return require("packer").startup(function(use)
 	--[ debug ]--
 	use({
 		"rcarriga/nvim-dap-ui",
-		requires = { "mfussenegger/nvim-dap" },
+		requires = { "mfussenegger/nvim-dap", config = "require('plugins.configs.dap')" },
 		config = "require('plugins.configs.dapui')",
 	})
 	use({
