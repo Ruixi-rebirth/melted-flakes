@@ -43,6 +43,7 @@ in
       nodePackages.prettier
       #-- Debug --#
       vscode-extensions.ms-vscode.cpptools
+      codelldb
     ];
   };
 
