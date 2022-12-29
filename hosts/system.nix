@@ -32,6 +32,7 @@
       wget
       neofetch
       lsd
+      exa
       gcc
       clang
       cargo
