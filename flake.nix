@@ -5,6 +5,7 @@
     {
       nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
       neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+      rust-overlay.url = "github:oxalica/rust-overlay";
       home-manager = {
         url = "github:nix-community/home-manager";
         inputs.nixpkgs.follows = "nixpkgs";
@@ -21,7 +22,7 @@
       };
     };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, rust-overlay, ... }:
     let
       user = "ruixi";
     in
@@ -31,7 +32,7 @@
         import ./hosts {
           # Imports ./hosts/default.nix
           inherit (nixpkgs) lib;
-          inherit inputs nixpkgs home-manager nur user hyprland impermanence; # Also inherit home-manager so it does not need to be defined here.
+          inherit inputs nixpkgs home-manager nur user hyprland impermanence rust-overlay; # Also inherit home-manager so it does not need to be defined here.
         }
       );
     };
