@@ -1,46 +1,88 @@
-{ appimageTools, lib, fetchurl, fetchzip, electron, makeWrapper, libsecret, p7zip }:
+{ alsa-lib
+, cups
+, dpkg
+, fetchurl
+, gjs
+, glib
+, gtk3
+, lib
+, libdrm
+, libgcrypt
+, libkrb5
+, mesa # for libgbm
+, nss
+, xorg
+, systemd
+, stdenv
+, at-spi2-core
+, autoPatchelfHook
+, wrapGAppsHook
+, copyDesktopItems
+, makeDesktopItem
+}:
 
 let
-  pname = "qq";
   version = "3.0.0-565";
-  name = "Tencent-QQ-${version}";
-
   srcs = {
-    electron = fetchurl {
-      url = "https://dldir1.qq.com/qqfile/qq/QQNT/64bd2578/linuxqq_3.0.0-565_x86_64.AppImage";
-      sha256 = "sha256-uoxGwuG+RP1XiNEvQZ5yLHh2rYU1TxBsl9NYaYZ78AI=";
+    x86_64-linux = fetchurl {
+      url = "https://dldir1.qq.com/qqfile/qq/QQNT/64bd2578/linuxqq_${version}_amd64.deb";
+      sha256 = "sha256-IfBbheVwg4b5PuLX9bzqSuTcElxNaV3tmbGd3v/NkCY=";
+    };
+    aarch64-linux = fetchurl {
+      url = "https://dldir1.qq.com/qqfile/qq/QQNT/64bd2578/linuxqq_${version}_arm64.deb";
+      sha256 = "sha256-6IlAJdPknaQzOE48sdxb5QbB+ZF1xKstF3ARGHM30GY=";
     };
   };
-
-  src = srcs.electron;
-
-  appimageContents = (appimageTools.extract { inherit name src; });
-
+  src = srcs.${stdenv.hostPlatform.system} or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
 in
-appimageTools.wrapAppImage {
-  inherit version name;
-  src = appimageContents;
+stdenv.mkDerivation {
+  pname = "qq";
+  inherit version src;
 
-  extraInstallCommands = ''
-    mv $out/bin/${name} $out/bin/${pname}
-    install -m 444 -D ${appimageContents}/${pname}.desktop -t $out/share/applications
-    substituteInPlace $out/share/applications/${pname}.desktop \
-      --replace 'Exec=AppRun' 'Exec=${pname}' \
-      --replace 'Icon=/opt/QQ/resources/app/512x512.png' 'Icon=qq'
-    cp -r ${appimageContents}/usr/share/icons $out/share
-  '';
+  unpackCmd = "dpkg-deb -x $curSrc source";
 
-  #passthru.version = version;
-
-  extraPkgs = pkgs: with pkgs; [
-    libsecret
-    libappindicator-gtk3
+  nativeBuildInputs = [
+    autoPatchelfHook
+    wrapGAppsHook
+    copyDesktopItems
+    dpkg
   ];
 
+  buildInputs = [
+    alsa-lib
+    at-spi2-core
+    cups
+    libdrm
+    libgcrypt
+    libkrb5
+    mesa
+    nss
+    xorg.libXdamage
+  ];
+
+  runtimeDependencies = [
+    gtk3
+    (lib.getLib systemd)
+  ];
+
+  installPhase = ''
+    runHook preInstall
+    mkdir -p $out/bin
+    cp -r opt $out/opt
+    cp -r usr/share $out/share
+    substituteInPlace $out/share/applications/qq.desktop \
+      --replace "/opt" "$out/opt" \
+      --replace "/usr/share" "$out/share"
+    ln -s $out/opt/QQ/qq $out/bin/qq
+    runHook postInstall
+  '';
+
   meta = with lib; {
-    homepage = "https://im.qq.com";
-    description = "Official Tencent QQ client for Linux (Beta)";
-    platforms = [ "x86_64-linux" ];
+    homepage = "https://im.qq.com/linuxqq/";
+    description = "Messaging app";
+    platforms = [ "x86_64-linux" "aarch64-linux" ];
     license = licenses.unfree;
+    sourceProvenance = with sourceTypes; [ binaryNativeCode ];
+    maintainers = with lib.maintainers; [ fee1-dead ];
   };
 }
