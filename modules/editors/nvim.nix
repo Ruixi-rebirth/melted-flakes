@@ -42,6 +42,7 @@ in
       beautysh
       nodePackages.prettier
       #-- Debug --#
+      lldb
     ];
   };
 
