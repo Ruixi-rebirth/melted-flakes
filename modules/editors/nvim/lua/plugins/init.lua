@@ -88,7 +88,7 @@ return require("packer").startup(function(use)
 	-- use({ "williamboman/nvim-lsp-installer" })
 	use({ "glepnir/lspsaga.nvim", config = "require('plugins.configs.lspsaga')", branch = "main" })
 	--[ debug ]--
-	use({ "mfussenegger/nvim-dap", config = "require('plugins.configs.dap')" })
+	-- use({ "mfussenegger/nvim-dap", config = "require('plugins.configs.dap')" })
 	use({
 		"rcarriga/nvim-dap-ui",
 		requires = { "mfussenegger/nvim-dap" },

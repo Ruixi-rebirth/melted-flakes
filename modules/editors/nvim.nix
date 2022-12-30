@@ -42,7 +42,6 @@ in
       beautysh
       nodePackages.prettier
       #-- Debug --#
-      vscode-lldb
     ];
   };
 
