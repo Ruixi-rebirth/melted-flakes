@@ -1,7 +1,7 @@
 local dap = require("dap")
 dap.adapters.lldb = {
 	type = "executable",
-	command = "lldb", -- adjust as needed, must be absolute path
+	command = "/etc/profiles/per-user/ruixi/bin/lldb", -- adjust as needed, must be absolute path
 	name = "lldb",
 }
 dap.configurations.cpp = {
