@@ -20,6 +20,7 @@
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
     packages = with pkgs; [
       tdesktop
+      qq
       pkgs.sway-contrib.grimshot
       imagemagick
     ];
