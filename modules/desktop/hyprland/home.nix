@@ -343,6 +343,7 @@
       windowrule=move 25%-,nemo
       windowrule=size 960 540,nemo
       windowrule=opacity 0.95,title:Telegram
+      windowrule=opacity 0.95,title:QQ
       windowrule=animation slide right,kitty
       windowrule=workspace name:QQ, title:Icalingua++
       windowrule=workspace name:TG, title:Telegram
