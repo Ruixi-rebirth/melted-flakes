@@ -71,6 +71,8 @@
           "Codelearning"
           ".npm-global"
           ".config"
+          ".steam"
+          ".minecraft"
           "Flakes"
           "Kvm"
           { directory = ".gnupg"; mode = "0700"; }
