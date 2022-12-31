@@ -110,6 +110,7 @@
       sshpass
       ntfs3g
       pkgs.rust-bin.stable.latest.default
+      blender
     ];
   };
 
