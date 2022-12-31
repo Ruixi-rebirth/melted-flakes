@@ -112,7 +112,7 @@
       pkgs.rust-bin.stable.latest.default
       blender
       minecraft
-      steam-run
+      steam
     ];
   };
 
