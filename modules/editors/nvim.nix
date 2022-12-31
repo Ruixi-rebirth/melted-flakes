@@ -34,6 +34,7 @@ in
       pyright
       zk
       rust-analyzer
+      clangd
       #-- format --#
       stylua
       black
