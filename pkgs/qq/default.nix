@@ -22,15 +22,15 @@
 }:
 
 let
-  version = "3.0.0-565";
+  version = "3.0.0-571";
   srcs = {
     x86_64-linux = fetchurl {
       url = "https://dldir1.qq.com/qqfile/qq/QQNT/64bd2578/linuxqq_${version}_amd64.deb";
-      sha256 = "sha256-IfBbheVwg4b5PuLX9bzqSuTcElxNaV3tmbGd3v/NkCY=";
+      sha256 = "";
     };
     aarch64-linux = fetchurl {
       url = "https://dldir1.qq.com/qqfile/qq/QQNT/64bd2578/linuxqq_${version}_arm64.deb";
-      sha256 = "sha256-6IlAJdPknaQzOE48sdxb5QbB+ZF1xKstF3ARGHM30GY=";
+      sha256 = "";
     };
   };
   src = srcs.${stdenv.hostPlatform.system} or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
