@@ -72,7 +72,6 @@
           ".npm-global"
           ".config"
           ".steam"
-          ".minecraft"
           "Flakes"
           "Kvm"
           { directory = ".gnupg"; mode = "0700"; }
@@ -113,7 +112,6 @@
       ntfs3g
       pkgs.rust-bin.stable.latest.default
       blender
-      minecraft
       steam
     ];
   };
