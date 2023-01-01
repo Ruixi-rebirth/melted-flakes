@@ -21,6 +21,7 @@
     packages = with pkgs; [
       tdesktop
       qq
+      feishu
       pkgs.sway-contrib.grimshot
       imagemagick
     ];
