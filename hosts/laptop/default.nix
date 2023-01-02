@@ -74,6 +74,7 @@
           ".npm-global"
           ".config"
           ".steam"
+          ".thunderbird"
           "Flakes"
           "Kvm"
           { directory = ".gnupg"; mode = "0700"; }
