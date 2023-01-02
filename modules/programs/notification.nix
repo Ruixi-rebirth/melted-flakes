@@ -5,7 +5,7 @@
     mako = {
       enable = true;
       font = "Iosevka Nerd Font 12";
-      width = 280;
+      width = 256;
       height = 500;
       margin = "10";
       padding = "5";
