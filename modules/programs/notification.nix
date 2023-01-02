@@ -16,7 +16,7 @@
       progressColor = "over #302D41";
       textColor = "#c0caf5";
       extraConfig = ''
-        text-alignment = center
+        text-alignment=center
         [urgency=high]
         border-color=#F8BD96
       '';
