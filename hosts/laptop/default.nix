@@ -24,6 +24,7 @@
       feishu
       pkgs.sway-contrib.grimshot
       imagemagick
+      thunderbird
     ];
   };
   boot = {
