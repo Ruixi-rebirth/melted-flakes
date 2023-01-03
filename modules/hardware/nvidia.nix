@@ -17,14 +17,13 @@
         # nvidia-vaapi-driver
         vaapiVdpau
         libvdpau-va-gl
-        # libva
       ];
     };
     pulseaudio.support32Bit = true;
   };
   environment = {
     systemPackages = with pkgs; [
-      # mesa
+      libva
       libva-utils
       glxinfo
     ];
