@@ -14,17 +14,17 @@
       extraPackages = with pkgs; [
         intel-media-driver
         vaapiIntel
-        nvidia-vaapi-driver
+        # nvidia-vaapi-driver
         vaapiVdpau
         libvdpau-va-gl
-        libva
+        # libva
       ];
     };
     pulseaudio.support32Bit = true;
   };
   environment = {
     systemPackages = with pkgs; [
-      mesa
+      # mesa
       libva-utils
       glxinfo
     ];
