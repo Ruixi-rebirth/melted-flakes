@@ -22,7 +22,7 @@
       GBM_BACKEND = "nvidia-drm";
       CLUTTER_BACKEND = "wayland";
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-      # LIBVA_DRIVER_NAME = "nvidia";
+      LIBVA_DRIVER_NAME = "nvidia";
       #vulkan
       WLR_RENDERER = "vulkan";
       #__NV_PRIME_RENDER_OFFLOAD="1";
