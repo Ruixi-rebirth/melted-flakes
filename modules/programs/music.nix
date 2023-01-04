@@ -5,6 +5,7 @@
     packages = with pkgs; [
       mpc-cli
       youtube-music
+      netease-cloud-music-gtk
     ];
   };
   programs = {
