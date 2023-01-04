@@ -73,7 +73,6 @@
           "Codelearning"
           ".npm-global"
           ".config"
-          ".steam"
           ".thunderbird"
           "Flakes"
           "Kvm"
@@ -115,7 +114,6 @@
       ntfs3g
       pkgs.rust-bin.stable.latest.default
       blender
-      steam
     ];
   };
 
