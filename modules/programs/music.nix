@@ -6,7 +6,6 @@
       mpc-cli
       youtube-music
       netease-cloud-music-gtk
-      netease-music-tui
     ];
   };
   programs = {
