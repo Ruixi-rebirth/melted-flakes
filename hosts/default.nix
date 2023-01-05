@@ -39,8 +39,7 @@ in
             (import ../overlays)
             inputs.neovim-nightly-overlay.overlay
             inputs.rust-overlay.overlays.default
-            inputs.hyprpicker.default
-            inputs.hypr-contrib.default
+            inputs.hypr-contrib.packages."${system}".grimblast
           ];
         };
       }
