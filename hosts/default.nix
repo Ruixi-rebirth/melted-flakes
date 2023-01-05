@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, nur, user, hyprland, impermanence, ... }:
+{ lib, inputs, nixpkgs, home-manager, nur, user, hyprland, impermanence, hyprpicker, hypr-contrib, ... }:
 
 let
   system = "x86_64-linux"; # System architecture
@@ -39,6 +39,8 @@ in
             (import ../overlays)
             inputs.neovim-nightly-overlay.overlay
             inputs.rust-overlay.overlays.default
+            inputs.hyprpicker.default
+            inputs.hypr-contrib.default
           ];
         };
       }

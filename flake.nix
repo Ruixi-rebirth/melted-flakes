@@ -8,17 +8,19 @@
       rust-overlay.url = "github:oxalica/rust-overlay";
       impermanence.url = "github:nix-community/impermanence";
       nur.url = "github:nix-community/NUR";
-      home-manager = {
-        url = "github:nix-community/home-manager";
-        inputs.nixpkgs.follows = "nixpkgs";
-      };
+      hyprpicker.url = "github:hyprwm/hyprpicker";
+      hypr-contrib.url = "github:hyprwm/contrib";
       hyprland = {
         url = "github:hyprwm/Hyprland";
         inputs.nixpkgs.follows = "nixpkgs";
       };
+      home-manager = {
+        url = "github:nix-community/home-manager";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
     };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, rust-overlay, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, rust-overlay, hyprpicker, hypr-contrib, ... }:
     let
       user = "ruixi";
     in
@@ -28,7 +30,7 @@
         import ./hosts {
           # Imports ./hosts/default.nix
           inherit (nixpkgs) lib;
-          inherit inputs nixpkgs home-manager nur user hyprland impermanence rust-overlay;
+          inherit inputs nixpkgs home-manager nur user hyprland impermanence rust-overlay hypr-contrib hyprpicker;
         }
       );
     };
