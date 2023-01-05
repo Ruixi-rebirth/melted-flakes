@@ -20,18 +20,18 @@
 stdenv.mkDerivation
 rec {
   pname = "netease-cloud-music-gtk";
-  version = "2.2.0";
+  version = "2.0.3";
 
   src = fetchFromGitHub {
     owner = "gmg137";
     repo = pname;
     rev = version;
-    hash = "sha256-9qUzRmm3WQEVjzhzHMT1vNw3r3ymWGlBWXnnPsYGSnk=";
+    hash = "sha256-A3mvf6TZ3+aiWA6rg9G5NMaDKvO0VQzwIM1t0MaTpTc=";
   };
 
   cargoDeps = rustPlatform.fetchCargoTarball {
     inherit src;
-    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    hash = "sha256-Y7rZTbg0zd/eoo6E8TmV8JJPs1N0bLlBjvB6W07Kelg=";
   };
 
   nativeBuildInputs = [
@@ -61,6 +61,7 @@ rec {
     gst-plugins-bad
     gst-plugins-ugly
   ]);
+
   meta = with lib; {
     description = "A Rust + GTK based netease cloud music player";
     homepage = "https://github.com/gmg137/netease-cloud-music-gtk";
