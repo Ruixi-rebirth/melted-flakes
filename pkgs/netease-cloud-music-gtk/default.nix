@@ -26,7 +26,7 @@ rec {
     owner = "gmg137";
     repo = pname;
     rev = version;
-    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    hash = "sha256-9qUzRmm3WQEVjzhzHMT1vNw3r3ymWGlBWXnnPsYGSnk=";
   };
 
   cargoDeps = rustPlatform.fetchCargoTarball {
