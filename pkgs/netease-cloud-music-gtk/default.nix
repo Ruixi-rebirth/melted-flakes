@@ -29,11 +29,10 @@ rec {
     hash = "sha256-9qUzRmm3WQEVjzhzHMT1vNw3r3ymWGlBWXnnPsYGSnk=";
   };
 
-  # cargoDeps = rustPlatform.fetchCargoTarball {
-  #   inherit src;
-  #   hash = "0000000000000000000000000000000000000000000000000000000000000000";
-  # };
-  # cargoSha256 = lib.fakeSha256;
+  cargoDeps = rustPlatform.fetchCargoTarball {
+    inherit src;
+    hash = "sha256-Y7rZTbg0zd/eoo6E8TmV8JJPs1N0bLlBjvB6W07Kekg=";
+  };
 
   nativeBuildInputs = [
     meson
