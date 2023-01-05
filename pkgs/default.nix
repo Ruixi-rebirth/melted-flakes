@@ -1,4 +1,4 @@
-{ pkgs, darwin }:
+{ pkgs, }:
 
 {
   catppuccin-cursors = pkgs.callPackage ./catppuccin-cursors { };
