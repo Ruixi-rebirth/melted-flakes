@@ -12,7 +12,7 @@ let
   grimblast_watermark = pkgs.writeShellScriptBin "grimblast_watermark" ''
         FILE=$(date "+%Y-%m-%d"T"%H:%M:%S").png
     # Get the picture from maim
-        grimblast --notify --cursor copysave area ~/Pictures/src.png >> /dev/null 2>&1
+        grimblast --notify --cursor save area ~/Pictures/src.png >> /dev/null 2>&1
     # add shadow, round corner, border and watermark
         convert $HOME/Pictures/src.png \
           \( +clone -alpha extract \
@@ -25,6 +25,8 @@ let
           +swap -background transparent -layers merge +repage $HOME/Pictures/$FILE
     #
         composite -gravity Southeast "${./watermark.png}" $HOME/Pictures/$FILE $HOME/Pictures/$FILE 
+    #
+        wl-copy < $HOME/Pictures/$FILE
     #   remove the other pictures
         rm $HOME/Pictures/src.png $HOME/Pictures/output.png
   '';
