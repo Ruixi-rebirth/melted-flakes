@@ -1,7 +1,13 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 {
   imports = [ ../../programs/waybar/hyprland_waybar.nix ];
 
+  home = {
+    packages = with pkgs; [
+      inputs.hypr-contrib.packages.${pkgs.system}.grimblast
+      inputs.hyprpicker.packages.${pkgs.system}.hyprpicker
+    ];
+  };
   programs.hyprland = {
     enable = true;
   };
