@@ -8,8 +8,8 @@
       swaybg
       swaylock-effects
       pamixer
-      inputs.hypr-contrib.packages.${pkgs.system}.grimblast
-      inputs.hyprpicker.packages.${pkgs.system}.hyprpicker
+      hypr-contrib.packages.${pkgs.system}.grimblast
+      hyprpicker.packages.${pkgs.system}.hyprpicker
     ];
   };
   home.file = {
