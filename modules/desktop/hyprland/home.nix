@@ -250,8 +250,8 @@
       bind=$mainMod,M,exec, youtube-music
       bind=$mainMod,T,exec,telegram-desktop
       bind=$mainMod,Q,exec,icalingua-plus-plus --enable-features=UseOzonePlatform --ozone-platform=wayland
-      bind=$mainMod,bracketleft,exec,grimblast --notify --sursor  copysave area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
-      bind=$mainMod,bracketright,exec, grimblast --notify --sursor  copy area
+      bind=$mainMod,bracketleft,exec,grimblast --notify --cursor  copysave area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
+      bind=$mainMod,bracketright,exec, grimblast --notify --cursor  copy area
       bind=$mainMod,A,exec, grimblast_watermark
       bind=,Super_L,exec, pkill rofi || ~/.config/rofi/launcher.sh
       bind=$mainMod,Super_L,exec, bash ~/.config/rofi/powermenu.sh
