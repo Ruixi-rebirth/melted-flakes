@@ -114,9 +114,6 @@
       ntfs3g
       pkgs.rust-bin.stable.latest.default
       blender
-      inputs.hypr-contrib.packages.${pkgs.system}.grimblast
-      inputs.hyprpicker.packages.${pkgs.system}.hyprpicker
-
     ];
   };
 
