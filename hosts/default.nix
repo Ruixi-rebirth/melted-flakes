@@ -23,7 +23,6 @@ in
       ../modules/programs/nurpkgs.nix
       hyprland.nixosModules.default
       home-manager.nixosModules.home-manager
-      inputs.hypr-contrib.packages.grimblast
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
@@ -40,6 +39,8 @@ in
             (import ../overlays)
             inputs.neovim-nightly-overlay.overlay
             inputs.rust-overlay.overlays.default
+            inputs.hyprpicker.default
+            inputs.hypr-contrib.default
           ];
         };
       }
