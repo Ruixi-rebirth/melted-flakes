@@ -351,7 +351,6 @@
       windowrule=float,ncmpcpp
       windowrule=move 25%-,ncmpcpp
       windowrule=size 960 540,ncmpcpp
-      windowrule=float,title:Zoom
     '';
   };
 }
