@@ -25,7 +25,6 @@
       pkgs.sway-contrib.grimshot
       imagemagick
       thunderbird
-      zoom-us
     ];
   };
   boot = {
