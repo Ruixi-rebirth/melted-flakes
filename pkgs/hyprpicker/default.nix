@@ -18,8 +18,8 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "hyprwm";
     repo = "hyprpicker";
-    rev = "06be1c9348fdf8ff58fd05f54b62bdd73544db6a";
-    hash = "sha256-jgiDWLwCf6PQhXLUtSk4btaS/jZwJed2XLnlA51ANQk=";
+    rev = "ef6009f71c3f18c63207102f18310d62e132a406";
+    hash = "sha256-cCBGvS1hI9ZBBhIaz+G/7WSUh+e8tkh5AVosWiq6udc=";
   };
 
   nativeBuildInputs = [
