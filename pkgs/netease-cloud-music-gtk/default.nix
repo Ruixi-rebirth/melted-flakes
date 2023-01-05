@@ -31,7 +31,7 @@ rec {
 
   cargoDeps = rustPlatform.fetchCargoTarball {
     inherit src;
-    hash = "sha256-Y7rZTbg0zd/eoo6E8TmV8JJPs1N0bLlBjvB6W07Kelg=";
+    hash = "sha256-Y7rZTbg0zd/eoo6E8TmV8JJPs1N0bLlBjvB6W07Kekg=";
   };
 
   nativeBuildInputs = [
