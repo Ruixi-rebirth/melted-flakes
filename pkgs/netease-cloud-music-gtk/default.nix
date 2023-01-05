@@ -20,13 +20,13 @@
 stdenv.mkDerivation
 rec {
   pname = "netease-cloud-music-gtk";
-  version = "2.0.3";
+  version = "2.2.0";
 
   src = fetchFromGitHub {
     owner = "gmg137";
     repo = pname;
     rev = version;
-    hash = "sha256-A3mvf6TZ3+aiWA6rg9G5NMaDKvO0VQzwIM1t0MaTpTc=";
+    hash = "sha256-9qUzRmm3WQEVjzhzHMT1vNw3r3ymWGlBWXnnPsYGSnk=";
   };
 
   cargoDeps = rustPlatform.fetchCargoTarball {
