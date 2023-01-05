@@ -23,7 +23,7 @@ in
       ../modules/programs/nurpkgs.nix
       hyprland.nixosModules.default
       home-manager.nixosModules.home-manager
-      inputs.hypr-contrib.packages."${system}".grimblast
+      inputs.hypr-contrib.packages.grimblast
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
