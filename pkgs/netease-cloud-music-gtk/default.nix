@@ -33,7 +33,7 @@ rec {
   #   inherit src;
   #   hash = "0000000000000000000000000000000000000000000000000000000000000000";
   # };
-  cargoSha256 = lib.fakeSha256;
+  # cargoSha256 = lib.fakeSha256;
 
   nativeBuildInputs = [
     meson
