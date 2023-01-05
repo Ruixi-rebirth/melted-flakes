@@ -15,8 +15,6 @@
 , dbus
 , libadwaita
 , gst_all_1
-, Foundation
-, SystemConfiguration
 }:
 
 stdenv.mkDerivation
@@ -62,11 +60,7 @@ rec {
     gst-plugins-good
     gst-plugins-bad
     gst-plugins-ugly
-  ]) ++ lib.optionals stdenv.isDarwin [
-    Foundation
-    SystemConfiguration
-  ];
-
+  ]);
   meta = with lib; {
     description = "A Rust + GTK based netease cloud music player";
     homepage = "https://github.com/gmg137/netease-cloud-music-gtk";
