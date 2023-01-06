@@ -1,2 +1,4 @@
 result/
 nixpkgs/
+blog/resources/
+blog/.hugo_build.lock
