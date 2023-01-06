@@ -10,6 +10,8 @@
       nur.url = "github:nix-community/NUR";
       hyprpicker.url = "github:hyprwm/hyprpicker";
       hypr-contrib.url = "github:hyprwm/contrib";
+      flake-utils.url = "github:numtide/flake-utils";
+      nixpkgs-review.url = "github:Mic92/nixpkgs-review";
       hyprland = {
         url = "github:hyprwm/Hyprland";
         inputs.nixpkgs.follows = "nixpkgs";
@@ -20,11 +22,25 @@
       };
     };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, rust-overlay, hyprpicker, hypr-contrib, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, rust-overlay, hyprpicker, hypr-contrib, flake-utils, ... }:
     let
       user = "ruixi";
     in
-    {
+    flake-utils.lib.eachSystem [ "x86_64-linux" ]
+      (
+        system:
+        let
+          pkgs = import nixpkgs {
+            inherit system;
+            overlays = [
+            ];
+          };
+        in
+        {
+          formatter = pkgs.nixpkgs-fmt;
+        }
+      )
+    // {
       nixosConfigurations = (
         # NixOS configurations
         import ./hosts {
