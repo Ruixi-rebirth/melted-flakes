@@ -25,6 +25,7 @@
   outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, rust-overlay, hyprpicker, hypr-contrib, flake-utils, ... }:
     let
       user = "ruixi";
+      domain = "rayxi.top";
     in
     flake-utils.lib.eachSystem [ "x86_64-linux" ]
       (
@@ -37,7 +38,20 @@
           };
         in
         {
-          formatter = pkgs.nixpkgs-fmt;
+          devShell = pkgs.mkShell
+            {
+              name = "blog";
+              buildInputs = with pkgs;
+                [
+                  hugo
+                ];
+              shellHook = ''
+                export PS1="\e[0;31m(Blog)\$ \e[m" 
+                cd blog/
+                cp -r ./static/hugo-theme-stack ./themes/
+                #hugo server --buildDrafts --forceSyncStatic
+              '';
+            };
         }
       )
     // {
