@@ -44,10 +44,11 @@
               buildInputs = with pkgs;
                 [
                   hugo
+                  git
                 ];
               shellHook = ''
                 export PS1="\e[0;31m(Blog)\$ \e[m" 
-                cd blog/
+                git checkout blog
                 cp -r ./static/hugo-theme-stack ./themes/
                 #hugo server --buildDrafts --forceSyncStatic
               '';
