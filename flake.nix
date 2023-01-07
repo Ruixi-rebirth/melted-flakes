@@ -48,7 +48,7 @@
                 ];
               shellHook = ''
                 export PS1="\e[0;31m(Blog)\$ \e[m" 
-                git checkout blog
+                cd ./blog
                 cp -r ./static/hugo-theme-stack ./themes/
                 #hugo server --buildDrafts --forceSyncStatic
               '';
