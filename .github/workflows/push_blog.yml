@@ -1,4 +1,4 @@
-name: push_blog
+name: deploy_blog
 
 on:
   push:
