@@ -1,3 +1,9 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - blog  # Set a branch to deploy
 jobs:
   deploy:
     runs-on: ubuntu-18.04
