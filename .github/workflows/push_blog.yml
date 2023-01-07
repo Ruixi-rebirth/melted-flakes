@@ -20,12 +20,12 @@ jobs:
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
-          # API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
+          # API_TOKEN_GITHUB: ${{ secrets.TOKEN }}
 
           SSH_DEPLOY_KEY: ${{ secrets.PRIVERT_KEY }}
         with:
           source-directory: './blog'
           destination-github-username: 'Ruixi-rebirth'
-          destination-repository-name: 'test'
+          destination-repository-name: 'Ruixi-rebirth.github.io'
           user-email: ruixirebirth@gmail.com
-          target-branch: main
+          target-branch: source
