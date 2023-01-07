@@ -3,7 +3,7 @@ name: github pages
 on:
   push:
     branches:
-      - blog  # Set a branch to deploy
+      - source  # Set a branch to deploy
 
 jobs:
   deploy:
