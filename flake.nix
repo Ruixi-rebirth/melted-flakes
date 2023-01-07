@@ -39,21 +39,31 @@
           };
         in
         {
-          devShell = pkgs.mkShell
-            {
+          devShells = {
+            default = with pkgs; mkShell {
               name = "blog";
-              buildInputs = with pkgs;
-                [
-                  hugo
-                  git
-                ];
+              nativeBuildInputs = [
+                hugo
+              ];
               shellHook = ''
-                export PS1="\e[0;31m(Blog)\$ \e[m" 
+                export PS1="\e[0;32m(Blog)\$ \e[m" 
                 cd ./blog
                 cp -r ./static/hugo-theme-stack ./themes/
                 #hugo server --buildDrafts --forceSyncStatic
               '';
             };
+            secret = with pkgs; mkShell {
+              nativeBuildInputs = [
+                sops
+                age
+                ssh-to-age
+                ssh-to-pgp
+              ];
+              shellHook = ''
+                export PS1="\e[0;31m(secret)\$ \e[m" 
+              '';
+            };
+          };
         }
       )
     // {
