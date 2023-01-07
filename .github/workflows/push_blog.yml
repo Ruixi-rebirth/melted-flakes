@@ -13,11 +13,11 @@ jobs:
       with:
         persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
-    - name: Commit files
-      run: |
-        git config --local user.email "ruixirebirth@gmail.com"
-        git config --local user.name "Ruixi-rebirth"
-        git commit -a -m "Add changes"
+    # - name: Commit files
+    #   run: |
+    #     git config --local user.email "ruixirebirth@gmail.com"
+    #     git config --local user.name "Ruixi-rebirth"
+    #     git commit -a -m "Add changes"
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
