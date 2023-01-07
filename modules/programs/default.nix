@@ -10,7 +10,6 @@
   ./yt-dlp.nix
   ./mpv/mpv.nix
   ./imgview.nix
-  ./hugo.nix
   ./dbeaver.nix
   ./lazygit.nix
   ./neofetch/neofetch.nix
