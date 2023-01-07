@@ -12,5 +12,5 @@ jobs:
         force: true
         github_token: ${{ secrets.GITHUB_TOKEN }}
         repository: 'ruixi-rebirth.github.io.git'
-        branch: source
+        branch: ${{ github.ref_source }}
         directory: '../../blog'
