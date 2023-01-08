@@ -40,8 +40,8 @@
         in
         {
           devShells = {
-            default = with pkgs; mkShell {
-              name = "blog";
+            #run by `nix devlop .#<name>`
+            blog = with pkgs; mkShell {
               nativeBuildInputs = [
                 hugo
               ];
@@ -60,7 +60,7 @@
                 ssh-to-pgp
               ];
               shellHook = ''
-                export PS1="\e[0;31m(secret)\$ \e[m" 
+                export PS1="\e[0;31m(Secret)\$ \e[m" 
               '';
             };
           };
