@@ -343,11 +343,11 @@
       windowrule=size 960 540,nemo
       windowrule=opacity 0.95,title:Telegram
       windowrule=opacity 0.95,title:QQ
-      windowrule=opacity 0.95,class:com.gitee.gmg137.NeteaseCloudMusicGtk4
+      windowrule=opacity 0.95,title: NetEase Cloud Music Gtk4
       windowrule=animation slide right,kitty
       windowrule=workspace name:QQ, title:Icalingua++
       windowrule=workspace name:TG, title:Telegram
-      windowrule=workspace name:Music, class:com.gitee.gmg137.NeteaseCloudMusicGtk4
+      windowrule=workspace name:Music, title: NetEase Cloud Music Gtk4
       windowrule=float,ncmpcpp
       windowrule=move 25%-,ncmpcpp
       windowrule=size 960 540,ncmpcpp
