@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 theme="launcher_theme"
-dir="$HOME/.config/rofi/"
+dir="$HOME/.config/rofi"
 
 # catppuccin
 # ALPHA="#00000000"
