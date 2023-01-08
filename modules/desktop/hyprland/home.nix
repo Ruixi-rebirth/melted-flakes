@@ -186,6 +186,7 @@
       bind = $mainMod, comma, workspace,e-1
       bind = $mainMod, Q, workspace,QQ
       bind = $mainMod, T, workspace,TG
+      bind = $mainMod, M, workspace,Music
 
       #-------------------------------#
       # special workspace(scratchpad) #
@@ -244,10 +245,9 @@
       # quickly launch program #
       #------------------------# 
       bind=$mainMod,B,exec,firefox
-      bind=$mainMod,M,exec,netease-cloud-music
+      bind=$mainMod,M,exec,netease-cloud-music-gtk4 
       bind=$mainMod SHIFT,D,exec,kitty  --class="danmufloat" --hold sh -c "cd /home/ruixi/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && go run main.go -c config.toml"
       bind=$mainMod SHIFT,X,exec,myswaylock
-      bind=$mainMod,M,exec, youtube-music
       bind=$mainMod,T,exec,telegram-desktop
       bind=$mainMod,Q,exec,icalingua-plus-plus --enable-features=UseOzonePlatform --ozone-platform=wayland
       bind=$mainMod,bracketleft,exec,grimblast --notify --cursor  copysave area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
@@ -343,10 +343,11 @@
       windowrule=size 960 540,nemo
       windowrule=opacity 0.95,title:Telegram
       windowrule=opacity 0.95,title:QQ
+      windowrule=opacity 0.95,class:com.gitee.gmg137.NeteaseCloudMusicGtk4
       windowrule=animation slide right,kitty
       windowrule=workspace name:QQ, title:Icalingua++
       windowrule=workspace name:TG, title:Telegram
-      windowrule=workspace name:Music, title:YouTube Music
+      windowrule=workspace name:Music, class:com.gitee.gmg137.NeteaseCloudMusicGtk4
       windowrule=float,ncmpcpp
       windowrule=move 25%-,ncmpcpp
       windowrule=size 960 540,ncmpcpp
