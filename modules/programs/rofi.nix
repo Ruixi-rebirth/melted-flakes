@@ -6,7 +6,6 @@
     ];
   };
   home.file.".config/rofi/off.sh".source = ./rofi/off.sh;
-  home.file.".config/rofi/colors.rasi".source = ./rofi/colors.rasi;
   home.file.".config/rofi/launcher.sh".source = ./rofi/launcher.sh;
   home.file.".config/rofi/launcher_theme.rasi".source = ./rofi/launcher_theme.rasi;
   home.file.".config/rofi/powermenu.sh".source = ./rofi/powermenu.sh;
