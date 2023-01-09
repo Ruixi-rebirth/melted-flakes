@@ -11,13 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
     
-      - name: "Install Nix ❄️""
+      - name: "Install Nix ❄️"
         uses: cachix/install-nix-action@v18
         with:
           github_access_token: ${{ secrets.TOKEN }}
       - run: nix flake check
       
-      - name: "Install Cachix ❄️""
+      - name: "Install Cachix ❄️"
         uses: cachix/cachix-action@v10
         with:
           name: ruixi-rebirth
@@ -26,7 +26,7 @@ jobs:
       
       - name: Print nixpkgs version
         run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'
-      - name: "Build NixOS config ❄️""
+      - name: "Build NixOS config ❄️"
         run: |
           nix build .#nixosConfigurations.laptop.config.system.build.toplevel 
           
