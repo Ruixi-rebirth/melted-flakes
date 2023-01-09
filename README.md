@@ -1,6 +1,6 @@
 **简体中文（中国大陆）** | [English (UK)](README_en.md)
 
-[![github pages](https://github.com/ruixi-rebirth/nixos-config/actions/workflows/push_blog.yml/badge.svg)](https://ruixi-rebirth.github.io) [![flake check](https://github.com/ruixi-rebirth/nixos-config/actions/workflows/test.yml/badge.svg)](https://Ruixi-rebirth/nixos-config/actions/workflows/test.yml)
+[![github pages](https://github.com/ruixi-rebirth/nixos-config/actions/workflows/push_blog.yml/badge.svg)](https://ruixi-rebirth.github.io) [![flake check](https://github.com/ruixi-rebirth/nixos-config/actions/workflows/NixOS.yml/badge.svg)](https://github.con/Ruixi-rebirth/nixos-config/actions/workflows/NixOS.yml)
 
 <p align="center"><img src="https://user-images.githubusercontent.com/75824585/210402874-da3422d5-ab65-4975-b73a-c300065c6792.png" width=300px></p>
 <h2 align="center">Ruixi-rebirth's NixOS Config</h2>
