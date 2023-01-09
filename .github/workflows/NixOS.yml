@@ -1,0 +1,33 @@
+name: NixOS
+#concurrency: 
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build-laptop:  
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+    
+      - name: "Install Nix ❄️""
+        uses: cachix/install-nix-action@v18
+        with:
+          github_access_token: ${{ secrets.TOKEN }}
+      - run: nix flake check
+      
+      - name: "Install Cachix ❄️""
+        uses: cachix/cachix-action@v10
+        with:
+          name: ruixi-rebirth
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+          extraPullNames: nix-community          
+      
+      - name: Print nixpkgs version
+        run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'
+      - name: "Build NixOS config ❄️""
+        run: |
+          nix build .#nixosConfigurations.laptop.config.system.build.toplevel 
+          
+        
