@@ -46,7 +46,7 @@ jobs:
         run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'
       - name: "Check free space"
         run: |
-          apt install neofetch
+          sudo apt install neofetch
           neofetch
           echo "Free space:"
           df -h
