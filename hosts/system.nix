@@ -53,6 +53,7 @@
       zip
       rar
       frp
+      sops
     ];
   };
   services.dbus.enable = true;
