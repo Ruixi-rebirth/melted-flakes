@@ -39,9 +39,14 @@ jobs:
         run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'
       - name: "Build NixOS config ❄️"
         run: |
-          nix build .#nixosConfigurations.laptop.config.system.build.toplevel 
+          # nix build .#nixosConfigurations.laptop.config.system.build.toplevel 
+          nix --experimental-features 'nix-command flakes' build -L '.#nixosConfigurations.laptop.config.system.build.toplevel'
+          nix build --profile /nix/var/nix/profiles/system "$(readlink -f result)"
+          nix shell -vv "$(readlink -f result)" -c switch-to-configuration switch 
+
       - name: "Check free space"
         run: |
+          neofetch
           echo "Free space:"
           df -h
           
