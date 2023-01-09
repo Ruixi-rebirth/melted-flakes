@@ -2,7 +2,7 @@
 
 [![github pages](https://github.com/ruixi-rebirth/nixos-config/actions/workflows/push_blog.yml/badge.svg)](https://ruixi-rebirth.github.io)
 
-[![github pages](https://github.com/ruixi-rebirth/nixos-config/actions/workflows/tests.yml/badge.svg)](https://Ruixi-rebirth/nixos-config/actions/workflows/tests.yml)
+[![flake check](https://github.com/ruixi-rebirth/nixos-config/actions/workflows/tests.yml/badge.svg)](https://Ruixi-rebirth/nixos-config/actions/workflows/tests.yml)
 
 <p align="center"><img src="https://user-images.githubusercontent.com/75824585/210402874-da3422d5-ab65-4975-b73a-c300065c6792.png" width=300px></p>
 <h2 align="center">Ruixi-rebirth's NixOS Config</h2>
