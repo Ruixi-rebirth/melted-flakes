@@ -1,4 +1,4 @@
-name: "test"
+name: "flake check"
 on:
   push:
     branches: [ main ]
