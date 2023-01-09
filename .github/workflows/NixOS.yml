@@ -40,10 +40,9 @@ jobs:
       - name: "Build NixOS config ❄️"
         run: |
           # nix build .#nixosConfigurations.laptop.config.system.build.toplevel 
-          sudo su
           nix --experimental-features 'nix-command flakes' build -L '.#nixosConfigurations.laptop.config.system.build.toplevel'
-          nix build --profile /nix/var/nix/profiles/system "$(readlink -f result)"
-          nix shell -vv "$(readlink -f result)" -c switch-to-configuration switch 
+          sudo nix build --profile /nix/var/nix/profiles/system "$(readlink -f result)"
+          sudo nix shell -vv "$(readlink -f result)" -c switch-to-configuration switch 
 
       - name: "Check free space"
         run: |
