@@ -9,6 +9,16 @@ jobs:
   build-laptop:  
     runs-on: ubuntu-latest
     steps:
+      - name: "Create Dir for Mounting moar Disk Space ❄"
+        run: |
+          sudo mkdir /nix
+      - name: "Maximize Disk Space"
+        uses: easimon/maximize-build-space@v6
+        with:
+          build-mount-path: /nix
+          remove-dotnet: "true"
+          remove-android: "true"
+          remove-haskell: "true"
       - uses: actions/checkout@v3
     
       - name: "Install Nix ❄️"
@@ -30,5 +40,9 @@ jobs:
       - name: "Build NixOS config ❄️"
         run: |
           nix build .#nixosConfigurations.laptop.config.system.build.toplevel 
+      - name: "Check free space"
+        run: |
+          echo "Free space:"
+          df -h
           
         
