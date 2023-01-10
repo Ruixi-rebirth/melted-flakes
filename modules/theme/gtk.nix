@@ -4,7 +4,8 @@
 
   home = {
     packages = with pkgs; [
-      catppuccin-gtk
+      catppuccin-frappe-gtk
+      catppuccin-latte-gtk
     ];
   };
   home.pointerCursor = {
