@@ -94,6 +94,18 @@ let
         fi
         waybar
   '';
+  default_waybar = pkgs.writeShellScriptBin "default_waybar" ''
+    #!/bin/bash
+    killall waybar
+    SDIR="$HOME/.config/waybar"
+    waybar -c "$SDIR"/config -s "$SDIR"/style.css &
+  '';
+  light_waybar = pkgs.writeShellScriptBin "light_waybar" ''
+    #!/bin/bash
+    killall waybar
+    SDIR="$HOME/.config/waybar"
+    waybar -c "$SDIR"/light_config -s "$SDIR"/light_style.css &
+  '';
 in
 {
   home.packages = with pkgs; [
@@ -104,5 +116,7 @@ in
     myswaylock
     dynamic_wallpaper
     launch_waybar
+    light_waybar
+    default_waybar
   ];
 }
