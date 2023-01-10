@@ -2,7 +2,8 @@
 
 {
   catppuccin-cursors = pkgs.callPackage ./catppuccin-cursors { };
-  catppuccin-gtk = pkgs.callPackage ./catppuccin-gtk { };
+  catppuccin-frappe-gtk = pkgs.callPackage ./catppuccin-frappe-gtk { };
+  catppuccin-latte-gtk = pkgs.callPackage ./catppuccin-latte-gtk { };
   qq = pkgs.callPackage ./qq { };
   # netease-cloud-music-gtk = pkgs.callPackage ./netease-cloud-music-gtk { };
 }
