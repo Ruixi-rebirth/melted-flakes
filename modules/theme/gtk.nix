@@ -2,12 +2,6 @@
 
 {
 
-  home = {
-    packages = with pkgs; [
-      catppuccin-frappe-gtk
-      catppuccin-latte-gtk
-    ];
-  };
   home.pointerCursor = {
     package = pkgs.catppuccin-cursors;
     name = "Catppuccin-Frappe-Dark";
@@ -20,6 +14,8 @@
       # name = "Catppuccin-Frappe-Pink";
 
       name = "Catppuccin-Latte-Green";
+      package = pkgs.catppuccin-latte-gtk;
+      # package = pkgs.catppuccin-frappe-gtk;
     };
     cursorTheme = {
       name = "Catppuccin-Frappe-Dark";
