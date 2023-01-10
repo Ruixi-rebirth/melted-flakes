@@ -18,6 +18,7 @@
     enable = true;
     theme = {
       # name = "Catppuccin-Frappe-Pink";
+
       name = "Catppuccin-Latte-Green";
     };
     cursorTheme = {
