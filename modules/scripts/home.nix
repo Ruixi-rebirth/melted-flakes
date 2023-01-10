@@ -96,13 +96,13 @@ let
   '';
   default_waybar = pkgs.writeShellScriptBin "default_waybar" ''
     #!/bin/bash
-    killall waybar
+    killall .waybar-wrapped
     SDIR="$HOME/.config/waybar"
     waybar -c "$SDIR"/config -s "$SDIR"/style.css &
   '';
   light_waybar = pkgs.writeShellScriptBin "light_waybar" ''
     #!/bin/bash
-    killall waybar
+    killall .waybar-wrapped
     SDIR="$HOME/.config/waybar"
     waybar -c "$SDIR"/light_config -s "$SDIR"/light_style.css &
   '';
