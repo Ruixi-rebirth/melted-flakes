@@ -27,7 +27,7 @@
       WLR_RENDERER = "vulkan";
       #__NV_PRIME_RENDER_OFFLOAD="1";
 
-      GTK_THEME = "Catppuccin-Frappe-Pink";
+      GTK_THEME = "Catppuccin-Latte-Green";
 
       XDG_CURRENT_DESKTOP = "Hyprland";
       XDG_SESSION_DESKTOP = "Hyprland";
