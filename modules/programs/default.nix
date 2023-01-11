@@ -1,6 +1,5 @@
 [
   ./base.nix
-  ./fcitx5.nix
   ./kitty.nix
   ./gpg.nix
   ./obs-studio/obs_studio.nix
