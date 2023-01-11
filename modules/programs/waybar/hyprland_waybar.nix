@@ -165,7 +165,7 @@ in
           "wlr/workspaces"
           "temperature"
           #"idle_inhibitor"
-          "custom/style-switch"
+          "custom/wall"
           "mpd"
           "custom/cava-internal"
         ];
@@ -187,9 +187,10 @@ in
           "on-click" = "pkill rofi || ~/.config/rofi/launcher.sh";
           "tooltip" = false;
         };
-        "custom/style-switch" = {
+        "custom/wall" = {
+          "on-click" = "wallpaper_random";
+          "on-click-right" = "killall dynamic_wallpaper || dynamic_wallpaper &";
           "format" = "ﴔ";
-          "on-click" = "light_waybar &";
           "tooltip" = false;
         };
         "custom/cava-internal" = {
@@ -243,8 +244,6 @@ in
           "tooltip" = false;
         };
         "clock" = {
-          "on-click" = "wallpaper_random";
-          "on-click-right" = "killall dynamic_wallpaper || dynamic_wallpaper &";
           "interval" = 1;
           "format" = "{:%I:%M %p  %A %b %d}";
           "tooltip" = true;
@@ -343,8 +342,6 @@ in
             "clock": {
               "format": "{:%I:%M %p  %A %b %d}",
               "interval": 1,
-              "on-click": "wallpaper_random",
-              "on-click-right": "killall dynamic_wallpaper || dynamic_wallpaper &",
               "tooltip": true,
               "tooltip-format": "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>"
             },
@@ -361,9 +358,10 @@ in
               "on-click": "pkill rofi || ~/.config/rofi/launcher.sh",
               "tooltip": false
             },
-            "custom/style-switch": {
+            "custom/wall": {
+              "on-click": "wallpaper_random",
+              "on-click-right": "killall dynamic_wallpaper || dynamic_wallpaper &",
               "format": "ﴔ",
-              "on-click": "default_waybar &",
               "tooltip": false
             },
             "custom/powermenu": {
@@ -395,7 +393,7 @@ in
               "wlr/workspaces",
               "temperature",
               //"idle_inhibitor",
-              "custom/style-switch",
+              "custom/wall",
               "mpd",
               "custom/cava-internal"
             ],
