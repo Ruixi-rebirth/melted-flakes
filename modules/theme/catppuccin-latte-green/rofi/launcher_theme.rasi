@@ -43,7 +43,7 @@ entry {
 
 inputbar {
   children:                   [ prompt, entry ];
-  background-color:           @ac;
+  background-color:           #FAF4FC;
   text-color:                 @bg;
   expand:                     false;
   border:                     0% 0% 0% 0%;
