@@ -190,7 +190,7 @@ in
         "custom/wall" = {
           "on-click" = "wallpaper_random";
           "on-click-right" = "killall dynamic_wallpaper || dynamic_wallpaper &";
-          "format" = "ﴔ";
+          "format" = " ﴔ ";
           "tooltip" = false;
         };
         "custom/cava-internal" = {
@@ -361,7 +361,7 @@ in
             "custom/wall": {
               "on-click": "wallpaper_random",
               "on-click-right": "killall dynamic_wallpaper || dynamic_wallpaper &",
-              "format": "ﴔ",
+              "format": " ﴔ ",
               "tooltip": false
             },
             "custom/powermenu": {
