@@ -92,7 +92,7 @@ let
         elif [ "$is_waybar_ServerExist" = "1" ]; then
           killall .waybar-wrapped
         fi
-        if [ "$GTK_THEME"="Catppuccin-Frappe-Pink" ]; then
+        if [ "$GTK_THEME" = "Catppuccin-Frappe-Pink" ]; then
           default_waybar
         else
           light_waybar
