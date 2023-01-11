@@ -1,4 +1,4 @@
-{ config, pkg, ... }:
+{ config, pkgs, ... }:
 {
   gpg.package = pkgs.gnupg;
   services = {
