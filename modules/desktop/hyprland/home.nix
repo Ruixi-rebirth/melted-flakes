@@ -311,7 +311,7 @@
       #------------#
       # auto start #
       #------------#
-      exec-once = waybar &
+      exec-once = launch_waybar &
       exec-once = fcitx5 -d &
       exec-once = mako &
       exec-once = border_color &
