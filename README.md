@@ -21,7 +21,8 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 <details>
 <summary><b>Click to expend</b></summary>
 
-![](./screenshot/screenshot.png)
+![](./screenshot/light.png)
+![](./screenshot/dark.png)
 
 </details>
 
