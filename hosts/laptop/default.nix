@@ -2,11 +2,11 @@
 
 {
   imports =
+    (import ../../modules/hardware) ++
+    (import ../../modules/virtualisation) ++
     [
       ./hardware-configuration.nix
       ../../modules/fonts
-      ../../modules/hardware
-      ../../modules/virtualisation
     ] ++ [
       # ../../modules/desktop/sway
       ../../modules/desktop/hyprland
