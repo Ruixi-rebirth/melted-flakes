@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  gpg.package = pkgs.gnupg;
+  programs.gpg.package = pkgs.gnupg;
   services = {
     gpg-agent = {
       enable = true;
