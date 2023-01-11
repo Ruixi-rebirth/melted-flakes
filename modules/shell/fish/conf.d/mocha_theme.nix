@@ -12,7 +12,7 @@
   set -l pink f5c2e7
   set -l red f38ba8
   set -l peach fab387
-  set -l green 99FF99
+  set -l green 49A536
   set -l yellow f9e2af
   set -l blue 89b4fa
   set -l gray 6c7086
