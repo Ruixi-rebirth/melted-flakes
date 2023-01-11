@@ -17,8 +17,8 @@
         background_opacity = "0.95";
       };
       extraConfig = ''
-        foreground              #6A6797
-        background              #FAF4FC
+        foreground              #4C4F69
+        background              #EFF1F5
         selection_foreground    #EFF1F5
         selection_background    #DC8A78
 
