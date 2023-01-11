@@ -2,6 +2,8 @@
 
 {
   imports = [ ../../environment/hypr-variables.nix ];
+  imports = [ ../../programs/waybar/hyprland_waybar.nix ];
+
 
   home = {
     packages = with pkgs; [
