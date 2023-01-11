@@ -1,4 +1,5 @@
 [
+  ./base.nix
   ./kitty.nix
   ./obs-studio/obs_studio.nix
   ./music.nix
