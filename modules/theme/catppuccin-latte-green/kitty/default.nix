@@ -3,6 +3,9 @@
 {
   programs = {
     kitty = {
+      theme = "Catppuccin-Mocha";
+      font.name = "jetbrains mono nerd font";
+      font.size = 15;
       settings = {
         italic_font = "auto";
         bold_italic_font = "auto";
