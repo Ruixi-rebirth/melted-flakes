@@ -7,6 +7,8 @@
       ../../modules/fonts
     ] ++ [
       (import ../../modules/hardware)
+    ] ++
+    [
       (import ../../modules/virtualisation)
     ]
     ++ [
