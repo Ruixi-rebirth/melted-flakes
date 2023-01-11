@@ -1,8 +1,5 @@
 { config, lib, pkgs, ... }:
 
-let
-  user = "ruixi";
-in
 {
   home-manager.users.${user} = {
     # Home-manager waybar config
