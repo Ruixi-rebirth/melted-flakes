@@ -32,7 +32,7 @@ prompt {
 
 entry {
   background-color:           @al;
-  text-color:                 #7AA2F7;
+  text-color:                 #414868;
   placeholder-color:          @bg;
   expand:                     true;
   horizontal-align:           0;
