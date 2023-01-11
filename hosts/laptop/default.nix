@@ -4,7 +4,6 @@
   imports =
     (import ../../modules/hardware) ++
     (import ../../modules/virtualisation) ++
-    (import ../../modules/theme/catppuccin-frappe-dark) ++
     [
       ./hardware-configuration.nix
       ../../modules/fonts
