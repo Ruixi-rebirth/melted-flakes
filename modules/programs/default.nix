@@ -1,6 +1,7 @@
 [
   ./base.nix
   ./kitty.nix
+  ./gpg.nix
   ./obs-studio/obs_studio.nix
   ./music.nix
   ./search.nix
