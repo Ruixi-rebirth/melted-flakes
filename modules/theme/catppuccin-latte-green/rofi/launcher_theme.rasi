@@ -76,7 +76,7 @@ mainbox {
 
 element {
   background-color:           @al;
-  text-color:                 #C0CAF5;
+  text-color:                 #8378c6;
   orientation:                horizontal;
   border-radius:              0%;
   padding:                    1% 0.5% 1% 0.5%;
