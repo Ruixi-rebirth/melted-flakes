@@ -1,15 +1,15 @@
 { config, pkgs, user, inputs, ... }:
 
 {
-  imports =
+  import =
     [
-      (import ./hardware-configuration.nix)
-      (import ../../modules/fonts)
-      (import ../../modules/hardware)
-      (import ../../modules/virtualisation)
+      ./hardware-configuration.nix
+      ../../modules/fonts
+      ../../modules/hardware
+      ../../modules/virtualisation
     ] ++ [
-      # (import ../../modules/desktop/sway)
-      (import ../../modules/desktop/hyprland)
+      # ../../modules/desktop/sway
+      ../../modules/desktop/hyprland
     ];
 
   sops.defaultSopsFile = ../../secrets/secrets.yaml;
