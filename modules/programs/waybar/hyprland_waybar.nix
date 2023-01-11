@@ -4,10 +4,6 @@ let
   user = "ruixi";
 in
 {
-  environment.systemPackages = with pkgs; [
-    waybar
-  ];
-
   nixpkgs.overlays = [
     (final: prev: {
       waybar =
