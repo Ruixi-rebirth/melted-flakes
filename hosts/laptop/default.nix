@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
       ../../modules/fonts
       # ../../modules/hardware
-      ../../modules/virtualisation
+      # ../../modules/virtualisation
     ] ++ [
       # ../../modules/desktop/sway
       ../../modules/desktop/hyprland
