@@ -3,7 +3,7 @@
 
   # --> special
   set -l foreground cdd6f4
-  set -l selection 313244
+  set -l selection 00313244
 
   # --> palette
   set -l teal 94e2d5
