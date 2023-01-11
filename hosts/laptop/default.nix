@@ -4,7 +4,7 @@
   imports =
     [ (import ./hardware-configuration.nix) ] ++
     # [ (import ../../modules/desktop/sway/default.nix) ] ++
-    [ (import ../../modules/desktop/hyprland/default.nix) ] ++
+    [ (import ../../modules/desktop/hyprland) ] ++
     [ (import ../../modules/fonts) ] ++
     (import ../../modules/hardware) ++
     (import ../../modules/virtualisation);
