@@ -1,4 +1,5 @@
 require("catppuccin").setup({
+	flavour = "mocha",
 	compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
 	transparent_background = true,
 	term_colors = true,
