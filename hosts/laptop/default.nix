@@ -1,7 +1,7 @@
 { config, pkgs, user, inputs, ... }:
 
 {
-  import =
+  imports =
     [
       ./hardware-configuration.nix
       ../../modules/fonts
