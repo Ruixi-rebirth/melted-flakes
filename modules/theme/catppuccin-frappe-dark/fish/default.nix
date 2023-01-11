@@ -1,5 +1,5 @@
 { lib, pkgs, user, ... }:
 
 {
-  home.file.".config/fish/conf.d/latte.fish".text = import ./latte.nix;
+  home.file.".config/fish/conf.d/mocha.fish".text = import ./mocha.nix;
 }
