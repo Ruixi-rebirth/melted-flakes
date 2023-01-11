@@ -5,12 +5,7 @@
     [
       ./hardware-configuration.nix
       ../../modules/fonts
-    ] ++ [
-      (import ../../modules/hardware)
-    ] ++
-    [
-      (import ../../modules/virtualisation)
-    ]
+    ] ++ [ (import ../../modules/hardware) ] ++ [ (import ../../modules/virtualisation) ]
     ++ [
       # ../../modules/desktop/sway
       ../../modules/desktop/hyprland
