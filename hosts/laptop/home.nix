@@ -2,15 +2,12 @@
 
 {
   imports =
-    [
-      ../../modules/desktop/sway/home.nix
-      ../../modules/desktop/hyprland/home.nix
-      ../../modules/scripts/home.nix
-    ] ++
+    # [ (import ../../modules/desktop/sway/home.nix) ] ++
+    [ (import ../../modules/desktop/hyprland/home.nix) ] ++
+    [ (import ../../modules/scripts/home.nix) ] ++
     (import ../../modules/shell) ++
     (import ../../modules/editors) ++
     (import ../../modules/programs) ++
-    (import ../../modules/theme/catppuccin-frappe-dark) ++
     (import ../../modules/devlop);
 
   home = {
