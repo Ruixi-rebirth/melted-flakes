@@ -4,12 +4,12 @@
   imports =
     [
       ./hardware-configuration.nix
-      ../../modules/fonts
-      ../../modules/hardware
-      ../../modules/virtualisation
+      ../../modules/fonts/default.nix
+      ../../modules/hardware/default.nix
+      ../../modules/virtualisation/default.nix
     ] ++ [
       # ../../modules/desktop/sway
-      ../../modules/desktop/hyprland
+      ../../modules/desktop/hyprland/default.nix
     ];
 
   sops.defaultSopsFile = ../../secrets/secrets.yaml;
