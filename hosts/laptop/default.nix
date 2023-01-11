@@ -121,6 +121,7 @@
   };
 
   services = {
+    dbus.packages = [ pkgs.gcr ];
     getty.autologinUser = "ruixi";
     gvfs.enable = true;
     pipewire = {
