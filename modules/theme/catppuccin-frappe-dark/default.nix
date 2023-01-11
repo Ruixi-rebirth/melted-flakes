@@ -6,5 +6,4 @@
   ./fcitx5
   ./kitty
   ./notification
-  ./fish
 ]
