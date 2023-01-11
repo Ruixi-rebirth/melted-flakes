@@ -110,6 +110,17 @@ let
     SDIR="$HOME/.config/waybar"
     waybar -c "$SDIR"/light_config -s "$SDIR"/light_style.css &
   '';
+  border_color = pkgs.writeShellScriptBin "border_color" ''
+      function border_color {
+      if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
+        hyprctl keyword general:col.active_border rgb\(ffc0cb\) 
+        else
+          hyprctl keyword general:col.active_border rgb\(C4ACEB\)
+      fi
+    }
+
+    socat - UNIX-CONNECT:/tmp/hypr/$(echo $HYPRLAND_INSTANCE_SIGNATURE)/.socket2.sock | while read line; do border_color $line; done
+  '';
 in
 {
   home.packages = with pkgs; [
@@ -122,5 +133,6 @@ in
     launch_waybar
     light_waybar
     default_waybar
+    border_color
   ];
 }
