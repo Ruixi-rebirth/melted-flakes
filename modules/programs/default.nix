@@ -1,6 +1,6 @@
 [
   ./kitty.nix
-  ./btop/btop.nix
+  ./btop.nix
   ./rofi.nix
   ./cava.nix
   ./obs-studio/obs_studio.nix
@@ -16,5 +16,4 @@
   ./firefox/firefox.nix
   ./zathura/zathura.nix
   ./ranger/ranger.nix
-  ./fcitx5/fcitx5-theme.nix
 ]

@@ -2,9 +2,10 @@
   ./gtk.nix
   ./btop
   ./cava
-  # ./rofi
-  # ./fcitx5
+  ./rofi
+  ./fcitx5
   ./kitty
-  # ./waybar
-  # ./notification
+  ./waybar/sway_waybar.nix
+  ./waybar/hyprland_waybar.nix
+  ./notification
 ]

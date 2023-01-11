@@ -5,7 +5,7 @@
     [ (import ./hardware-configuration.nix) ] ++
     # [ (import ../../modules/desktop/sway/default.nix) ] ++
     [ (import ../../modules/desktop/hyprland/default.nix) ] ++
-    [ (import ../../modules/programs/fcitx5/fcitx5.nix) ] ++
+    [ (import ../../modules/programs/fcitx5.nix) ] ++
     [ (import ../../modules/programs/gpg.nix) ] ++
     [ (import ../../modules/fonts/fonts.nix) ] ++
     (import ../../modules/hardware) ++
