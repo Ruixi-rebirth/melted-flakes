@@ -92,7 +92,11 @@ let
         elif [ "$is_waybar_ServerExist" = "1" ]; then
           killall .waybar-wrapped
         fi
-        waybar
+        if [ $GTK_THEME="Catppuccin-Frappe-Pink" ]; then
+          default_waybar
+        else
+          light_waybar
+        fi
   '';
   default_waybar = pkgs.writeShellScriptBin "default_waybar" ''
     #!/bin/bash

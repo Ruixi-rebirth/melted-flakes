@@ -1,9 +1,9 @@
 [
   ./gtk.nix
-  ./btop
-  ./cava
-  ./rofi
-  ./fcitx5
-  ./kitty
-  ./notification
+  # ./btop
+  # ./cava
+  # ./rofi
+  # ./fcitx5
+  # ./kitty
+  # ./notification
 ]
