@@ -1,8 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ../../environment/hypr-variables.nix ] ++ [ ../../programs/waybar/hyprland_waybar.nix ];
-
+  imports = [ ../../environment/hypr-variables.nix ];
 
   home = {
     packages = with pkgs; [

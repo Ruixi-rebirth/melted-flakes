@@ -1,5 +1,6 @@
 { config, lib, pkgs, inputs, ... }:
 {
+  imports = [ ../../programs/waybar/hyprland_waybar.nix ];
 
   environment.systemPackages = with pkgs; [
     inputs.hypr-contrib.packages.${pkgs.system}.grimblast
