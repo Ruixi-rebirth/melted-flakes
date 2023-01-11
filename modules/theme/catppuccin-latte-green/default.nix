@@ -6,4 +6,5 @@
   ./fcitx5
   ./kitty
   ./notification
+  ./neovim
 ]
