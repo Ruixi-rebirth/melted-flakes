@@ -1,23 +1,27 @@
 ''
 # vim: ft=dosini
 [Metadata]
-Name=Catppuccin
-Version=0.1
-Author=ayamir
-Description=Catppuccin Color Theme (Dark)
+Name=Catppuccin-light
+Version=0.2
+Author=justTOBBI and Isabelinc
+Description=Catppuccin Latte Color Theme (Dark)
 ScaleWithDPI=True
 
 [InputPanel]
 # 字体
 Font=JetBrainsMono Nerd Font Medium 14
 # 非选中候选字颜色
-NormalColor=#a4b9ef
+#Blue
+NormalColor=#1E66F5
 # 选中候选字颜色
-HighlightCandidateColor=#f9c096
+#Peach
+HighlightCandidateColor=#FE640B
 # 高亮前景颜色(输入字符颜色)
-HighlightColor=#f9c096
+#Peach
+HighlightColor=#FE640B
 # 输入字符背景颜色
-HighlightBackgroundColor=#302d41
+# Black3/surface0
+HighlightBackgroundColor=#CCD0DA
 #
 Spacing=3
 
@@ -32,8 +36,10 @@ Top=6
 Bottom=6
 
 [InputPanel/Background]
-Color=#302d41
-BorderColor=#302d41
+#Black3/surface0
+Color=#CCD0DA
+#Black3/surface0
+BorderColor=#CCD0DA
 BorderWidth=2
 
 [InputPanel/Background/Margin]
@@ -43,7 +49,8 @@ Top=2
 Bottom=2
 
 [InputPanel/Highlight]
-Color=#332e41
+#Black3/surface0
+Color=#CCD0DA
 
 [InputPanel/Highlight/Margin]
 # 高亮区域左边距
@@ -56,13 +63,15 @@ Top=7
 Bottom=7
 
 [Menu]
-Font=JetBrainsMono Nerd Font Medium 14
-NormalColor=#d7dae0
+Font=Sans 10
+#White/Text
+NormalColor=#4C4F69
 #HighlightColor=#4c566a
 Spacing=3
 
 [Menu/Background]
-Color=#302d41
+#Black3/surface0
+Color=#CCD0DA
 
 [Menu/Background/Margin]
 Left=2
@@ -77,7 +86,8 @@ Top=2
 Bottom=2
 
 [Menu/Highlight]
-Color=#f5c2e7
+#Pink
+Color=#EA76CB 
 
 [Menu/Highlight/Margin]
 Left=10
@@ -86,12 +96,13 @@ Top=5
 Bottom=5
 
 [Menu/Separator]
-Color=#1e1e28
+#Black2/base
+Color=#EFF1F5
 
 [Menu/CheckBox]
 Image="${./radio.png}"
 
-[Menu/SubMenu]
+[Menu/SubMenu]  
 Image="${./arrow.png}"
 
 [Menu/TextMargin]

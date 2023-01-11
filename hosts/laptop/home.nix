@@ -8,8 +8,8 @@
     (import ../../modules/shell) ++
     (import ../../modules/editors) ++
     (import ../../modules/programs) ++
-    (import ../../modules/theme/catppuccin-frappe-dark) ++
-    # (import ../../modules/theme/catppuccin-latte-green) ++
+    (import ../../modules/theme/catppuccin-dark) ++
+    # (import ../../modules/theme/catppuccin-light) ++
     (import ../../modules/devlop);
 
   home = {

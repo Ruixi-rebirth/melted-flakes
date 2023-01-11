@@ -1,7 +1,7 @@
 ''
 # vim: ft=dosini
 [Metadata]
-Name=Catppuccin
+Name=Catppuccin-dark
 Version=0.1
 Author=ayamir
 Description=Catppuccin Color Theme (Dark)
