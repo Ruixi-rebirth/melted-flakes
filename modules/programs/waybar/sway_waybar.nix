@@ -4,6 +4,10 @@ let
   user = "ruixi";
 in
 {
+  environment.systemPackages = with pkgs; [
+    waybar
+  ];
+
   home-manager.users.${user} = {
     # Home-manager waybar config
     programs.waybar = {
