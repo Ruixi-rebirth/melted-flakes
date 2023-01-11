@@ -4,8 +4,8 @@ dir="$HOME/.config/rofi"
 
 # catppuccin
 # ALPHA="#00000000"
-# BG="#24273A"
-# FG="#BF616A"
+# BG="#eff1f5"
+# FG="#4c4f69"
 # SELECT="#1E1E2E"
 # ACCENT="#24273A"
 # 
