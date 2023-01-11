@@ -3,7 +3,7 @@
   ./btop
   ./cava
   ./rofi
-  ./fcitx5
+  # ./fcitx5
   ./kitty
   ./notification
   ./neovim
