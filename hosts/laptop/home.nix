@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ../../modules/desktop/sway
-    ../../modules/desktop/hyprland
-    ../../modules/scripts
+    ../../modules/desktop/sway/home.nix
+    ../../modules/desktop/hyprland/home.nix
+    ../../modules/scripts/home.nix
   ] ++
   (import ../../modules/shell) ++
   (import ../../modules/editors) ++
