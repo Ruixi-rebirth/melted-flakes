@@ -2,12 +2,15 @@
 
 {
   imports =
-    [ (import ./hardware-configuration.nix) ] ++
-    # [ (import ../../modules/desktop/sway/default.nix) ] ++
-    [ (import ../../modules/desktop/hyprland) ] ++
-    [ (import ../../modules/fonts) ] ++
-    (import ../../modules/hardware) ++
-    (import ../../modules/virtualisation);
+    [
+      (import ./hardware-configuration.nix)
+      (import ../../modules/fonts)
+      (import ../../modules/hardware)
+      (import ../../modules/virtualisation)
+    ] ++ [
+      # (import ../../modules/desktop/sway)
+      (import ../../modules/desktop/hyprland)
+    ];
 
   sops.defaultSopsFile = ../../secrets/secrets.yaml;
   users.mutableUsers = false;
