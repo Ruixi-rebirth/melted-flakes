@@ -8,8 +8,8 @@
       ./hardware-configuration.nix
       ../../modules/fonts
     ] ++ [
-      # ../../modules/desktop/sway
-      ../../modules/desktop/hyprland
+      ../../modules/desktop/sway
+      # ../../modules/desktop/hyprland
     ];
 
   sops.defaultSopsFile = ../../secrets/secrets.yaml;
