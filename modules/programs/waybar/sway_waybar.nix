@@ -150,7 +150,8 @@ in
           "custom/launcher"
           "sway/workspaces"
           "temperature"
-          "idle_inhibitor"
+          #"idle_inhibitor"
+          "custom/wall"
           "mpd"
           "custom/cava-internal"
         ];
@@ -170,6 +171,13 @@ in
         "custom/launcher" = {
           "format" = " ";
           "on-click" = "pkill rofi || ~/.config/rofi/launcher.sh";
+          "tooltip" = false;
+        };
+        "custom/wall" = {
+          "on-click" = "wallpaper_random";
+          "on-click-middle" = "default_wall";
+          "on-click-right" = "killall dynamic_wallpaper || dynamic_wallpaper &";
+          "format" = " ﴔ ";
           "tooltip" = false;
         };
         "custom/cava-internal" = {
@@ -220,8 +228,6 @@ in
           "tooltip" = false;
         };
         "clock" = {
-          "on-click" = "wallpaper_random";
-          "on-click-right" = "killall dynamic_wallpaper || dynamic_wallpaper &";
           "interval" = 1;
           "format" = "{:%I:%M %p  %A %b %d}";
           "tooltip" = true;

@@ -90,7 +90,7 @@ in
                  padding-right: 6px;
                  color: #7ebae4;
                }
-         #mode, #clock, #memory, #temperature,#cpu,#mpd, #custom-style-switch, #temperature, #backlight, #pulseaudio, #network, #battery, #custom-powermenu, #custom-cava-internal {
+         #mode, #clock, #memory, #temperature,#cpu,#mpd, #custom-wall, #temperature, #backlight, #pulseaudio, #network, #battery, #custom-powermenu, #custom-cava-internal {
                  padding-left: 10px;
                  padding-right: 10px;
                }
@@ -111,7 +111,7 @@ in
         /* #idle_inhibitor {
                  color: rgb(221, 182, 242);
                }*/
-         #custom-style-switch {
+         #custom-wall {
                  color: rgb(221, 182, 242);
             }
          #temperature {
@@ -531,7 +531,7 @@ in
                 padding-right: 6px;
                 color: #7ebae4;
               }
-        #mode, #clock, #memory, #temperature,#cpu,#mpd, #custom-style-switch, #temperature, #backlight, #pulseaudio, #network, #battery, #custom-powermenu, #custom-cava-internal {
+        #mode, #clock, #memory, #temperature,#cpu,#mpd, #custom-wall, #temperature, #backlight, #pulseaudio, #network, #battery, #custom-powermenu, #custom-cava-internal {
                 padding-left: 10px;
                 padding-right: 10px;
               }
@@ -553,7 +553,7 @@ in
         #idle_inhibitor {
         color: #FF6699;
         }*/
-        #custom-style-switch {
+        #custom-wall {
                 color: #FF6699;
               }
         #temperature {
