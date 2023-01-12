@@ -2,7 +2,7 @@
 
 {
   imports =
-    (import ../../modules/hardware) ++
+    # (import ../../modules/hardware) ++
     (import ../../modules/virtualisation) ++
     [
       ./hardware-configuration.nix
