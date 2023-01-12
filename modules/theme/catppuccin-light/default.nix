@@ -7,4 +7,5 @@
   ./kitty
   ./notification
   ./neovim
+  ./fish
 ]

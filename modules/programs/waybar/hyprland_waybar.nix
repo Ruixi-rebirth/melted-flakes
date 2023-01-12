@@ -189,6 +189,7 @@ in
         };
         "custom/wall" = {
           "on-click" = "wallpaper_random";
+          "on-click-middle" = "default_wall";
           "on-click-right" = "killall dynamic_wallpaper || dynamic_wallpaper &";
           "format" = " ﴔ ";
           "tooltip" = false;
@@ -360,6 +361,7 @@ in
             },
             "custom/wall": {
               "on-click": "wallpaper_random",
+              "on-click-middle": "default_wall",
               "on-click-right": "killall dynamic_wallpaper || dynamic_wallpaper &",
               "format": " ﴔ ",
               "tooltip": false

@@ -85,6 +85,7 @@ let
   '';
   launch_waybar = pkgs.writeShellScriptBin "launch_waybar" ''
         #!/bin/bash
+        SDIR="$HOME/.config/waybar"
         is_waybar_ServerExist=`ps -ef|grep -m 1 waybar|grep -v "grep"|wc -l`
         if [ "$is_waybar_ServerExist" = "0" ]; then
           echo "waybar_server not found" > /dev/null 2>&1
@@ -93,22 +94,19 @@ let
           killall .waybar-wrapped
         fi
         if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
-          default_waybar
+          waybar -c "$SDIR"/config -s "$SDIR"/style.css > /dev/null 2>&1 & 
         else
-          light_waybar
+          waybar -c "$SDIR"/light_config -s "$SDIR"/light_style.css > /dev/null 2>&1 &
         fi
   '';
-  default_waybar = pkgs.writeShellScriptBin "default_waybar" ''
-    #!/bin/bash
-    killall .waybar-wrapped
-    SDIR="$HOME/.config/waybar"
-    waybar -c "$SDIR"/config -s "$SDIR"/style.css &
-  '';
-  light_waybar = pkgs.writeShellScriptBin "light_waybar" ''
-    #!/bin/bash
-    killall .waybar-wrapped
-    SDIR="$HOME/.config/waybar"
-    waybar -c "$SDIR"/light_config -s "$SDIR"/light_style.css &
+  default_wall = pkgs.writeShellScriptBin "default_wall" ''
+    killall swaybg
+    killall dynamic_wallpaper
+    if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
+      swaybg -i "${../theme/catppuccin-dark/wall/default.png}" -m fill &
+    else
+      swaybg -i "${../theme/catppuccin-light/wall/default.png}" -m fill &
+    fi
   '';
   border_color = pkgs.writeShellScriptBin "border_color" ''
       function border_color {
@@ -130,9 +128,8 @@ in
     grimblast_watermark
     myswaylock
     dynamic_wallpaper
+    default_wall
     launch_waybar
-    light_waybar
-    default_waybar
     border_color
   ];
 }
