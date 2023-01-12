@@ -2,7 +2,15 @@
 
 {
   imports = [ ../../environment/hypr-variables.nix ];
-
+  programs = {
+    bash = {
+      initExtra = ''
+        if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+           exec dbus-run-session Hyprland
+        fi
+      '';
+    };
+  };
   home = {
     packages = with pkgs; [
       swaybg

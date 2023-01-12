@@ -2,7 +2,15 @@
 
 {
   imports = [ ../../environment/sway-variables.nix ];
-
+  programs = {
+    bash = {
+      initExtra = ''
+        if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+           exec dbus-run-session sway --unsupported-gpu
+        fi
+      '';
+    };
+  };
   home.file = {
     ".config/sway/config".text = ''
 
