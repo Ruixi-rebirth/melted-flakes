@@ -88,7 +88,7 @@
         for_window [app_id="telegram"]                    opacity 0.95
         for_window [app_id="danmufloat"]                    opacity 0.80
         for_window [app_id="icalingua"]                   opacity 0.95
-        for_window [class="netease-cloud-music"]          opacity 0.90
+        for_window [class="netease-cloud-music-gtk4"]          opacity 0.90
 
     #------------------------------------------#
     # Placing software in a specific workspace #
@@ -179,9 +179,9 @@
         #
         # You can get the names of your outputs by running: swaymsg -t get_outputs
         # exec_always --no-startup-id swaybg -i ~/.config/sway/wallpaper/02.png 
-          output "*" bg "${./background/default.png}" fill
+        # output "*" bg "${./background/default.png}" fill
         # Automatically change wallpapers at intervals
-        # exec_always --no-startup-id dynamic_wallpaper 
+        exec_always --no-startup-id default_wall & 
 
     #-------------------------------------------------#
     # Control volume,monitor brightness,media players #
@@ -236,10 +236,10 @@
 
 
         # quick start some applications
-        bindsym $mod+m exec --no-startup-id              netease-cloud-music
+        bindsym $mod+m exec --no-startup-id              netease-cloud-music-gtk4
         bindsym $mod+b exec --no-startup-id              firefox
         bindsym $mod+Shift+d exec kitty --class="danmufloat" --hold sh -c "cd /home/ruixi/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && go run main.go -c config.toml" 
-        bindsym $mod+Shift+x exec --no-startup-id        ~/.config/sway/swaylock.sh
+        bindsym $mod+Shift+x exec --no-startup-id        myswaylock 
         bindsym $mod+t exec --no-startup-id              telegram-desktop
         bindsym $mod+q exec --no-startup-id              icalingua-plus-plus --enable-features=UseOzonePlatform --ozone-platform=wayland
         bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
@@ -251,7 +251,7 @@
         bindsym $mod+Shift+p kill
 
         # Start your launcher
-        bindsym Super_L exec ~/.config/rofi/launcher.sh
+        bindsym Super_L exec pkill rofi || ~/.config/rofi/launcher.sh
 
         # Start your powermenu
         bindsym $mod+Super_L exec bash ~/.config/rofi/powermenu.sh

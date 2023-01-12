@@ -306,7 +306,7 @@
       # wall #
       #------#
       # exec-once = dynamic_wallpaper
-      exec-once = default_wall &
+      exec-once = default_wall 
 
       #------------#
       # auto start #
