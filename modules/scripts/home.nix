@@ -84,20 +84,14 @@ let
     done
   '';
   launch_waybar = pkgs.writeShellScriptBin "launch_waybar" ''
-        #!/bin/bash
-        SDIR="$HOME/.config/waybar"
-        is_waybar_ServerExist=`ps -ef|grep -m 1 waybar|grep -v "grep"|wc -l`
-        if [ "$is_waybar_ServerExist" = "0" ]; then
-          echo "waybar_server not found" > /dev/null 2>&1
-    #	exit;
-        elif [ "$is_waybar_ServerExist" = "1" ]; then
-          killall .waybar-wrapped
-        fi
-        if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
-          waybar -c "$SDIR"/config -s "$SDIR"/style.css > /dev/null 2>&1 & 
-        else
-          waybar -c "$SDIR"/light_config -s "$SDIR"/light_style.css > /dev/null 2>&1 &
-        fi
+    #!/bin/bash
+    killall .waybar-wrapped
+    SDIR="$HOME/.config/waybar"
+    if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
+      waybar -c "$SDIR"/config -s "$SDIR"/style.css > /dev/null 2>&1 & 
+    else
+      waybar -c "$SDIR"/light_config -s "$SDIR"/light_style.css > /dev/null 2>&1 &
+    fi
   '';
   default_wall = pkgs.writeShellScriptBin "default_wall" ''
     killall swaybg
