@@ -18,32 +18,52 @@ in
       enable = true;
       withPython3 = true;
       withNodeJs = true;
+      extraPackages = [
+        #-- LSP --#
+        install_lsp
+        rnix-lsp
+        sumneko-lua-language-server
+        gopls
+        pyright
+        zk
+        rust-analyzer
+        clang-tools
+        #-- format --#
+        stylua
+        black
+        nixpkgs-fmt
+        rustfmt
+        beautysh
+        nodePackages.prettier
+        #-- Debug --#
+        lldb
+      ];
       #-- Plugins --#
       plugins = with pkgs.vimPlugins;[ ];
       #-- --#
     };
   };
 
-  home = {
-    packages = with pkgs; [
-      #-- LSP --#
-      install_lsp
-      rnix-lsp
-      sumneko-lua-language-server
-      gopls
-      pyright
-      zk
-      rust-analyzer
-      clang-tools
-      #-- format --#
-      stylua
-      black
-      nixpkgs-fmt
-      rustfmt
-      beautysh
-      nodePackages.prettier
-      #-- Debug --#
-      lldb
-    ];
-  };
+  # home = {
+  #   packages = with pkgs; [
+  #     #-- LSP --#
+  #     install_lsp
+  #     rnix-lsp
+  #     sumneko-lua-language-server
+  #     gopls
+  #     pyright
+  #     zk
+  #     rust-analyzer
+  #     clang-tools
+  #     #-- format --#
+  #     stylua
+  #     black
+  #     nixpkgs-fmt
+  #     rustfmt
+  #     beautysh
+  #     nodePackages.prettier
+  #     #-- Debug --#
+  #     lldb
+  #   ];
+  # };
 }
