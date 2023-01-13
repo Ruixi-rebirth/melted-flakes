@@ -27,7 +27,7 @@ in
         pkgs.pyright
         pkgs.zk
         pkgs.rust-analyzer
-        clang-tools
+        pkgs.clang-tools
         #-- format --#
         pkgs.stylua
         pkgs.black
