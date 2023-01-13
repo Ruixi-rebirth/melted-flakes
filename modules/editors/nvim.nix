@@ -43,27 +43,4 @@ in
       #-- --#
     };
   };
-
-  # home = {
-  #   packages = with pkgs; [
-  #     #-- LSP --#
-  #     install_lsp
-  #     rnix-lsp
-  #     sumneko-lua-language-server
-  #     gopls
-  #     pyright
-  #     zk
-  #     rust-analyzer
-  #     clang-tools
-  #     #-- format --#
-  #     stylua
-  #     black
-  #     nixpkgs-fmt
-  #     rustfmt
-  #     beautysh
-  #     nodePackages.prettier
-  #     #-- Debug --#
-  #     lldb
-  #   ];
-  # };
 }
