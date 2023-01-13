@@ -21,22 +21,22 @@ in
       extraPackages = [
         #-- LSP --#
         install_lsp
-        rnix-lsp
-        sumneko-lua-language-server
-        gopls
-        pyright
-        zk
-        rust-analyzer
+        pkgs.rnix-lsp
+        pkgs.sumneko-lua-language-server
+        pkgs.gopls
+        pkgs.pyright
+        pkgs.zk
+        pkgs.rust-analyzer
         clang-tools
         #-- format --#
-        stylua
-        black
-        nixpkgs-fmt
-        rustfmt
-        beautysh
-        nodePackages.prettier
+        pkgs.stylua
+        pkgs.black
+        pkgs.nixpkgs-fmt
+        pkgs.rustfmt
+        pkgs.beautysh
+        pkgs.nodePackages.prettier
         #-- Debug --#
-        lldb
+        pkgs.lldb
       ];
       #-- Plugins --#
       plugins = with pkgs.vimPlugins;[ ];
