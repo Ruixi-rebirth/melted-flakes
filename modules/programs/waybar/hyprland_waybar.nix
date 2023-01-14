@@ -12,8 +12,7 @@ in
     (final: prev: {
       waybar =
         let
-          hyprctl = "${pkgs.hyprland}/bin/hyprctl";
-          waybarPatchFile = import ./workspace-patch.nix { inherit pkgs hyprctl; };
+          waybarPatchFile = import ./workspace-patch.nix;
         in
         prev.waybar.overrideAttrs (oldAttrs: {
           mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
