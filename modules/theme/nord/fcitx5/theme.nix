@@ -87,10 +87,10 @@ Bottom=5
 Color=#2e3440
 
 [Menu/CheckBox]
-Image="${radio.png}"
+Image="${./radio.png}"
 
 [Menu/SubMenu]
-Image="${arrow.png}"
+Image="${./arrow.png}"
 
 [Menu/TextMargin]
 Left=5
