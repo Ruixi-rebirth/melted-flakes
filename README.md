@@ -16,7 +16,7 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 ![2023-01-12T03:00:29](https://user-images.githubusercontent.com/75824585/211895280-41d12bfe-453c-41da-a2a6-3f7f483ea8ad.png)
 
 **nord**
-![2023-01-16T21:56:49](https://user-images.githubusercontent.com/75824585/212695362-ec71ea69-b650-4383-a6e1-52bfe45cad58.png)
+![2023-01-17T00:15:22](https://user-images.githubusercontent.com/75824585/212723937-c56200da-52f4-407b-9d8e-428348ed5ed0.png)
 
 
 *安装主题任意选择一个即可：具体见[这里](https://github.com/Ruixi-rebirth/nixos-config/blob/main/hosts/laptop/home.nix#L11-L13)*
@@ -27,6 +27,7 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 
 ![](./screenshot/light.png)
 ![](./screenshot/dark.png)
+![](./screenshot/nord.png)
 
 </details>
 

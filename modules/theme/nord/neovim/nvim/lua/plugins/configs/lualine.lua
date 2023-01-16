@@ -7,7 +7,7 @@ local lualine = require("lualine")
 -- stylua: ignore
 local colors = {
   bg       = '#3B4252', --nord:#3B4252 catppuccin:#302D41
-  fg       = '#1E1E2E',
+  fg       = '#D6DCE7',
   yellow   = '#ECBE7B',
   cyan     = '#008080',
   darkblue = '#081633',
@@ -17,7 +17,7 @@ local colors = {
   magenta  = '#c678dd',
   blue     = '#51afef',
   red      = '#ec5f67',
-  custom   = '#FF99CC',
+  custom   = '#B38DAC',
 }
 
 local conditions = {
@@ -174,7 +174,7 @@ ins_left({
 		return msg
 	end,
 	icon = " LSP:",
-	color = { fg = "#474E6D", gui = "bold" },
+	color = { fg = "#D8DEE9", gui = "bold" },
 })
 
 -- Add components to right sections
