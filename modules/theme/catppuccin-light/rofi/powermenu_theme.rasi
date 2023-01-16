@@ -24,13 +24,13 @@ prompt {
   enabled:                        true;
   padding:                        0.30% 1% 0% -0.5%;
   background-color:               @al;
-  text-color:                     #C0CAF5;
+  text-color:                     #414868;
   font:                           "JetBrainsMono Nerd Font 14";
 }
 
 entry {
   background-color:               @al;
-  text-color:                     #87CEFA;
+  text-color:                     #414868;
   placeholder-color:              @bg;
   expand:                         true;
   horizontal-align:               0;
@@ -41,7 +41,7 @@ entry {
 
 inputbar {
   children:                       [ prompt, entry ];
-  background-color:               @ac;
+  background-color:               #FAF4FC;
   text-color:                     @bg;
   expand:                         false;
   border:                         0% 0% 0% 0%;
@@ -74,7 +74,7 @@ mainbox {
 
 element {
   background-color:               @al;
-  text-color:                     #ffffff;
+  text-color:                     #8378c6;
   orientation:                    horizontal;
   border-radius:                  0%;
   padding:                        1% 0.5% 1% 0.5%;
