@@ -15,7 +15,11 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 **catppuccin-dark**
 ![2023-01-12T03:00:29](https://user-images.githubusercontent.com/75824585/211895280-41d12bfe-453c-41da-a2a6-3f7f483ea8ad.png)
 
-*安装主题两个任意选择一个即可：具体见[这里](https://github.com/Ruixi-rebirth/nixos-config/blob/main/hosts/laptop/home.nix#L11-L12)*
+**nord**
+![2023-01-16T21:56:49](https://user-images.githubusercontent.com/75824585/212695362-ec71ea69-b650-4383-a6e1-52bfe45cad58.png)
+
+
+*安装主题任意选择一个即可：具体见[这里](https://github.com/Ruixi-rebirth/nixos-config/blob/main/hosts/laptop/home.nix#L11-L13)*
 
 ### 屏幕截图
 <details>
