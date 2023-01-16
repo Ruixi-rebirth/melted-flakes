@@ -89,8 +89,10 @@ let
     SDIR="$HOME/.config/waybar"
     if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
       waybar -c "$SDIR"/config -s "$SDIR"/style.css > /dev/null 2>&1 & 
-    else
+    elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
       waybar -c "$SDIR"/light_config -s "$SDIR"/light_style.css > /dev/null 2>&1 &
+    else 
+      waybar -c "$SDIR"/nord_config -s "$SDIR"/nord_style.css > /dev/null 2>&1 &
     fi
   '';
   default_wall = pkgs.writeShellScriptBin "default_wall" ''
@@ -98,16 +100,20 @@ let
     killall dynamic_wallpaper
     if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
       swaybg -i "${../theme/catppuccin-dark/wall/default.png}" -m fill &
-    else
+    elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
       swaybg -i "${../theme/catppuccin-light/wall/default.png}" -m fill &
+    else 
+      swaybg -i "${../theme/nord/wall/default.png}" -m fill &
     fi
   '';
   border_color = pkgs.writeShellScriptBin "border_color" ''
       function border_color {
       if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
         hyprctl keyword general:col.active_border rgb\(ffc0cb\) 
-        else
+      elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
           hyprctl keyword general:col.active_border rgb\(C4ACEB\)
+      else
+          hyprctl keyword general:col.active_border rgb\(81a1c1\)
       fi
     }
 
