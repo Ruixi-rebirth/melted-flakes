@@ -2,14 +2,14 @@
   # Catppuccin color palette
 
   # --> special
-  set -l foreground cdd6f4
+  set -l foreground CCCCFF
   set -l selection 00313244
 
   # --> palette
   set -l teal 94e2d5
   set -l flamingo ff99cc
   set -l mauve cba6f7
-  set -l pink f5c2e7
+  set -l pink ff99CC
   set -l red f38ba8
   set -l peach fab387
   set -l green 49A536
