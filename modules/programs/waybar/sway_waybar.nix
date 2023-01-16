@@ -859,7 +859,7 @@ in
                 color: #CF876F;
               }
         #battery.critical:not(.charging) {
-                color: rgb(242, 143, 173);
+                color: #D6DCE7;
               }
         #custom-powermenu {
                 color: #BD6069;
