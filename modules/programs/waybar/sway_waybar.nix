@@ -869,8 +869,8 @@ in
                 padding-left: 10px;
               }
         #tray menu {
-                background: rgb(250, 244, 252);
-                color:rgb(192, 202, 245);
+                background: #3b4252;
+                color: #DEE2EA;
         }
         #mpd.paused {
                 color: rgb(192, 202, 245);
