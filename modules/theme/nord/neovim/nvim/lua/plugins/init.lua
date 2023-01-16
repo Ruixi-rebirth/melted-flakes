@@ -43,7 +43,7 @@ return require("packer").startup(function(use)
 		cmd = "StartupTime",
 	})
 	--[ colorscheme ]--
-	--use("shaunsingh/nord.nvim")
+	use("shaunsingh/nord.nvim")
 	use({
 		"catppuccin/nvim",
 		as = "catppuccin",
