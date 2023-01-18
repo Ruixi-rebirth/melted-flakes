@@ -8,6 +8,32 @@
 
 https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-91a6-c30281d46e7a.mp4
 
+### 系统组件
+||NixOS(wayland)|
+| - | :--: |
+|**Window Manager**|[Sway](https://github.com/swaywm/sway), [Hyprland](https://github.com/hyprwm/Hyprland)|
+|**Terminal Emulator**|[Kitty](https://github.com/kovidgoyal/kitty)|
+|**Bar**|[Waybar](https://github.com/Alexays/Waybar)|
+|**Application Launcher**|[Rofi-wayland](https://github.com/lbonn/rofi)|
+|**Notification Daemon**|[Mako](https://github.com/emersion/mako)|
+|**Display Manager**|TTY1 Login|
+|**network management tool**|[NetworkManager](https://networkmanager.dev/)|
+|**Input method framework**|[Fcitx5](https://github.com/fcitx/fcitx5)|
+|**System resource monitor**|[Btop](https://github.com/aristocratos/btop)|
+|**File Manager**|[Ranger](https://github.com/ranger/ranger), [Nemo](https://github.com/linuxmint/nemo)|
+|**Lockscreen**|[Swaylock-effects](https://github.com/mortie/swaylock-effects)|
+|**Shell**|[Fish](https://github.com/fish-shell/fish-shell)|
+|**Music Player**|[mpd](https://github.com/MusicPlayerDaemon/MPD), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp), [mpc](https://github.com/MusicPlayerDaemon/mpc), [Netease-cloud-music-gtk](https://github.com/gmg137/netease-cloud-music-gtk)|
+|**Media Player**|[mpv](https://github.com/mpv-player/mpv)|
+|**Text Editor**|[Neovim](https://github.com/neovim/neovim)|
+|**Icons**|[Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)|
+|**Fonts**|[Nerd fonts](https://github.com/ryanoasis/nerd-fonts)|
+|**Image Viewer**|[imv](https://sr.ht/~exec64/imv/)|
+|**Screenshot Software**|[grimshot](https://github.com/swaywm/sway/blob/master/contrib/grimshot),[grimblast](https://github.com/hyprwm/contrib)|
+|**Screen Recording**|[wf-recorder](https://github.com/ammen99/wf-recorder), [OBS](https://obsproject.com)|
+|**Clipboard**|[wl-clipboard](https://github.com/bugaevc/wl-clipboard)|
+|**Color Picker**|[hyprpicker](https://github.com/hyprwm/hyprpicker)|
+
 ### 主题
 **catppuccin-light**
 ![2023-01-12T02:21:59](https://user-images.githubusercontent.com/75824585/211895195-e0a47165-e635-4256-922c-17d7da1ed62e.png)
