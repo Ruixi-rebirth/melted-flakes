@@ -9,7 +9,7 @@
 https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-91a6-c30281d46e7a.mp4
 
 ### 系统组件
-||NixOS(wayland)|
+||NixOS(Wayland)|
 | - | :--: |
 |**Window Manager**|[Sway](https://github.com/swaywm/sway), [Hyprland](https://github.com/hyprwm/Hyprland)|
 |**Terminal Emulator**|[Kitty](https://github.com/kovidgoyal/kitty)|
