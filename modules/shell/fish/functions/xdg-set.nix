@@ -5,7 +5,7 @@
     if test "$filename" = ""
     else 
       set beforeprogram (xdg-mime query default (xdg-mime query filetype $filename))
-      set program (find $applicationsdir -type l | f) 
+      set program (find /etc/profiles/per-user/ruixi/share/applications/ -type l | f) 
       if test "$program" = ""
       else
         echo "Open with $beforeprogram before changing"
