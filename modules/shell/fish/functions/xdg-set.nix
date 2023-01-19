@@ -1,10 +1,11 @@
 ''
   function xdg-set
+    set applicationsdir (echo $XDG_DATA_DIRS | sed 's/:/\/applications\/\ /g;s/$/&\/applications\//g')
     set filename (f)
     if test "$filename" = ""
     else 
       set beforeprogram (xdg-mime query default (xdg-mime query filetype $filename))
-      set program (find /usr/share/applications/ -type f | f) 
+      set program (find $applicationsdir -type f | f) 
       if test "$program" = ""
       else
         echo "Open with $beforeprogram before changing"
