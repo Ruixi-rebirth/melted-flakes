@@ -5,7 +5,7 @@
     if test "$filename" = ""
     else 
       set beforeprogram (xdg-mime query default (xdg-mime query filetype $filename))
-      set program (find $applicationsdir -type f | f) 
+      set program (find $applicationsdir -type l | f) 
       if test "$program" = ""
       else
         echo "Open with $beforeprogram before changing"
