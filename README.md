@@ -16,7 +16,7 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 |**Bar**|[Waybar](https://github.com/Alexays/Waybar)|
 |**Application Launcher**|[Rofi-wayland](https://github.com/lbonn/rofi)|
 |**Notification Daemon**|[Mako](https://github.com/emersion/mako)|
-|**Display Manager**|TTY1 Login|
+|**Display Manager**|None(TTY1 Login)|
 |**network management tool**|[NetworkManager](https://networkmanager.dev/)|
 |**Input method framework**|[Fcitx5](https://github.com/fcitx/fcitx5)|
 |**System resource monitor**|[Btop](https://github.com/aristocratos/btop)|
