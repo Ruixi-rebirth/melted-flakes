@@ -1,11 +1,17 @@
 ''
   function xdg-set
-    set applicationsdir (echo $XDG_DATA_DIRS | sed 's/:/\/applications\/\ /g;s/$/&\/applications\//g')
+    set applicationsdir (echo $XDG_DATA_DIRS | sed 's/:/\/applications\/\ /g; s/$/&\/applications\//g; s/\ /\n/g')
+    set arr2=""
+    for arr1 in $applicationsdir
+      if test -d $arr1
+        set -a arr2 $arr1
+      end
+    end 
     set filename (f)
     if test "$filename" = ""
     else 
       set beforeprogram (xdg-mime query default (xdg-mime query filetype $filename))
-      set program (find /etc/profiles/per-user/ruixi/share/applications/ /run/current-system/sw/share/applications/ -type l | f) 
+      set program (find $arr2 -type l | f) 
       if test "$program" = ""
       else
         echo "Open with $beforeprogram before changing"
