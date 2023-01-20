@@ -1,7 +1,7 @@
 ''
   function xdg-set
     set applicationsdir (echo $XDG_DATA_DIRS | sed 's/:/\/applications\/\ /g; s/$/&\/applications\//g; s/\ /\n/g')
-    set arr2=""
+    set arr2 ""
     for arr1 in $applicationsdir
       if test -d $arr1
         set -a arr2 $arr1
