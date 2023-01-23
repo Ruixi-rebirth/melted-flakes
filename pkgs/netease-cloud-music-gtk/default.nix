@@ -28,10 +28,14 @@ rec {
     rev = version;
     hash = "sha256-9qUzRmm3WQEVjzhzHMT1vNw3r3ymWGlBWXnnPsYGSnk=";
   };
-
+  patches = [ ./cargo-lock.patch ];
+  # postPatch = ''
+  #   cp ${./Cargo.lock} Cargo.lock
+  # '';
   cargoDeps = rustPlatform.fetchCargoTarball {
-    inherit src;
-    hash = "sha256-Y7rZTbg0zd/eoo6E8TmV8JJPs1N0bLlBjvB6W07Kekg=";
+    inherit src patches;
+    # sha256 = lib.fakeSha256;
+    hash = "sha256-1fuAu4jjcDaqwouDvJg5P/0jelw/Z7V6OwRI/m+ImlU=";
   };
 
   nativeBuildInputs = [
