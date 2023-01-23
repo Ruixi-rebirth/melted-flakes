@@ -82,6 +82,7 @@
           ".npm-global"
           ".config"
           ".thunderbird"
+          ".go-musicfox"
           "Flakes"
           "Kvm"
           { directory = ".gnupg"; mode = "0700"; }
