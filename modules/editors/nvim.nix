@@ -37,7 +37,7 @@ in
         pkgs.nodePackages.prettier
         #-- Debug --#
         pkgs.lldb
-        pkgs.lldb-vscode
+        pkgs.vscode-extensions.llvm-org.lldb-vscode
       ];
       #-- Plugins --#
       plugins = with pkgs.vimPlugins;[ ];
