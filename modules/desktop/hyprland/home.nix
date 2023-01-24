@@ -6,7 +6,7 @@
     bash = {
       initExtra = ''
         if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-           exec dbus-run-session Hyprland
+           exec  Hyprland
         fi
       '';
     };
