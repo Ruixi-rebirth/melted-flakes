@@ -12,3 +12,14 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
+if os.getenv("GTK_THEME") == "Nordic" then
+
+                        require("nord").set()
+                elseif
+                        os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink" 
+                then
+			vim.cmd([[colorscheme catppuccin-frappe ]])
+		else
+vim.cmd([[colorscheme catppuccin-latte ]])
+
+                end

@@ -8,7 +8,7 @@ return {
 				bold = true,
 			})
 		elseif
-			os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink" or os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink"
+			os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink" or os.getenv("GTK_THEME") == "Catppuccin-Latte-Green"
 		then
 			highlights = require("catppuccin.groups.integrations.bufferline").get()
 		end
