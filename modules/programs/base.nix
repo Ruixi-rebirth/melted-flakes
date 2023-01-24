@@ -14,6 +14,7 @@
       dbeaver
       imv
       rofi-wayland
+      lazygit
     ];
   };
 }

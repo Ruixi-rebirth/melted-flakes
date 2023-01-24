@@ -37,10 +37,13 @@ in
         pkgs.nodePackages.prettier
         #-- Debug --#
         pkgs.lldb
+        pkgs.lldb-vscode
       ];
       #-- Plugins --#
       plugins = with pkgs.vimPlugins;[ ];
       #-- --#
     };
   };
+  home.file.".config/nvim/init.lua".source = ./nvim/init.lua;
+  home.file.".config/nvim/lua".source = ./nvim/lua;
 }

@@ -1,5 +1,0 @@
-require("core.autocmd")
-require("core.mappings")
-require("core.options")
-require("core.lsp")
-require("core.null-ls")
