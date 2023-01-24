@@ -19,24 +19,6 @@ in
       withPython3 = true;
       withNodeJs = true;
       extraPackages = [
-        #-- LSP --#
-        install_lsp
-        pkgs.rnix-lsp
-        pkgs.sumneko-lua-language-server
-        pkgs.gopls
-        pkgs.pyright
-        pkgs.zk
-        pkgs.rust-analyzer
-        pkgs.clang-tools
-        #-- format --#
-        pkgs.stylua
-        pkgs.black
-        pkgs.nixpkgs-fmt
-        pkgs.rustfmt
-        pkgs.beautysh
-        pkgs.nodePackages.prettier
-        #-- Debug --#
-        pkgs.lldb
       ];
       #-- Plugins --#
       plugins = with pkgs.vimPlugins;[ ];
