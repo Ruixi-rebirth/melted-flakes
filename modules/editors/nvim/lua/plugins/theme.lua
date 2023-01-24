@@ -39,9 +39,9 @@ return {
 			return val
 		end,
 		config = function()
-			--vim.cmd([[colorscheme catppuccin-mocha ]])
+			vim.cmd([[colorscheme catppuccin-mocha ]])
 			require("catppuccin").setup({
-				flavour = "mocha",
+				--flavour = "mocha",
 				compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
 				transparent_background = true,
 				term_colors = true,
@@ -115,9 +115,9 @@ return {
 			return val
 		end,
 		config = function()
-			--vim.cmd([[colorscheme catppuccin-latte ]])
+			vim.cmd([[colorscheme catppuccin-latte ]])
 			require("catppuccin").setup({
-				flavour = "latte",
+				--flavour = "latte",
 				compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
 				transparent_background = true,
 				term_colors = true,
