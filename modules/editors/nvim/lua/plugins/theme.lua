@@ -28,7 +28,10 @@ return {
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
 		priority = 1000, -- make sure to load this before all the other start plugins
 		cond = function(val)
-			if os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink" or os.getenv("GTK_THEME") == "Catppuccin-Latte-Green" then
+			if
+				os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink"
+				or os.getenv("GTK_THEME") == "Catppuccin-Latte-Green"
+			then
 				val = true
 			else
 				val = false
@@ -97,4 +100,4 @@ return {
 			})
 		end,
 	},
-	}
+}
