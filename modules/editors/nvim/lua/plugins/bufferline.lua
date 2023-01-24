@@ -3,18 +3,21 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		local highlights = ""
-		if os.getenv("GTK_THEME") == "Nordic" then
-			highlights = require("nord").bufferline.highlights({
-				italic = true,
-				bold = true,
-			})
-		elseif
-			os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink" or os.getenv("GTK_THEME") == "Catppuccin-Latte-Green"
-		then
-			highlights = require("catppuccin.groups.integrations.bufferline").get()
-		end
 		require("bufferline").setup({
-			highlights = highlights,
+			highlights = function(val)
+				if os.getenv("GTK_THEME") == "Nordic" then
+					val = require("nord").bufferline.highlights({
+						italic = true,
+						bold = true,
+					})
+				elseif
+					os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink"
+					or os.getenv("GTK_THEME") == "Catppuccin-Latte-Green"
+				then
+					val = require("catppuccin.groups.integrations.bufferline").get()
+				end
+				return val
+			end,
 			options = {
 				mode = "buffers", -- set to "tabs" to only show tabpages instead
 				numbers = "buffer_id",
