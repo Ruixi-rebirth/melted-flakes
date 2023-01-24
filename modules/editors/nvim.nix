@@ -37,13 +37,35 @@ in
         pkgs.nodePackages.prettier
         #-- Debug --#
         pkgs.lldb
-        pkgs.vscode-extensions.llvm-org.lldb-vscode
       ];
       #-- Plugins --#
       plugins = with pkgs.vimPlugins;[ ];
       #-- --#
     };
   };
+  home = {
+    packages = with pkgs; [
+      #-- LSP --#
+      install_lsp
+      rnix-lsp
+      sumneko-lua-language-server
+      gopls
+      pyright
+      zk
+      rust-analyzer
+      clang-tools
+      #-- format --#
+      stylua
+      black
+      nixpkgs-fmt
+      rustfmt
+      beautysh
+      nodePackages.prettier
+      #-- Debug --#
+      lldb
+    ];
+  };
+
   home.file.".config/nvim/init.lua".source = ./nvim/init.lua;
   home.file.".config/nvim/lua".source = ./nvim/lua;
 }
