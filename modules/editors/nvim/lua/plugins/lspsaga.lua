@@ -1,6 +1,9 @@
 return {
 	"glepnir/lspsaga.nvim",
 	event = "BufRead",
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
+	},
 	config = function()
 		local colors, kind
 		if os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink" or os.getenv("GTK_THEME") == "Catppuccin-Latte-Green" then
@@ -23,5 +26,4 @@ return {
 			vim.cmd([[colorscheme catppuccin-latte ]])
 		end
 	end,
-	dependencies = { "nvim-tree/nvim-web-devicons" },
 }
