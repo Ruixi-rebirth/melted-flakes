@@ -2,7 +2,7 @@ return {
 	{
 		"shaunsingh/nord.nvim",
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		cond = function(val)
+		cond = function()
 			if os.getenv("GTK_THEME") == "Nordic" then
 				val = true
 			else
@@ -27,7 +27,7 @@ return {
 		"catppuccin/nvim",
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
 		priority = 1000, -- make sure to load this before all the other start plugins
-		cond = function(val)
+		cond = function()
 			if
 				os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink"
 				or os.getenv("GTK_THEME") == "Catppuccin-Latte-Green"
