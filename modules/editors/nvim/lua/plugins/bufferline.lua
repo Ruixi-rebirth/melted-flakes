@@ -2,7 +2,7 @@ return {
 	"akinsho/bufferline.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		local highlights = {}
+		local highlights
 		if os.getenv("GTK_THEME") == "Nordic" then
 			highlights = require("nord").bufferline.highlights({
 				italic = true,

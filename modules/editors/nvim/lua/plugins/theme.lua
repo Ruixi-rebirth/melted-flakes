@@ -4,11 +4,10 @@ return {
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
 		cond = function()
 			if os.getenv("GTK_THEME") == "Nordic" then
-				val = true
+				return true
 			else
-				val = false
+				return false
 			end
-			return val
 		end,
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
@@ -26,21 +25,20 @@ return {
 	{
 		"catppuccin/nvim",
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
+		name = "catppuccin",
 		priority = 1000, -- make sure to load this before all the other start plugins
 		cond = function()
 			if
 				os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink"
 				or os.getenv("GTK_THEME") == "Catppuccin-Latte-Green"
 			then
-				val = true
+				return true
 			else
-				val = false
+				return false
 			end
-			return val
 		end,
 		config = function()
 			require("catppuccin").setup({
-				--flavour = "mocha",
 				compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
 				transparent_background = true,
 				term_colors = true,
@@ -69,6 +67,9 @@ return {
 					nvimtree = true,
 					telescope = true,
 					treesitter = true,
+					ts_rainbow = true,
+					lsp_saga = true,
+					lsp_trouble = true,
 					dap = {
 						enable = true,
 						enable_ui = true,
@@ -98,6 +99,11 @@ return {
 				color_overrides = {},
 				custom_highlights = {},
 			})
+			if os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink" then
+				vim.cmd([[colorscheme catppuccin-frappe ]])
+			else
+				vim.cmd([[colorscheme catppuccin-latte ]])
+			end
 		end,
 	},
 }
