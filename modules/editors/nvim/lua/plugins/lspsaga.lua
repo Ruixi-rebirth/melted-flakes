@@ -9,6 +9,8 @@ return {
 		if os.getenv("GTK_THEME") == "Catppuccin-Frappe-Pink" or os.getenv("GTK_THEME") == "Catppuccin-Latte-Green" then
 			colors = require("catppuccin.groups.integrations.lsp_saga").custom_colors()
 			kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind()
+		else
+			colors = { normal_bg = "#3b4252" }
 		end
 		require("lspsaga").setup({
 			ui = {
