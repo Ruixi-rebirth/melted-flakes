@@ -71,9 +71,8 @@ keymap("n", "<Space><CR>", ":nohlsearch<CR>", opts)
 keymap("n", "n", "nzz", opts)
 keymap("n", "N", "Nzz", opts)
 
+-- tabnew
+keymap("n", "<C-n>", ":tabnew<CR>", opts)
 -- msic --
--- keymap("n", "K", "5k", opts)
--- keymap("n", "J", "5j", opts)
--- keymap("n", "H", "7h", opts)
--- keymap("n", "L", "7l", opts)
--- keymap("v", "p", '"_dP', opts)
+keymap("n", "<C-u>", "5k", opts)
+keymap("n", "<C-d>", "5j", opts)
