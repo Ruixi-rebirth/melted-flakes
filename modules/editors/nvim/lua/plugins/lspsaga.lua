@@ -18,6 +18,9 @@ return {
 				kind = kind,
 				border = "single",
 			},
+			outline = {
+				win_width = 25,
+			},
 		})
 		--Switch theme again after lspsaga loaded from
 		if os.getenv("GTK_THEME") == "Nordic" then
