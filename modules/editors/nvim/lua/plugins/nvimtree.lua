@@ -24,10 +24,10 @@ return {
 					open_win_config = {
 						relative = "editor",
 						--[[ border = "rounded", ]]
-						width = 25,
-						height = 20,
-						row = 3,
-						col = 120,
+						width = 65,
+						height = 25,
+						row = 6,
+						col = 45,
 					},
 				},
 				--[[ side = "left", ]]
