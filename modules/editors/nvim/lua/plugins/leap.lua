@@ -27,7 +27,7 @@ return {
 		for k, v in pairs(options) do
 			leap.opts[k] = v
 		end
-		keymap.set({ "n", "x", "o" }, "/", "<Plug>(leap-forward-to)")
-		keymap.set({ "n", "x", "o" }, "?", "<Plug>(leap-backward-to)")
+		keymap.set({ "n", "x", "o" }, "<space>m", "<Plug>(leap-forward-to)")
+		keymap.set({ "n", "x", "o" }, "<space>M", "<Plug>(leap-backward-to)")
 	end,
 }
