@@ -36,6 +36,8 @@ in
       zk
       rust-analyzer
       clang-tools
+      #-- tree-sitter --#
+      tree-sitter
       #-- format --#
       stylua
       black
