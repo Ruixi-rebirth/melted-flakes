@@ -129,7 +129,7 @@
 
   services = {
     dbus.packages = [ pkgs.gcr ];
-    getty.autologinUser = "ruixi";
+    getty.autologinUser = "${user}";
     gvfs.enable = true;
     pipewire = {
       enable = true;
@@ -147,7 +147,7 @@
   security.sudo = {
     enable = false;
     extraConfig = ''
-      ruixi ALL=(ALL) NOPASSWD:ALL
+      ${user} ALL=(ALL) NOPASSWD:ALL
     '';
   };
   security.doas = {
