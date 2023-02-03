@@ -70,7 +70,7 @@
         "/var/log"
         "/var/lib"
       ];
-      users.ruixi = {
+      users.${user} = {
         directories = [
           "Downloads"
           "Music"

@@ -14,8 +14,8 @@
     (import ../../modules/devlop);
 
   home = {
-    username = "ruixi";
-    homeDirectory = "/home/ruixi";
+    username = "${user}";
+    homeDirectory = "/home/${user}";
   };
   programs = {
     home-manager.enable = true;
