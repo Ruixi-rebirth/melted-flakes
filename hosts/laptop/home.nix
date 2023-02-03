@@ -2,12 +2,9 @@
 
 {
   imports =
-    (if builtins.getEnv "XDG_CURRENT_DESKTOP" == "Hyprland"
-    then
-      [ (import ../../modules/desktop/hyprland/home.nix) ]
-    else
-      [ (import ../../modules/desktop/sway/home.nix) ]) ++
-    [ (import ../../modules/scripts/home.nix) ] ++
+    # [ (import ../../modules/desktop/sway/home.nix) ] ++
+    [ (import ../../modules/desktop/hyprland/home.nix) ] ++
+    (import ../../modules/scripts) ++
     (import ../../modules/shell) ++
     (import ../../modules/editors) ++
     (import ../../modules/programs) ++
