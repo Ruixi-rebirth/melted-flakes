@@ -160,7 +160,7 @@ nixos-install --option substituters "https://mirrors.tuna.tsinghua.edu.cn/nix-ch
 ```
 9.5. 当出现这个[情况](https://github.com/Ruixi-rebirth/nixos-config/issues/4)后，别急，继续接下来的步骤
 
-10.0. 重启
+10. 重启
 ```bash
 reboot
 ```
