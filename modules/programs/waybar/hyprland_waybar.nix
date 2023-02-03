@@ -269,7 +269,7 @@
           "format-stopped" = "<span foreground='#bb9af7'></span>";
           "format-disconnected" = "";
           "on-click" = "mpc --quiet toggle";
-          "on-click-right" = "mpc ls | mpc add";
+          "on-click-right" = "mpc update; mpc ls | mpc add";
           "on-click-middle" = "kitty --class='ncmpcpp' ncmpcpp ";
           "on-scroll-up" = "mpc --quiet prev";
           "on-scroll-down" = "mpc --quiet next";
@@ -417,7 +417,7 @@
               "max-length": 25,
               "on-click": "mpc --quiet toggle",
               "on-click-middle": "kitty --class='ncmpcpp' ncmpcpp ",
-              "on-click-right": "mpc ls | mpc add",
+              "on-click-right": "mpc update; mpc ls | mpc add",
               "on-scroll-down": "mpc --quiet next",
               "on-scroll-up": "mpc --quiet prev",
               "smooth-scrolling-threshold": 5,
@@ -721,7 +721,7 @@
               "max-length": 25,
               "on-click": "mpc --quiet toggle",
               "on-click-middle": "kitty --class='ncmpcpp' ncmpcpp ",
-              "on-click-right": "mpc ls | mpc add",
+              "on-click-right": "mpc update; mpc ls | mpc add",
               "on-scroll-down": "mpc --quiet next",
               "on-scroll-up": "mpc --quiet prev",
               "smooth-scrolling-threshold": 5,
