@@ -11,6 +11,8 @@
   mkdir -p /mnt/{boot,nix}
   mount /dev/nvme0n1p3 /mnt/nix
   mount /dev/nvme0n1p1 /mnt/boot 
+  mkdir -p /mnt/nix/persist/etc/nixos
+  mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
 ```
 3. Generate a basic configuration 
 ```bash

@@ -103,6 +103,8 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
   mkdir -p /mnt/{boot,nix}
   mount /dev/nvme0n1p3 /mnt/nix
   mount /dev/nvme0n1p1 /mnt/boot 
+  mkdir -p /mnt/nix/persist/etc/nixos
+  mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
 ```
 3. 生成一个基本的配置 
 ```bash
