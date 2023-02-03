@@ -151,23 +151,16 @@ cd /mnt/etc/nixos/Flakes && rm -rf .git
 ```
 8. 修改用户 *root* 和 *ruixi* 的登陆密码,使用 `mkpasswd -m sha-512` 命令生成的hash密码将 `/mnt/etc/nixos/Flakes/hosts/laptop/default.nix` 中的 `users.users.<name>.hashedPassword` 的值替换掉
 
-9.0. 安装
+9. 安装
 ```bash
 nixos-install --no-root-passwd --flake .#laptop
 
 #或者指定源：
 nixos-install --option substituters "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" --no-root-passwd --flake .#laptop
 ```
-9.5. 当出现这个[情况](https://github.com/Ruixi-rebirth/nixos-config/issues/4)后，别急，继续接下来的步骤
 
 10. 重启
 ```bash
 reboot
 ```
-11. rebuild & switch 
-```bash
-cd /etc/nixos/Flakes
-nixos-rebuild switch  --flake .#laptop
-```
-12. 重启
-13. 享受它吧！
+12. 享受它吧！
