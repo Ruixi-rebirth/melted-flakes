@@ -1,5 +1,5 @@
 ## How to install ?(root on tmpfs)
-0. Suppose I have divided two partitions `/dev/nvme0n1p1` `/dev/nvme0n1p3`
+0. Prepare a 64-bit nixos [minimal iso image](https://channels.nixos.org/nixos-22.11/latest-nixos-minimal-x86_64-linux.iso) and burn it, then enter the live system. Suppose I have divided two partitions `/dev/nvme0n1p1` `/dev/nvme0n1p3`
 1. Format the partition 
 ```bash
   mkfs.fat -F 32 /dev/nvme0n1p1 
