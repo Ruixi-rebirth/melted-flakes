@@ -1,8 +1,5 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, user, ... }:
 
-let
-  user = "ruixi";
-in
 {
   environment.systemPackages = with pkgs; [
     waybar
