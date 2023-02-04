@@ -19,6 +19,10 @@ jobs:
           remove-dotnet: "true"
           remove-android: "true"
           remove-haskell: "true"
+          temp-reserve-mb: "100"
+          swap-size-mb: "4096"
+          root-reserve-mb: "1024"
+
       - uses: actions/checkout@v3
     
       - name: "Install Nix ❄️"
