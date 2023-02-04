@@ -5,7 +5,7 @@
   hardware = {
     nvidia = {
       open = false;
-      package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
+      package = config.boot.kernelPackages.nvidiaPackages.generic;
       modesetting.enable = true;
     };
     opengl = {
