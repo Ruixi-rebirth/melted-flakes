@@ -1,0 +1,18 @@
+diff b/src/vulkan/device-select-layer/device_select_layer.c a/src/vulkan/device-select-layer/device_select_layer.c
+--- b/src/vulkan/device-select-layer/device_select_layer.c
++++ a/src/vulkan/device-select-layer/device_select_layer.c
+@@ -454,12 +454,8 @@
+       exit(0);
+    } else {
+       unsigned selected_index = get_default_device(info, selection, physical_device_count, physical_devices);
+-      selected_physical_device_count = physical_device_count;
++      selected_physical_device_count = 1;
+       selected_physical_devices[0] = physical_devices[selected_index];
+-      for (unsigned i = 0; i < physical_device_count - 1; ++i) {
+-         unsigned  this_idx = i < selected_index ? i : i + 1;
+-         selected_physical_devices[i + 1] = physical_devices[this_idx];
+-      }
+    }
+
+    if (selected_physical_device_count == 0) {
+

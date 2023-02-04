@@ -7,7 +7,7 @@
         fn = oa: {
           nativeBuildInputs = oa.nativeBuildInputs ++ [ pkgs.glslang ];
           mesonFlags = oa.mesonFlags ++ [ "-Dvulkan-layers=device-select,overlay" ];
-          #       patches = oa.patches ++ [ ./mesa-vulkan-layer-nvidia.patch ]; See below 
+          patches = oa.patches ++ [ ./mesa-vulkan-layer-nvidia.patch ];
           postInstall = oa.postInstall + ''
             mv $out/lib/libVkLayer* $drivers/lib
 
@@ -29,13 +29,6 @@
         package = (mesa.overrideAttrs fn).drivers;
         package32 = (pkgsi686Linux.mesa.overrideAttrs fn).drivers;
       };
-  };
-  environment = {
-    systemPackages = with pkgs; [
-      glxinfo
-      libva
-      mesa
-      libva-utils
-    ];
+
   };
 }
