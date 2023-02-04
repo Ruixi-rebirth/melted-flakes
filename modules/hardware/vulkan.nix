@@ -7,7 +7,7 @@
         fn = oa: {
           nativeBuildInputs = oa.nativeBuildInputs ++ [ pkgs.glslang ];
           mesonFlags = oa.mesonFlags ++ [ "-Dvulkan-layers=device-select,overlay" ];
-          patches = oa.patches ++ [ ./mesa-vulkan-layer-nvidia.patch ];
+          # patches = oa.patches ++ [ ./mesa-vulkan-layer-nvidia.patch ];
           postInstall = oa.postInstall + ''
             mv $out/lib/libVkLayer* $drivers/lib
 

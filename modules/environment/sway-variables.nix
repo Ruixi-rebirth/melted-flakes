@@ -21,7 +21,7 @@
       GBM_BACKEND = "nvidia-drm";
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
       #vulkan
-      WLR_RENDERER = "vulkan";
+      #WLR_RENDERER = "vulkan";
       #__NV_PRIME_RENDER_OFFLOAD="1";
 
       XDG_CURRENT_DESKTOP = "sway";
