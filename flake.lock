@@ -236,22 +236,6 @@
         "type": "github"
       }
     },
-    "nixos-hardware": {
-      "locked": {
-        "lastModified": 1674550793,
-        "narHash": "sha256-ljJlIFQZwtBbzWqWTmmw2O5BFmQf1A/DspwMOQtGXHk=",
-        "owner": "NixOS",
-        "repo": "nixos-hardware",
-        "rev": "b7ac0a56029e4f9e6743b9993037a5aaafd57103",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "master",
-        "repo": "nixos-hardware",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1658161305,
@@ -423,7 +407,6 @@
         "hyprpicker": "hyprpicker",
         "impermanence": "impermanence",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
-        "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-review": "nixpkgs-review",
         "nur": "nur",
