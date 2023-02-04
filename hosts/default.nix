@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, nur, user, hyprland, impermanence, hyprpicker, hypr-contrib, sops-nix, ... }:
+{ lib, inputs, nixpkgs, home-manager, nur, user, hyprland, impermanence, hyprpicker, hypr-contrib, sops-nix, nixos-hardware, ... }:
 
 let
   system = "x86_64-linux"; # System architecture
@@ -22,6 +22,7 @@ in
       nur.nixosModules.nur
       ../modules/programs/nurpkgs.nix
       hyprland.nixosModules.default
+      nixos-hardware.nixosModules.lenovo-legion-16ithg6
       sops-nix.nixosModules.sops
       home-manager.nixosModules.home-manager
       {
