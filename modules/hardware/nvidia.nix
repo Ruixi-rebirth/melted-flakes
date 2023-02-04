@@ -9,11 +9,7 @@ let
     exec "$@"
   '';
 in
-
 {
-
-  environment.systemPackages = [ nvidia-offload ];
-
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware = {
     nvidia = {
@@ -43,6 +39,7 @@ in
   };
   environment = {
     systemPackages = with pkgs; [
+      nvidia-offload
       libva
       libva-utils
       glxinfo
