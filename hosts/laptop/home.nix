@@ -2,8 +2,8 @@
 
 {
   imports =
-    # [ (import ../../modules/desktop/sway/home.nix) ] ++
-    [ (import ../../modules/desktop/hyprland/home.nix) ] ++
+    [ (import ../../modules/desktop/sway/home.nix) ] ++
+    # [ (import ../../modules/desktop/hyprland/home.nix) ] ++
     [ (import ../../modules/scripts) ] ++
     (import ../../modules/shell) ++
     (import ../../modules/editors) ++

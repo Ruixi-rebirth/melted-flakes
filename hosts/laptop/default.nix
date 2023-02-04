@@ -8,8 +8,8 @@
       ./hardware-configuration.nix
       ../../modules/fonts
     ] ++ [
-      # ../../modules/desktop/sway
-      ../../modules/desktop/hyprland
+      ../../modules/desktop/sway
+      # ../../modules/desktop/hyprland
     ];
 
   sops.defaultSopsFile = ../../secrets/secrets.yaml;
@@ -62,7 +62,7 @@
   };
 
   environment = {
-    persistence."/persist" = {
+    persistence."/nix/persist" = {
       directories = [
         "/etc/nixos" # bind mounted from /nix/persist/etc/nixos to /etc/nixos
         "/etc/NetworkManager/system-connections"

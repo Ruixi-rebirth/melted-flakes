@@ -739,9 +739,9 @@
               "icon-size": 15,
               "spacing": 5
             },
-            "sway/workspaces" = {
-              "disable-scroll" = true;
-            };
+            "sway/workspaces": {
+              "disable-scroll": true,
+            }
           }
         ]
       '';
