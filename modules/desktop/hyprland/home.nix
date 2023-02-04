@@ -252,13 +252,13 @@
       #------------------------#
       # quickly launch program #
       #------------------------# 
-      bind=$mainMod,B,exec,firefox
+      bind=$mainMod,B,exec,nvidia-offload firefox
       bind=$mainMod,M,exec,netease-cloud-music-gtk4 
       bind=$mainMod SHIFT,M,exec,kitty --class="musicfox" --hold sh -c "musicfox" 
       bind=$mainMod SHIFT,D,exec,kitty  --class="danmufloat" --hold sh -c "cd /home/ruixi/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && go run main.go -c config.toml"
       bind=$mainMod SHIFT,X,exec,myswaylock
       bind=$mainMod,T,exec,telegram-desktop
-      bind=$mainMod,Q,exec,icalingua-plus-plus --enable-features=UseOzonePlatform --ozone-platform=wayland
+      bind=$mainMod,Q,exec,nvidia-offload icalingua-plus-plus --enable-features=UseOzonePlatform --ozone-platform=wayland
       bind=$mainMod,bracketleft,exec,grimblast --notify --cursor  copysave area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
       bind=$mainMod,bracketright,exec, grimblast --notify --cursor  copy area
       bind=$mainMod,A,exec, grimblast_watermark
