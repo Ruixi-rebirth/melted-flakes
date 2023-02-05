@@ -238,8 +238,8 @@
     # Key bindings --#
     #----------------#
         # Start a terminal
-        bindsym $mod+Return exec $term
-        bindsym $mod+Shift+Return exec kitty --class="termfloat"
+        bindsym $mod+Return exec $term fish
+        bindsym $mod+Shift+Return exec kitty --class="termfloat" fish
 
 
         # quick start some applications
