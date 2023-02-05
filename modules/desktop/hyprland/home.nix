@@ -80,10 +80,11 @@
         inactive_opacity = 1.0
         fullscreen_opacity = 1.0
         rounding = 0
-        blur = no 
+        blur = yes 
         blur_size = 3
         blur_passes = 1
         blur_new_optimizations = true
+        blur_xray = true
 
         drop_shadow = false
         shadow_range = 4
@@ -362,6 +363,7 @@
       windowrule=float,ncmpcpp
       windowrule=move 25%-,ncmpcpp
       windowrule=size 960 540,ncmpcpp
+      windowrule=noblur,^(firefox)$
     '';
   };
 }
