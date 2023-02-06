@@ -6,12 +6,30 @@
     inputs.hypr-contrib.packages.${pkgs.system}.grimblast
     inputs.hyprpicker.packages.${pkgs.system}.hyprpicker
     swww
+    swaybg
+    swaylock-effects
+    pamixer
   ];
-  programs.hyprland = {
-    enable = true;
+
+  systemd.user.services.swww = {
+    Unit = {
+      Description = "Swww background";
+      PartOf = [ "graphical-session.target" ];
+      After = [ "graphical-session.target" ];
+    };
+    Install.WantedBy = [ "graphical-session.target" ];
+    Service = {
+      ExecStart = "swww init";
+      ExecStop = "swww kill";
+      Restart = "on-failure";
+    };
   };
 
-  # Automatically on TTY login, see `../../shell/fish/fish.nix`
+  programs = {
+    hyprland = {
+      enable = true;
+    };
+  };
 
   security.pam.services.swaylock = { };
   xdg.portal = {

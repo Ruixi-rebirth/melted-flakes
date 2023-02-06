@@ -11,13 +11,6 @@
       '';
     };
   };
-  home = {
-    packages = with pkgs; [
-      swaybg
-      swaylock-effects
-      pamixer
-    ];
-  };
   home.file = {
     ".config/hypr/hyprland.conf".text = ''
       $mainMod = ALT
