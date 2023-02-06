@@ -11,25 +11,24 @@
     pamixer
   ];
 
-  systemd.user.services.swww = {
-    Unit = {
-      Description = "Swww background";
-      PartOf = [ "graphical-session.target" ];
-      After = [ "graphical-session.target" ];
-    };
-    Install.WantedBy = [ "graphical-session.target" ];
-    Service = {
-      ExecStart = "swww init";
-      ExecStop = "swww kill";
-      Restart = "on-failure";
-    };
-  };
-
   programs = {
     hyprland = {
       enable = true;
     };
   };
+
+  systemd.user.services.swww = lib.mkIf {
+    description = "Efficient animated wallpaper daemon for wayland";
+    wantedBy = [ "graphical-session.target" ];
+    after = [ "graphical-session.target" ];
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "${pkgs.swww}/bin/swww-daemon";
+      ExecStop = "${pkgs.swww}/bin/swww kill";
+      Restart = "always";
+    };
+  };
+
 
   security.pam.services.swaylock = { };
   xdg.portal = {
