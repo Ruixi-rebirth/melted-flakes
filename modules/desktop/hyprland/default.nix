@@ -13,6 +13,7 @@
 
   programs = {
     hyprland = {
+      systemdIntegration = true;
       enable = true;
     };
   };
