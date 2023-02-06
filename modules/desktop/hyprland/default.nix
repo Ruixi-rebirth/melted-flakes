@@ -17,7 +17,7 @@
     };
   };
 
-  systemd.user.services.swww = lib.mkIf {
+  systemd.user.services.swww = {
     description = "Efficient animated wallpaper daemon for wayland";
     wantedBy = [ "graphical-session.target" ];
     after = [ "graphical-session.target" ];
