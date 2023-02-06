@@ -11,6 +11,11 @@
       '';
     };
   };
+  wayland.windowManager.hyprland = {
+    # enable = true;
+    systemdIntegration = true;
+    # nvidiaPatches = true;
+  };
   home.file = {
     ".config/hypr/hyprland.conf".text = ''
       $mainMod = ALT

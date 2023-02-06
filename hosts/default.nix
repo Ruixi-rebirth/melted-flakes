@@ -22,6 +22,7 @@ in
       nur.nixosModules.nur
       ../modules/programs/nurpkgs.nix
       hyprland.nixosModules.default
+      hyprland.homeManagerModules.default
       sops-nix.nixosModules.sops
       home-manager.nixosModules.home-manager
       {

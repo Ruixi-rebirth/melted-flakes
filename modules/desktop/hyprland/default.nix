@@ -13,8 +13,9 @@
 
   programs = {
     hyprland = {
-      systemdIntegration = true;
       enable = true;
+      nvidiaPatches = true;
+      #   systemdIntegration = true;
     };
   };
 
