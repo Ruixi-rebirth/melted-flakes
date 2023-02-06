@@ -14,7 +14,6 @@
       hyprpicker.url = "github:hyprwm/hyprpicker";
       hypr-contrib.url = "github:hyprwm/contrib";
       flake-utils.url = "github:numtide/flake-utils";
-      nixpkgs-review.url = "github:Mic92/nixpkgs-review";
       sops-nix.url = "github:Mic92/sops-nix";
       hyprland = {
         url = "github:hyprwm/Hyprland";
