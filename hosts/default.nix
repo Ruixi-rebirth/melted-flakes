@@ -22,15 +22,16 @@ in
       nur.nixosModules.nur
       ../modules/programs/nurpkgs.nix
       hyprland.nixosModules.default
-      hyprland.homeManagerModules.default
       sops-nix.nixosModules.sops
       home-manager.nixosModules.home-manager
       {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { inherit user; };
-        home-manager.users.${user} = {
-          imports = [ (import ./laptop/home.nix) ];
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          extraSpecialArgs = { inherit user; };
+          users.${user} = {
+            imports = [ (import ./laptop/home.nix) ];
+          };
         };
         nixpkgs = {
           overlays = [
