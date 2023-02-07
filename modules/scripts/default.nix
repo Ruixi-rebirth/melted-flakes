@@ -6,6 +6,7 @@ let
   '';
   wallpaper_random = pkgs.writeShellScriptBin "wallpaper_random" ''
     if command -v swww >/dev/null 2>&1; then 
+        killall dynamic_wallpaper
         swww img $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) --transition-type random
     else 
         killall swaybg
