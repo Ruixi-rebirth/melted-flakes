@@ -1,6 +1,6 @@
 { config, lib, pkgs, inputs, ... }:
 let
-  swwwInit = pkgs.writeShellScript "swwwInit" ''
+  swwwInit = pkgs.writeShellScriptBin "swwwInit" ''
      ${pkgs.swww}/bin/swww init
       if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
       ${pkgs.swww}/bin/swww img "${../../theme/catppuccin-dark/wall/default.png}" --transition-type random
@@ -20,6 +20,7 @@ in
     swww
     swaylock-effects
     pamixer
+    swwwInit
   ];
 
   systemd.user.services.swww = {
