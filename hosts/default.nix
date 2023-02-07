@@ -32,7 +32,8 @@ in
           users.${user} = {
             imports = [
               (import ./laptop/home.nix)
-              (import ./test.nix)
+            ] ++ [
+              hyprland.homeManagerModules.default
             ];
           };
         };

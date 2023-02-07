@@ -11,13 +11,6 @@
     pamixer
   ];
 
-  programs = {
-    hyprland = {
-      enable = true;
-      nvidiaPatches = true;
-    };
-  };
-
   systemd.user.services.swww = {
     description = "Efficient animated wallpaper daemon for wayland";
     wantedBy = [ "graphical-session.target" ];
@@ -27,7 +20,6 @@
       ExecStop = "${pkgs.swww}/bin/swww kill";
     };
   };
-
 
   security.pam.services.swaylock = { };
   xdg.portal = {

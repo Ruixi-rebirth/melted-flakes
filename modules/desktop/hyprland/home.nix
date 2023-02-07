@@ -1,7 +1,9 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ../../environment/hypr-variables.nix ];
+  imports = [
+    (import ../../environment/hypr-variables.nix)
+  ];
   programs = {
     bash = {
       initExtra = ''
@@ -11,8 +13,11 @@
       '';
     };
   };
-  home.file = {
-    ".config/hypr/hyprland.conf".text = ''
+  wayland.windowManager.hyprland = {
+    enable = true;
+    systemdIntegration = true;
+    nvidiaPatches = true;
+    extraConfig = ''
       $mainMod = ALT
       # $scripts=$HOME/.config/hypr/scripts
 
