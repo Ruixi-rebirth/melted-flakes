@@ -17,19 +17,21 @@
     serviceConfig = {
       Type = "simple";
       ExecStart = ''
-        ${pkgs.swww}/bin/swww-daemon'';
-      ExecStart = ''
-          if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
-          ${pkgs.swww}/bin/swww img "${../../theme/catppuccin-dark/wall/default.png}" --transition-type random
-        elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
-          ${pkgs.swww}/bin/swww img "${../../theme/catppuccin-light/wall/default.png}" --transition-type random
-        else 
-          ${pkgs.swww}/bin/swww img "${../../theme/nord/wall/default.png}" --transition-type random
-        fi
+        ${pkgs.swww}/bin/swww-daemon
       '';
       ExecStop = "${pkgs.swww}/bin/swww kill";
     };
   };
+  systemd.user.services.default_wall = {
+    description = "default wallpaper";
+    requires = [ "swww.service" ];
+    after = [ "swww.service" ];
+    serviceConfig = {
+      ExecStart = ''${pkgs.default_wall}/bin/default_wall'';
+      ExecStop = "${pkgs.swww}/bin/swww kill";
+    };
+  };
+
 
   security.pam.services.swaylock = { };
   xdg.portal = {
