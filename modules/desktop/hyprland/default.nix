@@ -45,6 +45,7 @@ in
     script = ''${default_wall}'';
     serviceConfig = {
       Type = "oneshot";
+      Restart = "on-failure";
     };
   };
 

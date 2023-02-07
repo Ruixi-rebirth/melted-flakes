@@ -1,2 +1,3 @@
-final: prev:
-{ } // (import ../pkgs) { pkgs = final; }
+[
+  (import ./cinnamon.nemo)
+]

@@ -44,6 +44,7 @@ in
             #   catppuccin-gtk = prev.callPackage ../overlays/catppuccin-gtk.nix { };
             # })
             (import ../overlays)
+            (import ../pkgs)
             inputs.neovim-nightly-overlay.overlay
             inputs.rust-overlay.overlays.default
           ];
