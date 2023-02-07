@@ -2,13 +2,14 @@
 
 let
   default_wall = pkgs.writeShellScript "default_wall" ''
-    if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
-      ${pkgs.swww}/bin/swww img "${../../theme/catppuccin-dark/wall/default.png}" --transition-type random
-    elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
-      ${pkgs.swww}/bin/swww img "${../../theme/catppuccin-light/wall/default.png}" --transition-type random
-    else 
-      ${pkgs.swww}/bin/swww img "${../../theme/nord/wall/default.png}" --transition-type random
-    fi
+    killall dynamic_wallpaper
+      if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
+        ${pkgs.swww}/bin/swww img "${../../theme/catppuccin-dark/wall/default.png}" --transition-type random
+      elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
+        ${pkgs.swww}/bin/swww img "${../../theme/catppuccin-light/wall/default.png}" --transition-type random
+      else 
+        ${pkgs.swww}/bin/swww img "${../../theme/nord/wall/default.png}" --transition-type random
+      fi
   '';
 in
 
