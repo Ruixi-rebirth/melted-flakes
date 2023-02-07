@@ -6,7 +6,6 @@
     inputs.hypr-contrib.packages.${pkgs.system}.grimblast
     inputs.hyprpicker.packages.${pkgs.system}.hyprpicker
     swww
-    swaybg
     swaylock-effects
     pamixer
   ];
