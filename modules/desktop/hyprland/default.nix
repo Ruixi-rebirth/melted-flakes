@@ -20,7 +20,6 @@ in
     swww
     swaylock-effects
     pamixer
-    swwwInit
   ];
 
   systemd.user.services.swww = {
