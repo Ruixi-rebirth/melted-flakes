@@ -38,16 +38,13 @@ in
           };
         };
         nixpkgs = {
-          overlays = [
-            # (final: prev: {
-            #   catppuccin-cursors = prev.callPackage ../overlays/catppuccin-cursors.nix { };
-            #   catppuccin-gtk = prev.callPackage ../overlays/catppuccin-gtk.nix { };
-            # })
-            (import ../overlays)
-            (import ../pkgs)
-            inputs.neovim-nightly-overlay.overlay
-            inputs.rust-overlay.overlays.default
-          ];
+          overlays =
+            [ (import ../pkgs) ]
+            ++ (import ../overlays)
+            ++ [
+              inputs.neovim-nightly-overlay.overlay
+              inputs.rust-overlay.overlays.default
+            ];
         };
       }
     ];
