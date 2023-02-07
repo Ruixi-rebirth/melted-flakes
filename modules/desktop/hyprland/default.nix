@@ -1,6 +1,6 @@
 { config, lib, pkgs, inputs, ... }:
 let
-  swwwInit = pkgs.writeShellScriptBin "swwwInit" ''
+  swwwInit = pkgs.writeShellScript "swwwInit" ''
      ${pkgs.swww}/bin/swww init
       if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
       ${pkgs.swww}/bin/swww img "${../../theme/catppuccin-dark/wall/default.png}" --transition-type random
