@@ -30,7 +30,10 @@ in
           useUserPackages = true;
           extraSpecialArgs = { inherit user; };
           users.${user} = {
-            imports = [ (import ./laptop/home.nix) ];
+            imports = [
+              (import ./laptop/home.nix)
+              (import ./test.nix)
+            ];
           };
         };
         nixpkgs = {
