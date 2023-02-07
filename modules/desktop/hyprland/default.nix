@@ -3,11 +3,11 @@
 let
   default_wall = pkgs.writeShellScript "default_wall" ''
     if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
-      {pkgs.swww}/bin/swww img "${../../theme/catppuccin-dark/wall/default.png}" --transition-type random
+      ${pkgs.swww}/bin/swww img "${../../theme/catppuccin-dark/wall/default.png}" --transition-type random
     elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
-      {pkgs.swww}/bin/swww img "${../../theme/catppuccin-light/wall/default.png}" --transition-type random
+      ${pkgs.swww}/bin/swww img "${../../theme/catppuccin-light/wall/default.png}" --transition-type random
     else 
-      {pkgs.swww}/bin/swww img "${../../theme/nord/wall/default.png}" --transition-type random
+      ${pkgs.swww}/bin/swww img "${../../theme/nord/wall/default.png}" --transition-type random
     fi
   '';
 in
@@ -33,15 +33,19 @@ in
         ${pkgs.swww}/bin/swww-daemon
       '';
       ExecStop = "${pkgs.swww}/bin/swww kill";
+      Restart = "on-failure";
     };
   };
   systemd.user.services.default_wall = {
     description = "default wallpaper";
     requires = [ "swww.service" ];
-    after = [ "swww.service" ];
-    script = ''${default_wall}'';
+    after = [ "swww.service" "graphical-session.target" ];
     wantedBy = [ "graphical-session.target" ];
     partOf = [ "graphical-session.target" ];
+    script = ''${default_wall}'';
+    serviceConfig = {
+      Type = "oneshot";
+    };
   };
 
 

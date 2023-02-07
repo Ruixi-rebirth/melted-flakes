@@ -16,7 +16,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemdIntegration = true;
-    nvidiaPatches = true;
+    nvidiaPatches = false;
     extraConfig = ''
       $mainMod = ALT
       # $scripts=$HOME/.config/hypr/scripts
