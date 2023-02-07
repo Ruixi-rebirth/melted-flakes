@@ -310,11 +310,11 @@
       bindm = $mainMod, mouse:272, movewindow
       bindm = $mainMod, mouse:273, resizewindow
 
-      #------#
-      # wall #
-      #------#
+      #-----------------------#
+      # wall(by swww service) #
+      #-----------------------#
       # exec-once = dynamic_wallpaper
-      exec-once = default_wall 
+      # exec-once = default_wall 
 
       #------------#
       # auto start #

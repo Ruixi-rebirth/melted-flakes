@@ -103,6 +103,7 @@ let
   '';
   default_wall = pkgs.writeShellScriptBin "default_wall" ''
     if command -v swww >/dev/null 2>&1; then 
+          killall dynamic_wallpaper
            if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
              swww img "${../theme/catppuccin-dark/wall/default.png}" --transition-type random
            elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
