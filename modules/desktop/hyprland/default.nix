@@ -17,7 +17,7 @@
     serviceConfig = {
       Type = "simple";
       ExecStart = ''
-          ${pkgs.swww}/bin/swww-daemon
+          setsid ${pkgs.swww}/bin/swww-daemon &
           if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
           ${pkgs.swww}/bin/swww img "${../../theme/catppuccin-dark/wall/default.png}" --transition-type random
         elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
