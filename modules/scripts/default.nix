@@ -4,13 +4,8 @@ let
   cava-internal = pkgs.writeShellScriptBin "cava-internal" ''
     cava -p ~/.config/cava/config1 | sed -u 's/;//g;s/0/▁/g;s/1/▂/g;s/2/▃/g;s/3/▄/g;s/4/▅/g;s/5/▆/g;s/6/▇/g;s/7/█/g;'
   '';
-  wallpaper_random = pkgs.writeShellScriptBin "wallpaper_random" ''
-    killall swaybg
-    killall dynamic_wallpaper
-    swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
-  '';
-  grimblast_watermark = pkgs.writeShellScriptBin "grimblast_watermark" ''
-        FILE=$(date "+%Y-%m-%d"T"%H:%M:%S").png
+  grimblast_watermark = pkgs.writeshellscriptbin "grimblast_watermark" ''
+        file=$(date "+%y-%m-%d"t"%h:%m:%s").png
     # Get the picture from maim
         grimblast --notify --cursor save area ~/Pictures/src.png >> /dev/null 2>&1
     # add shadow, round corner, border and watermark
@@ -70,18 +65,61 @@ let
            --grace 2 \
            --fade-in 0.3
   '';
+  wallpaper_random = pkgs.writeshellscriptbin "wallpaper_random" ''
+    if command -v swww >/dev/null 2>&1; then 
+        swww img $(find ~/pictures/wallpaper/. -name "*.png" | shuf -n1) --transition-type random
+    else 
+        killall swaybg
+        killall dynamic_wallpaper
+        swaybg -i $(find ~/pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
+    fi
+  '';
   dynamic_wallpaper = pkgs.writeShellScriptBin "dynamic_wallpaper" ''
-    killall swaybg
-    swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
-    OLD_PID=$!
-    while true; do
-        sleep 120
+    if command -v swww >/dev/null 2>&1; then 
+        swww img $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) --transition-type random
+        OLD_PID=$!
+        while true; do
+            sleep 120
+        swww img $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) --transition-type random
+            NEXT_PID=$!
+            sleep 5
+            kill $OLD_PID
+            OLD_PID=$NEXT_PID
+        done
+    else 
+        killall swaybg
         swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
-        NEXT_PID=$!
-        sleep 5
-        kill $OLD_PID
-        OLD_PID=$NEXT_PID
-    done
+        OLD_PID=$!
+        while true; do
+            sleep 120
+            swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
+            NEXT_PID=$!
+            sleep 5
+            kill $OLD_PID
+            OLD_PID=$NEXT_PID
+        done
+    fi
+  '';
+  default_wall = pkgs.writeShellScriptBin "default_wall" ''
+    if command -v swww >/dev/null 2>&1; then 
+           if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
+             swww img "${../theme/catppuccin-dark/wall/default.png}" --transition-type random
+           elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
+             swww img "${../theme/catppuccin-light/wall/default.png}" --transition-type random
+           else 
+             swww img "${../theme/nord/wall/default.png}" --transition-type random
+           fi
+        else
+        killall swaybg
+        killall dynamic_wallpaper
+        if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
+          swaybg -i "${../theme/catppuccin-dark/wall/default.png}" -m fill &
+        elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
+          swaybg -i "${../theme/catppuccin-light/wall/default.png}" -m fill &
+        else 
+          swaybg -i "${../theme/nord/wall/default.png}" -m fill &
+        fi
+    fi
   '';
   launch_waybar = pkgs.writeShellScriptBin "launch_waybar" ''
     #!/bin/bash
@@ -93,17 +131,6 @@ let
       waybar -c "$SDIR"/light_config -s "$SDIR"/light_style.css > /dev/null 2>&1 &
     else 
       waybar -c "$SDIR"/nord_config -s "$SDIR"/nord_style.css > /dev/null 2>&1 &
-    fi
-  '';
-  default_wall = pkgs.writeShellScriptBin "default_wall" ''
-    killall swaybg
-    killall dynamic_wallpaper
-    if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
-      swaybg -i "${../theme/catppuccin-dark/wall/default.png}" -m fill &
-    elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
-      swaybg -i "${../theme/catppuccin-light/wall/default.png}" -m fill &
-    else 
-      swaybg -i "${../theme/nord/wall/default.png}" -m fill &
     fi
   '';
   border_color = pkgs.writeShellScriptBin "border_color" ''
