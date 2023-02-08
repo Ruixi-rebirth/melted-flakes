@@ -47,7 +47,6 @@ in
     script = ''${default_wall}'';
     serviceConfig = {
       Type = "oneshot";
-      ExecStop = "${pkgs.swww}/bin/swww clear";
       Restart = "on-failure";
     };
   };
