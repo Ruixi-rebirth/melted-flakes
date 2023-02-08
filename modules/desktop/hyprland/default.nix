@@ -3,7 +3,6 @@
 let
   default_wall = pkgs.writeShellScript "default_wall" ''
     killall dynamic_wallpaper
-    ${pkgs.swww}/bin/swww clear
       if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
         ${pkgs.swww}/bin/swww img "${../../theme/catppuccin-dark/wall/default.png}" --transition-type random
       elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
@@ -48,6 +47,7 @@ in
     script = ''${default_wall}'';
     serviceConfig = {
       Type = "oneshot";
+      ExecStop = "${pkgs.swww}/bin/swww clear";
       Restart = "on-failure";
     };
   };
