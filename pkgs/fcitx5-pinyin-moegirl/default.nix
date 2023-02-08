@@ -3,7 +3,7 @@
 , fetchurl
 }:
 stdenv.mkDerivation {
-  pname = "moegirl.dict";
+  pname = "fcitx5-pinyin-moegirl";
   version = "20230114";
 
   src = fetchurl {
@@ -17,7 +17,7 @@ stdenv.mkDerivation {
   '';
   meta = with lib; {
     description = "Fcitx 5 PinyinDictionary from zh.moegirl.org.cn ";
-    homepage = " https://github.com/outloudvi/mw2fcitx ";
+    homepage = "https://github.com/outloudvi/mw2fcitx";
     license = licenses.unlicense;
   };
 }

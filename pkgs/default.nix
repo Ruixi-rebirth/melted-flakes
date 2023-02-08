@@ -11,5 +11,6 @@ final: prev:
     go-musicfox = pkgs.callPackage ./go-musicfox { };
     swww = pkgs.callPackage ./swww { };
     fcitx5-pinyin-moegirl = pkgs.callPackage ./fcitx5-pinyin-moegirl { };
+    fcitx5-pinyin-zhwiki = pkgs.callPackage ./fcitx5-pinyin-zhwiki { };
   }
 )
