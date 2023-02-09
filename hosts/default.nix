@@ -1,8 +1,6 @@
-{ self, lib, inputs, nixpkgs, home-manager, nur, user, hyprland, impermanence, hyprpicker, hypr-contrib, sops-nix, ... }:
+{ system, self, nixpkgs, inputs, user, ... }:
 
 let
-  system = "x86_64-linux"; # System architecture
-
   pkgs = import nixpkgs {
     inherit system;
     config.allowUnfree = true; # Allow proprietary software
@@ -17,13 +15,13 @@ in
     specialArgs = { inherit inputs user; };
     modules = [
       ./laptop
-      impermanence.nixosModules.impermanence
+      inputs.impermanence.nixosModules.impermanence
       ./system.nix
-      nur.nixosModules.nur
+      inputs.nur.nixosModules.nur
       ../modules/programs/nurpkgs.nix
-      hyprland.nixosModules.default
-      sops-nix.nixosModules.sops
-      home-manager.nixosModules.home-manager
+      inputs.hyprland.nixosModules.default
+      inputs.sops-nix.nixosModules.sops
+      inputs.home-manager.nixosModules.home-manager
       {
         home-manager = {
           useGlobalPkgs = true;
@@ -33,7 +31,7 @@ in
             imports = [
               (import ./laptop/home.nix)
             ] ++ [
-              hyprland.homeManagerModules.default
+              inputs.hyprland.homeManagerModules.default
             ];
           };
         };

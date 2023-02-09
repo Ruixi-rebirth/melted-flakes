@@ -25,7 +25,7 @@
       };
     };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, rust-overlay, hyprpicker, hypr-contrib, flake-utils, sops-nix, ... }:
+  outputs = inputs @ { self, nixpkgs, flake-utils, ... }:
     let
       user = "ruixi";
       domain = "rayxi.top";
@@ -80,8 +80,8 @@
         # NixOS configurations
         import ./hosts {
           # Imports ./hosts/default.nix
-          inherit (nixpkgs) lib;
-          inherit self inputs nixpkgs home-manager nur user hyprland impermanence rust-overlay hypr-contrib hyprpicker sops-nix;
+          system = "x86_64-linux";
+          inherit nixpkgs self inputs user;
         }
       );
     };
