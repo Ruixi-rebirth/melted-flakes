@@ -12,5 +12,5 @@ pkgs.mkShell {
           "
             export PS1="[\e[0;34m(Flakes)\$\e[m:\w]\$ "
   '';
-  nativeBuildInputs = with pkgs; [ git ];
+  nativeBuildInputs = with pkgs; [ git neovim ];
 }
