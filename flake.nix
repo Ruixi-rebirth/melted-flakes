@@ -42,8 +42,11 @@
         in
         {
           devShells = {
+            #run by `nix devlop` or `nix-shell`(legacy)
+            default = import ./shell.nix;
             #run by `nix devlop .#<name>`
             blog = with pkgs; mkShell {
+              name = "blog";
               nativeBuildInputs = [
                 hugo
               ];
@@ -55,6 +58,7 @@
               '';
             };
             secret = with pkgs; mkShell {
+              name = "secret";
               nativeBuildInputs = [
                 sops
                 age

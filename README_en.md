@@ -20,7 +20,7 @@
 ```
 4. Clone the repository locally 
 ```bash
-nix-shell -p git
+nix develop
 git clone  https://github.com/Ruixi-rebirth/nixos-config.git /mnt/etc/nixos/Flakes 
 ```
 5. Copy `hardware-configuration.nix` from /mnt/etc/nixos to /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix 
