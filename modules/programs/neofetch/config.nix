@@ -7,6 +7,7 @@
       info " " kernel
       info " " packages
       info " " de
+      info " " wm
       info " " memory
       info " " uptime
       info cols
