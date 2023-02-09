@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, nur, user, hyprland, impermanence, hyprpicker, hypr-contrib, sops-nix, ... }:
+{ self, lib, inputs, nixpkgs, home-manager, nur, user, hyprland, impermanence, hyprpicker, hypr-contrib, sops-nix, ... }:
 
 let
   system = "x86_64-linux"; # System architecture
@@ -39,9 +39,9 @@ in
         };
         nixpkgs = {
           overlays =
-            [ (import ../pkgs) ]
-            ++ (import ../overlays)
+            (import ../overlays)
             ++ [
+              self.overlays.default
               inputs.neovim-nightly-overlay.overlay
               inputs.rust-overlay.overlays.default
             ];

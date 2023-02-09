@@ -29,6 +29,7 @@
     let
       user = "ruixi";
       domain = "rayxi.top";
+      selfPkgs = import ./pkgs;
     in
     flake-utils.lib.eachSystem [ "x86_64-linux" ]
       (
@@ -37,6 +38,7 @@
           pkgs = import nixpkgs {
             inherit system;
             overlays = [
+              self.overlays.default
             ];
           };
         in
@@ -73,12 +75,13 @@
         }
       )
     // {
+      overlays.default = selfPkgs.overlay;
       nixosConfigurations = (
         # NixOS configurations
         import ./hosts {
           # Imports ./hosts/default.nix
           inherit (nixpkgs) lib;
-          inherit inputs nixpkgs home-manager nur user hyprland impermanence rust-overlay hypr-contrib hyprpicker sops-nix;
+          inherit self inputs nixpkgs home-manager nur user hyprland impermanence rust-overlay hypr-contrib hyprpicker sops-nix;
         }
       );
     };
