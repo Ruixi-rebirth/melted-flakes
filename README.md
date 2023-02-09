@@ -112,8 +112,9 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 ```
 4. 克隆仓库到本地
 ```bash
-nix develop
+nix-shell -p git
 git clone  https://github.com/Ruixi-rebirth/nixos-config.git /mnt/etc/nixos/Flakes 
+nix develop
 ```
 5. 将 /mnt/etc/nixos 中的 `hardware-configuration.nix` 拷贝到 /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
 ```bash 
