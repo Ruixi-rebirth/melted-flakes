@@ -11,7 +11,6 @@
   home = {
     packages = with pkgs; [
       cava
-      dbeaver
       imv
       rofi-wayland
       lazygit

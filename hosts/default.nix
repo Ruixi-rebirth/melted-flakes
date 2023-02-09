@@ -18,7 +18,6 @@ in
       inputs.impermanence.nixosModules.impermanence
       ./system.nix
       inputs.nur.nixosModules.nur
-      ../modules/programs/nurpkgs.nix
       inputs.hyprland.nixosModules.default
       inputs.sops-nix.nixosModules.sops
       inputs.home-manager.nixosModules.home-manager

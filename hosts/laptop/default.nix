@@ -20,14 +20,16 @@
     # shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
-    packages = with pkgs; [
+    packages = (with pkgs; [
       tdesktop
       qq
       feishu
-      pkgs.sway-contrib.grimshot
-      imagemagick
       thunderbird
-    ];
+      blender
+      dbeaver
+    ]) ++ (with config.nur.repos;[
+      linyinfeng.icalingua-plus-plus
+    ]);
   };
   boot = {
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
@@ -122,8 +124,9 @@
       sshpass
       ntfs3g
       pkgs.rust-bin.stable.latest.default
-      blender
       lxappearance
+      imagemagick
+      pkgs.sway-contrib.grimshot
     ];
   };
 
