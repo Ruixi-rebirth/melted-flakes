@@ -29,6 +29,9 @@ nix develop
 cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
 ```
 6. Modify the overwritten `hardware-configuration.nix` 
+```bash
+nvim /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
+```
 ```nix
 ...
 #This is just an example

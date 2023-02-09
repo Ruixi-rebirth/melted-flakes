@@ -122,7 +122,7 @@ cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/Flakes/hosts/laptop/
 ```
 6. 修改被覆盖后的 `hardware-configuration.nix`
 ```bash
-nano /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
+nvim /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
 ```
 ```nix
 ...
