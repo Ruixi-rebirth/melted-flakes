@@ -43,7 +43,7 @@
         {
           devShells = {
             #run by `nix devlop` or `nix-shell`(legacy)
-            default = import ./shell.nix;
+            default = import ./shell.nix { inherit pkgs; };
             #run by `nix devlop .#<name>`
             blog = with pkgs; mkShell {
               name = "blog";
