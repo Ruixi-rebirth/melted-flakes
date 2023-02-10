@@ -91,6 +91,8 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 ```
 
 ### 如何安装?(root on tmpfs)
+[视频](https://www.bilibili.com/video/BV1Y24y1W7uB/?vd_source=c4f02f0c890cb2be8edb56aa53774e09)
+
 0. 准备一个64位的nixos [minimal iso image](https://channels.nixos.org/nixos-22.11/latest-nixos-minimal-x86_64-linux.iso) 烧录好,然后进入live系统。假设我已经分好两个分区`/dev/nvme0n1p1` `/dev/nvme0n1p3`
 1. 格式化分区
 ```bash
