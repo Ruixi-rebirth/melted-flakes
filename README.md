@@ -114,7 +114,7 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 ```bash
 nix-shell -p git
 git clone  https://github.com/Ruixi-rebirth/flakes.git /mnt/etc/nixos/Flakes 
-nix develop
+nix develop --extra-experimental-features nix-command --extra-experimental-features flakes
 ```
 5. 将 /mnt/etc/nixos 中的 `hardware-configuration.nix` 拷贝到 /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
 ```bash 
