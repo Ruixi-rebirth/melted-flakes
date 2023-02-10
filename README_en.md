@@ -22,6 +22,7 @@
 ```bash
 nix-shell -p git
 git clone  https://github.com/Ruixi-rebirth/flakes.git /mnt/etc/nixos/Flakes 
+cd /mnt/etc/nixos/Flakes/
 nix develop --extra-experimental-features nix-command --extra-experimental-features flakes 
 ```
 5. Copy `hardware-configuration.nix` from /mnt/etc/nixos to /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix 
@@ -60,9 +61,9 @@ nvim /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
     };
 ...
 ```
-7. Go into the cloned repository and remove '/mnt/etc/nixos/Flakes/.git' 
+7. remove '/mnt/etc/nixos/Flakes/.git' 
 ```bash 
-cd /mnt/etc/nixos/Flakes && rm -rf .git
+rm -rf .git
 ```
 8. If you want to change the default user name from `ruixi` to other name, please open `/mnt/etc/nixos/Flakes/flakes.nix` and change the `user` variable in it.
 

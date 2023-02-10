@@ -114,6 +114,7 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 ```bash
 nix-shell -p git
 git clone  https://github.com/Ruixi-rebirth/flakes.git /mnt/etc/nixos/Flakes 
+cd  /mnt/etc/nixos/Flakes/
 nix develop --extra-experimental-features nix-command --extra-experimental-features flakes
 ```
 5. 将 /mnt/etc/nixos 中的 `hardware-configuration.nix` 拷贝到 /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
@@ -152,9 +153,9 @@ nvim /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
     };
 ...
 ```
-7. 进入克隆的仓库并移除 '/mnt/etc/nixos/Flakes/.git'
+7. 移除 '/mnt/etc/nixos/Flakes/.git'
 ```bash 
-cd /mnt/etc/nixos/Flakes && rm -rf .git
+rm -rf .git
 ```
 8. 如果你想要将默认用户名称从 `ruixi` 更改成为其他名称，请打开 `/mnt/etc/nixos/Flakes/flake.nix` 并修改其中的 `user` 变量为对应的名称。
 
