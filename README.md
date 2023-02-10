@@ -156,7 +156,7 @@ nvim /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
 ```bash 
 cd /mnt/etc/nixos/Flakes && rm -rf .git
 ```
-8. 修改用户 *root* 和 *ruixi* 的登陆密码,使用 `mkpasswd -m sha-512` 命令生成的hash密码将 `/mnt/etc/nixos/Flakes/hosts/laptop/default.nix` 中的 `users.users.<name>.hashedPassword` 的值替换掉
+8. 使用 `mkpasswd {PASSWORD} -m sha-512` 命令生成的密码哈希串替换掉 `/mnt/etc/nixos/Flakes/hosts/laptop/default.nix` 中的 `users.users.<name>.hashedPassword` 值替换掉。（在文件中有两处需要替换的内容）
 
 9. 安装
 ```bash
