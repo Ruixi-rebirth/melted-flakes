@@ -114,7 +114,7 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 ```bash
 nix-shell -p git
 git clone  https://github.com/Ruixi-rebirth/flakes.git /mnt/etc/nixos/Flakes 
-nix develop
+nix develop --extra-experimental-features nix-command --extra-experimental-features flakes
 ```
 5. 将 /mnt/etc/nixos 中的 `hardware-configuration.nix` 拷贝到 /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
 ```bash 
@@ -156,9 +156,11 @@ nvim /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
 ```bash 
 cd /mnt/etc/nixos/Flakes && rm -rf .git
 ```
-8. 修改用户 *root* 和 *ruixi* 的登陆密码,使用 `mkpasswd -m sha-512` 命令生成的hash密码将 `/mnt/etc/nixos/Flakes/hosts/laptop/default.nix` 中的 `users.users.<name>.hashedPassword` 的值替换掉
+8. 如果你想要将默认用户名称从 `ruixi` 更改成为其他名称，请打开 `/mnt/etc/nixos/Flakes/flake.nix` 并修改其中的 `user` 变量为对应的名称。
 
-9. 安装
+9. 使用 `mkpasswd {PASSWORD} -m sha-512` 命令生成的密码哈希串替换掉 `/mnt/etc/nixos/Flakes/hosts/laptop/default.nix` 中的 `users.users.<name>.hashedPassword` 值替换掉。（在文件中有两处需要替换的内容）
+
+10. 安装
 ```bash
 nixos-install --no-root-passwd --flake .#laptop
 
@@ -166,7 +168,7 @@ nixos-install --no-root-passwd --flake .#laptop
 nixos-install --option substituters "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" --no-root-passwd --flake .#laptop
 ```
 
-10. 重启
+11. 重启
 ```bash
 reboot
 ```
