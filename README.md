@@ -1,6 +1,6 @@
 **简体中文（中国大陆）** | [English (UK)](README_en.md)
 
-[![Push Blog](https://github.com/ruixi-rebirth/nixos-config/actions/workflows/push_blog.yml/badge.svg)](https://ruixi-rebirth.github.io) 
+[![Push Blog](https://github.com/ruixi-rebirth/flakes/actions/workflows/push_blog.yml/badge.svg)](https://ruixi-rebirth.github.io) 
 
 <p align="center"><img src="https://user-images.githubusercontent.com/75824585/210402874-da3422d5-ab65-4975-b73a-c300065c6792.png" width=300px></p>
 <h2 align="center">Ruixi-rebirth's NixOS Config</h2>
@@ -45,7 +45,7 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 ![2023-01-17T00:15:22](https://user-images.githubusercontent.com/75824585/212723937-c56200da-52f4-407b-9d8e-428348ed5ed0.png)
 
 
-*安装主题任意选择一个即可：具体见[这里](https://github.com/Ruixi-rebirth/nixos-config/blob/main/hosts/laptop/home.nix#L11-L13)*
+*安装主题任意选择一个即可：具体见[这里](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/home.nix#L11-L13)*
 
 ### 屏幕截图
 <details>
@@ -113,7 +113,7 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 4. 克隆仓库到本地
 ```bash
 nix-shell -p git
-git clone  https://github.com/Ruixi-rebirth/nixos-config.git /mnt/etc/nixos/Flakes 
+git clone  https://github.com/Ruixi-rebirth/flakes.git /mnt/etc/nixos/Flakes 
 nix develop
 ```
 5. 将 /mnt/etc/nixos 中的 `hardware-configuration.nix` 拷贝到 /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
