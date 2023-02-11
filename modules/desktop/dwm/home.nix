@@ -2,7 +2,7 @@
 
 {
   imports = [
-    (import ../../environment/hypr-variables.nix)
+    (import ../../environment/dwm-variables.nix)
   ];
   programs = {
     bash = {
@@ -22,7 +22,7 @@
       if command -v dbus-update-activation-environment >/dev/null 2>&1; then
        dbus-update-activation-environment DISPLAY XAUTHORITY
       fi
-      exec dwm
+       QT_QPA_PLATFORMexec dwm
     '';
   };
 }
