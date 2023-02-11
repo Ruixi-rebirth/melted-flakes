@@ -6,7 +6,6 @@
 <h2 align="center">Ruixi-rebirth's NixOS Config</h2>
 <p align="center"><img src="https://user-images.githubusercontent.com/75824585/196195007-ecebb290-2c6b-4fab-9e1e-2dbb12f7eb44.png" width=300px></p>
 
-https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-91a6-c30281d46e7a.mp4
 
 ### 系统组件
 ||NixOS(Wayland)|NixOS(Xorg)|
@@ -42,7 +41,9 @@ https://user-images.githubusercontent.com/75824585/218276736-59abba49-d7a2-4f19-
 
 **sway & hyprland**
 
-如下图，sway 与 hyprland 外观一致
+https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-91a6-c30281d46e7a.mp4
+
+sway 与 hyprland 外观一致,此处展示的是hyprland
 
 *安装wm,选择任意一个即可: 具体参见[此处](https://github.com/Ruixi-rebirth/flakes/blob/9536b94c5128979269f1dd1d15a38648ad3c54bf/hosts/default.nix#L17-L18)和[此处](https://github.com/Ruixi-rebirth/flakes/blob/9536b94c5128979269f1dd1d15a38648ad3c54bf/hosts/default.nix#L34-L35)*
 
