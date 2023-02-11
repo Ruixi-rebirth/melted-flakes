@@ -1,5 +1,6 @@
 { config, lib, pkgs, inputs, ... }:
 {
+  imports = [ ../../programs/x11/st/st.nix ];
   services.xserver = {
     enable = true;
     windowManager.dwm.enable = true;

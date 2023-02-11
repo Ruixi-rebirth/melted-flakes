@@ -5,5 +5,4 @@ in
   ./launcher
   ./notice
   ./picom
-  ./st
 ] ++ common
