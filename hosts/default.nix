@@ -16,8 +16,10 @@ in
     modules = [
       # ./laptop/wayland #hyprland and sway,go to this dir,choose one
       ./laptop/x11 #dwm
-      inputs.impermanence.nixosModules.impermanence
+    ] ++ [
       ./system.nix
+    ] ++ [
+      inputs.impermanence.nixosModules.impermanence
       inputs.nur.nixosModules.nur
       inputs.hyprland.nixosModules.default
       inputs.sops-nix.nixosModules.sops
@@ -39,7 +41,7 @@ in
         nixpkgs = {
           overlays =
             (import ../overlays)
-            ++ [
+              ++ [
               self.overlays.default
               inputs.neovim-nightly-overlay.overlay
               inputs.rust-overlay.overlays.default
