@@ -4,15 +4,15 @@
   imports = [
     (import ../../environment/dwm-variables.nix)
   ];
-  programs = {
-    bash = {
-      initExtra = ''
-        if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-           exec  startx
-        fi
-      '';
-    };
-  };
+  # programs = {
+  #   bash = {
+  #     initExtra = ''
+  #       if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+  #          exec  startx
+  #       fi
+  #     '';
+  #   };
+  # };
   home.file = {
     ".xinitrc".text = ''
       if test -z "$DBUS_SESSION_BUS_ADDRESS"; then
