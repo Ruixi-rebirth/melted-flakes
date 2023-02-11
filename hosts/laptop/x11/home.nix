@@ -6,7 +6,7 @@
     [ (import ../../../modules/scripts) ] ++
     (import ../../../modules/shell) ++
     (import ../../../modules/editors) ++
-    (import ../../../modules/programs) ++
+    (import ../../../modules/programs/x11) ++
     # (import ../../../modules/theme/catppuccin-dark) ++
     # (import ../../../modules/theme/catppuccin-light) ++
     (import ../../../modules/theme/nord) ++
