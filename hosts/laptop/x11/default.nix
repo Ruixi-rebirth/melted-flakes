@@ -93,6 +93,7 @@
         ];
         files = [
           ".npmrc"
+          ".xinitrc"
         ];
       };
     };
