@@ -34,6 +34,12 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 |**Clipboard**|[wl-clipboard](https://github.com/bugaevc/wl-clipboard)|[xclip](https://opensource.com/article/19/7/xclip)|
 |**Color Picker**|[hyprpicker](https://github.com/hyprwm/hyprpicker)||
 
+### 窗口管理器
+**dwm**
+
+**sway & hyprland**
+如下图，sway 与 hyprland 外观一致
+
 ### 主题
 **catppuccin-light**
 ![2023-01-12T02:21:59](https://user-images.githubusercontent.com/75824585/211895195-e0a47165-e635-4256-922c-17d7da1ed62e.png)
