@@ -538,11 +538,11 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1676040229,
-        "narHash": "sha256-et82h2l0YzJgpQjlfnuGPIAn3o9+QEd7YB1JiPHj/ME=",
+        "lastModified": 1676139454,
+        "narHash": "sha256-kNYRHSUBOLrC3BTT7y1ppyEROfjk1B33xDxhyvleDkw=",
         "owner": "Ruixi-rebirth",
         "repo": "st",
-        "rev": "a2d7a9c5f0ac43b893a5530ac5317d497c6479a2",
+        "rev": "8d8309ee81ca69f4e14ce8037a82078aae4a5e66",
         "type": "github"
       },
       "original": {
