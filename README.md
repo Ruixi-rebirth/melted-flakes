@@ -35,9 +35,13 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 |**Color Picker**|[hyprpicker](https://github.com/hyprwm/hyprpicker)||
 
 ### 窗口管理器
+
 **dwm**
 
+https://user-images.githubusercontent.com/75824585/218276736-59abba49-d7a2-4f19-b257-c3556d091f50.mp4
+
 **sway & hyprland**
+
 如下图，sway 与 hyprland 外观一致
 
 ### 主题
