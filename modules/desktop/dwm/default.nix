@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, ... }:
 {
   imports = [ ../../programs/x11/st/st.nix ];
   services.xserver = {
@@ -7,7 +7,6 @@
     displayManager.startx.enable = true;
   };
   environment.systemPackages = with pkgs; [
-    inputs.hyprpicker.packages.${pkgs.system}.hyprpicker
     betterlockscreen
   ];
 
