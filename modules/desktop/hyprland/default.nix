@@ -14,7 +14,7 @@ let
 in
 
 {
-  imports = [ ../../programs/waybar/hyprland_waybar.nix ];
+  imports = [ ../../programs/wayland/waybar/hyprland_waybar.nix ];
 
   environment.systemPackages = with pkgs; [
     inputs.hypr-contrib.packages.${pkgs.system}.grimblast

@@ -3,6 +3,7 @@
 {
   home = {
     packages = with pkgs; [
+      cava
       mpc-cli
       # youtube-music
       netease-cloud-music-gtk

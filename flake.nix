@@ -15,6 +15,9 @@
       hypr-contrib.url = "github:hyprwm/contrib";
       flake-utils.url = "github:numtide/flake-utils";
       sops-nix.url = "github:Mic92/sops-nix";
+      dwm.url = "github:yaocccc/dwm";
+      st.url = "github:Ruixi-rebirth/st";
+      picom.url = "github:Ruixi-rebirth/picom";
       hyprland = {
         url = "github:hyprwm/Hyprland";
         inputs.nixpkgs.follows = "nixpkgs";

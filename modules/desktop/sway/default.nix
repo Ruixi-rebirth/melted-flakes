@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-  imports = [ ../../programs/waybar/sway_waybar.nix ];
+  imports = [ ../../programs/wayland/waybar/sway_waybar.nix ];
 
   programs = {
     sway = {

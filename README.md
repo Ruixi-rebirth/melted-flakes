@@ -9,30 +9,30 @@
 https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-91a6-c30281d46e7a.mp4
 
 ### 系统组件
-||NixOS(Wayland)|
-| - | :--: |
-|**Window Manager**|[Sway](https://github.com/swaywm/sway), [Hyprland](https://github.com/hyprwm/Hyprland)|
-|**Terminal Emulator**|[Kitty](https://github.com/kovidgoyal/kitty)|
-|**Bar**|[Waybar](https://github.com/Alexays/Waybar)|
-|**Application Launcher**|[Rofi-wayland](https://github.com/lbonn/rofi)|
-|**Notification Daemon**|[Mako](https://github.com/emersion/mako)|
-|**Display Manager**|None(TTY1 Login)|
-|**network management tool**|[NetworkManager](https://networkmanager.dev/)|
-|**Input method framework**|[Fcitx5](https://github.com/fcitx/fcitx5)|
-|**System resource monitor**|[Btop](https://github.com/aristocratos/btop)|
-|**File Manager**|[Ranger](https://github.com/ranger/ranger), [Nemo](https://github.com/linuxmint/nemo)|
-|**Lockscreen**|[Swaylock-effects](https://github.com/mortie/swaylock-effects)|
-|**Shell**|[Fish](https://github.com/fish-shell/fish-shell)|
-|**Music Player**|[mpd](https://github.com/MusicPlayerDaemon/MPD), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp), [mpc](https://github.com/MusicPlayerDaemon/mpc), [Netease-cloud-music-gtk](https://github.com/gmg137/netease-cloud-music-gtk)|
-|**Media Player**|[mpv](https://github.com/mpv-player/mpv)|
-|**Text Editor**|[Neovim](https://github.com/neovim/neovim)|
-|**Icons**|[Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)|
-|**Fonts**|[Nerd fonts](https://github.com/ryanoasis/nerd-fonts)|
-|**Image Viewer**|[imv](https://sr.ht/~exec64/imv/)|
-|**Screenshot Software**|[grimshot](https://github.com/swaywm/sway/blob/master/contrib/grimshot),[grimblast](https://github.com/hyprwm/contrib)|
-|**Screen Recording**|[wf-recorder](https://github.com/ammen99/wf-recorder), [OBS](https://obsproject.com)|
-|**Clipboard**|[wl-clipboard](https://github.com/bugaevc/wl-clipboard)|
-|**Color Picker**|[hyprpicker](https://github.com/hyprwm/hyprpicker)|
+||NixOS(Wayland)|NixOS(Xorg)|
+| - | :--: |:--: |
+|**Window Manager**|[Sway](https://github.com/swaywm/sway), [Hyprland](https://github.com/hyprwm/Hyprland)|[dwm](https://dwm.suckless.org/)|
+|**Terminal Emulator**|[Kitty](https://github.com/kovidgoyal/kitty)|[Kitty](https://github.com/kovidgoyal/kitty)|
+|**Bar**|[Waybar](https://github.com/Alexays/Waybar)|dwm built-in|
+|**Application Launcher**|[Rofi-wayland](https://github.com/lbonn/rofi)|[Rofi](https://github.com/davatorium/rofi)|
+|**Notification Daemon**|[Mako](https://github.com/emersion/mako)|[Dunst](https://github.com/dunst-project/dunst)|
+|**Display Manager**|None(TTY1 Login)|None(TTY1 Login)|
+|**network management tool**|[NetworkManager](https://networkmanager.dev/)|[NetworkManager](https://networkmanager.dev/)|
+|**Input method framework**|[Fcitx5](https://github.com/fcitx/fcitx5)|[Fcitx5](https://github.com/fcitx/fcitx5)|
+|**System resource monitor**|[Btop](https://github.com/aristocratos/btop)|[Btop](https://github.com/aristocratos/btop)|
+|**File Manager**|[Ranger](https://github.com/ranger/ranger), [Nemo](https://github.com/linuxmint/nemo)|[Ranger](https://github.com/ranger/ranger), [Nemo](https://github.com/linuxmint/nemo)|
+|**Lockscreen**|[Swaylock-effects](https://github.com/mortie/swaylock-effects)|[Betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)|
+|**Shell**|[Fish](https://github.com/fish-shell/fish-shell)|[Fish](https://github.com/fish-shell/fish-shell)|
+|**Music Player**|[mpd](https://github.com/MusicPlayerDaemon/MPD), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp), [mpc](https://github.com/MusicPlayerDaemon/mpc), [Netease-cloud-music-gtk](https://github.com/gmg137/netease-cloud-music-gtk)|[mpd](https://github.com/MusicPlayerDaemon/MPD), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp), [mpc](https://github.com/MusicPlayerDaemon/mpc), [Netease-cloud-music-gtk](https://github.com/gmg137/netease-cloud-music-gtk)|
+|**Media Player**|[mpv](https://github.com/mpv-player/mpv)|[mpv](https://github.com/mpv-player/mpv)|
+|**Text Editor**|[Neovim](https://github.com/neovim/neovim)|[Neovim](https://github.com/neovim/neovim)|
+|**Icons**|[Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)|[Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)|
+|**Fonts**|[Nerd fonts](https://github.com/ryanoasis/nerd-fonts)|[Nerd fonts](https://github.com/ryanoasis/nerd-fonts)|
+|**Image Viewer**|[imv](https://sr.ht/~exec64/imv/)|[feh](https://feh.finalrewind.org/)|
+|**Screenshot Software**|[grimshot](https://github.com/swaywm/sway/blob/master/contrib/grimshot),[grimblast](https://github.com/hyprwm/contrib)|[flameshot](https://github.com/flameshot-org/flameshot)|
+|**Screen Recording**|[wf-recorder](https://github.com/ammen99/wf-recorder), [OBS](https://obsproject.com)|[OBS](https://obsproject.com)|
+|**Clipboard**|[wl-clipboard](https://github.com/bugaevc/wl-clipboard)|[xclip](https://opensource.com/article/19/7/xclip)|
+|**Color Picker**|[hyprpicker](https://github.com/hyprwm/hyprpicker)|[hyprpicker](https://github.com/hyprwm/hyprpicker)|
 
 ### 主题
 **catppuccin-light**

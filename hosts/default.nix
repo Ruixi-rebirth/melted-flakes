@@ -14,7 +14,8 @@ in
     inherit system;
     specialArgs = { inherit inputs user; };
     modules = [
-      ./laptop
+      # ./laptop/wayland #hyprland and sway,go to this dir,choose one
+      ./laptop/x11 #dwm
       inputs.impermanence.nixosModules.impermanence
       ./system.nix
       inputs.nur.nixosModules.nur
@@ -28,7 +29,7 @@ in
           extraSpecialArgs = { inherit user; };
           users.${user} = {
             imports = [
-              (import ./laptop/home.nix)
+              (import ./laptop/wayland/home.nix)
             ] ++ [
               inputs.hyprland.homeManagerModules.default
             ];
@@ -41,6 +42,9 @@ in
               self.overlays.default
               inputs.neovim-nightly-overlay.overlay
               inputs.rust-overlay.overlays.default
+              inputs.dwm.overlays.default
+              inputs.st.overlays.default
+              inputs.picom.overlays.default
             ];
         };
       }
