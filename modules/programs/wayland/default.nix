@@ -6,4 +6,5 @@ in
   ./kitty
   ./launcher
   ./notice
+  ./mpv
 ] ++ common

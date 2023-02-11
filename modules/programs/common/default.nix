@@ -2,7 +2,6 @@
   ./firefox
   ./gpg
   ./lazygit
-  ./mpv
   ./music
   ./neofetch
   ./obs-studio

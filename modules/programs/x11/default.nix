@@ -5,4 +5,5 @@ in
   ./launcher
   ./notice
   ./picom
+  ./mpv
 ] ++ common
