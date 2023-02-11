@@ -11,8 +11,8 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 ### 系统组件
 ||NixOS(Wayland)|NixOS(Xorg)|
 | - | :--: |:--: |
-|**Window Manager**|[Sway](https://github.com/swaywm/sway), [Hyprland](https://github.com/hyprwm/Hyprland)|[dwm](https://dwm.suckless.org/)|
-|**Terminal Emulator**|[Kitty](https://github.com/kovidgoyal/kitty)|[st](https://st.suckless.org/)|
+|**Window Manager**|[Sway](https://github.com/swaywm/sway), [Hyprland](https://github.com/hyprwm/Hyprland)|[dwm](https://github.com/yaocccc/dwm)|
+|**Terminal Emulator**|[Kitty](https://github.com/kovidgoyal/kitty)|[st](https://github.com/yaocccc/st)|
 |**Bar**|[Waybar](https://github.com/Alexays/Waybar)|dwm built-in|
 |**Application Launcher**|[Rofi-wayland](https://github.com/lbonn/rofi)|[Rofi](https://github.com/davatorium/rofi)|
 |**Notification Daemon**|[Mako](https://github.com/emersion/mako)|[Dunst](https://github.com/dunst-project/dunst)|
