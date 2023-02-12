@@ -4,6 +4,9 @@
   imports = [
     (import ../../environment/dwm-variables.nix)
   ];
+  services.wlsunset.systemdTarget = ''
+    graphical-session.target
+  '';
   programs = {
     bash = {
       initExtra = ''
