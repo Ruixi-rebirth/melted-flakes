@@ -14,9 +14,6 @@
     };
   };
   home.file = {
-    ".Xresources".text = ''
-      Xcursor.theme: Catppuccin-Frappe-Dark
-    '';
     ".xinitrc".text = ''
       if test -z "$DBUS_SESSION_BUS_ADDRESS"; then
        eval $(dbus-launch --exit-with-session --sh-syntax)
@@ -26,7 +23,6 @@
        dbus-update-activation-environment DISPLAY XAUTHORITY
       fi
       exec dwm
-      [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
     '';
   };
 }
