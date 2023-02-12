@@ -25,7 +25,10 @@
       if command -v dbus-update-activation-environment >/dev/null 2>&1; then
        dbus-update-activation-environment DISPLAY XAUTHORITY
       fi
-      exec dwm
+       ${pkgs.xorg.xrdb}/bin/xrdb -merge <${pkgs.writeText "Xresources" ''
+         Xcursor.theme: Catppuccin-Frappe-Dark
+        ''}
+      exec dwm 
     '';
   };
 }
