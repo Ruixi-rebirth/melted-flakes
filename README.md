@@ -45,9 +45,15 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 
 sway 与 hyprland 外观一致,此处展示的是hyprland
 
-*安装wm,选择任意一个即可: 具体参见[此处](https://github.com/Ruixi-rebirth/flakes/blob/9536b94c5128979269f1dd1d15a38648ad3c54bf/hosts/default.nix#L17-L18)和[此处](https://github.com/Ruixi-rebirth/flakes/blob/9536b94c5128979269f1dd1d15a38648ad3c54bf/hosts/default.nix#L34-L35)*
+*安装wm,选择任意一个即可: 具体参见[此处](https://github.com/Ruixi-rebirth/flakes/blob/9536b94c5128979269f1dd1d15a38648ad3c54bf/hosts/default.nix#L17-L18)和[此处](https://github.com/Ruixi-rebirth/flakes/blob/9536b94c5128979269f1dd1d15a38648ad3c54bf/hosts/default.nix#L34-L35)*(**目前dwm还在适配中,不建议切换到dwm**)
 
 ### 主题
+> dwm 
+
+只有默认的
+
+> hyprland & sway 
+
 **catppuccin-light**
 ![2023-01-12T02:21:59](https://user-images.githubusercontent.com/75824585/211895195-e0a47165-e635-4256-922c-17d7da1ed62e.png)
 
