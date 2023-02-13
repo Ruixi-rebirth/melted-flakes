@@ -20,7 +20,6 @@
 ```
 4. Clone the repository locally 
 ```bash
-nix-shell -p git
 git clone  https://github.com/Ruixi-rebirth/flakes.git /mnt/etc/nixos/Flakes 
 cd /mnt/etc/nixos/Flakes/
 nix develop --extra-experimental-features nix-command --extra-experimental-features flakes 

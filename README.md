@@ -133,7 +133,6 @@ sway 与 hyprland 外观一致,此处展示的是hyprland
 ```
 4. 克隆仓库到本地
 ```bash
-nix-shell -p git
 git clone  https://github.com/Ruixi-rebirth/flakes.git /mnt/etc/nixos/Flakes 
 cd  /mnt/etc/nixos/Flakes/
 nix develop --extra-experimental-features nix-command --extra-experimental-features flakes
