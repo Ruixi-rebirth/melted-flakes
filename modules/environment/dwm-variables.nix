@@ -3,7 +3,7 @@
 {
   home = {
     sessionVariables = {
-      DWM = "~/Dwm";
+      DWM = "~/Dwm/dwm";
       EDITOR = "nvim";
       BROWSER = "firefox";
       TERMINAL = "kitty";
