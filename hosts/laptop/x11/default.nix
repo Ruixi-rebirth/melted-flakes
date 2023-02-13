@@ -86,6 +86,7 @@
           ".go-musicfox"
           "Flakes"
           "Kvm"
+          "Dwm"
           { directory = ".gnupg"; mode = "0700"; }
           { directory = ".ssh"; mode = "0700"; }
           ".local"
