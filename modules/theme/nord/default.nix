@@ -1,10 +1,10 @@
 [
-  ./gtk.nix
+  ./gtk
   ./btop
   ./cava
   ./rofi
   ./fcitx5
   ./kitty
-  ./notification
+  ./notice
   ./fish
 ]
