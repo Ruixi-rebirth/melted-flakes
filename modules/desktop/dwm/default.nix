@@ -6,7 +6,6 @@
     windowManager.dwm.enable = true;
     displayManager = {
       startx.enable = true;
-      sessionCommands = ''systemctl --user start dwm-session.target'';
     };
   };
   environment.systemPackages = with pkgs; [
