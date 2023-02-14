@@ -5,6 +5,5 @@
   ./rofi
   ./fcitx5
   ./kitty
-  ./notice
   ./fish
 ]

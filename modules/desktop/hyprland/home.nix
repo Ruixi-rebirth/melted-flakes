@@ -273,9 +273,9 @@
       bind=,XF86AudioMicMute,exec, pamixer --default-source -t
       bind=,XF86MonBrightnessUp,exec, light -A 5
       bind=,XF86MonBrightnessDown, exec, light -U 5
-      bind=,XF86AudioPlay,exec, playerctl play-pause
-      bind=,XF86AudioNext,exec, playerctl next
-      bind=,XF86AudioPrev,exec, playerctl previous
+      bind=,XF86AudioPlay,exec, mpc -q toggle 
+      bind=,XF86AudioNext,exec, mpc -q next 
+      bind=,XF86AudioPrev,exec, mpc -q prev
 
       #---------------#
       # waybar toggle #

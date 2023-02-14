@@ -8,8 +8,7 @@
       ../hardware-configuration.nix
       ../../../modules/fonts
     ] ++ [
-      # ../../modules/desktop/sway
-      ../../../modules/desktop/hyprland
+      ../../../modules/desktop/bspwm
     ];
 
   sops.defaultSopsFile = ../../../secrets/secrets.yaml;
@@ -32,7 +31,7 @@
     ]);
   };
   boot = {
-    kernelPackages = pkgs.linuxPackages_nvidia_x11_xanmod_latest;
+    kernelPackages = pkgs.linuxPackages_xanmod_latest;
     loader = {
       systemd-boot = {
         enable = true;
@@ -99,23 +98,13 @@
     };
     systemPackages = with pkgs; [
       libnotify
-      wl-clipboard
-      wlr-randr
+      xclip
+      xorg.xrandr
       wireplumber
       pipewire-media-session
-      wayland
-      wayland-scanner
-      wayland-utils
-      egl-wayland
-      wayland-protocols
-      pkgs.xorg.xeyes
-      glfw-wayland
-      xwayland
-      pkgs.qt6.qtwayland
       cinnamon.nemo
       networkmanagerapplet
-      wev
-      wf-recorder
+      xorg.xev
       alsa-lib
       alsa-utils
       flac
@@ -126,7 +115,7 @@
       pkgs.rust-bin.stable.latest.default
       lxappearance
       imagemagick
-      pkgs.sway-contrib.grimshot
+      flameshot
     ];
   };
 

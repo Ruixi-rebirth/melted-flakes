@@ -2,15 +2,13 @@
 
 {
   imports =
-    # [ (import ../../../modules/desktop/sway/home.nix) ] ++
-    [ (import ../../../modules/desktop/hyprland/home.nix) ] ++
+    [ (import ../../../modules/desktop/bspwm/home.nix) ] ++
     [ (import ../../../modules/scripts) ] ++
     (import ../../../modules/shell) ++
     (import ../../../modules/editors) ++
-    (import ../../../modules/programs/wayland) ++
-    # (import ../../../modules/theme/catppuccin-dark/wayland) ++
-    # (import ../../../modules/theme/catppuccin-light/wayland) ++
-    (import ../../../modules/theme/nord/wayland) ++
+    (import ../../../modules/programs/x11) ++
+    # (import ../../../modules/theme/catppuccin-dark/x11) ++
+    (import ../../../modules/theme/nord/x11) ++
     (import ../../../modules/devlop);
 
   home = {

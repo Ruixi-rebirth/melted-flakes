@@ -17,7 +17,7 @@ let
   grimblast_watermark = pkgs.writeShellScriptBin "grimblast_watermark" ''
         FILE=$(date "+%Y-%m-%d"T"%H:%M:%S").png
     # Get the picture from maim
-        grimblast --notify --cursor save area ~/Pictures/src.png >> /dev/null 2>&1
+        grimblast --notify --cursor save area $HOME/Pictures/src.png >> /dev/null 2>&1
     # add shadow, round corner, border and watermark
         convert $HOME/Pictures/src.png \
           \( +clone -alpha extract \
@@ -38,7 +38,7 @@ let
   grimshot_watermark = pkgs.writeShellScriptBin "grimshot_watermark" ''
         FILE=$(date "+%Y-%m-%d"T"%H:%M:%S").png
     # Get the picture from maim
-        grimshot --notify  save area ~/Pictures/src.png >> /dev/null 2>&1
+        grimshot --notify  save area $HOME/Pictures/src.png >> /dev/null 2>&1
     # add shadow, round corner, border and watermark
         convert $HOME/Pictures/src.png \
           \( +clone -alpha extract \
@@ -58,6 +58,29 @@ let
     # # remove the other pictures
         rm $HOME/Pictures/src.png $HOME/Pictures/output.png
   '';
+  flameshot_watermark = pkgs.writeShellScriptBin "flameshot_watermark" ''
+        FILE=$(date "+%Y-%m-%d"T"%H:%M:%S").png
+
+        flameshot gui -r > $HOME/Pictures/src.png
+    # add shadow, round corner, border and watermark
+    convert $HOME/Pictures/src.png \
+    	\( +clone -alpha extract \
+    	-draw 'fill black polygon 0,0 0,8 8,0 fill white circle 8,8 8,0' \
+    	\( +clone -flip \) -compose Multiply -composite \
+    	\( +clone -flop \) -compose Multiply -composite \
+    	\) -alpha off -compose CopyOpacity -composite $HOME/Pictures/output.png
+
+    convert $HOME/Pictures/output.png -bordercolor none -border 20 \( +clone -background black -shadow 80x8+15+15 \) \
+    	+swap -background transparent -layers merge +repage $HOME/Pictures/$FILE
+
+    composite -gravity Southeast "${./watermark.png}" $HOME/Pictures/$FILE $HOME/Pictures/$FILE
+
+    # Send the Picture to clipboard
+    xclip -selection clipboard -t image/png -i $HOME/Pictures/$FILE
+
+    # remove the other pictures
+    rm $HOME/Pictures/src.png $HOME/Pictures/output.png
+  '';
   myswaylock = pkgs.writeShellScriptBin "myswaylock" ''
     swaylock  \
            --screenshots \
@@ -75,6 +98,8 @@ let
            --grace 2 \
            --fade-in 0.3
   '';
+  # myi3lock = pkgs.writeShellScriptBin "myi3lock" ''
+  # '';
   dynamic_wallpaper = pkgs.writeShellScriptBin "dynamic_wallpaper" ''
     if command -v swww >/dev/null 2>&1; then 
         swww img $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) --transition-type random
@@ -87,7 +112,7 @@ let
             kill $OLD_PID
             OLD_PID=$NEXT_PID
         done
-    else 
+    elif command -v swaybg >/dev/null 2>&1; then  
         killall swaybg
         swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
         OLD_PID=$!
@@ -99,27 +124,49 @@ let
             kill $OLD_PID
             OLD_PID=$NEXT_PID
         done
+    else 
+        killall feh 
+        feh --randomize --bg-fill $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) &
+        OLD_PID=$!
+        while true; do
+            sleep 120
+            feh --randomize --bg-fill $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) &
+            NEXT_PID=$!
+            sleep 5
+            kill $OLD_PID
+            OLD_PID=$NEXT_PID
+        done
     fi
   '';
   default_wall = pkgs.writeShellScriptBin "default_wall" ''
     if command -v swww >/dev/null 2>&1; then 
           killall dynamic_wallpaper
            if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
-             swww img "${../theme/catppuccin-dark/wall/default.png}" --transition-type random
+             swww img "${../theme/catppuccin-dark/common/wall/default.png}" --transition-type random
            elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
-             swww img "${../theme/catppuccin-light/wall/default.png}" --transition-type random
+             swww img "${../theme/catppuccin-light/common/wall/default.png}" --transition-type random
            else 
-             swww img "${../theme/nord/wall/default.png}" --transition-type random
+             swww img "${../theme/nord/common/wall/default.png}" --transition-type random
            fi
-        else
+    elif command -v swaybg >/dev/null 2>&1; then 
         killall swaybg
         killall dynamic_wallpaper
         if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
-          swaybg -i "${../theme/catppuccin-dark/wall/default.png}" -m fill &
+          swaybg -i "${../theme/catppuccin-dark/common/wall/default.png}" -m fill &
         elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
-          swaybg -i "${../theme/catppuccin-light/wall/default.png}" -m fill &
+          swaybg -i "${../theme/catppuccin-light/common/wall/default.png}" -m fill &
         else 
-          swaybg -i "${../theme/nord/wall/default.png}" -m fill &
+          swaybg -i "${../theme/nord/common/wall/default.png}" -m fill &
+        fi
+    else 
+        killall feh
+        killall dynamic_wallpaper
+        if [[ "$GTK_THEME" == "Catppuccin-Frappe-Pink" ]]; then
+          feh --randomize --bg-fill "${../theme/catppuccin-dark/common/wall/default.png}" &
+        elif [[ "$GTK_THEME" == "Catppuccin-Latte-Green" ]]; then
+          feh --randomize --bg-fill "${../theme/catppuccin-light/common/wall/default.png}" &
+        else 
+          feh --randomize --bg-fill "${../theme/nord/common/wall/default.png}" &
         fi
     fi
   '';
@@ -155,6 +202,7 @@ in
     wallpaper_random
     grimshot_watermark
     grimblast_watermark
+    flameshot_watermark
     myswaylock
     dynamic_wallpaper
     default_wall

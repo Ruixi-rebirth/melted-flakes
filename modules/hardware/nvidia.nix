@@ -10,7 +10,11 @@ let
   '';
 in
 {
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services = {
+    tlp.enable = true;
+    auto-cpufreq.enable = true;
+    xserver.videoDrivers = [ "nvidia" ];
+  };
   hardware = {
     nvidia = {
       open = false;

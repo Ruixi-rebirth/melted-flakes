@@ -1,0 +1,4 @@
+{ config, pkgs, ... }:
+{
+  services.dunst = { };
+}
