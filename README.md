@@ -178,9 +178,9 @@ nvim /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
 ```bash 
 rm -rf .git
 ```
-8. 如果你想要将默认用户名称从 `ruixi` 更改成为其他名称，请打开 `/mnt/etc/nixos/Flakes/flake.nix` 并修改其中的 `user` 变量为对应的名称。
+8. 用户名修改: 编辑 `/mnt/etc/nixos/Flakes/flake.nix` 修改 **user** 变量,主机名修改: 编辑 `/mnt/etc/nixos/Flakes/hosts/system.nix ` 修改 **networking** 属性组中的 **hostName** 值
 
-9. 使用 `mkpasswd {PASSWORD} -m sha-512` 命令生成的密码哈希串替换掉 `/mnt/etc/nixos/Flakes/hosts/laptop/default.nix` 中的 `users.users.<name>.hashedPassword` 值替换掉。（在文件中有两处需要替换的内容）
+9. 使用 `mkpasswd {PASSWORD} -m sha-512` 命令生成的密码哈希串替换掉 `/mnt/etc/nixos/Flakes/hosts/laptop/{wayland | x11}/default.nix` 中的 `users.users.<name>.hashedPassword` 值替换掉。（在文件中有两处需要替换的内容）
 
 10. 安装
 ```bash
