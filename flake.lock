@@ -6,11 +6,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1676289354,
-        "narHash": "sha256-MwDoxkKAhkD9Zjw4gSmiUUyofoGbkVNrVD8UaCthpPw=",
+        "lastModified": 1676343876,
+        "narHash": "sha256-7Svv6oy8geyyKeyVmJnzgdFgNXcakQOZhXSopD95EU8=",
         "owner": "Ruixi-rebirth",
         "repo": "dwm",
-        "rev": "ca4798477cd0636b5678e6a1a0b8b2fe0c94c4d4",
+        "rev": "08554a1bc7c6a4fc9d49209c660e32bd1c0f0ee4",
         "type": "github"
       },
       "original": {

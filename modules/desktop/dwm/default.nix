@@ -9,6 +9,8 @@
     };
   };
   environment.systemPackages = with pkgs; [
+    autostart-script
+    statusbar-script
     betterlockscreen
   ];
 }
