@@ -8,36 +8,32 @@
 
 
 ### 系统组件
-||NixOS(Wayland)|NixOS(Xorg)|
-| - | :--: |:--: |
-|**Window Manager**|[Sway](https://github.com/swaywm/sway), [Hyprland](https://github.com/hyprwm/Hyprland)|[dwm](https://github.com/yaocccc/dwm)|
-|**Terminal Emulator**|[Kitty](https://github.com/kovidgoyal/kitty)|[st](https://github.com/yaocccc/st)|
-|**Bar**|[Waybar](https://github.com/Alexays/Waybar)|dwm built-in|
-|**Application Launcher**|[Rofi-wayland](https://github.com/lbonn/rofi)|[Rofi](https://github.com/davatorium/rofi)|
-|**Notification Daemon**|[Mako](https://github.com/emersion/mako)|[Dunst](https://github.com/dunst-project/dunst)|
-|**Display Manager**|None(TTY1 Login)|None(TTY1 Login)|
-|**network management tool**|[NetworkManager](https://networkmanager.dev/)|[NetworkManager](https://networkmanager.dev/)|
-|**Input method framework**|[Fcitx5](https://github.com/fcitx/fcitx5)|[Fcitx5](https://github.com/fcitx/fcitx5)|
-|**System resource monitor**|[Btop](https://github.com/aristocratos/btop)|[Btop](https://github.com/aristocratos/btop)|
-|**File Manager**|[Ranger](https://github.com/ranger/ranger), [Nemo](https://github.com/linuxmint/nemo)|[Ranger](https://github.com/ranger/ranger), [Nemo](https://github.com/linuxmint/nemo)|
-|**Lockscreen**|[Swaylock-effects](https://github.com/mortie/swaylock-effects)|[Betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)|
-|**Shell**|[Fish](https://github.com/fish-shell/fish-shell)|[Fish](https://github.com/fish-shell/fish-shell)|
-|**Music Player**|[mpd](https://github.com/MusicPlayerDaemon/MPD), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp), [mpc](https://github.com/MusicPlayerDaemon/mpc), [Netease-cloud-music-gtk](https://github.com/gmg137/netease-cloud-music-gtk)|[mpd](https://github.com/MusicPlayerDaemon/MPD), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp), [mpc](https://github.com/MusicPlayerDaemon/mpc), [Netease-cloud-music-gtk](https://github.com/gmg137/netease-cloud-music-gtk)|
-|**Media Player**|[mpv](https://github.com/mpv-player/mpv)|[mpv](https://github.com/mpv-player/mpv)|
-|**Text Editor**|[Neovim](https://github.com/neovim/neovim)|[Neovim](https://github.com/neovim/neovim)|
-|**Icons**|[Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)|[Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)|
-|**Fonts**|[Nerd fonts](https://github.com/ryanoasis/nerd-fonts)|[Nerd fonts](https://github.com/ryanoasis/nerd-fonts)|
-|**Image Viewer**|[imv](https://sr.ht/~exec64/imv/)|[feh](https://feh.finalrewind.org/)|
-|**Screenshot Software**|[grimshot](https://github.com/swaywm/sway/blob/master/contrib/grimshot),[grimblast](https://github.com/hyprwm/contrib)|[flameshot](https://github.com/flameshot-org/flameshot)|
-|**Screen Recording**|[wf-recorder](https://github.com/ammen99/wf-recorder), [OBS](https://obsproject.com)|[OBS](https://obsproject.com)|
-|**Clipboard**|[wl-clipboard](https://github.com/bugaevc/wl-clipboard)|[xclip](https://opensource.com/article/19/7/xclip)|
-|**Color Picker**|[hyprpicker](https://github.com/hyprwm/hyprpicker)||
+||NixOS(Wayland)|
+| - | :--: |
+|**Window Manager**|[Sway](https://github.com/swaywm/sway), [Hyprland](https://github.com/hyprwm/Hyprland)|
+|**Terminal Emulator**|[Kitty](https://github.com/kovidgoyal/kitty)|
+|**Bar**|[Waybar](https://github.com/Alexays/Waybar)|
+|**Application Launcher**|[Rofi-wayland](https://github.com/lbonn/rofi)|
+|**Notification Daemon**|[Mako](https://github.com/emersion/mako)|
+|**Display Manager**|None(TTY1 Login)|
+|**network management tool**|[NetworkManager](https://networkmanager.dev/)|
+|**Input method framework**|[Fcitx5](https://github.com/fcitx/fcitx5)|
+|**System resource monitor**|[Btop](https://github.com/aristocratos/btop)|
+|**File Manager**|[Ranger](https://github.com/ranger/ranger), [Nemo](https://github.com/linuxmint/nemo)|
+|**Lockscreen**|[Swaylock-effects](https://github.com/mortie/swaylock-effects)|
+|**Shell**|[Fish](https://github.com/fish-shell/fish-shell)|
+|**Music Player**|[mpd](https://github.com/MusicPlayerDaemon/MPD), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp), [mpc](https://github.com/MusicPlayerDaemon/mpc), [Netease-cloud-music-gtk](https://github.com/gmg137/netease-cloud-music-gtk)|
+|**Media Player**|[mpv](https://github.com/mpv-player/mpv)|
+|**Text Editor**|[Neovim](https://github.com/neovim/neovim)|
+|**Icons**|[Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)|
+|**Fonts**|[Nerd fonts](https://github.com/ryanoasis/nerd-fonts)|
+|**Image Viewer**|[imv](https://sr.ht/~exec64/imv/)
+|**Screenshot Software**|[grimshot](https://github.com/swaywm/sway/blob/master/contrib/grimshot),[grimblast](https://github.com/hyprwm/contrib)|
+|**Screen Recording**|[wf-recorder](https://github.com/ammen99/wf-recorder), [OBS](https://obsproject.com)|
+|**Clipboard**|[wl-clipboard](https://github.com/bugaevc/wl-clipboard)|
+|**Color Picker**|[hyprpicker](https://github.com/hyprwm/hyprpicker)|
 
 ### 窗口管理器
-
-**dwm**
-
-https://user-images.githubusercontent.com/75824585/218276736-59abba49-d7a2-4f19-b257-c3556d091f50.mp4
 
 **sway & hyprland**
 
@@ -45,12 +41,8 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 
 sway 与 hyprland 外观一致,此处展示的是hyprland
 
-*安装wm,选择任意一个即可: 具体参见[此处](https://github.com/Ruixi-rebirth/flakes/blob/9536b94c5128979269f1dd1d15a38648ad3c54bf/hosts/default.nix#L17-L18)和[此处](https://github.com/Ruixi-rebirth/flakes/blob/9536b94c5128979269f1dd1d15a38648ad3c54bf/hosts/default.nix#L34-L35)*(**目前dwm还在适配中,不建议切换到dwm**)
 
 ### 主题
-> dwm 
-
-只有默认的
 
 > hyprland & sway 
 
@@ -64,17 +56,8 @@ sway 与 hyprland 外观一致,此处展示的是hyprland
 ![2023-01-17T00:15:22](https://user-images.githubusercontent.com/75824585/212723937-c56200da-52f4-407b-9d8e-428348ed5ed0.png)
 
 
-*安装主题任意选择一个即可：具体见[这里](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/home.nix#L11-L13)*
+*安装主题任意选择一个即可：具体见[这里](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/home.nix#L11-L13)*
 
-### 屏幕截图
-<details>
-<summary><b>Click to expend</b></summary>
-
-![](./screenshot/light.png)
-![](./screenshot/dark.png)
-![](./screenshot/nord.png)
-
-</details>
 
 ### 目录结构
 ```
@@ -180,7 +163,7 @@ rm -rf .git
 ```
 8. 用户名修改: 编辑 `/mnt/etc/nixos/Flakes/flake.nix` 修改 **user** 变量,主机名修改: 编辑 `/mnt/etc/nixos/Flakes/hosts/system.nix ` 修改 **networking** 属性组中的 **hostName** 值
 
-9. 使用 `mkpasswd {PASSWORD} -m sha-512` 命令生成的密码哈希串替换掉 `/mnt/etc/nixos/Flakes/hosts/laptop/{wayland | x11}/default.nix` 中的 `users.users.<name>.hashedPassword` 值替换掉。（在文件中有两处需要替换的内容）
+9. 使用 `mkpasswd {PASSWORD} -m sha-512` 命令生成的密码哈希串替换掉 `/mnt/etc/nixos/Flakes/hosts/laptop/wayland/default.nix` 中的 `users.users.<name>.hashedPassword` 值替换掉。（在文件中有两处需要替换的内容）
 
 10. 安装
 ```bash
