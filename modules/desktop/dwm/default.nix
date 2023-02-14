@@ -9,8 +9,7 @@
     };
   };
   environment.systemPackages = with pkgs; [
-    dwm-autostart
-    dwm-statusbar
+    statusbar-script
     betterlockscreen
   ];
 }
