@@ -43,9 +43,6 @@ in
               self.overlays.default
               inputs.neovim-nightly-overlay.overlay
               inputs.rust-overlay.overlays.default
-              inputs.dwm.overlays.default
-              inputs.st.overlays.default
-              inputs.picom.overlays.default
             ];
         };
       }
