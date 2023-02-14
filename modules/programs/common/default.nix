@@ -10,4 +10,5 @@
   ./search
   ./yt-dlp
   ./zathura
+  ./kitty
 ]

@@ -3,7 +3,6 @@ let
 in
 [
   ./imgview
-  ./kitty
   ./launcher
   ./notice
   ./mpv
