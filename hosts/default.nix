@@ -46,17 +46,6 @@ in
               inputs.neovim-nightly-overlay.overlay
               inputs.rust-overlay.overlays.default
               inputs.picom.overlays.default
-              self: super:
-                {
-                  flameshot = super.kitty.overrideAttrs (old: {
-                    src = super.fetchFromGitHub {
-                      owner = "flameshot-org";
-                      repo = "flameshot";
-                      rev = "3ededae";
-                      hash = "sha256-4SMg63MndCctpfoOX3OQ1vPoLP/90l/KGLifyUzYD5g=";
-                    };
-                  });
-                }
             ];
         };
       }
