@@ -127,6 +127,7 @@
       lxappearance
       imagemagick
       pkgs.sway-contrib.grimshot
+      flameshot
     ];
   };
 
