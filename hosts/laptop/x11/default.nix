@@ -31,6 +31,7 @@
     ]);
   };
   boot = {
+    supportedFilesystems = [ "ntfs" ];
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
     loader = {
       systemd-boot = {
@@ -111,7 +112,6 @@
       pulsemixer
       linux-firmware
       sshpass
-      ntfs3g
       pkgs.rust-bin.stable.latest.default
       lxappearance
       imagemagick
