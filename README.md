@@ -96,7 +96,11 @@ sway 与 hyprland 外观一致,此处展示的是hyprland
     └── screenshot.png
 ```
 
+### 如何安装？
+最小安装(包含wm,没有tmpfs as root)，前往[此处](https://github.com/Ruixi-rebirth/flakes/tree/minimal)
+
 ### 如何安装?(root on tmpfs)
+
 
 0. 准备一个64位的nixos [minimal iso image](https://channels.nixos.org/nixos-22.11/latest-nixos-minimal-x86_64-linux.iso) 烧录好,然后进入live系统。假设我已经分好两个分区`/dev/nvme0n1p1` `/dev/nvme0n1p3`
 1. 格式化分区
