@@ -4,7 +4,7 @@
 ```bash
 mkfs.fat -F 32 /dev/vda1 
 mkfs.ext4 /dev/vda2
-
+```
 2. Moount 
 ```bash 
 mount /dev/vda2 /mnt 
