@@ -9,7 +9,7 @@ mkfs.ext4 /dev/vda2
 ```bash 
 mount /dev/vda2 /mnt 
 mkdir /mnt/boot 
-mount /dev//vda1 /mnt/boot
+mount /dev/vda1 /mnt/boot
 ```
 3. Generate a basic configuration 
 ```bash
