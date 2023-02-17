@@ -1,9 +1,0 @@
-keys:
-  - &laptop 742d85c6b66670d48300f5c90f7578f8b9426944
-creation_rules:
-  - path_regex: secrets/[^/]+\.yaml$
-    key_groups:
-    - pgp:
-      - *laptop
-    # - age:
-    #   - *ruixi

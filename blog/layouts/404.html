@@ -1,9 +1,0 @@
-{{ define "main" }}
-    <div class="not-found-card">
-        <h1 class="article-title">{{ T "notFoundTitle" }}</h1>
-        <h2 class="article-subtitle">{{ T "notFoundSubtitle" }}</h2>
-        {{ partial "helper/icon" "salted-fish" }}
-    </div>
-
-    {{ partialCached "footer/footer" . }}
-{{ end }}

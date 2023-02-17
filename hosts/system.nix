@@ -4,7 +4,7 @@
   nixpkgs.system = "x86_64-linux";
 
   networking = {
-    hostName = "RuiXi"; # Define your hostname.
+    hostName = "nixos"; # Define your hostname.
     networkmanager.enable = true;
     hosts = {
       "185.199.109.133" = [ "raw.githubusercontent.com" ];
@@ -32,27 +32,9 @@
       wget
       neofetch
       exa
-      gcc
-      clang
-      cargo
-      zig
-      p7zip
-      atool
-      unzip
       ranger
-      ffmpeg
-      ffmpegthumbnailer
-      glib
-      xdg-utils
-      pciutils
-      gdb
       killall
-      nodejs
       socat
-      zip
-      rar
-      frp
-      sops
     ];
   };
   services.dbus.enable = true;
@@ -78,6 +60,7 @@
       keep-derivations      = true
     '';
   };
+  nixpkgs.config.allowUnfree = true;
 
   system = {
     autoUpgrade = {

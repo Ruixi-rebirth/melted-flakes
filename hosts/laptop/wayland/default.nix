@@ -3,33 +3,20 @@
 {
   imports =
     (import ../../../modules/hardware) ++
-    (import ../../../modules/virtualisation) ++
     [
       ../hardware-configuration.nix
       ../../../modules/fonts
     ] ++ [
-      # ../../../modules/desktop/sway
       ../../../modules/desktop/hyprland
     ];
 
-  sops.defaultSopsFile = ../../../secrets/secrets.yaml;
-  users.mutableUsers = false;
   users.users.root.initialHashedPassword = "$6$4lwj3AGq8M9CQE2.$q8cNPghWHTl/dfE0dMPm2vsh0cMpY2gWxw91/Uadi8jShbvUHJJu3Jg0CvSpqrlEB7a3kvWDf/p2CI3mSqP1c/";
   users.users.${user} = {
     initialHashedPassword = "$6$4lwj3AGq8M9CQE2.$q8cNPghWHTl/dfE0dMPm2vsh0cMpY2gWxw91/Uadi8jShbvUHJJu3Jg0CvSpqrlEB7a3kvWDf/p2CI3mSqP1c/";
     # shell = pkgs.fish;
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
-    packages = (with pkgs; [
-      tdesktop
-      qq
-      feishu
-      thunderbird
-      blender
-      dbeaver
-    ]) ++ (with config.nur.repos;[
-      linyinfeng.icalingua-plus-plus
-    ]);
+    extraGroups = [ "wheel" "video" "audio" ];
+    packages = [ ];
   };
   boot = {
     supportedFilesystems = [ "ntfs" ];
@@ -48,7 +35,7 @@
     kernelParams = [
       "quiet"
       "splash"
-      "nvidia-drm.modeset=1"
+      # "nvidia-drm.modeset=1"
     ];
     consoleLogLevel = 0;
     initrd.verbose = false;
@@ -65,54 +52,12 @@
   };
 
   environment = {
-    persistence."/nix/persist" = {
-      directories = [
-        "/etc/nixos" # bind mounted from /nix/persist/etc/nixos to /etc/nixos
-        "/etc/NetworkManager/system-connections"
-        "/etc/v2raya"
-        "/var/log"
-        "/var/lib"
-      ];
-      users.${user} = {
-        directories = [
-          "Downloads"
-          "Music"
-          "Pictures"
-          "Documents"
-          "Videos"
-          ".cache"
-          "Codelearning"
-          ".npm-global"
-          ".config"
-          ".thunderbird"
-          ".go-musicfox"
-          "Flakes"
-          "Kvm"
-          { directory = ".gnupg"; mode = "0700"; }
-          { directory = ".ssh"; mode = "0700"; }
-          ".local"
-          ".mozilla"
-        ];
-        files = [
-          ".npmrc"
-        ];
-      };
-    };
     systemPackages = with pkgs; [
       libnotify
       wl-clipboard
       wlr-randr
       wireplumber
       pipewire-media-session
-      wayland
-      wayland-scanner
-      wayland-utils
-      egl-wayland
-      wayland-protocols
-      pkgs.xorg.xeyes
-      glfw-wayland
-      xwayland
-      pkgs.qt6.qtwayland
       cinnamon.nemo
       networkmanagerapplet
       wev
@@ -121,10 +66,6 @@
       alsa-utils
       flac
       pulsemixer
-      linux-firmware
-      sshpass
-      pkgs.rust-bin.stable.latest.default
-      lxappearance
       imagemagick
       pkgs.sway-contrib.grimshot
       flameshot
@@ -147,13 +88,13 @@
 
   security.polkit.enable = true;
   security.sudo = {
-    enable = false;
+    enable = true;
     extraConfig = ''
       ${user} ALL=(ALL) NOPASSWD:ALL
     '';
   };
   security.doas = {
-    enable = true;
+    enable = false;
     extraConfig = ''
       permit nopass :wheel
     '';
