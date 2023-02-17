@@ -12,6 +12,7 @@ in
 {
   services = {
     tlp.enable = true;
+    auto-cpufreq.enable = true;
     xserver.videoDrivers = [ "nvidia" ];
   };
   hardware = {
