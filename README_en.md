@@ -1,3 +1,6 @@
+## How to install?
+Minimal installation (including wm, no tmpfs as root), go to [here](https://github.com/Ruixi-rebirth/flakes/tree/minimal)
+
 ## How to install ?(root on tmpfs)
 0. Prepare a 64-bit nixos [minimal iso image](https://channels.nixos.org/nixos-22.11/latest-nixos-minimal-x86_64-linux.iso) and burn it, then enter the live system. Suppose I have divided two partitions `/dev/nvme0n1p1` `/dev/nvme0n1p3`
 1. Format the partition 
