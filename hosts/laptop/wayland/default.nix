@@ -143,9 +143,6 @@
       pulse.enable = true;
       jack.enable = true;
     };
-    openssh = {
-      enable = true;
-    };
   };
 
   security.polkit.enable = true;
