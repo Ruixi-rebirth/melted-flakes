@@ -8,7 +8,7 @@
       ../hardware-configuration.nix
       ../../../modules/fonts
     ] ++ [
-      # ../../modules/desktop/sway
+      # ../../../modules/desktop/sway
       ../../../modules/desktop/hyprland
     ];
 
