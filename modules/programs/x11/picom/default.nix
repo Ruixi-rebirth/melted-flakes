@@ -24,7 +24,8 @@
         rounded-corners-exclude = [
           # "class_g *= 'bspwm'"
           "class_g *= 'fcitx'"
-          "class_g *= 'polybar'"
+          "class_g *= 'Polybar'"
+          "class_g *= 'tray'"
         ];
         #shadow
         shadow = false;

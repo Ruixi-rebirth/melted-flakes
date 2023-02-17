@@ -56,7 +56,7 @@
       '';
       extraConfigEarly = ''
         systemctl --user start bspwm-session.target 
-        systemctl --user start polybar.service
+        systemctl --user start tray.target
       '';
     };
   };
