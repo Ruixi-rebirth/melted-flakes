@@ -74,9 +74,13 @@ let
     	+swap -background transparent -layers merge +repage $HOME/Pictures/$FILE
 
     composite -gravity Southeast "${./watermark.png}" $HOME/Pictures/$FILE $HOME/Pictures/$FILE
-
+    if [[ "$XDG_CURRENT_DESKTOP"=="Hyprland" ]] || [[ "$XDG_CURRENT_DESKTOP"=="sway" ]];then 
+      # # Send the Picture to clipboard
+        wl-copy < $HOME/Pictures/$FILE
+    else
     # Send the Picture to clipboard
-    xclip -selection clipboard -t image/png -i $HOME/Pictures/$FILE
+        xclip -selection clipboard -t image/png -i $HOME/Pictures/$FILE
+    fi
 
     # remove the other pictures
     rm $HOME/Pictures/src.png $HOME/Pictures/output.png
