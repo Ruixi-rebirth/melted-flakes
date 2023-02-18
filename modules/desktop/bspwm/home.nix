@@ -39,7 +39,7 @@
       };
       settings = {
         pointer_modifier = "mod1";
-        top_padding = 40;
+        # top_padding = 40;
         border_width = 3;
         window_gap = 8;
         split_ratio = 0.5;
