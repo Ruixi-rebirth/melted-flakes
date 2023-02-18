@@ -30,7 +30,7 @@ in
       #-- LSP --#
       install_lsp
       rnix-lsp
-      sumneko-lua-language-server
+      lua-language-server
       gopls
       pyright
       zk
