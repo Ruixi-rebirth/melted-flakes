@@ -18,12 +18,11 @@
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
       QT_AUTO_SCREEN_SCALE_FACTOR = "1";
       WLR_DRM_DEVICES = "/dev/dri/card1:/dev/dri/card0";
-      #GBM
+      # WLR_NO_HARDWARE_CURSORS = "1"; # if no cursor,uncomment this line  
       GBM_BACKEND = "nvidia-drm";
       CLUTTER_BACKEND = "wayland";
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
       # LIBVA_DRIVER_NAME = "nvidia";
-      #vulkan
       WLR_RENDERER = "vulkan";
       #__NV_PRIME_RENDER_OFFLOAD="1";
 
