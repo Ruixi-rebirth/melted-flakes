@@ -3,6 +3,8 @@
 {
   nixpkgs.system = "x86_64-linux";
 
+  nixpkgs.config.allowUnfree = true;
+
   networking = {
     hostName = "RuiXi"; # Define your hostname.
     networkmanager.enable = true;
