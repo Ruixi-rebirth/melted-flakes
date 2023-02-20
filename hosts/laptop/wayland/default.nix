@@ -102,8 +102,6 @@
       libnotify
       wl-clipboard
       wlr-randr
-      wireplumber
-      pipewire-media-session
       wayland
       wayland-scanner
       wayland-utils

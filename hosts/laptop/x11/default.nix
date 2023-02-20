@@ -101,8 +101,6 @@
       libnotify
       xclip
       xorg.xrandr
-      wireplumber
-      pipewire-media-session
       cinnamon.nemo
       networkmanagerapplet
       xorg.xev
