@@ -56,8 +56,6 @@
       libnotify
       xclip
       xorg.xrandr
-      wireplumber
-      pipewire-media-session
       cinnamon.nemo
       networkmanagerapplet
       alsa-lib
