@@ -56,9 +56,6 @@ sway 与 hyprland 外观一致,此处展示的是hyprland
 **nord**
 ![2023-01-17T00:15:22](https://user-images.githubusercontent.com/75824585/212723937-c56200da-52f4-407b-9d8e-428348ed5ed0.png)
 
-
-*安装主题任意选择一个即可：具体见[这里](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/home.nix#L11-L13)*
-
 > bspwm 
 
 只有nord主题
@@ -172,7 +169,27 @@ rm -rf .git
 
 9. 使用 `mkpasswd {PASSWORD} -m sha-512` 命令生成的密码哈希串替换掉 `/mnt/etc/nixos/Flakes/hosts/laptop/wayland/default.nix` 中的 `users.users.<name>.hashedPassword` 值替换掉。（在文件中有两处需要替换的内容）
 
-10. 安装
+10. 选择 Window Manager 
+> Wayland: [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L17) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L34) **取消注释**, 并且**注释** [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L18) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L35)
+
+Hyprland: 如果 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/default.nix#L12) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/home.nix#L6) 有注释, 则均**取消注释**, 并且**注释**掉下面涉及到 sway 的两行   
+
+Sway: 如果 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/default.nix#L11)  和  [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/home.nix#L5) 有注释, 则均**取消注释**, 并且**注释**掉上面涉及到 hyprland 的两行 
+
+> Xorg: [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L18) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L35) **取消注释**, 并且**注释** [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L17) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L34)
+
+Bspwm: 默认
+
+11. 选择主题
+>Wayland
+
+[这里](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/home.nix#L11-L13) 任意选择一个
+
+> Xorg 
+
+nord: 默认
+
+12. 安装
 ```bash
 nixos-install --no-root-passwd --flake .#laptop
 
@@ -180,8 +197,8 @@ nixos-install --no-root-passwd --flake .#laptop
 nixos-install --option substituters "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" --no-root-passwd --flake .#laptop
 ```
 
-11. 重启
+13. 重启
 ```bash
 reboot
 ```
-12. 享受它吧！
+14. 享受它吧！
