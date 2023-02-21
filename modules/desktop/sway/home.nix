@@ -2,15 +2,32 @@
 
 {
   imports = [ ../../environment/sway-variables.nix ];
-  programs = {
-    bash = {
-      initExtra = ''
-        if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-           exec sway --unsupported-gpu
-        fi
-      '';
-    };
+  # programs = {
+  #   bash = {
+  #     initExtra = ''
+  #       if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+  #          exec sway --unsupported-gpu
+  #       fi
+  #     '';
+  #   };
+  # };
+  systemd.user = {
+    targets.sway-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
   };
+  wayland.windowManager.sway = {
+    enable = true;
+    extraOptions = [ "--unsupported-gpu" ];
+    wrapperFeatures.gtk = true;
+  };
+  home = {
+    packages = with pkgs; [
+      swaybg
+      swayidle
+      swaylock-effects
+      pamixer
+    ];
+  };
+
   home.file = {
     ".config/sway/config".text = ''
 
@@ -118,7 +135,6 @@
     # Autostart #
     #-----------#
         exec_always  --no-startup-id  mako &
-        exec_always  --no-startup-id  fcitx5 -d &
         exec_always  --no-startup-id  nm-applet --indicator &
         exec_always  --no-startup-id  launch_waybar
 
