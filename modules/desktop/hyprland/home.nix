@@ -321,7 +321,6 @@
       # auto start #
       #------------#
       exec-once = launch_waybar &
-      # exec-once = fcitx5 -d &
       exec-once = mako &
       exec-once = border_color &
       exec-once = nm-applet --indicator &

@@ -7,10 +7,12 @@
       startx.enable = true;
     };
   };
+  programs = {
+    dconf.enable = true;
+    light.enable = true;
+  };
   environment.systemPackages = with pkgs; [
-    betterlockscreen
     pamixer
     i3lock-fancy
-    polybar
   ];
 }

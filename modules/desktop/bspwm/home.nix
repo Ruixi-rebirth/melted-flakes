@@ -13,7 +13,6 @@
       startupPrograms = [
         "sxhkd"
         "default_wall"
-        "fcitx5 -d"
         "flameshot"
         "dunst"
         "nm-applet --indicator"

@@ -10,10 +10,9 @@
     programs.waybar = {
       enable = true;
       systemd = {
-        enable = true;
-        target = "sway-session.target"; # Needed for waybar to start automatically
+        enable = false;
+        target = "graphical-session.target";
       };
-
       style = ''
               * {
                 font-family: "JetBrainsMono Nerd Font";

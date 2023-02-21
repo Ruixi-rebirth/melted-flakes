@@ -1,6 +1,10 @@
 { config, lib, pkgs, ... }:
 {
   imports = [ ../../programs/wayland/waybar/sway_waybar.nix ];
+  programs = {
+    dconf.enable = true;
+    light.enable = true;
+  };
   security.pam.services.swaylock = { };
   xdg.portal = {
     enable = true;
