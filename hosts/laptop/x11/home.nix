@@ -7,7 +7,6 @@
     (import ../../../modules/shell) ++
     (import ../../../modules/editors) ++
     (import ../../../modules/programs/x11) ++
-    # (import ../../../modules/theme/catppuccin-dark/x11) ++
     (import ../../../modules/theme/nord/x11) ++
     (import ../../../modules/devlop);
 
