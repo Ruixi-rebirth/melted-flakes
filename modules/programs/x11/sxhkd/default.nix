@@ -30,6 +30,7 @@
         "alt + ctrl + {1-9}" = "bspc node -o 0.{1-9}";
         "alt + f" = "bspc node -t \~fullscreen";
         "alt + p" = "bspc node -t \~pseudo_tiled";
+        "alt + ctrl + t" = "bspc node -t \~tiled";
         "alt + v" = "bspc node -g hidden";
         "alt + shift + v" = "bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off";
         "XF86AudioRaiseVolume" = "pamixer -i 5";
@@ -45,13 +46,13 @@
         "alt + m" = "netease-cloud-music-gtk4";
         "alt + shift + m" = "musicfox";
         "alt + shift +d" = "kitty  --class='danmufloat' --hold sh -c 'cd /home/ruixi/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && go run main.go -c config.toml'";
-        "alt + shift +x" = " ";
         "alt + t" = "telegram-desktop";
         "alt + q" = "nvidia-offload icalingua-plus-plus";
         "alt + a" = "flameshot_watermark";
-        "Super_L" = "pkill rofi || ~/.config/rofi/launcher.sh";
+        "Super_L" = "pkill rofi || bash ~/.config/rofi/launcher.sh";
         "alt + Super_L" = "bash ~/.config/rofi/powermenu.sh";
         "alt + o" = "polybar-msg cmd toggle";
+        "alt + shift +x" = "i3lock-fancy -p";
       };
     };
   };
