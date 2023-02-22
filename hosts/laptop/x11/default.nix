@@ -112,6 +112,11 @@
     ];
   };
 
+  services.xserver = {
+    xkbOptions = "caps:escape";
+  };
+  console.useXkbConfig = true;
+
   services = {
     dbus.packages = [ pkgs.gcr ];
     getty.autologinUser = "${user}";
