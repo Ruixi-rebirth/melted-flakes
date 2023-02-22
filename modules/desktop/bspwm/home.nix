@@ -35,6 +35,10 @@
           state = "floating";
           center = true;
         };
+        "nemo" = {
+          state = "floating";
+          center = true;
+        };
       };
       settings = {
         pointer_modifier = "mod1";
