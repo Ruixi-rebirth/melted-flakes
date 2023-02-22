@@ -53,6 +53,7 @@
         "alt + Super_L" = "bash ~/.config/rofi/powermenu.sh";
         "alt + o" = "polybar-msg cmd toggle";
         "alt + shift +x" = "i3lock-fancy -p";
+        "alt + w" = ''feh --randomize --bg-fill $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1)'';
       };
     };
   };
