@@ -42,12 +42,17 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 sway 与 hyprland 外观一致,此处展示的是hyprland
 
 **bspwm**
+
 动画极为流畅，只是录制视频有点卡卡的样子
 
+https://user-images.githubusercontent.com/75824585/220659189-be78cf81-0b8c-4865-a777-74febef8edcc.mp4
 
 ### 主题
 
 > hyprland & sway 
+
+<details>
+<summary><b>Load</b> <span style="font-size:14px;">(Click to expend) </span> </summary>
 
 **catppuccin-light**
 ![2023-01-12T02:21:59](https://user-images.githubusercontent.com/75824585/211895195-e0a47165-e635-4256-922c-17d7da1ed62e.png)
@@ -57,10 +62,15 @@ sway 与 hyprland 外观一致,此处展示的是hyprland
 
 **nord**
 ![2023-01-17T00:15:22](https://user-images.githubusercontent.com/75824585/212723937-c56200da-52f4-407b-9d8e-428348ed5ed0.png)
+</details>
 
 > bspwm 
 
-只有nord主题
+<details>
+<summary><b>Load</b> <span style="font-size:14px;">(Click to expend) </span> </summary>
+
+![2023-02-22_21-30](https://user-images.githubusercontent.com/75824585/220659944-7c93802a-2519-4bc1-9c9b-80d6bd81bce9.png)
+</details>
 
 
 
