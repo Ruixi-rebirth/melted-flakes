@@ -42,6 +42,8 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 sway 与 hyprland 外观一致,此处展示的是hyprland
 
 **bspwm**
+动画极为流畅，只是录制视频有点卡卡的样子
+
 
 ### 主题
 
@@ -60,37 +62,45 @@ sway 与 hyprland 外观一致,此处展示的是hyprland
 
 只有nord主题
 
+
+
 ### 目录结构
 ```
-.
-├── flake.lock
-├── flake.nix
+├── blog
+│  ├── archetypes
+│  ├── assets
+│  ├── content
+│  ├── layouts
+│  ├── static
+│  └── themes
 ├── hosts
-│   ├── default.nix
-│   ├── laptop
-│   └── system.nix
+│  ├── laptop
+│  └── server
 ├── modules
-│   ├── desktop
-│   ├── devlop
-│   ├── editors
-│   ├── environment
-│   ├── fonts
-│   ├── hardware
-│   ├── programs
-│   ├── scripts
-│   ├── shell
-│   ├── theme
-│   └── virtualisation
+│  ├── desktop
+│  ├── devlop
+│  ├── editors
+│  ├── environment
+│  ├── fonts
+│  ├── hardware
+│  ├── programs
+│  ├── scripts
+│  ├── shell
+│  ├── theme
+│  └── virtualisation
 ├── overlays
-│   └── default.nix
+│  ├── cinnamon.nemo
+│  └── flameshot
 ├── pkgs
-│   ├── catppuccin-cursors
-│   ├── catppuccin-gtk
-│   └── default.nix
-├── README_en.md
-├── README.md
-└── screenshot
-    └── screenshot.png
+│  ├── catppuccin-cursors
+│  ├── catppuccin-frappe-gtk
+│  ├── catppuccin-latte-gtk
+│  ├── fcitx5-pinyin-moegirl
+│  ├── fcitx5-pinyin-zhwiki
+│  ├── go-musicfox
+│  └── swww
+└── secrets
+   └── _public_keys_
 ```
 
 ### 如何安装？
