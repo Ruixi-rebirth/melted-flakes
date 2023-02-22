@@ -2,13 +2,13 @@
 {
   services.dunst = {
     iconTheme = {
-      name = "hicolor";
-      package = pkgs.Papirus-Dark;
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
       size = "32x32";
     };
     settings = {
       global = {
-        follow = mouse;
+        follow = "mouse";
         width = 256;
         height = 222;
         origin = "top-right";
