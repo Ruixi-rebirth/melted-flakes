@@ -117,6 +117,11 @@
   };
   console.useXkbConfig = true;
 
+  services.xserver.libinput = {
+    enable = true;
+    touchpad.naturalScrolling = true;
+  };
+
   services = {
     dbus.packages = [ pkgs.gcr ];
     getty.autologinUser = "${user}";
