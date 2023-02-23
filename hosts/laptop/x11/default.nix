@@ -28,6 +28,7 @@
       dbeaver
     ]) ++ (with config.nur.repos;[
       linyinfeng.icalingua-plus-plus
+      linyinfeng.wemeet
     ]);
   };
   boot = {
