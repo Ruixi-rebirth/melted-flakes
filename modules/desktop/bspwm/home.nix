@@ -16,6 +16,7 @@
         "flameshot"
         "dunst"
         "nm-applet --indicator"
+        "sleep 2s;polybar -q main"
       ];
       monitors = {
         eDP-2 = [
