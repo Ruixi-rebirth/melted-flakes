@@ -16,6 +16,7 @@
         "flameshot"
         "dunst"
         "nm-applet --indicator"
+        "sleep 2s;polybar -q main"
       ];
       monitors = {
         eDP-2 = [
@@ -32,6 +33,10 @@
           center = true;
         };
         "termfloat" = {
+          state = "floating";
+          center = true;
+        };
+        "nemo" = {
           state = "floating";
           center = true;
         };

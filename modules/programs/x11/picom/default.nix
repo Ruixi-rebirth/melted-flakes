@@ -19,13 +19,14 @@
         invert-color-include = [ ];
         glx-copy-from-front = false;
         #round corner
-        corner-radius = 10.0;
-        round-borders = 2;
+        corner-radius = 0;
+        round-borders = 0;
         rounded-corners-exclude = [
           # "class_g *= 'bspwm'"
           "class_g *= 'fcitx'"
           "class_g *= 'Polybar'"
-          "class_g *= 'tray'"
+          "class_g *= 'polybar'"
+          # "class_g *= 'tray'"
         ];
         #shadow
         shadow = false;
@@ -56,6 +57,9 @@
           "100:class_g = 'mpv'"
           "100:class_g = 'obs'"
           "100:class_g = 'Gimp'"
+          "100:class_g = 'firefox'"
+          "100:class_g = 'tray'"
+          "100:name = 'Polybar tray window'"
           "85:!focused"
         ];
 
