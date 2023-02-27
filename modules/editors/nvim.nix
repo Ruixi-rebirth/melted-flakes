@@ -9,7 +9,7 @@ let
       else 
              npm set prefix ~/.npm-global
     fi
-    npm i -g npm vscode-langservers-extracted vscode-langservers-extracted typescript typescript-language-server bash-language-server
+    npm i -g npm vscode-langservers-extracted typescript typescript-language-server bash-language-server
   '';
 in
 {
