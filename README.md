@@ -1,4 +1,4 @@
-0. Prepare a 64-bit nixos [minimal iso image](https://channels.nixos.org/nixos-22.11/latest-nixos-minimal-x86_64-linux.iso) and burn it, then enter the live system. Suppose I have divided two partitions `/dev/vda1` `/dev/vda2` 
+0. Prepare a 64-bit nixos [minimal iso image](https://channels.nixos.org/nixos-22.11/latest-nixos-minimal-x86_64-linux.iso) and burn it, then enter the live system. Suppose I have divided two partitions `/dev/vda1` `/dev/vda2` [check how to make partitions](https://github.com/Komi7/flakes/blob/minimal/partition-sample.md)
 
 1. Format the partition 
 ```bash
