@@ -44,7 +44,8 @@ p
  
  
  USE Terminal: `Parted`
- # parted /dev/sda -- mklabel msdos (gpt for uefi)
+```
+# parted /dev/sda -- mklabel msdos (gpt for uefi)
 # parted /dev/sda -- mkpart primary 1MiB -8GiB (512MiB -8GiB for uefi)
 # parted /dev/sda -- mkpart primary linux-swap -8GiB 100%
 
