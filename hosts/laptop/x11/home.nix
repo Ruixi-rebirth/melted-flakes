@@ -2,7 +2,8 @@
 
 {
   imports =
-    [ (import ../../../modules/desktop/bspwm/home.nix) ] ++
+    # [ (import ../../../modules/desktop/bspwm/home.nix) ] ++
+    [ (import ../../../modules/desktop/xmonad/home.nix) ] ++
     [ (import ../../../modules/scripts) ] ++
     (import ../../../modules/shell) ++
     (import ../../../modules/editors) ++

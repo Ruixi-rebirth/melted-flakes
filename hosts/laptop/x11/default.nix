@@ -8,7 +8,8 @@
       ../hardware-configuration.nix
       ../../../modules/fonts
     ] ++ [
-      ../../../modules/desktop/bspwm
+      # ../../../modules/desktop/bspwm
+      ../../../modules/desktop/xmonad
     ];
 
   sops.defaultSopsFile = ../../../secrets/secrets.yaml;
