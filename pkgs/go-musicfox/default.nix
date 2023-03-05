@@ -16,7 +16,7 @@ buildGoModule.override { stdenv = clangStdenv; } rec {
     owner = "anhoder";
     repo = pname;
     rev = "v${version}";
-    hash = "";
+    hash = "sha256-Wc9HFvBSLQA7jT+LJj+tyHzRbszhR2XD1/3C+SdrAGA=";
   };
 
   deleteVendor = true;
