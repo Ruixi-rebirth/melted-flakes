@@ -6,4 +6,5 @@ in
   ./launcher
   ./notice
   ./mpv
+  ./kooha
 ] ++ common
