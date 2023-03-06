@@ -7,7 +7,6 @@
 , libxcb
 , openssl
 , python3
-, pkgs
 }:
 rustPlatform.buildRustPackage rec {
   pname = "youtube-tui";
@@ -19,7 +18,7 @@ rustPlatform.buildRustPackage rec {
   };
   cargoHash = "sha256-qcWuh8qaOQBBebdX3D01k5yXZfifbFC+ZP0d6bJeOr0=";
   nativeBuildInputs = [ pkg-config python3 ];
-  buildInputs = [ libsixel libxcb pkg-config openssl ];
+  buildInputs = [ libsixel libxcb openssl ];
 
   doCheck = false;
 
