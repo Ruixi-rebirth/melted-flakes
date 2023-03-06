@@ -4,6 +4,7 @@
 , rustPlatform
 , pkg-config
 , libxkbcommon
+, lz4
 ,
 }:
 rustPlatform.buildRustPackage rec {
@@ -21,7 +22,7 @@ rustPlatform.buildRustPackage rec {
 
   nativeBuildInputs = [ pkg-config ];
 
-  buildInputs = [ libxkbcommon ];
+  buildInputs = [ lz4 libxkbcommon ];
 
   doCheck = false;
 
