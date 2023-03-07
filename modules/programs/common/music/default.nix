@@ -8,7 +8,6 @@
       # youtube-music
       netease-cloud-music-gtk
       go-musicfox
-      ytermusic
     ];
   };
   programs = {
