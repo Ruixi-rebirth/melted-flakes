@@ -9,6 +9,7 @@
       netease-cloud-music-gtk
       go-musicfox
       youtube-tui
+      bilibili-live-tui
     ];
   };
   programs = {
