@@ -11,4 +11,5 @@
   ./yt-dlp
   ./zathura
   ./kitty
+  ./youtube-tui
 ]
