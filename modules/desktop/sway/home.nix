@@ -128,9 +128,9 @@
       #-----------#
       # Autostart #
       #-----------#
+          exec_always  --no-startup-id  launch_waybar &
           exec_always  --no-startup-id  mako &
           exec_always  --no-startup-id  nm-applet --indicator &
-          exec_always  --no-startup-id  launch_waybar
 
       #-------------------------------#
       # Make capslock work as escape #
