@@ -12,4 +12,5 @@
   ./zathura
   ./kitty
   ./youtube-tui
+  ./aliyun-cli
 ]
