@@ -316,8 +316,7 @@
       #-----------------------#
       # wall(by swww service) #
       #-----------------------#
-      # exec-once = dynamic_wallpaper
-      # exec-once = default_wall 
+      exec-once = swww-daemon && default_wall 
 
       #------------#
       # auto start #
