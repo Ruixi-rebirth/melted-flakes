@@ -1,37 +1,15 @@
 {
   description = "My Personal NixOS Configuration";
 
-  inputs =
-    {
-      nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-      neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-      rust-overlay.url = "github:oxalica/rust-overlay";
-      impermanence.url = "github:nix-community/impermanence";
-      nur.url = "github:nix-community/NUR";
-      hyprpicker.url = "github:hyprwm/hyprpicker";
-      hypr-contrib.url = "github:hyprwm/contrib";
-      flake-utils.url = "github:numtide/flake-utils";
-      sops-nix.url = "github:Mic92/sops-nix";
-      picom.url = "github:yaocccc/picom";
-      hyprland = {
-        url = "github:hyprwm/Hyprland";
-        inputs.nixpkgs.follows = "nixpkgs";
-      };
-      home-manager = {
-        url = "github:nix-community/home-manager";
-        inputs.nixpkgs.follows = "nixpkgs";
-      };
-    };
-
-  outputs = inputs @ { self, nixpkgs, flake-utils, ... }:
+  outputs = inputs @ { self, nixpkgs, flake-parts, ... }:
     let
       user = "ruixi";
       domain = "rayxi.top";
       selfPkgs = import ./pkgs;
     in
-    flake-utils.lib.eachSystem [ "x86_64-linux" ]
-      (
-        system:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
+      perSystem = { config, inputs', pkgs, system, ... }:
         let
           pkgs = import nixpkgs {
             inherit system;
@@ -70,17 +48,41 @@
               '';
             };
           };
-        }
-      )
-    // {
-      overlays.default = selfPkgs.overlay;
-      nixosConfigurations = (
-        # NixOS configurations
-        import ./hosts {
-          # Imports ./hosts/default.nix
-          system = "x86_64-linux";
-          inherit nixpkgs self inputs user;
-        }
-      );
+
+          formatter = pkgs.nixpkgs-fmt;
+        };
+
+      flake = {
+        overlays.default = selfPkgs.overlay;
+        nixosConfigurations = (
+          import ./hosts {
+            system = "x86_64-linux";
+            inherit nixpkgs self inputs user;
+          }
+        );
+      };
     };
+
+  inputs =
+    {
+      nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+      neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+      rust-overlay.url = "github:oxalica/rust-overlay";
+      impermanence.url = "github:nix-community/impermanence";
+      nur.url = "github:nix-community/NUR";
+      hyprpicker.url = "github:hyprwm/hyprpicker";
+      hypr-contrib.url = "github:hyprwm/contrib";
+      flake-parts.url = "github:hercules-ci/flake-parts";
+      sops-nix.url = "github:Mic92/sops-nix";
+      picom.url = "github:yaocccc/picom";
+      hyprland = {
+        url = "github:hyprwm/Hyprland";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
+      home-manager = {
+        url = "github:nix-community/home-manager";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
+    };
+
 }
