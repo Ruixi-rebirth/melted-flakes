@@ -28,7 +28,7 @@ buildGoModule.override { stdenv = clangStdenv; } rec {
   ldflags = [
     "-s"
     "-w"
-    "-X go-musicfox/pkg/constants.AppVersion=${version}"
+    "-X go-musicfox/pkg/constants.AppVersion=v${version}"
   ];
 
   nativeBuildInputs = [
