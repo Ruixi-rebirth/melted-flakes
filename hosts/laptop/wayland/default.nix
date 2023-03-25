@@ -27,6 +27,7 @@
       thunderbird
       blender
       dbeaver
+      aichat
     ]) ++ (with config.nur.repos;[
       linyinfeng.icalingua-plus-plus
     ]);
