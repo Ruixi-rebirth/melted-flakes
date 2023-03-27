@@ -36,6 +36,7 @@ in
       zk
       rust-analyzer
       clang-tools
+      haskell-language-server
       #-- tree-sitter --#
       tree-sitter
       #-- format --#
@@ -45,6 +46,7 @@ in
       rustfmt
       beautysh
       nodePackages.prettier
+      stylish-haskell
       #-- Debug --#
       lldb
     ];

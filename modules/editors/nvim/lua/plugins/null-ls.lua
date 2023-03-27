@@ -12,6 +12,7 @@ return {
 				require("null-ls").builtins.formatting.nixpkgs_fmt,
 				require("null-ls").builtins.formatting.beautysh,
 				require("null-ls").builtins.formatting.rustfmt,
+				require("null-ls").builtins.formatting.stylish_haskell,
 			},
 		})
 	end,
