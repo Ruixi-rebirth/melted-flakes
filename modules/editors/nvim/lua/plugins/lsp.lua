@@ -167,9 +167,7 @@ return {
 		nvim_lsp.rnix.setup({
 			on_attach = on_attach,
 		})
-		nvim_lsp.hls.setup({
-			on_attach = on_attach,
-		})
+		nvim_lsp.hls.setup({})
 
 		-- ebuild Syntastic(install dev-util/pkgcheck)
 		vim.g.syntastic_ebuild_checkers = "pkgcheck"
