@@ -27,6 +27,7 @@
       thunderbird
       blender
       dbeaver
+      aichat
     ]) ++ (with config.nur.repos;[
       linyinfeng.icalingua-plus-plus
       linyinfeng.wemeet
@@ -84,6 +85,7 @@
           ".go-musicfox"
           "Flakes"
           "Kvm"
+          ".cabal"
           { directory = ".gnupg"; mode = "0700"; }
           { directory = ".ssh"; mode = "0700"; }
           ".local"
