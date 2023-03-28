@@ -84,6 +84,11 @@
         inputs.nixpkgs.follows = "nixpkgs";
       };
       emacs-overlay.url = "github:nix-community/emacs-overlay";
+      # lanzaboote = {
+      #   url = "github:nix-community/lanzaboote";
+      #   inputs.nixpkgs.follows = "nixpkgs";
+      # };
+      # disko.url = "github:nix-community/disko";
     };
 
 }
