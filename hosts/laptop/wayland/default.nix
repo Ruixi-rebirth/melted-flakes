@@ -28,6 +28,7 @@
       blender
       dbeaver
       aichat
+      chatgpt-cli
     ]) ++ (with config.nur.repos;[
       linyinfeng.icalingua-plus-plus
     ]);
