@@ -9,8 +9,8 @@
     (import ../../../modules/editors) ++
     (import ../../../modules/programs/wayland) ++
     # (import ../../../modules/theme/catppuccin-dark/wayland) ++
-    (import ../../../modules/theme/catppuccin-light/wayland) ++
-    # (import ../../../modules/theme/nord/wayland) ++
+    # (import ../../../modules/theme/catppuccin-light/wayland) ++
+    (import ../../../modules/theme/nord/wayland) ++
     (import ../../../modules/devlop);
 
   home = {
