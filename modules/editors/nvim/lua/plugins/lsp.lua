@@ -93,7 +93,10 @@ return {
 		-- 		on_attach = on_attach,
 		-- 	},
 		-- }) -- C
-		nvim_lsp.clangd.setup({})
+		nvim_lsp.clangd.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
 		--Python
 		nvim_lsp.pyright.setup({
 			on_attach = on_attach,
