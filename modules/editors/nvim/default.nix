@@ -37,6 +37,7 @@ in
       rust-analyzer
       clang-tools
       haskell-language-server
+      java-language-server
       #-- tree-sitter --#
       tree-sitter
       #-- format --#
@@ -47,6 +48,7 @@ in
       beautysh
       nodePackages.prettier
       stylish-haskell
+      google-java-format
       #-- Debug --#
       lldb
     ];

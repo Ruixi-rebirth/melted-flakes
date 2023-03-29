@@ -168,6 +168,9 @@ return {
 			on_attach = on_attach,
 		})
 		nvim_lsp.hls.setup({})
+		nvim_lsp.java_language_server.setup({
+			on_attach = on_attach,
+		})
 
 		-- ebuild Syntastic(install dev-util/pkgcheck)
 		vim.g.syntastic_ebuild_checkers = "pkgcheck"
