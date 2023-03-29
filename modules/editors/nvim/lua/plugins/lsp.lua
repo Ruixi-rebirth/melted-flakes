@@ -93,10 +93,7 @@ return {
 		-- 		on_attach = on_attach,
 		-- 	},
 		-- }) -- C
-		nvim_lsp.clangd.setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-		})
+		nvim_lsp.clangd.setup({})
 		--Python
 		nvim_lsp.pyright.setup({
 			on_attach = on_attach,
@@ -171,9 +168,6 @@ return {
 			on_attach = on_attach,
 		})
 		nvim_lsp.hls.setup({})
-		nvim_lsp.java_language_server.setup({
-			on_attach = on_attach,
-		})
 
 		-- ebuild Syntastic(install dev-util/pkgcheck)
 		vim.g.syntastic_ebuild_checkers = "pkgcheck"

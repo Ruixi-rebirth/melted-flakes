@@ -13,8 +13,6 @@ return {
 				require("null-ls").builtins.formatting.beautysh,
 				require("null-ls").builtins.formatting.rustfmt,
 				require("null-ls").builtins.formatting.stylish_haskell,
-				require("null-ls").builtins.formatting.google_java_format,
-				require("null-ls").builtins.formatting.clang_format,
 			},
 		})
 	end,
