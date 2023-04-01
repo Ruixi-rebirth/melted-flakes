@@ -1,9 +1,5 @@
 { config, lib, pkgs, ... }:
 {
-  # if  wayland.windowManager.a.enable==true then 
-  # package = pkgs.emacsGit-nox;
-  # else 
-  package = pkgs.emacsGit;
   programs.emacs = {
     enable = true;
     package =
