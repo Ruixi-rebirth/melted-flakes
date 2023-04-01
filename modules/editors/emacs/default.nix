@@ -1,8 +1,16 @@
 { config, lib, pkgs, ... }:
 {
+  # if  wayland.windowManager.a.enable==true then 
+  # package = pkgs.emacsGit-nox;
+  # else 
+  package = pkgs.emacsGit;
   programs.emacs = {
     enable = true;
-    package = pkgs.emacsGit;
+    package =
+      if builtins.hasAttr "wayland" pkgs == true then
+        pkgs.emacsGit-nox
+      else
+        pkgs.emacsGit;
     overrides = self: super: { };
     extraPackages = epkgs: [
       # epkgs.emms
