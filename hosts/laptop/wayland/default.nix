@@ -29,6 +29,7 @@
       dbeaver
       aichat
       chatgpt-cli
+      bili_tui
     ]) ++ (with config.nur.repos;[
       linyinfeng.icalingua-plus-plus
     ]);
