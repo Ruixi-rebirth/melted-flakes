@@ -3,4 +3,5 @@ let
 in
 [
   ./notice
+  ./swww
 ] ++ common
