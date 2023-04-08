@@ -52,7 +52,7 @@ https://user-images.githubusercontent.com/75824585/220659189-be78cf81-0b8c-4865-
 > hyprland & sway 
 
 <details>
-<summary><b>Load</b> <span style="font-size:14px;">(Click to expend) </span> </summary>
+<summary><b>Load</b> <span style="font-size:14px;">(Click to expand) </span> </summary>
 
 **catppuccin-light**
 ![2023-01-12T02:21:59](https://user-images.githubusercontent.com/75824585/211895195-e0a47165-e635-4256-922c-17d7da1ed62e.png)
@@ -67,7 +67,7 @@ https://user-images.githubusercontent.com/75824585/220659189-be78cf81-0b8c-4865-
 > bspwm 
 
 <details>
-<summary><b>Load</b> <span style="font-size:14px;">(Click to expend) </span> </summary>
+<summary><b>Load</b> <span style="font-size:14px;">(Click to expand) </span> </summary>
 
 ![2023-02-22_21-30](https://user-images.githubusercontent.com/75824585/220659944-7c93802a-2519-4bc1-9c9b-80d6bd81bce9.png)
 </details>
