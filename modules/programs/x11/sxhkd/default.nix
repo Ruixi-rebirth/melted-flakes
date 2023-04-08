@@ -45,7 +45,7 @@
         "alt + b" = "nvidia-offload firefox";
         "alt + m" = "netease-cloud-music-gtk4";
         "alt + shift + m" = "kitty --class='musicfox' 'musicfox'";
-        "alt + shift +d" = "kitty  --class='danmufloat' --hold sh -c 'cd /home/ruixi/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && go run main.go -c config.toml'";
+        "alt + shift +d" = "kitty  --class='danmufloat' --hold sh -c 'export TERM=xterm-256color && bili'";
         "alt + t" = "telegram-desktop";
         "alt + q" = "nvidia-offload icalingua-plus-plus";
         "alt + a" = "flameshot_watermark";

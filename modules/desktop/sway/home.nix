@@ -242,7 +242,7 @@
           # quick start some applications
           bindsym $mod+m exec --no-startup-id              netease-cloud-music-gtk4
           bindsym $mod+b exec --no-startup-id              nvidia-offload firefox
-          bindsym $mod+Shift+d exec kitty --class="danmufloat" --hold sh -c "cd /home/ruixi/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && go run main.go -c config.toml" 
+          bindsym $mod+Shift+d exec kitty --class="danmufloat" --hold sh -c "export TERM=xterm-256color && bili" 
           bindsym $mod+Shift+x exec --no-startup-id        myswaylock 
           bindsym $mod+t exec --no-startup-id              telegram-desktop
           bindsym $mod+q exec --no-startup-id              nvidia-offload icalingua-plus-plus --enable-features=UseOzonePlatform --ozone-platform=wayland
