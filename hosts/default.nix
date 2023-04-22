@@ -24,6 +24,7 @@ in
       inputs.hyprland.nixosModules.default
       inputs.sops-nix.nixosModules.sops
       inputs.disko.nixosModules.disko
+      # inputs.lanzaboote.nixosModules.lanzaboote
       inputs.home-manager.nixosModules.home-manager
       {
         home-manager = {

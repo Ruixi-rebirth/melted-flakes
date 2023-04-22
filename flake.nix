@@ -87,6 +87,7 @@
       # lanzaboote = {
       #   url = "github:nix-community/lanzaboote";
       #   inputs.nixpkgs.follows = "nixpkgs";
+      #   inputs.rust-overlay.follows = "rust-overlay";
       # };
       disko.url = "github:nix-community/disko";
       colmena = {
