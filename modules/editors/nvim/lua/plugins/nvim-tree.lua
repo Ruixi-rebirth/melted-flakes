@@ -89,7 +89,6 @@ return {
 				update_cwd = false,
 				ignore_list = {},
 			},
-			ignore_ft_on_setup = {},
 			system_open = {
 				cmd = nil,
 				args = {},
