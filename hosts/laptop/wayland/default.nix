@@ -1,4 +1,4 @@
-{ config, pkgs, user, inputs, ... }:
+{ config, pkgs, user, inputs, lib, ... }:
 
 {
   imports =
@@ -40,6 +40,7 @@
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
     loader = {
       systemd-boot = {
+        # enable = lib.mkForce false;
         enable = true;
         consoleMode = "auto";
       };
@@ -49,6 +50,10 @@
       };
       timeout = 3;
     };
+    # lanzaboote = {
+    #   enable = true;
+    #   pkiBundle = "/etc/secureboot";
+    # };
     kernelParams = [
       "quiet"
       "splash"
