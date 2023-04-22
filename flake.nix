@@ -89,6 +89,10 @@
       #   inputs.nixpkgs.follows = "nixpkgs";
       # };
       disko.url = "github:nix-community/disko";
+      colmena = {
+        url = "github:zhaofengli/colmena";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
     };
 
 }
