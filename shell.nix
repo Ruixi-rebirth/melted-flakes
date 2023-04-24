@@ -1,6 +1,7 @@
 { pkgs ? import <nixpkgs> { } }:
 pkgs.mkShell {
   shellHook = ''
+          clear
           echo "
      ______   _           _                 
     |  ____| | |         | |                
