@@ -38,7 +38,7 @@ rm -rf .git
 
 > Wayland: uncomment [this line](https://github.com/Ruixi-rebirth/flakes/blob/minimal/hosts/default.nix#L17) and [this line](https://github.com/Ruixi-rebirth/flakes/blob/minimal/hosts/default.nix#L31), comment [this line](https://github.com/Ruixi-rebirth/flakes/blob/minimal/hosts/default.nix#L18) and [this line](https://github.com/Ruixi-rebirth/flakes/blob/minimal/hosts/default.nix#L32) 
 
-> Xorg:  uncomment [this line](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L18) and [this line](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L35), comment [this line](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L17) and [this line](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L34)
+> Xorg:  uncomment [this line](https://github.com/Ruixi-rebirth/flakes/blob/minimal/hosts/default.nix#L18) and [this line](https://github.com/Ruixi-rebirth/flakes/blob/minimal/hosts/default.nix#L32), comment [this line](https://github.com/Ruixi-rebirth/flakes/blob/minimal/hosts/default.nix#L17) and [this line](https://github.com/Ruixi-rebirth/flakes/blob/minimal/hosts/default.nix#L31)
 
 10. Select a theme 
 > Wayland 
