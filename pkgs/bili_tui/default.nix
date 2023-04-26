@@ -6,16 +6,17 @@
 
 buildGoModule rec {
   pname = "bilibili_live_tui";
-  version = "1cc1cee";
+  version = "4441239";
 
   src = fetchFromGitHub {
     owner = "yaocccc";
     repo = pname;
     rev = "${version}";
-    sha256 = "sha256-RN2CBSY6TRrOOI7lovuSsV6WirZs2IK+/ZmC6W1/Rcc=";
+    sha256 = "sha256-th66czpHiLdZRqXVGpxVLh2lrvrjXErniJzuwVNZsP0=";
   };
 
   vendorSha256 = "sha256-eoLVLAzbw9BxbSgHWxmaxVmlV6RhIscwSAJrv2OpU+k=";
+
   subPackages = [ "." ];
 
   ldflags = [
