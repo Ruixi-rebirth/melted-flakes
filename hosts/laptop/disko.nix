@@ -1,8 +1,12 @@
+# pre-install, need run  this command ` nix --extra-experimental-features nix-command --extra-experimental-features flakes run github:nix-community/disko -- --mode zap_create_mount /path/to/disko-config.nix `
+
+# more information get -> https://github.com/nix-community/disko
+{ disko ? [ "/dev/nvme0n1p1" "/dev/nvme0n1p2" ] }:
 {
   disko.devices = {
     disk = {
       nvme0n1p1 = {
-        device = "/dev/nvme0n1p1";
+        device = builtins.elemAt disks 0;
         type = "disk";
         content = {
           type = "table";
@@ -23,7 +27,7 @@
         };
       };
       nvme0n1p2 = {
-        device = "/dev/nvme0n1p2";
+        device = builtins.elemAt disks 1;
         type = "disk";
         content = {
           type = "table";
