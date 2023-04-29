@@ -24,9 +24,19 @@
         in
         {
           mission-control.scripts = {
+            install = {
+              description = "Install NixOS";
+              exec = "nixos-install --flake .#laptop";
+              category = "Tools";
+            };
             update = {
-              description = "Update flake inputs what you want,Please check `./flake-update.sh` item";
+              description = "Update flake inputs what you want,Please check ./flake-update.sh";
               exec = "sh ./flake-update.sh";
+              category = "Tools";
+            };
+            rebuild = {
+              description = "Switch to new profile";
+              exec = "doas nixos-rebuild switch --flake .#laptop";
               category = "Tools";
             };
             fmt = {
