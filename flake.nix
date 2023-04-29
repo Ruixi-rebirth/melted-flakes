@@ -39,6 +39,11 @@
               exec = "doas nixos-rebuild switch --flake .#laptop";
               category = "Tools";
             };
+            deploy = {
+              description = "Remote deployment or local deployment";
+              exec = "sh deploy.sh";
+              category = "Tools";
+            };
             fmt = {
               description = "Format the top-level Nix files(nixpkgs-fmt)";
               exec = "${lib.getExe pkgs.nixpkgs-fmt} ./*.nix";
