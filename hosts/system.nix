@@ -55,6 +55,7 @@
       rar
       frp
       sops
+      polkit_gnome
       # sbctl
     ];
   };
