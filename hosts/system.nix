@@ -55,7 +55,6 @@
       rar
       frp
       sops
-      # sbctl
     ];
   };
   services.dbus.enable = true;
