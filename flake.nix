@@ -24,13 +24,18 @@
         in
         {
           mission-control.scripts = {
+            update = {
+              description = "Update flake inputs what you want,Please check `./flake-update.sh` item";
+              exec = "sh ./flake-update.sh";
+              category = "Tools";
+            };
             fmt = {
               description = "Format the top-level Nix files(nixpkgs-fmt)";
               exec = "${lib.getExe pkgs.nixpkgs-fmt} ./*.nix";
               category = "Tools";
             };
             blog = {
-              description = "debug my blog";
+              description = "Debug my blog";
               exec = ''
                 cd "$FLAKE_ROOT/blog"
                 cp -r ./static/hugo-theme-stack ./themes/
