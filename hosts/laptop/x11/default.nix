@@ -38,7 +38,8 @@
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
     loader = {
       systemd-boot = {
-        enable = true;
+        enable = lib.mkForce false; #lanzaboote
+        # enable = true;
         consoleMode = "auto";
       };
       efi = {
@@ -46,6 +47,11 @@
         efiSysMountPoint = "/boot";
       };
       timeout = 3;
+    };
+    bootspec.enable = true;
+    lanzaboote = {
+      enable = true;
+      pkiBundle = "/etc/secureboot";
     };
     kernelParams = [
       "quiet"
@@ -67,6 +73,7 @@
         "/etc/nixos" # bind mounted from /nix/persist/etc/nixos to /etc/nixos
         "/etc/NetworkManager/system-connections"
         "/etc/v2raya"
+        "/etc/secureboot"
         "/var/log"
         "/var/lib"
       ];
@@ -90,6 +97,7 @@
           { directory = ".ssh"; mode = "0700"; }
           ".local"
           ".mozilla"
+          ".emacs.d"
         ];
         files = [
           ".npmrc"

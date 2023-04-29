@@ -68,7 +68,7 @@
             #run by `nix devlop` or `nix-shell`(legacy)
             # default = import ./shell.nix { inherit pkgs; };
             default = pkgs.mkShell {
-              nativeBuildInputs = with pkgs; [ git neovim colmena ];
+              nativeBuildInputs = with pkgs; [ git neovim colmena sbctl ];
               inputsFrom = [
                 config.flake-root.devShell
                 config.mission-control.devShell
@@ -124,11 +124,11 @@
       flake-root.url = "github:srid/flake-root";
       mission-control.url = "github:Platonic-Systems/mission-control";
       emacs-overlay.url = "github:nix-community/emacs-overlay";
-      # lanzaboote = {
-      #   url = "github:nix-community/lanzaboote";
-      #   inputs.nixpkgs.follows = "nixpkgs";
-      #   inputs.rust-overlay.follows = "rust-overlay";
-      # };
+      lanzaboote = {
+        url = "github:nix-community/lanzaboote";
+        inputs.nixpkgs.follows = "nixpkgs";
+        inputs.rust-overlay.follows = "rust-overlay";
+      };
       disko.url = "github:nix-community/disko";
       colmena = {
         url = "github:zhaofengli/colmena";
