@@ -40,8 +40,8 @@
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
     loader = {
       systemd-boot = {
-        # enable = lib.mkForce false;
-        enable = true;
+        enable = lib.mkForce false; #lanzaboote
+        # enable = true;
         consoleMode = "auto";
       };
       efi = {
@@ -50,10 +50,11 @@
       };
       timeout = 3;
     };
-    # lanzaboote = {
-    #   enable = true;
-    #   pkiBundle = "/etc/secureboot";
-    # };
+    bootspec.enable = true;
+    lanzaboote = {
+      enable = true;
+      pkiBundle = "/etc/secureboot";
+    };
     kernelParams = [
       "quiet"
       "splash"
@@ -76,6 +77,7 @@
         "/etc/v2raya"
         "/var/log"
         "/var/lib"
+        "/etc/secureboot"
       ];
       users.${user} = {
         directories = [
