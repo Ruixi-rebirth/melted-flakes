@@ -30,7 +30,7 @@
             programs.nixpkgs-fmt.enable = true;
           };
           mission-control.scripts = {
-            install = {
+            Install = {
               description = "Install NixOS";
               #TODO: Currently only available for my laptop, will be more flexible for other devices 
               exec = ''
