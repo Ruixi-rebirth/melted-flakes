@@ -162,6 +162,7 @@
       treefmt-nix.url = "github:numtide/treefmt-nix";
       emacs-overlay.url = "github:nix-community/emacs-overlay";
       lanzaboote = {
+        #please read this doc -> https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md 
         url = "github:nix-community/lanzaboote";
         inputs.nixpkgs.follows = "nixpkgs";
         inputs.rust-overlay.follows = "rust-overlay";
