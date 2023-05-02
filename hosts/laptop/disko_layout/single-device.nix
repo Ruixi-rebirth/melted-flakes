@@ -1,4 +1,4 @@
-{ disks ? [ "/dev/vdb" ], ... }: {
+{ disks ? [ "/dev/vda" ], ... }: {
   disko.devices = {
     disk = {
       vdb = {
@@ -11,7 +11,7 @@
             {
               name = "ESP";
               start = "1MiB";
-              end = "100MiB";
+              end = "512MiB";
               bootable = true;
               content = {
                 type = "filesystem";
@@ -21,7 +21,7 @@
             }
             {
               name = "root";
-              start = "100MiB";
+              start = "512MiB";
               end = "100%";
               part-type = "primary";
               bootable = true;
@@ -33,6 +33,16 @@
             }
           ];
         };
+      };
+    };
+    nodev = {
+      "/" = {
+        fsType = "tmpfs";
+        mountOptions = [
+          "defaults"
+          "size=12G"
+          "mode=755"
+        ];
       };
     };
   };

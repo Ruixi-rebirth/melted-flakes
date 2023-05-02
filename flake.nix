@@ -33,8 +33,8 @@
                 passwd_hash=$(mkpasswd -m sha-512  2>/dev/null)
                 cd /mnt/etc/nixos/Flakes 
                 sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/laptop/{wayland,x11}/default.nix
-                read -p "device name: " device
-                nixos-install --no-root-passwd --flake .#$device
+                read -p  "device name: " -r device
+                nixos-install --no-root-passwd --flake .#"$device"
               '';
               category = "Tools";
             };
@@ -46,8 +46,8 @@
             rebuild = {
               description = "Switch to new profile";
               exec = ''
-                read -p "device name: " device
-                doas nixos-rebuild switch --flake .#$device'';
+                read -p  "device name: " -r device
+                doas nixos-rebuild switch --flake .#"$device"'';
               category = "Tools";
             };
             deploy = {
@@ -63,7 +63,7 @@
             blog = {
               description = "Debug my blog";
               exec = ''
-                cd "$FLAKE_ROOT/blog"
+                cd "$FLAKE_ROOT"/blog
                 cp -r ./static/hugo-theme-stack ./themes/
                 ${lib.getExe pkgs.hugo} server --buildDrafts --forceSyncStatic'';
               category = "Tools";
@@ -74,15 +74,15 @@
               exec = ''
                 set -e
                 #to set luks password
-                read -p "luks password(important!): " luks_pass 
+                read -p  "luks password(important!): " -r luks_pass 
                 echo -n "$luks_pass" > /tmp/secret.key
-                nix --extra-experimental-features nix-command --extra-experimental-features flakes run github:nix-community/disko -- --mode zap_create_mount $FLAKE_ROOT/hosts/laptop/disko_layout/multi-device-luks.nix
+                nix --extra-experimental-features nix-command --extra-experimental-features flakes run github:nix-community/disko -- --mode zap_create_mount "$FLAKE_ROOT"/hosts/laptop/disko_layout/multi-device-luks.nix
                 mkdir -p /mnt/nix/persist/etc/nixos
                 mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
                 nixos-generate-config --no-filesystems --root /mnt
                 cd /mnt/etc/nixos 
-                cp hardware-configuration.nix $FLAKE_ROOT/hosts/laptop/hardware-configuration.nix 
-                sed -i 's/imports\ =/imports\ = [(import\ .\/disko_layout\/multi-device-luks.nix)\ {}]++/g' $FLAKE_ROOT/hosts/laptop/hardware-configuration.nix
+                cp hardware-configuration.nix "$FLAKE_ROOT"/hosts/laptop/hardware-configuration.nix 
+                sed -i 's/imports\ =/imports\ = [(import\ .\/disko_layout\/multi-device-luks.nix)\ {}]++/g' "$FLAKE_ROOT"/hosts/laptop/hardware-configuration.nix
                 cp -r ../Flakes /mnt/etc/nixos  
                 lsblk
               '';

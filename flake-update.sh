@@ -14,6 +14,9 @@ flake_input=(
     nur
     picom
     sops-nix
+    lanzaboote
+    rust-overlay
+    neovim-nightly-overlay
 )
 for item in "${flake_input[@]}"
 do

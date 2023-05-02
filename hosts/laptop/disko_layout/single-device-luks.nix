@@ -1,4 +1,4 @@
-{ disks ? [ "/dev/vdb" ], ... }: {
+{ disks ? [ "/dev/vda" ], ... }: {
   disko.devices = {
     disk = {
       vdb = {
@@ -11,7 +11,7 @@
             {
               name = "ESP";
               start = "1MiB";
-              end = "100MiB";
+              end = "512MiB";
               bootable = true;
               content = {
                 type = "filesystem";
@@ -24,14 +24,12 @@
             }
             {
               name = "luks";
-              start = "100MiB";
+              start = "512MiB";
               end = "100%";
               content = {
                 type = "luks";
                 name = "crypted";
                 extraOpenArgs = [ "--allow-discards" ];
-                # if you want to use the key for interactive login be sure there is no trailing newline
-                # for example use `echo -n "password" > /tmp/secret.key`
                 keyFile = "/tmp/secret.key";
                 content = {
                   type = "lvm_pv";
@@ -43,31 +41,30 @@
         };
       };
     };
+    nodev = {
+      "/" = {
+        fsType = "tmpfs";
+        mountOptions = [
+          "defaults"
+          "size=12G"
+          "mode=755"
+        ];
+      };
+    };
     lvm_vg = {
       pool = {
         type = "lvm_vg";
         lvs = {
           root = {
-            size = "100M";
+            size = "100%FREE";
             content = {
               type = "filesystem";
               format = "ext4";
-              mountpoint = "/";
+              mountpoint = "/nix";
               mountOptions = [
                 "defaults"
               ];
             };
-          };
-          home = {
-            size = "10M";
-            content = {
-              type = "filesystem";
-              format = "ext4";
-              mountpoint = "/home";
-            };
-          };
-          raw = {
-            size = "10M";
           };
         };
       };
