@@ -35,7 +35,7 @@
               #TODO: Currently only available for my laptop, will be more flexible for other devices 
               exec = ''
                 set -e
-                echo "set your user login password"
+                echo $'\e[1;32mset your user login password\e[0m'
                 #to set user login password
                 passwd_hash=$(mkpasswd -m sha-512  2>/dev/null)
                 cd /mnt/etc/nixos/Flakes 
