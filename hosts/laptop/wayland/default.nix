@@ -104,6 +104,7 @@
         ];
         files = [
           ".npmrc"
+          "/etc/machine-id"
         ];
       };
     };
