@@ -40,10 +40,10 @@
   boot = {
     supportedFilesystems = [ "ntfs" ];
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
+    bootspec.enable = true;
     loader = {
-      bootspec.enable = true;
-      systemd-boot = {
-        enable = (lib.mkIf config.boot.lanzaboote.enable) lib.mkForce false; #lanzaboote
+      systemd-boot = (lib.mkIf config.boot.lanzaboote.enable) {
+        enable = lib.mkForce false; #lanzaboote
         consoleMode = "auto";
       };
       efi = {
