@@ -40,8 +40,7 @@
                 passwd_hash=$(mkpasswd -m sha-512  2>/dev/null)
                 cd /mnt/etc/nixos/Flakes 
                 sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/laptop/{wayland,x11}/default.nix && sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/laptop_minimal/default.nix
-
-                read -p  "device name: " -r device
+                read -p  $'\e[1;32mEnter device name: \e[0m' -r device
                 nixos-install --no-root-passwd --flake .#"$device"
               '';
               category = "Tools";
@@ -54,7 +53,7 @@
             rebuild = {
               description = "Switch to new profile";
               exec = ''
-                read -p  "device name: " -r device
+                read -p  $'\e[1;32mEnter device name: \e[0m' -r device
                 doas nixos-rebuild switch --flake .#"$device"'';
               category = "Tools";
             };
@@ -82,7 +81,7 @@
               exec = ''
                 set -e
                 #to set luks password
-                read -p  "luks password(important!): " -r luks_pass 
+                read -p $'\e[1;31mEnter LUKS password (important!): \e[0m' -r luks_pass
                 echo -n "$luks_pass" > /tmp/secret.key
                 nix --extra-experimental-features nix-command --extra-experimental-features flakes run github:nix-community/disko -- --mode zap_create_mount "$FLAKE_ROOT"/hosts/laptop/disko_layout/multi-device-luks.nix
                 mkdir -p /mnt/etc/nixos
