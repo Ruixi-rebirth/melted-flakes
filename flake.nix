@@ -76,7 +76,7 @@
               category = "Tools";
             };
             disko = {
-              description = "Pre-install,automatically partition and moount ";
+              description = "Pre-install,automatically partition and mount";
               #TODO: Currently only available for my laptop, will be more flexible for other devices 
               exec = ''
                 set -e
