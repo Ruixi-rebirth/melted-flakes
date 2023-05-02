@@ -33,7 +33,8 @@
                 #to set user login password
                 passwd_hash=$(mkpasswd -m sha-512  2>/dev/null)
                 cd /mnt/etc/nixos/Flakes 
-                sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/{laptop,laptop_minimal}/{wayland,x11}/default.nix
+                sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/laptop/{wayland,x11}/default.nix && sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/laptop_minimal/default.nix
+
                 read -p  "device name: " -r device
                 nixos-install --no-root-passwd --flake .#"$device"
               '';
