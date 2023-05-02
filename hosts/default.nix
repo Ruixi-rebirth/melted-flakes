@@ -61,7 +61,7 @@ in
     inherit system;
     specialArgs = { inherit inputs user; };
     modules = [
-      ./laptop-minimal
+      ./laptop_minimal
     ] ++ [
       ./system.nix
     ] ++ [
