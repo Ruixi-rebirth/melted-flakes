@@ -29,6 +29,7 @@
               #TODO: Currently only available for my laptop, will be more flexible for other devices 
               exec = ''
                 set -e
+                echo "set your user login password"
                 #to set user login password
                 passwd_hash=$(mkpasswd -m sha-512  2>/dev/null)
                 cd /mnt/etc/nixos/Flakes 
@@ -77,13 +78,14 @@
                 read -p  "luks password(important!): " -r luks_pass 
                 echo -n "$luks_pass" > /tmp/secret.key
                 nix --extra-experimental-features nix-command --extra-experimental-features flakes run github:nix-community/disko -- --mode zap_create_mount "$FLAKE_ROOT"/hosts/laptop/disko_layout/multi-device-luks.nix
+                mkdir -p /mnt/etc/nixos
                 mkdir -p /mnt/nix/persist/etc/nixos
                 mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
                 nixos-generate-config --no-filesystems --root /mnt
                 cd /mnt/etc/nixos 
                 cp hardware-configuration.nix "$FLAKE_ROOT"/hosts/laptop/hardware-configuration.nix 
                 sed -i 's/imports\ =/imports\ = [(import\ .\/disko_layout\/multi-device-luks.nix)\ {}]++/g' "$FLAKE_ROOT"/hosts/laptop/hardware-configuration.nix
-                cp -r ../Flakes /mnt/etc/nixos  
+                cp -r "$FLAKE_ROOT" /mnt/etc/nixos  
                 lsblk
               '';
               category = "Tools";
