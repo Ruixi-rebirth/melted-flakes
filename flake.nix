@@ -83,7 +83,7 @@
                 mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
                 nixos-generate-config --no-filesystems --root /mnt
                 cd /mnt/etc/nixos 
-                cp hardware-configuration.nix "$FLAKE_ROOT"/hosts/{laptop,laptop_minimal}/hardware-configuration.nix 
+                cp hardware-configuration.nix "$FLAKE_ROOT"/hosts/laptop/hardware-configuration.nix && cp hardware-configuration.nix "$FLAKE_ROOT"/hosts/laptop_minimal/hardware-configuration.nix 
                 sed -i 's/imports\ =/imports\ = [(import\ .\/disko_layout\/multi-device-luks.nix\ {})]++/g' "$FLAKE_ROOT"/hosts/{laptop,laptop_minimal}/hardware-configuration.nix
                 cp -r "$FLAKE_ROOT" /mnt/etc/nixos  
                 lsblk
