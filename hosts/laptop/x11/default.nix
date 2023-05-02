@@ -78,6 +78,9 @@
         "/var/log"
         "/var/lib"
       ];
+      files = [
+        "/etc/machine-id"
+      ];
       users.${user} = {
         directories = [
           "Downloads"
@@ -102,7 +105,6 @@
         ];
         files = [
           ".npmrc"
-          "/etc/machine-id"
         ];
       };
     };

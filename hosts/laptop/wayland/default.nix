@@ -80,6 +80,9 @@
         "/var/lib"
         "/etc/secureboot"
       ];
+      files = [
+        "/etc/machine-id"
+      ];
       users.${user} = {
         directories = [
           "Downloads"
@@ -104,7 +107,6 @@
         ];
         files = [
           ".npmrc"
-          "/etc/machine-id"
         ];
       };
     };
