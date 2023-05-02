@@ -41,9 +41,9 @@
     supportedFilesystems = [ "ntfs" ];
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
     loader = {
+      bootspec.enable = true;
       systemd-boot = {
-        enable = lib.mkForce false; #lanzaboote
-        # enable = true;
+        enable = (lib.mkIf config.boot.lanzaboote.enable) lib.mkForce false; #lanzaboote
         consoleMode = "auto";
       };
       efi = {
@@ -52,7 +52,6 @@
       };
       timeout = 3;
     };
-    bootspec.enable = true;
     lanzaboote = {
       enable = true;
       pkiBundle = "/etc/secureboot";

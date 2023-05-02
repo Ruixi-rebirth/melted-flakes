@@ -33,7 +33,7 @@
                 #to set user login password
                 passwd_hash=$(mkpasswd -m sha-512  2>/dev/null)
                 cd /mnt/etc/nixos/Flakes 
-                sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/laptop/{wayland,x11}/default.nix
+                sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/{laptop,laptop_minimal}/{wayland,x11}/default.nix
                 read -p  "device name: " -r device
                 nixos-install --no-root-passwd --flake .#"$device"
               '';
@@ -83,8 +83,8 @@
                 mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
                 nixos-generate-config --no-filesystems --root /mnt
                 cd /mnt/etc/nixos 
-                cp hardware-configuration.nix "$FLAKE_ROOT"/hosts/laptop/hardware-configuration.nix 
-                sed -i 's/imports\ =/imports\ = [(import\ .\/disko_layout\/multi-device-luks.nix\ {})]++/g' "$FLAKE_ROOT"/hosts/laptop/hardware-configuration.nix
+                cp hardware-configuration.nix "$FLAKE_ROOT"/hosts/{laptop,laptop_minimal}/hardware-configuration.nix 
+                sed -i 's/imports\ =/imports\ = [(import\ .\/disko_layout\/multi-device-luks.nix\ {})]++/g' "$FLAKE_ROOT"/hosts/{laptop,laptop_minimal}/hardware-configuration.nix
                 cp -r "$FLAKE_ROOT" /mnt/etc/nixos  
                 lsblk
               '';
