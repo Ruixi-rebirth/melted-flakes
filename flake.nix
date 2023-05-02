@@ -12,6 +12,7 @@
       imports = [
         inputs.flake-root.flakeModule
         inputs.mission-control.flakeModule
+        inputs.treefmt-nix.flakeModule
       ];
       perSystem = { config, inputs', pkgs, system, lib, ... }:
         let
@@ -23,6 +24,11 @@
           };
         in
         {
+          treefmt.config = {
+            inherit (config.flake-root) projectRootFile;
+            package = pkgs.treefmt;
+            programs.nixpkgs-fmt.enable = true;
+          };
           mission-control.scripts = {
             install = {
               description = "Install NixOS";
@@ -58,8 +64,8 @@
               category = "Tools";
             };
             fmt = {
-              description = "Format the top-level Nix files(nixpkgs-fmt)";
-              exec = "${lib.getExe pkgs.nixpkgs-fmt} ./*.nix";
+              description = "Format the source tree";
+              exec = config.treefmt.build.wrapper;
               category = "Tools";
             };
             blog = {
@@ -153,6 +159,7 @@
       };
       flake-root.url = "github:srid/flake-root";
       mission-control.url = "github:Platonic-Systems/mission-control";
+      treefmt-nix.url = "github:numtide/treefmt-nix";
       emacs-overlay.url = "github:nix-community/emacs-overlay";
       lanzaboote = {
         url = "github:nix-community/lanzaboote";
