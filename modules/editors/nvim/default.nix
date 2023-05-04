@@ -1,21 +1,15 @@
 { config, lib, pkgs, ... }:
 
-let
-  install_lsp = pkgs.writeShellScriptBin "install_lsp" ''
-      #!/bin/bash 
-    if [ ! -d ~/.npm-global ]; then  
-             mkdir ~/.npm-global
-             npm set prefix ~/.npm-global
-      else 
-             npm set prefix ~/.npm-global
-    fi
-    npm i -g npm vscode-langservers-extracted typescript typescript-language-server bash-language-server
-  '';
-in
 {
+  nixpkgs.config = {
+    programs.npm.npmrc = ''
+      prefix = ''${HOME}/.npm-global
+    '';
+  };
   programs = {
     neovim = {
       enable = true;
+      viAlias = true;
       withPython3 = true;
       withNodeJs = true;
       extraPackages = [
@@ -28,7 +22,10 @@ in
   home = {
     packages = with pkgs; [
       #-- LSP --#
-      install_lsp
+      nodePackages_latest.typescript
+      nodePackages_latest.typescript-language-server
+      nodePackages_latest.vscode-langservers-extracted
+      nodePackages_latest.bash-language-server
       rnix-lsp
       lua-language-server
       gopls
