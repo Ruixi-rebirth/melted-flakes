@@ -23,7 +23,7 @@ while true; do
     echo "2. single-device-luks"
     echo "3. multi-device"
     echo "4. multi-device-luks"
-    read -p "Enter your choice(number): " choice
+    read -p $'\e[1;32mEnter your choice(number): \e[0m' choice
 
     case $choice in
         1)
