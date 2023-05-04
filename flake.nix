@@ -36,34 +36,22 @@
           mission-control.scripts = {
             Install = {
               description = "Install NixOS";
-              #TODO: Currently only available for my laptop, will be more flexible for other devices 
-              exec = ''
-                set -e
-                echo $'\e[1;32mset your user login password\e[0m'
-                #to set user login password
-                passwd_hash=$(mkpasswd -m sha-512  2>/dev/null)
-                cd /mnt/etc/nixos/Flakes 
-                sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/laptop/{wayland,x11}/default.nix && sed -i "/initialHashedPassword/c\ \ \ \ initialHashedPassword\ =\ \"$passwd_hash\";" ./hosts/laptop_minimal/default.nix
-                read -p  $'\e[1;32mEnter device name: \e[0m' -r device
-                nixos-install --no-root-passwd --flake .#"$device"
-              '';
+              exec = "sh ./scripts/install.sh";
               category = "Tools";
             };
             update = {
               description = "Update flake inputs what you want,Please check ./flake-update.sh";
-              exec = "sh ./flake-update.sh";
+              exec = "sh ./scripts/flake-update.sh";
               category = "Tools";
             };
             rebuild = {
               description = "Switch to new profile";
-              exec = ''
-                read -p  $'\e[1;32mEnter device name: \e[0m' -r device
-                doas nixos-rebuild switch --flake .#"$device"'';
+              exec = "sh ./scripts/rebuild.sh";
               category = "Tools";
             };
             deploy = {
               description = "Remote deployment or local deployment";
-              exec = "sh deploy.sh";
+              exec = "sh ./scriptsdeploy.sh";
               category = "Tools";
             };
             fmt = {
@@ -81,23 +69,7 @@
             };
             disko = {
               description = "Pre-install,automatically partition and mount";
-              #TODO: Currently only available for my laptop, will be more flexible for other devices 
-              exec = ''
-                set -e
-                #to set luks password
-                read -p $'\e[1;31mEnter LUKS password (important!): \e[0m' -r luks_pass
-                echo -n "$luks_pass" > /tmp/secret.key
-                nix --extra-experimental-features nix-command --extra-experimental-features flakes run github:nix-community/disko -- --mode zap_create_mount "$FLAKE_ROOT"/hosts/laptop/disko_layout/multi-device-luks.nix
-                mkdir -p /mnt/etc/nixos
-                mkdir -p /mnt/nix/persist/etc/nixos
-                mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
-                nixos-generate-config --no-filesystems --root /mnt
-                cd /mnt/etc/nixos 
-                cp hardware-configuration.nix "$FLAKE_ROOT"/hosts/laptop/hardware-configuration.nix && cp hardware-configuration.nix "$FLAKE_ROOT"/hosts/laptop_minimal/hardware-configuration.nix 
-                sed -i 's/imports\ =/imports\ = [(import\ .\/disko_layout\/multi-device-luks.nix\ {})]++/g' "$FLAKE_ROOT"/hosts/{laptop,laptop_minimal}/hardware-configuration.nix
-                cp -r "$FLAKE_ROOT" /mnt/etc/nixos  
-                lsblk
-              '';
+              exec = "sh ./scripts/disko.sh";
               category = "Tools";
             };
           };
