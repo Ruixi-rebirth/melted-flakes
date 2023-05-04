@@ -51,7 +51,7 @@
             };
             deploy = {
               description = "Remote deployment or local deployment";
-              exec = "sh ./scriptsdeploy.sh";
+              exec = "sh ./scripts/deploy.sh";
               category = "Tools";
             };
             fmt = {
