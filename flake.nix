@@ -35,12 +35,12 @@
           };
           mission-control.scripts = {
             Install = {
-              description = "Install NixOS";
+              description = "After partitioning, formal installation of nixos";
               exec = "sh ./scripts/install.sh";
               category = "Tools";
             };
             update = {
-              description = "Update flake inputs what you want,Please check ./flake-update.sh";
+              description = "Update flake inputs what you want,Please check ./scripts/flake-update.sh";
               exec = "sh ./scripts/flake-update.sh";
               category = "Tools";
             };
