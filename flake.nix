@@ -28,6 +28,10 @@
             inherit (config.flake-root) projectRootFile;
             package = pkgs.treefmt;
             programs.nixpkgs-fmt.enable = true;
+            programs.beautysh = {
+              enable = true;
+              indent_size = 4;
+            };
           };
           mission-control.scripts = {
             Install = {

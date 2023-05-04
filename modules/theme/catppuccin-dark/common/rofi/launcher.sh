@@ -8,7 +8,7 @@ dir="$HOME/.config/rofi"
 # FG="#BF616A"
 # SELECT="#1E1E2E"
 # ACCENT="#24273A"
-# 
+#
 ALPHA="#00000000"
 BG="#1E1E2E"
 FG="#1A1B26"

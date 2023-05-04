@@ -1,3 +1,9 @@
+function trap_ctrlc {
+    echo "Ctrl-C caught...exiting."
+    exit 1
+}
+trap "trap_ctrlc" 2
+
 flake_input=(
     colmena
     disko
@@ -17,9 +23,10 @@ flake_input=(
     lanzaboote
     rust-overlay
     neovim-nightly-overlay
+    treefmt-nix
 )
 for item in "${flake_input[@]}"
 do
-    echo "$item:"
+    echo -e "\033[1;34m${item}: \033[0m"
     nix flake lock --update-input "$item"
 done
