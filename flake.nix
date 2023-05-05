@@ -79,13 +79,13 @@
             #Temporarily enable experimental features, run by`nix develop --extra-experimental-features nix-command --extra-experimental-features flakes`
             # default = import ./shell.nix { inherit pkgs; };
             default = pkgs.mkShell {
-              nativeBuildInputs = with pkgs; [ git neovim colmena sbctl ];
+              nativeBuildInputs = with pkgs; [ git neovim sbctl ];
               inputsFrom = [
                 config.flake-root.devShell
                 config.mission-control.devShell
               ];
             };
-            #run ny `nix devShell .#<name>`
+            #run by `nix devShell .#<name>`
             secret = with pkgs; mkShell {
               name = "secret";
               nativeBuildInputs = [
@@ -143,10 +143,6 @@
         inputs.rust-overlay.follows = "rust-overlay";
       };
       disko.url = "github:nix-community/disko";
-      colmena = {
-        url = "github:zhaofengli/colmena";
-        inputs.nixpkgs.follows = "nixpkgs";
-      };
     };
 
 }

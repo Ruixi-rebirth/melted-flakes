@@ -5,7 +5,6 @@ function trap_ctrlc {
 trap "trap_ctrlc" 2
 
 flake_input=(
-    colmena
     disko
     emacs-overlay
     flake-parts
