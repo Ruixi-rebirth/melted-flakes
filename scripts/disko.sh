@@ -16,7 +16,7 @@ function ask {
         fi
     done
 }
-# Select the disc partition layout and edit it
+# Select the disk partition layout and edit it
 while true; do
     echo "Please select a disk partition layout:"
     echo "1. single-device"
@@ -65,7 +65,7 @@ cd /mnt/etc/nixos
 cp hardware-configuration.nix "$FLAKE_ROOT"/hosts/laptop/hardware-configuration.nix && cp hardware-configuration.nix "$FLAKE_ROOT"/hosts/laptop_minimal/hardware-configuration.nix
 # To truncate characters, simplify the following sed command
 layout=.${partition_layout#$FLAKE_ROOT/hosts/laptop}
-sed  "/imports\ =/cimports\ = [(import\ $layout\ {})]++" "$FLAKE_ROOT"/hosts/{laptop,laptop_minimal}/hardware-configuration.nix
+sed -i "/imports\ =/cimports\ = [(import\ $layout\ {})]++" "$FLAKE_ROOT"/hosts/{laptop,laptop_minimal}/hardware-configuration.nix
 cp -r "$FLAKE_ROOT" /mnt/etc/nixos
 lsblk
 
