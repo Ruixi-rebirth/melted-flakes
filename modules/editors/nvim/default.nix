@@ -27,6 +27,7 @@
       nodePackages_latest.vscode-langservers-extracted
       nodePackages_latest.bash-language-server
       rnix-lsp
+      nil
       lua-language-server
       gopls
       pyright
