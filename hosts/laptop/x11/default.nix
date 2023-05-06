@@ -1,4 +1,4 @@
-{ config, pkgs, user, inputs, ... }:
+{ config, pkgs, user, inputs, lib, ... }:
 
 {
   imports =
@@ -97,6 +97,7 @@
           "Flakes"
           "Kvm"
           ".cabal"
+          ".cargo"
           { directory = ".gnupg"; mode = "0700"; }
           { directory = ".ssh"; mode = "0700"; }
           ".local"
