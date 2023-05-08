@@ -21,6 +21,7 @@ flake_input=(
     sops-nix
     lanzaboote
     rust-overlay
+    nil
     neovim-nightly-overlay
     treefmt-nix
 )

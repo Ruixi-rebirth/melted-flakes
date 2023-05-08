@@ -117,6 +117,7 @@
       nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
       neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
       rust-overlay.url = "github:oxalica/rust-overlay";
+      nil.url = "github:oxalica/nil";
       impermanence.url = "github:nix-community/impermanence";
       nur.url = "github:nix-community/NUR";
       hyprpicker.url = "github:hyprwm/hyprpicker";
