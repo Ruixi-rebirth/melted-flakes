@@ -85,7 +85,7 @@
                 config.mission-control.devShell
               ];
             };
-            #run by `nix devShell .#<name>`
+            #run by `nix develop .#<name>`
             secret = with pkgs; mkShell {
               name = "secret";
               nativeBuildInputs = [
