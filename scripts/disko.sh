@@ -68,8 +68,3 @@ layout=.${partition_layout#$FLAKE_ROOT/hosts/laptop}
 sed -i "/imports\ =/cimports\ = [(import\ $layout\ {})]++" "$FLAKE_ROOT"/hosts/{laptop,laptop_minimal}/hardware-configuration.nix
 cp -r "$FLAKE_ROOT" /mnt/etc/nixos
 lsblk
-
-
-
-
-
