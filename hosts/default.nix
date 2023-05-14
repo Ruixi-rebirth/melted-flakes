@@ -47,8 +47,7 @@ in
               inputs.neovim-nightly-overlay.overlay
               inputs.rust-overlay.overlays.default
               inputs.picom.overlays.default
-              # inputs.lanzaboote.nixosModules.lanzaboote
-              # inputs.disko.nixosModules.disko
+              inputs.nil.overlays.default
               (import inputs.emacs-overlay)
             ]
             ++ (import ../overlays);

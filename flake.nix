@@ -144,6 +144,7 @@
         inputs.rust-overlay.follows = "rust-overlay";
       };
       disko.url = "github:nix-community/disko";
+      emanote.url = "github:srid/emanote";
     };
 
 }
