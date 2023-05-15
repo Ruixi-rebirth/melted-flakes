@@ -169,6 +169,15 @@ return {
 		})
 		nvim_lsp.nil_ls.setup({
 			on_attach = on_attach,
+			settings = {
+				["nil"] = {
+					nix = {
+						flake = {
+							autoArchive = true,
+						},
+					},
+				},
+			},
 		})
 		nvim_lsp.hls.setup({})
 

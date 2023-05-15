@@ -8,7 +8,7 @@
       selfPkgs = import ./pkgs;
     in
     flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [ "x86_64-linux" ];
+      systems = nixpkgs.lib.systems.flakeExposed;
       imports = [
         inputs.flake-root.flakeModule
         inputs.mission-control.flakeModule
