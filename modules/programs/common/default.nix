@@ -13,4 +13,5 @@
   ./kitty
   ./youtube-tui
   ./aliyun-cli
+  ./emanote
 ]

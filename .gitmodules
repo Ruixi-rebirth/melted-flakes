@@ -1,0 +1,3 @@
+[submodule "blog"]
+	path = blog
+	url = git@github.com:Ruixi-rebirth/Ruixi-rebirth.git

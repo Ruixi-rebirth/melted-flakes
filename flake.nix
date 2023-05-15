@@ -81,7 +81,11 @@
             #Temporarily enable experimental features, run by`nix develop --extra-experimental-features nix-command --extra-experimental-features flakes`
             # default = import ./shell.nix { inherit pkgs; };
             default = pkgs.mkShell {
-              nativeBuildInputs = with pkgs; [ git neovim sbctl ];
+              nativeBuildInputs = with pkgs; [
+                git
+                neovim
+                sbctl
+              ];
               inputsFrom = [
                 config.flake-root.devShell
                 config.mission-control.devShell

@@ -4,4 +4,5 @@ nixpkgs/
 blog/resources/
 blog/.hugo_build.lock
 blog/.gitmodules
+blog.bak
 !.gitkeep
