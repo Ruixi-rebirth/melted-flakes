@@ -1,6 +1,8 @@
 {
   description = "My Personal NixOS Configuration";
 
+  nixConfig = { };
+
   outputs = inputs @ { self, nixpkgs, flake-parts, ... }:
     let
       user = "ruixi";

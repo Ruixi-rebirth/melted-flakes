@@ -1,5 +1,6 @@
 [
-  ./fish/fish.nix
-  ./git.nix
-  ./bash.nix
+  ./fish
+  ./git
+  ./bash
+  ./nushell
 ]
