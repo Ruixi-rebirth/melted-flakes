@@ -21,7 +21,7 @@ return {
 				--number_style = "superscript" | "subscript" | "" | { "none", "subscript" }, -- buffer_id at index 1, ordinal at index 2
 				close_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
 				indicator_style = "▎",
-				buffer_close_icon = "",
+				buffer_close_icon = "",
 				modified_icon = "●",
 				close_icon = "",
 				left_trunc_marker = "",

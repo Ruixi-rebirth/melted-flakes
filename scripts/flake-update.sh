@@ -24,6 +24,7 @@ flake_input=(
     nil
     neovim-nightly-overlay
     treefmt-nix
+    emanote
 )
 for item in "${flake_input[@]}"
 do

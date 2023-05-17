@@ -188,7 +188,7 @@
           "on-click" = "wallpaper_random";
           "on-click-middle" = "default_wall";
           "on-click-right" = "killall dynamic_wallpaper || dynamic_wallpaper &";
-          "format" = " ﴔ ";
+          "format" = " 󰠖 ";
           "tooltip" = false;
         };
         "custom/cava-internal" = {
@@ -204,8 +204,8 @@
         "idle_inhibitor" = {
           "format" = "{icon}";
           "format-icons" = {
-            "activated" = "";
-            "deactivated" = "";
+            "activated" = "";
+            "deactivated" = "";
           };
           "tooltip" = false;
         };
@@ -214,12 +214,12 @@
           "on-scroll-up" = "light -A 5";
           "on-scroll-down" = "light -U 5";
           "format" = "{icon} {percent}%";
-          "format-icons" = [ "" "" "" "" ];
+          "format-icons" = [ "󰃝" "󰃞" "󰃟" "󰃠" ];
         };
         "pulseaudio" = {
           "scroll-step" = 1;
           "format" = "{icon} {volume}%";
-          "format-muted" = "婢 Muted";
+          "format-muted" = "󰖁 Muted";
           "format-icons" = {
             "default" = [ "" "" "" ];
           };
@@ -236,9 +236,9 @@
             "critical" = 10;
           };
           "format" = "{icon} {capacity}%";
-          "format-icons" = [ "" "" "" "" "" "" "" "" "" ];
+          "format-icons" = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" ];
           "format-full" = "{icon} {capacity}%";
-          "format-charging" = " {capacity}%";
+          "format-charging" = "󰂄 {capacity}%";
           "tooltip" = false;
         };
         "clock" = {
@@ -250,14 +250,14 @@
         };
         "memory" = {
           "interval" = 1;
-          "format" = "﬙ {percentage}%";
+          "format" = "󰍛 {percentage}%";
           "states" = {
             "warning" = 85;
           };
         };
         "cpu" = {
           "interval" = 1;
-          "format" = " {usage}%";
+          "format" = "󰻠 {usage}%";
         };
         "mpd" = {
           "max-length" = 25;
@@ -274,11 +274,11 @@
           "tooltip-format" = "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})";
         };
         "network" = {
+          "format-disconnected" = "󰯡 Disconnected";
+          "format-ethernet" = "󰀂 {ifname} ({ipaddr})";
+          "format-linked" = "󰖪 {essid} (No IP)";
+          "format-wifi" = "󰖩 {essid}";
           "interval" = 1;
-          "format-wifi" = "說 {essid}";
-          "format-ethernet" = "  {ifname} ({ipaddr})";
-          "format-linked" = "說 {essid} (No IP)";
-          "format-disconnected" = "說 Disconnected";
           "tooltip" = false;
         };
         "temperature" = {
@@ -307,28 +307,17 @@
               "device": "intel_backlight",
               "format": "{icon} {percent}%",
               "format-icons": [
-                "",
-                "",
-                "",
-                ""
+                "󰃝", "󰃞", "󰃟", "󰃠"
               ],
               "on-scroll-down": "light -U 5",
               "on-scroll-up": "light -A 5"
             },
             "battery": {
               "format": "{icon} {capacity}%",
-              "format-charging": " {capacity}%",
+              "format-charging": "󰂄 {capacity}%",
               "format-full": "{icon} {capacity}%",
               "format-icons": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
+                "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂",
               ],
               "interval": 10,
               "states": {
@@ -344,7 +333,7 @@
               "tooltip-format": "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>"
             },
             "cpu": {
-              "format": " {usage}%",
+              "format": "󰻠 {usage}%",
               "interval": 1
             },
             "custom/cava-internal": {
@@ -360,7 +349,7 @@
               "on-click": "wallpaper_random",
               "on-click-middle": "default_wall",
               "on-click-right": "killall dynamic_wallpaper || dynamic_wallpaper &",
-              "format": " ﴔ ",
+              "format": " 󰠖 ",
               "tooltip": false
             },
             "custom/powermenu": {
@@ -371,14 +360,14 @@
             "idle_inhibitor": {
               "format": "{icon}",
               "format-icons": {
-                "activated": "",
-                "deactivated": ""
+                "activated": "",
+                "deactivated": ""
               },
               "tooltip": false
             },
             "layer": "top",
             "memory": {
-              "format": "﬙ {percentage}%",
+              "format": "󰍛 {percentage}%",
               "interval": 1,
               "states": {
                 "warning": 85
@@ -421,13 +410,13 @@
               "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
             },
             "network": {
-              "format-disconnected": "說 Disconnected",
-              "format-ethernet": "  {ifname} ({ipaddr})",
-              "format-linked": "說 {essid} (No IP)",
-              "format-wifi": "說 {essid}",
               "interval": 1,
-              "tooltip": false
-            },
+              "format-wifi": "󰖩 {essid}",
+              "format-ethernet": "󰀂  {ifname} ({ipaddr})",
+              "format-linked": "󰖪 {essid} (No IP)",
+              "format-disconnected": "󰯡 Disconnected",
+              "tooltip": false,
+            };
             "position": "top",
             "pulseaudio": {
               "format": "{icon} {volume}%",
@@ -438,7 +427,7 @@
                   ""
                 ]
               },
-              "format-muted": "婢 Muted",
+              "format-muted": "󰖁 Muted",
               "on-click": "pamixer -t",
               "scroll-step": 1,
               "states": {
@@ -611,28 +600,17 @@
               "device": "intel_backlight",
               "format": "{icon} {percent}%",
               "format-icons": [
-                "",
-                "",
-                "",
-                ""
+                "󰃝", "󰃞", "󰃟", "󰃠"
               ],
               "on-scroll-down": "light -U 5",
               "on-scroll-up": "light -A 5"
             },
             "battery": {
               "format": "{icon} {capacity}%",
-              "format-charging": " {capacity}%",
+              "format-charging": "󰂄 {capacity}%",
               "format-full": "{icon} {capacity}%",
               "format-icons": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
+              "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"
               ],
               "interval": 10,
               "states": {
@@ -648,7 +626,7 @@
               "tooltip-format": "上午：高数\n下午：Ps\n晚上：Golang\n<tt>{calendar}</tt>"
             },
             "cpu": {
-              "format": " {usage}%",
+              "format": "󰻠 {usage}%",
               "interval": 1
             },
             "custom/cava-internal": {
@@ -664,7 +642,7 @@
               "on-click": "wallpaper_random",
               "on-click-middle": "default_wall",
               "on-click-right": "killall dynamic_wallpaper || dynamic_wallpaper &",
-              "format": " ﴔ ",
+              "format": " 󰠖 ",
               "tooltip": false
             },
             "custom/powermenu": {
@@ -675,14 +653,14 @@
             "idle_inhibitor": {
               "format": "{icon}",
               "format-icons": {
-                "activated": "",
-                "deactivated": ""
+                "activated": "",
+                "deactivated": ""
               },
               "tooltip": false
             },
             "layer": "top",
             "memory": {
-              "format": "﬙ {percentage}%",
+              "format": "󰍛 {percentage}%",
               "interval": 1,
               "states": {
                 "warning": 85
@@ -725,10 +703,10 @@
               "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
             },
             "network": {
-              "format-disconnected": "說 Disconnected",
-              "format-ethernet": "  {ifname} ({ipaddr})",
-              "format-linked": "說 {essid} (No IP)",
-              "format-wifi": "說 {essid}",
+              "format-disconnected": "󰯡 Disconnected",
+              "format-ethernet": "󰀂 {ifname} ({ipaddr})",
+              "format-linked": "󰖪 {essid} (No IP)",
+              "format-wifi": "󰖩 {essid}",
               "interval": 1,
               "tooltip": false
             },
@@ -742,7 +720,7 @@
                   ""
                 ]
               },
-              "format-muted": "婢 Muted",
+              "format-muted": "󰖁 Muted",
               "on-click": "pamixer -t",
               "scroll-step": 1,
               "states": {
