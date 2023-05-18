@@ -64,9 +64,11 @@
             blog = {
               description = "Debug my blog";
               exec = ''
+                git submodule update --init --recursive
                 cd "$FLAKE_ROOT"/blog
-                cp -r ./static/hugo-theme-stack ./themes/
-                ${lib.getExe pkgs.hugo} server --buildDrafts --forceSyncStatic'';
+                git checkout master
+                emanote -L ./.
+              '';
               category = "Tools";
             };
             disko = {
