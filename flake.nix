@@ -64,7 +64,7 @@
             blog = {
               description = "Debug my blog";
               exec = ''
-                if [ "`ls -A blog`" = "" ]; then  
+                if [ "$(ls -A blog)" = "" ]; then  
                   git submodule update --init --recursive
                 fi
 
