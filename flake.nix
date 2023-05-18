@@ -64,7 +64,10 @@
             blog = {
               description = "Debug my blog";
               exec = ''
-                git submodule update --init --recursive
+                if [ "`ls -A blog`" = "" ]; then  
+                  git submodule update --init --recursive
+                fi
+
                 cd "$FLAKE_ROOT"/blog
                 git checkout master
                 emanote -L ./.
