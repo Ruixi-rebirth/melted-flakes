@@ -10,6 +10,12 @@
         fi
       '';
     };
+    fish = {
+      loginShellInit = ''
+        set TTY1 (tty)
+        [ "$TTY1" = "/dev/tty1" ] && exec sway --unsupported-gpu
+      '';
+    };
   };
   systemd.user = {
     targets.sway-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
@@ -235,8 +241,8 @@
       # Key bindings --#
       #----------------#
           # Start a terminal
-          bindsym $mod+Return exec $term fish
-          bindsym $mod+Shift+Return exec kitty --class="termfloat" fish
+          bindsym $mod+Return exec $term
+          bindsym $mod+Shift+Return exec kitty --class="termfloat"
 
 
           # quick start some applications

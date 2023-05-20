@@ -5,8 +5,8 @@
       enable = true;
       keybindings = {
         #use ` xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }' ` will get the key name
-        "alt + Return" = "kitty fish";
-        "alt + shift + Return" = "kitty --class='termfloat' fish";
+        "alt + Return" = "kitty";
+        "alt + shift + Return" = "kitty --class='termfloat'";
         "alt + Escape" = "pkill -USER1 -x sxhkd";
         "alt + shift + p" = "bspc node -c";
         "alt + shift + {q,r}" = "bspc {quit,wm -r}";

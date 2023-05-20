@@ -12,6 +12,12 @@
         fi
       '';
     };
+    fish = {
+      loginShellInit = ''
+        set TTY1 (tty)
+        [ "$TTY1" = "/dev/tty1" ] && exec Hyprland
+      '';
+    };
   };
   systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
   wayland.windowManager.hyprland = {
@@ -147,8 +153,8 @@
         sensitivity = -0.5
       }
 
-      bind = $mainMod, Return, exec, kitty fish
-      bind = $mainMod SHIFT, Return, exec, kitty --class="termfloat" fish
+      bind = $mainMod, Return, exec, kitty
+      bind = $mainMod SHIFT, Return, exec, kitty --class="termfloat"
       bind = $mainMod SHIFT, P, killactive,
       bind = $mainMod SHIFT, Q, exit,
       bind = $mainMod SHIFT, Space, togglefloating,
