@@ -221,7 +221,7 @@
             "critical" = 10;
           };
           "format" = "{icon} {capacity}%";
-          "format-icons" = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" ];
+          "format-icons" = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
           "format-full" = "{icon} {capacity}%";
           "format-charging" = "󰂄 {capacity}%";
           "tooltip" = false;
@@ -301,7 +301,7 @@
               "format-charging": "󰂄 {capacity}%",
               "format-full": "{icon} {capacity}%",
               "format-icons": [
-                "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂",
+                "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
               ],
               "interval": 10,
               "states": {
@@ -591,7 +591,7 @@
               "format-charging": "󰂄 {capacity}%",
               "format-full": "{icon} {capacity}%",
               "format-icons": [
-              "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"
+              "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂","󰁹"
               ],
               "interval": 10,
               "states": {
