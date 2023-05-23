@@ -11,7 +11,7 @@ while true; do
             doas nixos-rebuild switch --flake .#laptop;
             break ;;
         2)
-            doas nixos-rebuild switch --flake .#laptop_minimal;
+            doas nixos-rebuild switch --flake .#laptop-minimal;
             break ;;
         *)
             echo "Invalid choice, please try again."
