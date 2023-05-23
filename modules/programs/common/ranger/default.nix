@@ -1,6 +1,11 @@
 { lib, pkgs, user, ... }:
 
 {
+  home = {
+    packages = with pkgs; [
+      joshuto
+    ];
+  };
   home.file.".config/ranger/colorschemes".source = ./colorschemes;
   home.file.".config/ranger/commands.py".source = ./commands.py;
   home.file.".config/ranger/commands_full.py".source = ./commands_full.py;

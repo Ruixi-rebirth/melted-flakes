@@ -49,6 +49,7 @@ in
               inputs.rust-overlay.overlays.default
               inputs.picom.overlays.default
               inputs.nil.overlays.default
+              inputs.joshuto.overlays.default
               (import inputs.emacs-overlay)
             ]
             ++ (import ../overlays);

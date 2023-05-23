@@ -156,6 +156,7 @@
       };
       disko.url = "github:nix-community/disko";
       emanote.url = "github:srid/emanote";
+      joshuto.url = "github:Ruixi-rebirth/joshuto";
     };
 
 }

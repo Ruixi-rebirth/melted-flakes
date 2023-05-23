@@ -41,7 +41,7 @@
       p7zip
       atool
       unzip
-      ranger
+      joshuto
       ffmpeg
       ffmpegthumbnailer
       glib
