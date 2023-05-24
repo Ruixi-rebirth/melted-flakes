@@ -5,7 +5,6 @@
   ./music
   ./neofetch
   ./obs-studio
-  # ./ranger
   ./joshuto
   ./resource_monitor
   ./search

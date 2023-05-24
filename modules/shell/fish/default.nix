@@ -9,7 +9,6 @@
   home.file.".config/fish/fish_variables".text = import ./fish_variables.nix;
   home.file.".config/fish/functions/l.fish".text = import ./functions/l.nix;
   home.file.".config/fish/functions/n.fish".text = import ./functions/n.nix;
-  home.file.".config/fish/functions/r.fish".text = import ./functions/r.nix;
   home.file.".config/fish/functions/j.fish".text = import ./functions/j.nix;
   home.file.".config/fish/functions/ls.fish".text = import ./functions/ls.nix;
   home.file.".config/fish/functions/nf.fish".text = import ./functions/nf.nix;
