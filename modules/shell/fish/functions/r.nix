@@ -1,5 +1,5 @@
 ''
-  function j
+  function r
       joshuto $argv
   end
 ''
