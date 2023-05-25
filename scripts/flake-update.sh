@@ -25,6 +25,7 @@ flake_input=(
     neovim-nightly-overlay
     treefmt-nix
     emanote
+    joshuto
 )
 for item in "${flake_input[@]}"
 do

@@ -399,7 +399,7 @@
               "format-linked": "󰖪 {essid} (No IP)",
               "format-disconnected": "󰯡 Disconnected",
               "tooltip": false,
-            };
+            },
             "position": "top",
             "pulseaudio": {
               "format": "{icon} {volume}%",
