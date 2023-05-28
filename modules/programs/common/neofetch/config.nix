@@ -3,13 +3,13 @@
   {
       info title
       info underline
-      info " " distro
-      info " " kernel
-      info " " packages
+      info " " distro
+      info " " kernel
+      info " " packages
       info " " de
       info " " wm
-      info " " memory
-      info " " uptime
+      info "󰍛 " memory
+      info "󰔟 " uptime
       info cols
   }
   title_fqdn="off"
