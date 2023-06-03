@@ -154,6 +154,7 @@
       disko.url = "github:nix-community/disko";
       emanote.url = "github:srid/emanote";
       joshuto.url = "github:kamiyaa/joshuto";
+      nixd.url = "github:nix-community/nixd";
     };
 
 }

@@ -26,6 +26,7 @@ flake_input=(
     treefmt-nix
     emanote
     joshuto
+    nixd
 )
 for item in "${flake_input[@]}"
 do
