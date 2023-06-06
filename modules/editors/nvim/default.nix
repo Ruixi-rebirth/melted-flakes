@@ -28,7 +28,7 @@
       nodePackages_latest.bash-language-server
       rnix-lsp
       nil
-      nixd
+      # nixd
       lua-language-server
       gopls
       pyright

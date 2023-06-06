@@ -179,10 +179,20 @@ return {
 				},
 			},
 		})
-		nvim_lsp.nixd.setup({
-			on_attach = on_attach,
-			settings = {},
-		})
+		--[[ nvim_lsp.nixd.setup({ ]]
+		--[[ 	on_attach = on_attach, ]]
+		--[[ 	settings = { ]]
+		--[[ 		["nixd"] = { ]]
+		--[[ 			installable = { ]]
+		--[[ 				args = { ]]
+		--[[ 					"--expr", ]]
+		--[[ 					"with import <nixpkgs> { }; callPackage /home/ruixi/some-package.nix { }", ]]
+		--[[ 				}, ]]
+		--[[ 				installable = "", ]]
+		--[[ 			}, ]]
+		--[[ 		}, ]]
+		--[[ 	}, ]]
+		--[[ }) ]]
 		nvim_lsp.hls.setup({})
 
 		-- ebuild Syntastic(install dev-util/pkgcheck)
@@ -192,7 +202,7 @@ return {
 		-- UI --
 		--------
 		--Change diagnostic symbols in the sign column (gutter)
-		local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+		local signs = { Error = "", Warn = " ", Hint = " ", Info = " " }
 		for type, icon in pairs(signs) do
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })

@@ -223,9 +223,6 @@
           "format-icons" = {
             "default" = [ "" "" "" ];
           };
-          "states" = {
-            "warning" = 85;
-          };
           "on-click" = "pamixer -t";
           "tooltip" = false;
         };
@@ -430,9 +427,6 @@
               "format-muted": "󰖁 Muted",
               "on-click": "pamixer -t",
               "scroll-step": 1,
-              "states": {
-                "warning": 85
-              },
               "tooltip": false
             },
             "temperature": {
@@ -723,9 +717,6 @@
               "format-muted": "󰖁 Muted",
               "on-click": "pamixer -t",
               "scroll-step": 1,
-              "states": {
-                "warning": 85
-              },
               "tooltip": false
             },
             "temperature": {
