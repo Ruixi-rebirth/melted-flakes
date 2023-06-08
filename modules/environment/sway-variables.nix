@@ -17,13 +17,14 @@
       QT_QPA_PLATFORM = "wayland";
       QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
       WLR_DRM_DEVICES = "/dev/dri/card1:/dev/dri/card0";
-      # WLR_NO_HARDWARE_CURSORS = "1"; # if no cursor,uncomment this line  
+      WLR_NO_HARDWARE_CURSORS = "1"; # if no cursor,uncomment this line  
+      WLR_RENDERER_ALLOW_SOFTWARE = "1";
       # GBM_BACKEND = "nvidia-drm";
       CLUTTER_BACKEND = "wayland";
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-      #WLR_RENDERER = "vulkan";
+      WLR_RENDERER = "vulkan";
       LIBVA_DRIVER_NAME = "nvidia";
-      #__NV_PRIME_RENDER_OFFLOAD="1";
+      __NV_PRIME_RENDER_OFFLOAD = "1";
 
       XDG_CURRENT_DESKTOP = "sway";
       XDG_SESSION_DESKTOP = "sway";
