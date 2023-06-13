@@ -24,7 +24,7 @@
       __GLX_VENDOR_LIBRARY_NAME = "nvidia";
       WLR_RENDERER = "vulkan";
       LIBVA_DRIVER_NAME = "nvidia";
-      __NV_PRIME_RENDER_OFFLOAD = "1";
+      # __NV_PRIME_RENDER_OFFLOAD = "1";
 
       XDG_CURRENT_DESKTOP = "sway";
       XDG_SESSION_DESKTOP = "sway";

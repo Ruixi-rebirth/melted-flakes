@@ -164,21 +164,21 @@ return {
 			cmd = { "bash-language-server", "start" },
 		})
 
-		nvim_lsp.rnix.setup({
-			on_attach = on_attach,
-		})
-		nvim_lsp.nil_ls.setup({
-			on_attach = on_attach,
-			settings = {
-				["nil"] = {
-					nix = {
-						flake = {
-							autoArchive = true,
-						},
-					},
-				},
-			},
-		})
+		--nvim_lsp.rnix.setup({
+		--	on_attach = on_attach,
+		--})
+		--nvim_lsp.nil_ls.setup({
+		--	on_attach = on_attach,
+		--	settings = {
+		--		["nil"] = {
+		--			nix = {
+		--				flake = {
+		--					autoArchive = true,
+		--				},
+		--			},
+		--		},
+		--	},
+		--})
 
 		nvim_lsp.nixd.setup({
 			on_attach = on_attach,
@@ -198,9 +198,9 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 		end
 		vim.diagnostic.config({
-			-- virtual_text = {
-			-- 	source = "always", -- Or "if_many"
-			-- },
+			--virtual_text = {
+			--	source = "always", -- Or "if_many"
+			--},
 			virtual_text = false,
 			signs = true,
 			underline = true,
@@ -209,6 +209,25 @@ return {
 			float = {
 				source = "always", -- Or "if_many"
 			},
+		})
+
+		-- show diagnostics on save
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = { "nix" },
+			callback = function(args)
+				vim.api.nvim_create_autocmd("DiagnosticChanged", {
+					buffer = args.buf,
+					callback = function()
+						vim.diagnostic.hide()
+					end,
+				})
+				vim.api.nvim_create_autocmd("BufWritePost", {
+					buffer = args.buf,
+					callback = function()
+						vim.diagnostic.show()
+					end,
+				})
+			end,
 		})
 	end,
 }
