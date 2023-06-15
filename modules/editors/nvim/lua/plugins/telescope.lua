@@ -1,22 +1,18 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	keys = {
-		{ "<Leader>e", "<cmd>Telescope<CR>", desc = "telescope" },
+		{ "<Leader>t", "<cmd>Telescope<CR>", desc = "telescope" },
 	},
-	dependencies = { "nvim-telescope/telescope-media-files.nvim" },
 	config = function()
 		local status_ok, telescope = pcall(require, "telescope")
 		if not status_ok then
 			return
 		end
 
-		telescope.load_extension("media_files")
-
 		local actions = require("telescope.actions")
 
 		telescope.setup({
 			defaults = {
-
 				prompt_prefix = " ",
 				selection_caret = " ",
 				path_display = { "smart" },
@@ -111,12 +107,6 @@ return {
 				-- builtin picker
 			},
 			extensions = {
-				media_files = {
-					-- filetypes whitelist
-					-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-					filetypes = { "png", "webp", "jpg", "jpeg", "mp4", "pdf", "webm" },
-					find_cmd = "rg", -- find command (defaults to `fd`)
-				},
 				-- Your extension configuration goes here:
 				-- extension_name = {
 				--   extension_config_key = value,
