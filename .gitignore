@@ -6,3 +6,5 @@ blog/.hugo_build.lock
 blog/.gitmodules
 blog.bak
 !.gitkeep
+.nixd.nix 
+.nixd.json
