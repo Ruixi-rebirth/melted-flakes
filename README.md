@@ -1,37 +1,35 @@
 **简体中文（中国大陆）** | [English (UK)](README_en.md)
 
-[![NixOS](https://github.com/ruixi-rebirth/flakes/actions/workflows/NixOS.yml/badge.svg)](https://github.com/Ruixi-rebirth/flakes/actions/workflows/NixOS.yml)
-
 <p align="center"><img src="https://user-images.githubusercontent.com/75824585/210402874-da3422d5-ab65-4975-b73a-c300065c6792.png" width=300px></p>
 <h2 align="center">Ruixi-rebirth's NixOS Config</h2>
 <p align="center"><img src="https://user-images.githubusercontent.com/75824585/196195007-ecebb290-2c6b-4fab-9e1e-2dbb12f7eb44.png" width=300px></p>
 
-
 ### 系统组件
-||NixOS(Wayland)|Nixos(Xorg)|
-| - | :--: | :--: |
-|**Window Manager**|[Sway](https://github.com/swaywm/sway), [Hyprland](https://github.com/hyprwm/Hyprland)|[bspwm](https://github.com/baskerville/bspwm)|
-|**Terminal Emulator**|[Kitty](https://github.com/kovidgoyal/kitty)|[Kitty](https://github.com/kovidgoyal/kitty)|
-|**Bar**|[Waybar](https://github.com/Alexays/Waybar)|[Polybar](https://github.com/polybar/polybar)|
-|**Application Launcher**|[Rofi-wayland](https://github.com/lbonn/rofi)|[rofi](https://github.com/polybar/polybar)|
-|**Notification Daemon**|[Mako](https://github.com/emersion/mako)|[Dunst](https://github.com/dunst-project/dunst)|
-|**Display Manager**|None(TTY1 Login)|None(TTY1 Login)|
-|**network management tool**|[NetworkManager](https://networkmanager.dev/)|[NetworkManager](https://networkmanager.dev/)|
-|**Input method framework**|[Fcitx5](https://github.com/fcitx/fcitx5)|[Fcitx5](https://github.com/fcitx/fcitx5)|
-|**System resource monitor**|[Btop](https://github.com/aristocratos/btop)|[Btop](https://github.com/aristocratos/btop)|
-|**File Manager**|[Ranger](https://github.com/ranger/ranger), [Nemo](https://github.com/linuxmint/nemo)|[Ranger](https://github.com/ranger/ranger), [Nemo](https://github.com/linuxmint/nemo)|
-|**Lockscreen**|[Swaylock-effects](https://github.com/mortie/swaylock-effects)|[i3lock-fancy](https://github.com/meskarune/i3lock-fancy)|
-|**Shell**|[Fish](https://github.com/fish-shell/fish-shell)|[Fish](https://github.com/fish-shell/fish-shell)|
-|**Music Player**|[mpd](https://github.com/MusicPlayerDaemon/MPD), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp), [mpc](https://github.com/MusicPlayerDaemon/mpc), [Netease-cloud-music-gtk](https://github.com/gmg137/netease-cloud-music-gtk)|[mpd](https://github.com/MusicPlayerDaemon/MPD), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp), [mpc](https://github.com/MusicPlayerDaemon/mpc), [Netease-cloud-music-gtk](https://github.com/gmg137/netease-cloud-music-gtk)|
-|**Media Player**|[mpv](https://github.com/mpv-player/mpv)|[mpv](https://github.com/mpv-player/mpv)|
-|**Text Editor**|[Neovim](https://github.com/neovim/neovim)|[Neovim](https://github.com/neovim/neovim)|
-|**Icons**|[Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)|[Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)|
-|**Fonts**|[Nerd fonts](https://github.com/ryanoasis/nerd-fonts)|[Nerd fonts](https://github.com/ryanoasis/nerd-fonts)|
-|**Image Viewer**|[imv](https://sr.ht/~exec64/imv/)|[feh](https://feh.finalrewind.org/)|
-|**Screenshot Software**|[grimshot](https://github.com/swaywm/sway/blob/master/contrib/grimshot),[grimblast](https://github.com/hyprwm/contrib)|[flameshot](https://github.com/flameshot-org/flameshot)|
-|**Screen Recording**|[wf-recorder](https://github.com/ammen99/wf-recorder), [OBS](https://obsproject.com)|[OBS](https://obsproject.com)|
-|**Clipboard**|[wl-clipboard](https://github.com/bugaevc/wl-clipboard)|[xclip](https://opensource.com/article/19/7/xclip)|
-|**Color Picker**|[hyprpicker](https://github.com/hyprwm/hyprpicker)||
+
+|                             |                                                                                                        NixOS(Wayland)                                                                                                         |                                                                                                          Nixos(Xorg)                                                                                                          |
+| --------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| **Window Manager**          |                                                                    [Sway](https://github.com/swaywm/sway), [Hyprland](https://github.com/hyprwm/Hyprland)                                                                     |                                                                                         [bspwm](https://github.com/baskerville/bspwm)                                                                                         |
+| **Terminal Emulator**       |                                                                                         [Kitty](https://github.com/kovidgoyal/kitty)                                                                                          |                                                                                         [Kitty](https://github.com/kovidgoyal/kitty)                                                                                          |
+| **Bar**                     |                                                                                          [Waybar](https://github.com/Alexays/Waybar)                                                                                          |                                                                                         [Polybar](https://github.com/polybar/polybar)                                                                                         |
+| **Application Launcher**    |                                                                                         [Rofi-wayland](https://github.com/lbonn/rofi)                                                                                         |                                                                                          [rofi](https://github.com/polybar/polybar)                                                                                           |
+| **Notification Daemon**     |                                                                                           [Mako](https://github.com/emersion/mako)                                                                                            |                                                                                        [Dunst](https://github.com/dunst-project/dunst)                                                                                        |
+| **Display Manager**         |                                                                                                       None(TTY1 Login)                                                                                                        |                                                                                                       None(TTY1 Login)                                                                                                        |
+| **network management tool** |                                                                                         [NetworkManager](https://networkmanager.dev/)                                                                                         |                                                                                         [NetworkManager](https://networkmanager.dev/)                                                                                         |
+| **Input method framework**  |                                                                                           [Fcitx5](https://github.com/fcitx/fcitx5)                                                                                           |                                                                                           [Fcitx5](https://github.com/fcitx/fcitx5)                                                                                           |
+| **System resource monitor** |                                                                                         [Btop](https://github.com/aristocratos/btop)                                                                                          |                                                                                         [Btop](https://github.com/aristocratos/btop)                                                                                          |
+| **File Manager**            |                                                                     [Ranger](https://github.com/ranger/ranger), [Nemo](https://github.com/linuxmint/nemo)                                                                     |                                                                     [Ranger](https://github.com/ranger/ranger), [Nemo](https://github.com/linuxmint/nemo)                                                                     |
+| **Lockscreen**              |                                                                                [Swaylock-effects](https://github.com/mortie/swaylock-effects)                                                                                 |                                                                                   [i3lock-fancy](https://github.com/meskarune/i3lock-fancy)                                                                                   |
+| **Shell**                   |                                                                                       [Fish](https://github.com/fish-shell/fish-shell)                                                                                        |                                                                                       [Fish](https://github.com/fish-shell/fish-shell)                                                                                        |
+| **Music Player**            | [mpd](https://github.com/MusicPlayerDaemon/MPD), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp), [mpc](https://github.com/MusicPlayerDaemon/mpc), [Netease-cloud-music-gtk](https://github.com/gmg137/netease-cloud-music-gtk) | [mpd](https://github.com/MusicPlayerDaemon/MPD), [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp), [mpc](https://github.com/MusicPlayerDaemon/mpc), [Netease-cloud-music-gtk](https://github.com/gmg137/netease-cloud-music-gtk) |
+| **Media Player**            |                                                                                           [mpv](https://github.com/mpv-player/mpv)                                                                                            |                                                                                           [mpv](https://github.com/mpv-player/mpv)                                                                                            |
+| **Text Editor**             |                                                                                          [Neovim](https://github.com/neovim/neovim)                                                                                           |                                                                                          [Neovim](https://github.com/neovim/neovim)                                                                                           |
+| **Icons**                   |                                                                            [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)                                                                            |                                                                            [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)                                                                            |
+| **Fonts**                   |                                                                                     [Nerd fonts](https://github.com/ryanoasis/nerd-fonts)                                                                                     |                                                                                     [Nerd fonts](https://github.com/ryanoasis/nerd-fonts)                                                                                     |
+| **Image Viewer**            |                                                                                               [imv](https://sr.ht/~exec64/imv/)                                                                                               |                                                                                              [feh](https://feh.finalrewind.org/)                                                                                              |
+| **Screenshot Software**     |                                                    [grimshot](https://github.com/swaywm/sway/blob/master/contrib/grimshot),[grimblast](https://github.com/hyprwm/contrib)                                                     |                                                                                    [flameshot](https://github.com/flameshot-org/flameshot)                                                                                    |
+| **Screen Recording**        |                                                                     [wf-recorder](https://github.com/ammen99/wf-recorder), [OBS](https://obsproject.com)                                                                      |                                                                                                 [OBS](https://obsproject.com)                                                                                                 |
+| **Clipboard**               |                                                                                    [wl-clipboard](https://github.com/bugaevc/wl-clipboard)                                                                                    |                                                                                      [xclip](https://opensource.com/article/19/7/xclip)                                                                                       |
+| **Color Picker**            |                                                                                      [hyprpicker](https://github.com/hyprwm/hyprpicker)                                                                                       |                                                                                                                                                                                                                               |
 
 ### 窗口管理器
 
@@ -39,7 +37,7 @@
 
 https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-91a6-c30281d46e7a.mp4
 
-sway 与 hyprland 外观一致,此处展示的是hyprland
+sway 与 hyprland 外观一致,此处展示的是 hyprland
 
 **bspwm**
 
@@ -49,7 +47,7 @@ https://user-images.githubusercontent.com/75824585/220659189-be78cf81-0b8c-4865-
 
 ### 主题
 
-> hyprland & sway 
+> hyprland & sway
 
 <details>
 <summary><b>Load</b> <span style="font-size:14px;">(Click to expand) </span> </summary>
@@ -62,19 +60,20 @@ https://user-images.githubusercontent.com/75824585/220659189-be78cf81-0b8c-4865-
 
 **nord**
 ![2023-01-17T00:15:22](https://user-images.githubusercontent.com/75824585/212723937-c56200da-52f4-407b-9d8e-428348ed5ed0.png)
+
 </details>
 
-> bspwm 
+> bspwm
 
 <details>
 <summary><b>Load</b> <span style="font-size:14px;">(Click to expand) </span> </summary>
 
 ![2023-02-22_21-30](https://user-images.githubusercontent.com/75824585/220659944-7c93802a-2519-4bc1-9c9b-80d6bd81bce9.png)
+
 </details>
 
-
-
 ### 目录结构
+
 ```
 ├── blog
 │  ├── archetypes
@@ -114,45 +113,57 @@ https://user-images.githubusercontent.com/75824585/220659189-be78cf81-0b8c-4865-
 ```
 
 ### 如何安装？
-最小安装(包含wm,没有tmpfs as root)，前往[此处](https://github.com/Ruixi-rebirth/flakes/tree/minimal)
+
+最小安装(包含 wm,没有 tmpfs as root)，前往[此处](https://github.com/Ruixi-rebirth/flakes/tree/minimal)
 
 ### 如何安装?(root on tmpfs)
 
-
-0. 准备一个64位的nixos [minimal iso image](https://channels.nixos.org/nixos-22.11/latest-nixos-minimal-x86_64-linux.iso) 烧录好,然后进入live系统。假设我已经分好两个分区`/dev/nvme0n1p1` `/dev/nvme0n1p3`
+0. 准备一个 64 位的 nixos [minimal iso image](https://channels.nixos.org/nixos-22.11/latest-nixos-minimal-x86_64-linux.iso) 烧录好,然后进入 live 系统。假设我已经分好两个分区`/dev/nvme0n1p1` `/dev/nvme0n1p3`
 1. 格式化分区
+
 ```bash
-  mkfs.fat -F 32 /dev/nvme0n1p1 
+  mkfs.fat -F 32 /dev/nvme0n1p1
   mkfs.ext4 /dev/nvme0n1p3
 ```
+
 2. 挂载
+
 ```bash
-  mount -t tmpfs none /mnt 
+  mount -t tmpfs none /mnt
   mkdir -p /mnt/{boot,nix,etc/nixos}
   mount /dev/nvme0n1p3 /mnt/nix
-  mount /dev/nvme0n1p1 /mnt/boot 
+  mount /dev/nvme0n1p1 /mnt/boot
   mkdir -p /mnt/nix/persist/etc/nixos
   mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
 ```
-3. 生成一个基本的配置 
+
+3. 生成一个基本的配置
+
 ```bash
   nixos-generate-config --root /mnt
 ```
+
 4. 克隆仓库到本地
+
 ```bash
 nix-shell -p git
-git clone  https://github.com/Ruixi-rebirth/flakes.git /mnt/etc/nixos/Flakes 
+git clone  https://github.com/Ruixi-rebirth/flakes.git /mnt/etc/nixos/Flakes
 cd  /mnt/etc/nixos/Flakes/
 nix develop --extra-experimental-features nix-command --extra-experimental-features flakes
 ```
+
 5. 将 /mnt/etc/nixos 中的 `hardware-configuration.nix` 拷贝到 /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
-```bash 
+
+```bash
 cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
 ```
+
 6. 修改被覆盖后的 `hardware-configuration.nix`
+
 ```bash
 nvim /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
 ```
+
 ```nix
 ...
 #这只是一个例子
@@ -181,35 +192,39 @@ nvim /mnt/etc/nixos/Flakes/hosts/laptop/hardware-configuration.nix
     };
 ...
 ```
+
 7. 移除 '/mnt/etc/nixos/Flakes/.git'
-```bash 
+
+```bash
 rm -rf .git
 ```
+
 8. 用户名修改: 编辑 `/mnt/etc/nixos/Flakes/flake.nix` 修改 **user** 变量,主机名修改: 编辑 `/mnt/etc/nixos/Flakes/hosts/system.nix ` 修改 **networking** 属性组中的 **hostName** 值
 
 9. 使用 `mkpasswd {PASSWORD} -m sha-512` 命令生成的密码哈希串替换掉 `/mnt/etc/nixos/Flakes/hosts/laptop/wayland/default.nix` 中的 `users.users.<name>.hashedPassword` 值替换掉。（在文件中有两处需要替换的内容）
 
-10. 选择 Window Manager 
-> Wayland: [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L17) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L36) **取消注释**, 并且**注释** [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L18) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L37)
+10. 选择 Window Manager
+    > Wayland: [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L17) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L36) **取消注释**, 并且**注释** [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L18) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L37)
 
-Hyprland: 如果 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/default.nix#L12) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/home.nix#L6) 有注释, 则均**取消注释**, 并且**注释**掉下面涉及到 sway 的两行   
+Hyprland: 如果 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/default.nix#L12) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/home.nix#L6) 有注释, 则均**取消注释**, 并且**注释**掉下面涉及到 sway 的两行
 
-Sway: 如果 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/default.nix#L11)  和  [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/home.nix#L5) 有注释, 则均**取消注释**, 并且**注释**掉上面涉及到 hyprland 的两行 
+Sway: 如果 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/default.nix#L11) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/home.nix#L5) 有注释, 则均**取消注释**, 并且**注释**掉上面涉及到 hyprland 的两行
 
 > Xorg: [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L18) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L37) **取消注释**, 并且**注释** [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L17) 和 [这行](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/default.nix#L36)
 
 Bspwm: 默认
 
 11. 选择主题
->Wayland
+    > Wayland
 
 [这里](https://github.com/Ruixi-rebirth/flakes/blob/main/hosts/laptop/wayland/home.nix#L11-L13) 任意选择一个
 
-> Xorg 
+> Xorg
 
 nord: 默认
 
 12. 安装
+
 ```bash
 nixos-install --no-root-passwd --flake .#laptop
 
@@ -218,7 +233,9 @@ nixos-install --option substituters "https://mirrors.tuna.tsinghua.edu.cn/nix-ch
 ```
 
 13. 重启
+
 ```bash
 reboot
 ```
+
 14. 享受它吧！

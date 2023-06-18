@@ -1,12 +1,12 @@
 name: NixOS
-#concurrency: 
+#concurrency:
 on:
   push:
-    branches: [ main ]
+    branches: [minimal]
   pull_request:
-    branches: [ main ]
+    branches: [minimal]
 jobs:
-  build-laptop-minimal:  
+  build-laptop-minimal:
     runs-on: ubuntu-latest
     steps:
       - name: Free Disk Space (Ubuntu)
@@ -15,7 +15,7 @@ jobs:
           # this might remove tools that are actually needed,
           # when set to "true" but frees about 6 GB
           tool-cache: true
-          
+
           # all of these default to true, but feel free to set to
           # "false" if necessary for your workflow
           android: true
@@ -39,27 +39,27 @@ jobs:
           root-reserve-mb: "1024"
 
       - uses: actions/checkout@v3
-    
+
       - name: "Install Nix ❄️"
         uses: cachix/install-nix-action@v21
         with:
           github_access_token: ${{ secrets.TOKEN }}
           nix_path: nixpkgs=channel:nixos-unstable
       - run: nix flake check
-      
+
       - name: "Install Cachix ❄️"
         uses: cachix/cachix-action@v12
         with:
           name: ruixi-rebirth
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-          extraPullNames: nix-community          
-      
+          extraPullNames: nix-community
+
       - name: "Build NixOS config ❄️"
         run: |
           # nix build .#nixosConfigurations.laptop-minimal.config.system.build.toplevel 
           nix --experimental-features 'nix-command flakes' build -L '.#nixosConfigurations.laptop-minimal.config.system.build.toplevel'
           # sudo nix build --profile /nix/var/nix/profiles/system "$(readlink -f result)"
-          # sudo nix shell -vv "$(readlink -f result)" -c switch-to-configuration switch 
+          # sudo nix shell -vv "$(readlink -f result)" -c switch-to-configuration switch
 
       - name: "Print nixpkgs version ❄️"
         run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'

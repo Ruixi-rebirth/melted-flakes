@@ -30,6 +30,8 @@
             inherit (config.flake-root) projectRootFile;
             package = pkgs.treefmt;
             programs.nixpkgs-fmt.enable = true;
+            programs.prettier.enable = true;
+            programs.stylua.enable = true;
             programs.beautysh = {
               enable = true;
               indent_size = 4;
@@ -149,7 +151,6 @@
         #please read this doc -> https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md 
         url = "github:nix-community/lanzaboote";
         inputs.nixpkgs.follows = "nixpkgs";
-        inputs.rust-overlay.follows = "rust-overlay";
       };
       disko.url = "github:nix-community/disko";
       emanote.url = "github:srid/emanote";

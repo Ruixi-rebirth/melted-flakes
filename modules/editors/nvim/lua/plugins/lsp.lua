@@ -30,7 +30,7 @@ return {
 			vim.api.nvim_create_autocmd("CursorHold", {
 				buffer = bufnr,
 				callback = function()
-            local opts = {
+					local opts = {
 						focusable = false,
 						close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
 						border = "rounded",
