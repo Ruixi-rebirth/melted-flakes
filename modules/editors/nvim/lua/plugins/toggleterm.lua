@@ -28,10 +28,10 @@ return {
 				-- see :h nvim_open_win for details on borders however
 				-- the 'curved' border is a custom border type
 				-- not natively supported but implemented in this plugin.
-				border = "curved", --'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
+				border = "single", --'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
 				width = 80,
 				height = 20,
-				winblend = 3,
+				winblend = 0,
 				highlights = {
 					border = "Normal",
 					background = "Normal",
@@ -44,6 +44,21 @@ return {
 				end,
 			},
 		})
+
+		function runFile()
+			local ft = vim.bo.filetype
+			local run_cmd = { go = "go run", rust = "cargo run" }
+			if run_cmd[ft] then
+				vim.cmd("TermExec cmd=" .. "'clear;" .. run_cmd[ft] .. " %'")
+			end
+		end
+
+		vim.api.nvim_set_keymap(
+			"n",
+			"<Leader>r",
+			"<cmd>lua print('Run current file...') runFile()<CR>",
+			{ noremap = true, silent = true }
+		)
 
 		function _G.set_terminal_keymaps()
 			local opts = { buffer = 0 }

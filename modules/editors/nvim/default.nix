@@ -24,7 +24,7 @@
       #-- LSP --#
       nodePackages_latest.typescript
       nodePackages_latest.typescript-language-server
-      # nodePackages_latest.vscode-langservers-extracted
+      nodePackages_latest.vscode-langservers-extracted
       nodePackages_latest.bash-language-server
       # rnix-lsp
       # nil
