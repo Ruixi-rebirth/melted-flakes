@@ -38,6 +38,7 @@ return {
 						prefix = " ",
 						scope = "line",
 					}
+					vim.diagnostic.show()
 					vim.diagnostic.open_float(nil, opts)
 				end,
 			})
@@ -226,7 +227,7 @@ return {
 						vim.diagnostic.hide()
 					end,
 				})
-				vim.api.nvim_create_autocmd("InsertLeave", {
+				vim.api.nvim_create_autocmd({ "InsertLeave", "BufWritePost" }, {
 					buffer = args.buf,
 					callback = function()
 						vim.diagnostic.show()

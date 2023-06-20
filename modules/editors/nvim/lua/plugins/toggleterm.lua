@@ -49,16 +49,11 @@ return {
 			local ft = vim.bo.filetype
 			local run_cmd = { go = "go run", rust = "cargo run" }
 			if run_cmd[ft] then
-				vim.cmd("TermExec cmd=" .. "'clear;" .. run_cmd[ft] .. " %'")
+				vim.cmd("TermExec cmd=" .. '\'clear;echo "Run current file..."; ' .. run_cmd[ft] .. " %'")
 			end
 		end
 
-		vim.api.nvim_set_keymap(
-			"n",
-			"<Leader>r",
-			"<cmd>lua print('Run current file...') runFile()<CR>",
-			{ noremap = true, silent = true }
-		)
+		vim.api.nvim_set_keymap("n", "<F5>", "<cmd>lua runFile()<CR>", { noremap = true, silent = true })
 
 		function _G.set_terminal_keymaps()
 			local opts = { buffer = 0 }
