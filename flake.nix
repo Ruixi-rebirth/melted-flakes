@@ -156,6 +156,10 @@
       emanote.url = "github:srid/emanote";
       joshuto.url = "github:kamiyaa/joshuto";
       nixd.url = "github:nix-community/nixd";
+      flake-compat = {
+        url = "github:inclyc/flake-compat";
+        flake = false;
+      };
     };
 
 }
