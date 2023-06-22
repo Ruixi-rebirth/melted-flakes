@@ -7,4 +7,3 @@ blog/.gitmodules
 blog.bak
 !.gitkeep
 .nixd.nix 
-.nixd.json

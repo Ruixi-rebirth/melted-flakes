@@ -1,0 +1,16 @@
+{
+  "eval": {
+    "target": {
+      "args": ["-f", "default.nix"],
+      "installable": "nixosConfigurations.laptop.config.system.build.toplevel"
+    }
+  },
+  "formatting": { "command": "nixpkgs-fmt" },
+  "options": {
+    "enable": true,
+    "target": {
+      "args": [],
+      "installable": ".#nixosConfigurations.laptop.options"
+    }
+  }
+}
