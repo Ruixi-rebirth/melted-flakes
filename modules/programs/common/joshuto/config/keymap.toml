@@ -125,11 +125,14 @@ keymap = [
   { keys = ["g", "d"], command = "cd ~/Downloads" },
   { keys = ["g", "e"], command = "cd /etc" },
   { keys = ["g", "h"], command = "cd ~/" },
+  { keys = ["g", "f"], command = "cd ~/Flakes" },
   { keys = ["?"], command = "help" },
 
   # `Shift + s` enter shell 
-  {keys = ["S"],command = "shell fish"},
-  # 
+  { keys = ["S"], command = "shell fish" },
+  #youtube-dl 
+  { keys = ["y", "a"], command = ":shell yt-dlp -x --audio-format mp3 " },
+  { keys = ["y", "v"], command = ":shell yt-dlp -x -ic " },
 ]
 
 [task_view]

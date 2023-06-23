@@ -31,6 +31,7 @@
             package = pkgs.treefmt;
             programs.nixpkgs-fmt.enable = true;
             programs.prettier.enable = true;
+            programs.taplo.enable = true;
             programs.stylua.enable = true;
             programs.beautysh = {
               enable = true;
