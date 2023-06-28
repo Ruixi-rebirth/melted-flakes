@@ -178,7 +178,7 @@ return {
 		-- ebuild Syntastic(install dev-util/pkgcheck)
 		vim.g.syntastic_ebuild_checkers = "pkgcheck"
 
-		-- Global mappings.
+		--[[ -- Global mappings.
 		-- See `:help vim.diagnostic.*` for documentation on any of the below functions
 		vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
 		vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
@@ -215,7 +215,7 @@ return {
 					vim.lsp.buf.format({ async = true })
 				end, opts)
 			end,
-		})
+		}) ]]
 
 		-- show diagnostics when InsertLeave
 		vim.api.nvim_create_autocmd("FileType", {

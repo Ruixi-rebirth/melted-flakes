@@ -86,7 +86,7 @@ return {
 		-- if there has no hover will have a notify no information available
 		-- to disable it just Lspsaga hover_doc ++quiet
 		-- press twice it will jump into hover window
-		keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>")
+		--[[ keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>") ]]
 		-- if you want keep hover window in right top you can use ++keep arg
 		-- notice if you use hover with ++keep you press this keymap it will
 		-- close the hover window .if you want jump to hover window must use

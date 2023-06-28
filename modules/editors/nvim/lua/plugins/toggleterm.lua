@@ -53,7 +53,7 @@ return {
 			end
 		end
 
-		vim.api.nvim_set_keymap("n", "<F5>", "<cmd>lua runFile()<CR>", { noremap = true, silent = true })
+		vim.api.nvim_set_keymap("n", "<space>r", "<cmd>lua runFile()<CR>", { noremap = true, silent = true })
 
 		function _G.set_terminal_keymaps()
 			local opts = { buffer = 0 }
