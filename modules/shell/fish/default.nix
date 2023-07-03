@@ -18,4 +18,6 @@
   home.file.".config/fish/functions/xdg-get.fish".text = import ./functions/xdg-get.nix;
   home.file.".config/fish/functions/xdg-set.fish".text = import ./functions/xdg-set.nix;
   home.file.".config/fish/functions/fish_prompt.fish".source = ./functions/fish_prompt.fish;
+  home.file.".config/fish/functions/la.fish".text = import ./functions/la.nix;
+  home.file.".config/fish/functions/ll.fish".text = import ./functions/ll.nix;
 }
