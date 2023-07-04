@@ -156,6 +156,7 @@
       disko.url = "github:nix-community/disko";
       emanote.url = "github:srid/emanote";
       joshuto.url = "github:kamiyaa/joshuto";
+      go-musicfox.url = "github:go-musicfox/go-musicfox";
       nixd.url = "github:nix-community/nixd";
       flake-compat = {
         url = "github:inclyc/flake-compat";

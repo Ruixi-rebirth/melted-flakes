@@ -96,7 +96,6 @@
           ".npm-global"
           ".config"
           ".thunderbird"
-          ".go-musicfox"
           "Flakes"
           "Kvm"
           ".cabal"

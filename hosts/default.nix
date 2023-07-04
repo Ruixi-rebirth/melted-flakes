@@ -50,6 +50,7 @@ in
               inputs.picom.overlays.default
               inputs.nil.overlays.default
               inputs.joshuto.overlays.default
+              inputs.go-musicfox.overlays.default
               inputs.nixd.overlays.default
               (import inputs.emacs-overlay)
             ]
