@@ -1,7 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	keys = {
-		{ "<Leader>t", "<cmd>Telescope<CR>", desc = "telescope" },
+		{ "<Leader>e", "<cmd>Telescope<CR>", desc = "telescope" },
 	},
 	config = function()
 		local status_ok, telescope = pcall(require, "telescope")
