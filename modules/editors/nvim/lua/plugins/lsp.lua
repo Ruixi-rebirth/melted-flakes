@@ -233,6 +233,7 @@ return {
 						vim.diagnostic.show()
 					end,
 				})
+				vim.lsp.inlay_hint(0, true)
 			end,
 		})
 	end,

@@ -221,7 +221,7 @@ return {
 					-- by removing them from the list.
 					-- If you rather use another key, you can map them
 					-- to something else, e.g., { [";"] = "L", [","] = H }
-					keys = { "f", "F", "t", "T", ";", "," },
+					keys = { "f", "F", "t", "T" },
 					---alias Flash.CharActions table<string, "next" | "prev" | "right" | "left">
 					-- The direction for `prev` and `next` is determined by the motion.
 					-- `left` and `right` are always left and right.
