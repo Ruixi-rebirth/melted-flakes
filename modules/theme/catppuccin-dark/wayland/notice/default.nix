@@ -13,6 +13,7 @@
     borderColor = "#c0caf5";
     progressColor = "over #302D41";
     textColor = "#c0caf5";
+    defaultTimeout = 5000;
     extraConfig = ''
       text-alignment=center
       [urgency=high]
