@@ -96,6 +96,7 @@
           ".thunderbird"
           "Flakes"
           "Kvm"
+          "Projects"
           ".cabal"
           ".cargo"
           { directory = ".gnupg"; mode = "0700"; }
