@@ -233,6 +233,12 @@ return {
 						vim.diagnostic.show()
 					end,
 				})
+			end,
+		})
+		-- 为特定语言开启 inlay_hint 功能
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = { "rust" },
+			callback = function()
 				vim.lsp.inlay_hint(0, true)
 			end,
 		})
