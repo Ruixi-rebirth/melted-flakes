@@ -28,7 +28,7 @@ jobs:
         run: |
           sudo mkdir /nix
       - name: "Maximize Disk Space"
-        uses: easimon/maximize-build-space@v7
+        uses: easimon/maximize-build-space@v8
         with:
           build-mount-path: /nix
           remove-dotnet: "true"
