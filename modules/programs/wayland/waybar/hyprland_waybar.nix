@@ -5,15 +5,15 @@
     waybar
   ];
 
-  nixpkgs.overlays = [
-    (final: prev: {
-      waybar = prev.waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-        postPatch = (oldAttrs.postPatch or "") + ''
-          sed -i 's/zext_workspace_handle_v1_activate(workspace_handle_);/const std::string command = "hyprctl dispatch workspace " + name_;\n\tsystem(command.c_str());/g' src/modules/wlr/workspace_manager.cpp'';
-      });
-    })
-  ];
+  ## nixpkgs.overlays = [
+  ## (final: prev: {
+  ## waybar = prev.waybar.overrideAttrs (oldAttrs: {
+  ## mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+  ## postPatch = (oldAttrs.postPatch or "") + ''
+  ## sed -i 's/zext_workspace_handle_v1_activate(workspace_handle_);/const std::string command = "hyprctl dispatch workspace " + name_;\n\tsystem(command.c_str());/g' src/modules/wlr/workspace_manager.cpp'';
+  ## });
+  ## })
+  ## ];
 
   home-manager.users.${user} = {
     # Home-manager waybar config
@@ -159,7 +159,7 @@
         "position" = "top";
         modules-left = [
           "custom/launcher"
-          "wlr/workspaces"
+          "hyprland/workspaces"
           "temperature"
           #"idle_inhibitor"
           "custom/wall"
@@ -195,7 +195,7 @@
           "exec" = "sleep 1s && cava-internal";
           "tooltip" = false;
         };
-        "wlr/workspaces" = {
+        "hyprland/workspaces" = {
           "format" = "{icon}";
           "on-click" = "activate";
           # "on-scroll-up" = "hyprctl dispatch workspace e+1";
@@ -375,7 +375,7 @@
             ],
             "modules-left": [
               "custom/launcher",
-              "wlr/workspaces",
+              "hyprland/workspaces",
               "temperature",
               //"idle_inhibitor",
               "custom/wall",
@@ -437,7 +437,7 @@
               "icon-size": 15,
               "spacing": 5
             },
-            "wlr/workspaces": {
+            "hyprland/workspaces": {
               "format": "{icon}",
               "on-click": "activate",
               "active-only": false,
@@ -665,7 +665,7 @@
             ],
             "modules-left": [
               "custom/launcher",
-              "wlr/workspaces",
+              "hyprland/workspaces",
               "temperature",
               //"idle_inhibitor",
               "custom/wall",
@@ -727,7 +727,7 @@
               "icon-size": 15,
               "spacing": 5
             },
-            "wlr/workspaces": {
+            "hyprland/workspaces": {
               "format": "{icon}",
               "on-click": "activate",
               "active-only": false,
